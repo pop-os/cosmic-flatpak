@@ -15,4 +15,10 @@ repo:
             "build/app/${ref}" \
             "app/${ref}/${ref}.json"
     done
+    flatpak \
+        build-update-repo \
+        --gpg-sign="${DEBEMAIL}" \
+        --generate-static-deltas \
+        --prune \
+        repo
     touch repo

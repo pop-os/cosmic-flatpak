@@ -7,6 +7,7 @@ repo:
             --ccache \
             --force-clean \
             --gpg-sign="${DEBEMAIL}" \
+            --install-deps-from=flathub \
             --repo=repo \
             --sandbox \
             --user \

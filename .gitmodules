@@ -1,0 +1,12 @@
+[submodule "dep/com.system76.Cosmic.BaseApp/stable"]
+	path = dep/com.system76.Cosmic.BaseApp/stable
+	url = https://github.com/flathub/com.system76.Cosmic.BaseApp.git
+	branch = master
+[submodule "dep/org.freedesktop.Sdk.Extension.rust-stable/24.08"]
+	path = dep/org.freedesktop.Sdk.Extension.rust-stable/24.08
+	url = https://github.com/flathub/org.freedesktop.Sdk.Extension.rust-stable.git
+	branch = branch/24.08
+[submodule "dep/org.freedesktop.Sdk/24.08"]
+	path = dep/org.freedesktop.Sdk/24.08
+	url = https://gitlab.com/freedesktop-sdk/freedesktop-sdk.git
+	branch = release/24.08

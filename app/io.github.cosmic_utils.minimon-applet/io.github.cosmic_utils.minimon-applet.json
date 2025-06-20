@@ -15,7 +15,8 @@
     "--filesystem=/sys/class/hwmon:ro",
     "--filesystem=/sys/class/drm:ro",
     "--filesystem=/sys/devices:ro",
-    "--share=ipc"
+    "--share=ipc",
+    "--device=all"
   ],
   "build-options": {
     "append-path": "/usr/lib/sdk/rust-stable/bin",

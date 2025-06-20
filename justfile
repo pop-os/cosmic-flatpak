@@ -20,13 +20,26 @@ repo:
     then
         ostree --repo=repo init --mode=archive
     fi
+    repo="$(realpath repo)"
 
     # Build freedesktop sdk
     for id_branch in \
         org.freedesktop.Sdk/24.08
     do
-        ln -srf repo "dep/${id_branch}/repo"
-        make -C "dep/${id_branch}" export
+        id="$(dirname "${id_branch}")"
+        pushd "dep/${id_branch}"
+        rm -rf repo runtimes
+        mkdir -p runtimes
+        bst artifact \
+            checkout flatpak-release-repo.bst \
+            --directory runtimes/flatpak-release-repo.bst
+        flatpak build-commit-from \
+            --gpg-sign="${DEBEMAIL}" \
+            --src-repo=runtimes/flatpak-release-repo.bst \
+            --subject "Export ${id}" \
+            "${repo}"
+        rm -rf runtimes
+        popd
     done
 
     # Build other dependencies

@@ -9,6 +9,7 @@ repo:
             --force-clean \
             --gpg-sign="${DEBEMAIL}" \
             --repo=repo \
+            --require-changes \
             --sandbox \
             --user \
             --verbose \
@@ -27,6 +28,11 @@ repo:
         org.freedesktop.Sdk/24.08
     do
         id="$(dirname "${id_branch}")"
+        branch="$(basename "${id_branch}")"
+        if ostree --repo=repo show "runtime/${id}/x86_64/${branch}"
+        then
+            continue
+        fi
         pushd "dep/${id_branch}"
         rm -rf repo runtimes
         mkdir -p runtimes
@@ -35,6 +41,7 @@ repo:
             --directory runtimes/flatpak-release-repo.bst
         flatpak build-commit-from \
             --gpg-sign="${DEBEMAIL}" \
+            --no-update-summary \
             --src-repo=runtimes/flatpak-release-repo.bst \
             --subject "Export ${id}" \
             "${repo}"
@@ -67,6 +74,14 @@ repo:
 
 clean:
     rm -rf .flatpak-builder build repo
+
+ostree-info:
+    #!/usr/bin/env bash
+    set -e
+    ostree --repo=repo refs | while read ref
+    do
+        ostree --repo=repo log "${ref}"
+    done
 
 ubuntu-deps:
     sudo apt-get install --yes \

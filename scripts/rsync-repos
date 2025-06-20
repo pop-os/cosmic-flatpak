@@ -1,0 +1,63 @@
+#!/usr/bin/env python
+#
+# Use rsync to intelligently sync OSTree repositories.  This
+# avoids a few race conditions and issues that could otherwise
+# occur if one simply does the whole repository in a single run.
+#
+# Known issues:
+#   - Ignores the fact that detached metadata (e.g. GPG signatures)
+#     can be updated asynchronously.
+#
+# Copyright 2016 Colin Walters <walters@verbum.org>
+# Licensed under the new-BSD license (http://www.opensource.org/licenses/bsd-license.php)
+
+import os, sys, subprocess, argparse, shlex
+
+def fatal(msg):
+    print >>sys.stderr, msg
+    sys.exit(1)
+
+parser = argparse.ArgumentParser()
+parser.add_argument("--src", help="Source path",
+                    action='store', required=True)
+parser.add_argument("--dest", help="Destination path",
+                    action='store', required=True)
+parser.add_argument("--rsync-opts", help="Additional rsync options (parsed via shell)",
+                    action='store', default=None)
+parser.add_argument("--rsync-opt", help="Additional (single) rsync option",
+                    action='append', default=[])
+
+args = parser.parse_args()
+
+if not args.src.endswith('/'):
+    args.src = args.src + '/'
+if not args.dest.endswith('/'):
+    args.dest = args.dest + '/'
+
+rsync_opts = []
+if args.rsync_opts is not None:
+    rsync_opts.extend(shlex.split(args.rsync_opts))
+rsync_opts.extend(args.rsync_opt)
+
+def rsync(paths, opts, ignore_missing_args=False):
+    argv = ['rsync', '-rlpt']
+    for path in paths:
+        argv.append('--include=' + path)
+    argv.extend(['--exclude=*', args.src, args.dest])
+    argv.extend(rsync_opts)
+    argv.extend(opts)
+    print("Executing: {}".format(subprocess.list2cmdline(argv)))
+    subprocess.check_call(argv)
+
+OBJECTS_AND_DELTAS = ['/objects', '/objects/**', '/deltas', '/deltas/**']
+REFS_AND_SUMMARY = ['/refs', '/refs/**', '/summary*', '/summaries', '/summaries/**']
+CONFIG = ['/config']
+# We rsync in reverse data dependence order - the summary and refs
+# point to objects + deltas.  Our first pass over the objects doesn't
+# perform any deletions, as that would create race conditions.  We
+# do handle deletions for refs and summary.
+rsync(OBJECTS_AND_DELTAS, ['--ignore-existing'])
+rsync(REFS_AND_SUMMARY, ['--delete'])
+# Finally, we handle any deletions for objects and deltas.
+rsync(OBJECTS_AND_DELTAS, ['--ignore-existing', '--delete'])
+rsync(CONFIG, ['--ignore-existing'])

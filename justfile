@@ -64,4 +64,5 @@ ubuntu-deps:
     pipx inject buildstream \
         dulwich \
         requests \
+        tomli \
         tomlkit

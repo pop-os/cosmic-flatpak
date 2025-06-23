@@ -40,7 +40,7 @@
           {
              "type": "git",
              "url": "https://github.com/D-Brox/cosmic-ext-applet-system-monitor.git",
-             "commit": "2b2d7ae0e9597105449e4a389022ae9d091716e0"
+             "commit": "8d7228519223a8cceea9f1443dbb0a14e2bdafdb"
            },
           "generated-sources.json"
         ]

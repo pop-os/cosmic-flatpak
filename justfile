@@ -22,7 +22,7 @@ repo:
             --verbose \
             "build/app/${id}" \
             "app/${id}/${id}.json" \
-            | tee "log/app/${id}.txt"
+            2>&1 | tee "log/app/${id}.txt"
     done
 
     # Generate update information and appstream data

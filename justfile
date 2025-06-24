@@ -3,6 +3,10 @@ repo:
 
     set -ex
 
+    # Clear log directory
+    rm -rf log
+    mkdir -p log/app
+
     # Build all apps
     ls -1 app | while read id
     do
@@ -17,7 +21,8 @@ repo:
             --user \
             --verbose \
             "build/app/${id}" \
-            "app/${id}/${id}.json"
+            "app/${id}/${id}.json" \
+            | tee "log/app/${id}.txt"
     done
 
     # Generate update information and appstream data
@@ -29,7 +34,7 @@ repo:
         repo
 
 clean:
-    rm -rf .flatpak-builder build repo
+    rm -rf .flatpak-builder build log repo
 
 ostree-info:
     #!/usr/bin/env bash

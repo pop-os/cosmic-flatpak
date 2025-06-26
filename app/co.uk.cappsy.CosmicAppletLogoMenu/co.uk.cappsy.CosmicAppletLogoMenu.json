@@ -49,7 +49,7 @@
         {
           "type": "git",
           "url": "https://github.com/cappsyco/cosmic-applet-logomenu.git",
-          "commit": "21c62f3c12b462774a103eda512e972ab73cba37"
+          "commit": "6a0038c18dbf262f5ae979d2489f08f3360297ac"
         },
         "./cargo-sources.json"
       ]

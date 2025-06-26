@@ -1,0 +1,55 @@
+{
+  "id": "co.uk.cappsy.CosmicAppletLogoMenu",
+  "runtime": "org.freedesktop.Platform",
+  "runtime-version": "24.08",
+  "sdk": "org.freedesktop.Sdk",
+  "sdk-extensions": ["org.freedesktop.Sdk.Extension.rust-stable"],
+  "base": "com.system76.Cosmic.BaseApp",
+  "base-version": "stable",
+  "finish-args": [
+    "--socket=wayland",
+    "--socket=fallback-x11",
+    "--socket=system-bus",
+    "--socket=session-bus",
+    "--talk-name=com.system76.CosmicSettingsDaemon",
+    "--talk-name=org.freedesktop.Flatpak",
+    "--talk-name=org.freedesktop.login1",
+    "--talk-name=org.freedesktop.ScreenSaver",
+    "--talk-name=org.freedesktop.DisplayManager",
+    "--filesystem=xdg-config/cosmic:rw",
+    "--share=ipc"
+  ],
+  "build-options": {
+    "append-path": "/usr/lib/sdk/rust-stable/bin",
+    "env": {
+      "CARGO_HOME": "/run/build/cosmic-applet-logomenu/cargo"
+    }
+  },
+  "modules": [
+    {
+      "name": "cosmic-applet-logomenu",
+      "buildsystem": "simple",
+      "build-commands": [
+        "cargo --offline fetch --manifest-path Cargo.toml --verbose",
+        "cd ./applet && cargo --offline build --release --verbose",
+        "cd ./settings && cargo --offline build --release --verbose",
+
+        "install -Dm755 ./target/release/cosmic-applet-logomenu -t /app/bin",
+        "install -Dm755 ./target/release/cosmic-logomenu-settings -t /app/bin",
+        "install -Dm644 ./res/co.uk.cappsy.CosmicAppletLogoMenu.desktop -t /app/share/applications",
+        "install -Dm644 ./res/co.uk.cappsy.CosmicLogoMenuSettings.desktop /app/share/applications/co.uk.cappsy.CosmicAppletLogoMenu.Settings.desktop",
+        "install -Dm644 ./res/co.uk.cappsy.CosmicLogoMenuSettings.metainfo.xml /app/share/metainfo/co.uk.cappsy.CosmicLogoMenuSettings.metainfo.xml",
+        "install -Dm644 ./res/icons/hicolor/scalable/apps/co.uk.cappsy.CosmicAppletLogoMenu.svg /app/share/icons/hicolor/scalable/apps/co.uk.cappsy.CosmicAppletLogoMenu.svg",
+        "install -Dm644 ./res/icons/hicolor/scalable/apps/co.uk.cappsy.CosmicAppletLogoMenu.svg /app/share/icons/hicolor/scalable/apps/co.uk.cappsy.CosmicAppletLogoMenu.Settings.svg"
+      ],
+      "sources": [
+        {
+          "type": "git",
+          "url": "https://github.com/cappsyco/cosmic-applet-logomenu.git",
+          "commit": "6a0038c18dbf262f5ae979d2489f08f3360297ac"
+        },
+        "./cargo-sources.json"
+      ]
+    }
+  ]
+}

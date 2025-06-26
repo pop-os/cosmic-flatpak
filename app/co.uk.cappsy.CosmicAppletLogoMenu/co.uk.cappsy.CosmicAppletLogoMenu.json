@@ -17,9 +17,6 @@
     "--talk-name=org.freedesktop.ScreenSaver",
     "--talk-name=org.freedesktop.DisplayManager",
     "--filesystem=xdg-config/cosmic:rw",
-    "--filesystem=/sys/class/hwmon:ro",
-    "--filesystem=/sys/class/drm:ro",
-    "--filesystem=/sys/devices:ro",
     "--share=ipc"
   ],
   "build-options": {

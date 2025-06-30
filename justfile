@@ -10,19 +10,24 @@ repo:
     # Build all apps
     ls -1 app | while read id
     do
-        flatpak-builder \
-            --ccache \
-            --force-clean \
-            --gpg-sign="${DEBEMAIL}" \
-            --install-deps-from=flathub \
-            --repo=repo \
-            --require-changes \
-            --sandbox \
-            --user \
-            --verbose \
-            "build/app/${id}" \
-            "app/${id}/${id}.json" \
-            2>&1 | tee "log/app/${id}.txt"
+        #TODO: run aarch64 build natively
+        for arch in x86_64 aarch64
+        do
+            flatpak-builder \
+                --arch="${arch}" \
+                --ccache \
+                --force-clean \
+                --gpg-sign="${DEBEMAIL}" \
+                --install-deps-from=flathub \
+                --repo=repo \
+                --require-changes \
+                --sandbox \
+                --user \
+                --verbose \
+                "build/app/${id}" \
+                "app/${id}/${id}.json" \
+                2>&1 | tee "log/app/${id}.txt"
+        done
     done
 
     # Generate update information and appstream data

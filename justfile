@@ -3,31 +3,25 @@ repo:
 
     set -ex
 
-    # Clear log directory
-    rm -rf log
-    mkdir -p log/app
-
     # Build all apps
+    arch="$(flatpak --default-arch)"
     ls -1 app | while read id
     do
-        #TODO: run aarch64 build natively
-        for arch in x86_64 aarch64
-        do
-            flatpak-builder \
-                --arch="${arch}" \
-                --ccache \
-                --force-clean \
-                --gpg-sign="${DEBEMAIL}" \
-                --install-deps-from=flathub \
-                --repo=repo \
-                --require-changes \
-                --sandbox \
-                --user \
-                --verbose \
-                "build/app/${id}" \
-                "app/${id}/${id}.json" \
-                2>&1 | tee "log/app/${id}.txt"
-        done
+        mkdir -p "log/app/${id}"
+        flatpak-builder \
+            --arch="${arch}" \
+            --ccache \
+            --force-clean \
+            --gpg-sign="${DEBEMAIL}" \
+            --install-deps-from=flathub \
+            --repo=repo \
+            --require-changes \
+            --sandbox \
+            --user \
+            --verbose \
+            "build/app/${id}/${arch}" \
+            "app/${id}/${id}.json" \
+            2>&1 | tee "log/app/${id}/${arch}.txt"
     done
 
     # Generate update information and appstream data
@@ -39,7 +33,10 @@ repo:
         repo
 
 clean:
-    rm -rf .flatpak-builder build log repo
+    rm -rf build log
+
+distclean: clean
+    rm -rf .flatpak-builder repo
 
 ostree-info:
     #!/usr/bin/env bash

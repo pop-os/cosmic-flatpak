@@ -3,14 +3,13 @@ repo:
 
     set -ex
 
-    # Clear log directory
-    rm -rf log
-    mkdir -p log/app
-
     # Build all apps
+    arch="$(flatpak --default-arch)"
     ls -1 app | while read id
     do
+        mkdir -p "log/app/${id}"
         flatpak-builder \
+            --arch="${arch}" \
             --ccache \
             --force-clean \
             --gpg-sign="${DEBEMAIL}" \
@@ -20,9 +19,9 @@ repo:
             --sandbox \
             --user \
             --verbose \
-            "build/app/${id}" \
+            "build/app/${id}/${arch}" \
             "app/${id}/${id}.json" \
-            2>&1 | tee "log/app/${id}.txt"
+            2>&1 | tee "log/app/${id}/${arch}.txt"
     done
 
     # Generate update information and appstream data
@@ -34,7 +33,10 @@ repo:
         repo
 
 clean:
-    rm -rf .flatpak-builder build log repo
+    rm -rf build log
+
+distclean: clean
+    rm -rf .flatpak-builder repo
 
 ostree-info:
     #!/usr/bin/env bash

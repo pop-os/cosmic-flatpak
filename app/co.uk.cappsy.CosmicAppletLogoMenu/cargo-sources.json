@@ -38,8 +38,8 @@
     {
         "type": "git",
         "url": "https://github.com/pop-os/cosmic-panel",
-        "commit": "e63396b497d14ff1e7527ab35a569f706c9d45ba",
-        "dest": "flatpak-cargo/git/cosmic-panel-e63396b"
+        "commit": "d8482f30d8874a83036a85e40ff969feb8c9bcdd",
+        "dest": "flatpak-cargo/git/cosmic-panel-d8482f3"
     },
     {
         "type": "git",
@@ -591,6 +591,19 @@
         "type": "inline",
         "contents": "{\"package\": \"ff6e472cdea888a4bd64f342f09b3f50e1886d32afe8df3d663c01140b811b18\", \"files\": {}}",
         "dest": "cargo/vendor/async-lock-3.4.0",
+        "dest-filename": ".cargo-checksum.json"
+    },
+    {
+        "type": "archive",
+        "archive-type": "tar-gzip",
+        "url": "https://static.crates.io/crates/async-net/async-net-2.0.0.crate",
+        "sha256": "b948000fad4873c1c9339d60f2623323a0cfd3816e5181033c6a5cb68b2accf7",
+        "dest": "cargo/vendor/async-net-2.0.0"
+    },
+    {
+        "type": "inline",
+        "contents": "{\"package\": \"b948000fad4873c1c9339d60f2623323a0cfd3816e5181033c6a5cb68b2accf7\", \"files\": {}}",
+        "dest": "cargo/vendor/async-net-2.0.0",
         "dest-filename": ".cargo-checksum.json"
     },
     {
@@ -1468,7 +1481,7 @@
     {
         "type": "shell",
         "commands": [
-            "cp -r --reflink=auto \"flatpak-cargo/git/cosmic-panel-e63396b/cosmic-panel-config\" \"cargo/vendor/cosmic-panel-config\""
+            "cp -r --reflink=auto \"flatpak-cargo/git/cosmic-panel-d8482f3/cosmic-panel-config\" \"cargo/vendor/cosmic-panel-config\""
         ]
     },
     {
@@ -8184,7 +8197,7 @@
     {
         "type": "shell",
         "commands": [
-            "cp -r --reflink=auto \"flatpak-cargo/git/cosmic-panel-e63396b/xdg-shell-wrapper-config\" \"cargo/vendor/xdg-shell-wrapper-config\""
+            "cp -r --reflink=auto \"flatpak-cargo/git/cosmic-panel-d8482f3/xdg-shell-wrapper-config\" \"cargo/vendor/xdg-shell-wrapper-config\""
         ]
     },
     {

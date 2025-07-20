@@ -30,7 +30,7 @@
         {
           "type": "git",
           "url": "https://github.com/cosmic-utils/clipboard-manager.git",
-          "commit": "367ae2cb915e44db3d16eac145f61ed6f44d59eb"
+          "commit": "e0a4f8e56dc05d74e7ca86ae730273d1f09998ed"
         },
         "cargo-sources.json"
       ]

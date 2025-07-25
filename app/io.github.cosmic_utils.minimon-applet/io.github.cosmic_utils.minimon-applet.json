@@ -12,6 +12,7 @@
     "--socket=fallback-x11",
     "--filesystem=xdg-config/cosmic:rw",
     "--talk-name=com.system76.CosmicSettingsDaemon",
+    "--talk-name=org.freedesktop.Flatpak",
     "--filesystem=/sys/class/hwmon:ro",
     "--filesystem=/sys/class/drm:ro",
     "--filesystem=/sys/devices:ro",
@@ -46,7 +47,7 @@
         {
           "type": "git",
           "url": "https://github.com/cosmic-utils/minimon-applet.git",
-          "commit": "21a2ddfcd04e89a526918ae52af442c8cbac248f"
+          "commit": "6d4129f8dd6db616c85194362e5d296b25882374"
         },
         "cargo-sources.json"
       ]

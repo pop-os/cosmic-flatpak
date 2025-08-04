@@ -10,10 +10,10 @@
   "finish-args": [
     "--share=ipc",
     "--socket=wayland",
-    "--socket=fallback-x11",
     "--talk-name=com.system76.CosmicSettingsDaemon",
     "--device=all",
-    "--filesystem=~/.config/cosmic/com.system76.CosmicTheme.Mode:w"
+    "--filesystem=xdg-config/cosmic/com.system76.CosmicTheme.Mode:rw",
+    "--filesystem=xdg-config/cosmic:rw"
   ],
   "build-options": {
     "append-path": "/usr/lib/sdk/rust-stable/bin",
@@ -33,7 +33,7 @@
         {
           "type": "git",
           "url": "https://github.com/cosmic-utils/cosmic-ext-applet-external-monitor-brightness.git",
-          "commit": "20a9e536fd2ef57e628b33a485ca5163cf9fcb35"
+          "commit": "d543b0edaf6ab99db000b6d7a3e6705a70df2c64"
         },
         "cargo-sources.json"
       ]

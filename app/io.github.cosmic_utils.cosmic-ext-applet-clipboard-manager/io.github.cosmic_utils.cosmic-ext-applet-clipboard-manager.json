@@ -10,7 +10,8 @@
   "finish-args": [
     "--share=ipc",
     "--socket=wayland",
-    "--talk-name=com.system76.CosmicSettingsDaemon"
+    "--talk-name=com.system76.CosmicSettingsDaemon",
+    "--filesystem=xdg-config/cosmic:rw"
   ],
   "build-options": {
     "append-path": "/usr/lib/sdk/rust-stable/bin",
@@ -30,7 +31,7 @@
         {
           "type": "git",
           "url": "https://github.com/cosmic-utils/clipboard-manager.git",
-          "commit": "c80c6aff2076fbec15789210b0bf9f4c62c9df68"
+          "commit": "3b4d392f8bae47d5582e308dac0296eeb7365c6a"
         },
         "cargo-sources.json"
       ]

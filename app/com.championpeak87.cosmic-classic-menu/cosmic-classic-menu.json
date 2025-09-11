@@ -1,0 +1,55 @@
+{
+  "id": "com.championpeak87.cosmic-classic-menu",
+  "runtime": "org.freedesktop.Platform",
+  "runtime-version": "24.08",
+  "base": "com.system76.Cosmic.BaseApp",
+  "base-version": "stable",
+  "sdk": "org.freedesktop.Sdk",
+  "sdk-extensions": ["org.freedesktop.Sdk.Extension.rust-stable"],
+  "command": "cosmic-classic-menu",
+  "finish-args": [
+    "--filesystem=xdg-config/cosmic:rw",
+    "--talk-name=com.system76.CosmicSettingsDaemon",
+    "--system-talk-name=org.freedesktop.Accounts",
+    "--system-talk-name=org.freedesktop.login1",
+    "--socket=wayland",
+    "--device=dri",
+    "--talk-name=org.freedesktop.portal.Desktop",
+    "--talk-name=org.freedesktop.portal.Location",
+    "--talk-name=org.freedesktop.Flatpak",
+    "--talk-name=org.freedesktop.portal.*",
+    "--talk-name=org.freedesktop.ScreenSaver",
+    "--env=XDG_DATA_DIRS=$XDG_DATA_DIRS:/run/host/usr/share:/var/lib/flatpak/exports/share:/app/share",
+    "--filesystem=host-os:ro",
+    "--filesystem=/var/lib/flatpak/exports/share/applications:ro",
+    "--filesystem=/var/lib/flatpak/app:ro",
+    "--filesystem=/var/lib/flatpak/exports/share/icons:ro",
+    "--filesystem=~/.local/share/flatpak/exports/share/applications:ro",
+    "--filesystem=~/.local/share/flatpak/app:ro",
+    "--filesystem=~/.local/share/flatpak/exports/share/icons:ro"
+  ],
+  "build-options": {
+    "append-path": "/usr/lib/sdk/rust-stable/bin",
+    "env": {
+      "CARGO_HOME": "/run/build/cosmic-classic-menu/cargo"
+    }
+  },
+  "modules": [
+    {
+      "name": "cosmic-classic-menu",
+      "buildsystem": "simple",
+      "build-commands": [
+        "just build-release --verbose",
+        "just prefix=/app install"
+      ],
+      "sources": [
+        {
+          "type": "git",
+          "url": "https://github.com/championpeak87/cosmic-classic-menu.git",
+          "tag": "0.0.3"
+        },
+        "./cargo-sources.json"
+      ]
+    }
+  ]
+}

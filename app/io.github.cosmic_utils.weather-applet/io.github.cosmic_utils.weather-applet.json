@@ -38,7 +38,7 @@
         {
           "type": "git",
           "url": "https://github.com/cosmic-utils/cosmic-ext-applet-weather.git",
-          "commit": "f613c9dd156e84290765c34ca98ff8ede3b530fa"
+          "commit": "833e3109ccee94fc9dea6b2ad9e373bf3b23b35e"
         },
         "cargo-sources.json"
       ]

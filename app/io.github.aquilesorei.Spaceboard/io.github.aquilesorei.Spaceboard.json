@@ -1,10 +1,10 @@
 {
-  "id": "com.cosmic.VirtualKeyboard",
+  "id": "io.github.aquilesorei.Spaceboard",
   "runtime": "org.freedesktop.Platform",
   "runtime-version": "24.08",
   "sdk": "org.freedesktop.Sdk",
   "sdk-extensions": ["org.freedesktop.Sdk.Extension.rust-stable"],
-  "command": "cosmic-virtual-keyboard",
+  "command": "cosmic-ext-spaceboard",
   "finish-args": [
     "--socket=wayland",
     "--socket=session-bus",
@@ -16,7 +16,7 @@
   "build-options": {
     "append-path": "/usr/lib/sdk/rust-stable/bin",
     "env": {
-      "CARGO_HOME": "/run/build/cosmic-virtual-keyboard/cargo"
+      "CARGO_HOME": "/run/build/spaceboard/cargo"
     }
   },
   "modules": [
@@ -49,20 +49,20 @@
       ]
     },
     {
-      "name": "cosmic-virtual-keyboard",
+      "name": "spaceboard",
       "buildsystem": "simple",
       "build-commands": [
         "cargo --offline fetch --manifest-path Cargo.toml --verbose",
         "cargo --offline build --release --verbose",
-        "install -Dm755 ./target/release/cosmic-virtual-keyboard /app/bin/cosmic-virtual-keyboard",
-        "install -Dm644 ./cosmic-virtual-keyboard.desktop /app/share/applications/com.cosmic.VirtualKeyboard.desktop",
-        "install -Dm644 ./com.cosmic.VirtualKeyboard.appdata.xml /app/share/metainfo/com.cosmic.VirtualKeyboard.metainfo.xml",
-        "install -Dm644 ./icons/hicolor/scalable/apps/input-keyboard-symbolic.svg /app/share/icons/hicolor/scalable/apps/com.cosmic.VirtualKeyboard.svg"
+        "install -Dm755 ./target/release/cosmic-ext-spaceboard /app/bin/cosmic-ext-spaceboard",
+        "install -Dm644 ./spaceboard.desktop /app/share/applications/io.github.aquilesorei.Spaceboard.desktop",
+        "install -Dm644 ./io.github.aquilesorei.Spaceboard.appdata.xml /app/share/metainfo/io.github.aquilesorei.Spaceboard.metainfo.xml",
+        "install -Dm644 ./icons/hicolor/scalable/apps/input-keyboard-symbolic.svg /app/share/icons/hicolor/scalable/apps/io.github.aquilesorei.Spaceboard.svg"
       ],
       "sources": [
         {
           "type": "git",
-          "url": "https://github.com/Aquilesorei/cosmic-virtual-keyboard.git",
+          "url": "https://github.com/Aquilesorei/spaceboard.git",
           "branch": "master"
         },
         "./cargo-sources.json"

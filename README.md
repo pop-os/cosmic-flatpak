@@ -12,6 +12,6 @@ To test building an app, run the following commands:
 ```
 # Install dependencies (only run once):
 sudo apt-get install flatpak flatpak-builder just
-# Build app with ID com.example.app (replace ID with yours)
+# Build app with ID com.example.app (replace ID with yours):
 just build com.example.app
 ```

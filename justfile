@@ -1,27 +1,12 @@
+# Build repo
 repo:
     #!/usr/bin/env bash
-
     set -ex
 
     # Build all apps
-    arch="$(flatpak --default-arch)"
     ls -1 app | while read id
     do
-        mkdir -p "log/app/${id}"
-        flatpak-builder \
-            --arch="${arch}" \
-            --ccache \
-            --force-clean \
-            --gpg-sign="${DEBEMAIL}" \
-            --install-deps-from=flathub \
-            --repo=repo \
-            --require-changes \
-            --sandbox \
-            --user \
-            --verbose \
-            "build/app/${id}/${arch}" \
-            "app/${id}/${id}.json" \
-            2>&1 | tee "log/app/${id}/${arch}.txt"
+        just build ${id}
     done
 
     # Generate update information and appstream data
@@ -31,6 +16,27 @@ repo:
         --generate-static-deltas \
         --prune \
         repo
+
+# Build app with specified ID
+build id:
+    #!/usr/bin/env bash
+    set -ex
+    mkdir -p "log/app/{{id}}"
+    arch="$(flatpak --default-arch)"
+    flatpak-builder \
+        --arch="${arch}" \
+        --ccache \
+        --force-clean \
+        --gpg-sign="${DEBEMAIL}" \
+        --install-deps-from=flathub \
+        --repo=repo \
+        --require-changes \
+        --sandbox \
+        --user \
+        --verbose \
+        "build/app/{{id}}/${arch}" \
+        "app/{{id}}/{{id}}.json" \
+        2>&1 | tee "log/app/{{id}}/${arch}.txt"
 
 clean:
     rm -rf build log

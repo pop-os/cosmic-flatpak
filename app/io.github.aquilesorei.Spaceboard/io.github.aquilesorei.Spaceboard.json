@@ -30,8 +30,8 @@
       "sources": [
         {
           "type": "git",
-          "url": "https://github.com/jjsullivan5196/wvkbd.git",
-          "commit": "f9e9278e8c1d5d80615faebb9bb6a8d5eaaa5855"
+          "url": "https://github.com/Aquilesorei/wvkbd.git",
+          "commit": "ca2d9badbf15f474bbb80f860ca96564fa2c099e"
         }
       ],
       "modules": [
@@ -42,7 +42,7 @@
             {
               "type": "archive",
               "url": "https://gitlab.freedesktop.org/wayland/wayland-protocols/-/releases/1.32/downloads/wayland-protocols-1.32.tar.xz",
-              "sha256": "7459799d340c8296b695ef857c07ddef24c5a09b09ab6a74f7b92640372c2415"
+              "sha256": "7459799d340c8296b695ef857c07ddef24c5a09b09ab6a74f7b92640d2b1ba11"
             }
           ]
         }

@@ -30,8 +30,8 @@
       "sources": [
         {
           "type": "git",
-          "url": "https://github.com/jjsullivan5196/wvkbd.git",
-          "commit": "ed702f956216b5c638121763687ac5aa305bfba0"
+          "url": "https://github.com/Aquilesorei/wvkbd.git",
+          "commit": "ca2d9badbf15f474bbb80f860ca96564fa2c099e"
         }
       ],
       "modules": [

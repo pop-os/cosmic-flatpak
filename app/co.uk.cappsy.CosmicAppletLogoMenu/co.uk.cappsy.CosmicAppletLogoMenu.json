@@ -22,19 +22,19 @@
   "build-options": {
     "append-path": "/usr/lib/sdk/rust-stable/bin",
     "env": {
-      "CARGO_HOME": "/run/build/cosmic-applet-logomenu/cargo"
+      "CARGO_HOME": "/run/build/cosmic-ext-applet-logomenu/cargo"
     }
   },
   "modules": [
     {
-      "name": "cosmic-applet-logomenu",
+      "name": "cosmic-ext-applet-logomenu",
       "buildsystem": "simple",
       "build-commands": [
         "cargo --offline fetch --manifest-path Cargo.toml --verbose",
         "cd ./applet && cargo --offline build --release --verbose",
         "cd ./settings && cargo --offline build --release --verbose",
-        "install -Dm755 ./target/release/cosmic-applet-logomenu -t /app/bin",
-        "install -Dm755 ./target/release/cosmic-logomenu-settings -t /app/bin",
+        "install -Dm755 ./target/release/cosmic-ext-applet-logomenu -t /app/bin",
+        "install -Dm755 ./target/release/cosmic-ext-logomenu-settings -t /app/bin",
         "install -Dm644 ./res/co.uk.cappsy.CosmicAppletLogoMenu.desktop -t /app/share/applications",
         "install -Dm644 ./res/co.uk.cappsy.CosmicAppletLogoMenu.Settings.desktop /app/share/applications",
         "install -Dm644 ./res/co.uk.cappsy.CosmicAppletLogoMenu.metainfo.xml -t /app/share/metainfo",
@@ -43,8 +43,8 @@
       "sources": [
         {
           "type": "git",
-          "url": "https://github.com/cappsyco/cosmic-applet-logomenu.git",
-	  "tag": "v0.6.4"
+          "url": "https://github.com/cappsyco/cosmic-ext-applet-logomenu.git",
+	  "tag": "v0.6.5"
         },
         "./cargo-sources.json"
       ]

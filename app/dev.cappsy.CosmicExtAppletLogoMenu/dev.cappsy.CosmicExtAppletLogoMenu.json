@@ -31,8 +31,8 @@
       "buildsystem": "simple",
       "build-commands": [
         "cargo --offline fetch --manifest-path Cargo.toml --verbose",
-        "cd ./applet && cargo --offline build --release --verbose",
-        "cd ./settings && cargo --offline build --release --verbose",
+        "cd ./applet && cargo --offline build --release --features flatpak --verbose",
+        "cd ./settings && cargo --offline build --release --features flatpak --verbose",
         "install -Dm755 ./target/release/cosmic-ext-applet-logomenu -t /app/bin",
         "install -Dm755 ./target/release/cosmic-ext-logomenu-settings -t /app/bin",
         "install -Dm644 ./res/dev.cappsy.CosmicExtAppletLogoMenu.desktop -t /app/share/applications",
@@ -44,7 +44,7 @@
         {
           "type": "git",
           "url": "https://github.com/cappsyco/cosmic-ext-applet-logomenu.git",
-	  "tag": "v0.6.6"
+	  "tag": "v0.6.7"
         },
         "./cargo-sources.json"
       ]

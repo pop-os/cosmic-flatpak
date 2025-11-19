@@ -30,7 +30,7 @@
         "install -Dm755 ./target/release/cosmic-ext-applet-dict -t /app/bin",
         "install -Dm644 ./resources/app.desktop /app/share/applications/dev.cappsy.CosmicExtAppletDict.desktop",
         "install -Dm644 ./resources/app.metainfo.xml /app/share/metainfo/dev.cappsy.CosmicExtAppletDict.metainfo.xml",
-        "install -Dm644 ./resources/database/dictionary.db -t /app/share/dev.cappsy.CosmicExtAppletDict",
+        "install -Dm644 ./resources/database/wordset.db -t /app/share/dev.cappsy.CosmicExtAppletDict",
         "install -Dm644 ./resources/icons/hicolor/scalable/apps/icon.svg /app/share/icons/hicolor/scalable/apps/dev.cappsy.CosmicExtAppletDict-symbolic.svg"
       ],
       "sources": [

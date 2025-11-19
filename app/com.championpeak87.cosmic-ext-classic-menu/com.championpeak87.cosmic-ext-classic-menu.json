@@ -1,18 +1,22 @@
 {
-  "id": "com.championpeak87.cosmic-classic-menu",
+  "id": "com.championpeak87.cosmic-ext-classic-menu",
   "runtime": "org.freedesktop.Platform",
   "runtime-version": "24.08",
   "base": "com.system76.Cosmic.BaseApp",
   "base-version": "stable",
   "sdk": "org.freedesktop.Sdk",
   "sdk-extensions": ["org.freedesktop.Sdk.Extension.rust-stable"],
-  "command": "cosmic-classic-menu",
+  "command": "cosmic-ext-classic-menu-applet",
   "finish-args": [
+    "--socket=wayland",
+    "--socket=fallback-x11",
+    "--socket=system-bus",
+    "--socket=session-bus",
+    "--share=ipc",
     "--filesystem=xdg-config/cosmic:rw",
     "--talk-name=com.system76.CosmicSettingsDaemon",
     "--system-talk-name=org.freedesktop.Accounts",
     "--system-talk-name=org.freedesktop.login1",
-    "--socket=wayland",
     "--device=dri",
     "--talk-name=org.freedesktop.portal.Desktop",
     "--talk-name=org.freedesktop.portal.Location",
@@ -31,12 +35,12 @@
   "build-options": {
     "append-path": "/usr/lib/sdk/rust-stable/bin",
     "env": {
-      "CARGO_HOME": "/run/build/cosmic-classic-menu/cargo"
+      "CARGO_HOME": "/run/build/cosmic-ext-classic-menu/cargo"
     }
   },
   "modules": [
     {
-      "name": "cosmic-classic-menu",
+      "name": "cosmic-ext-classic-menu",
       "buildsystem": "simple",
       "build-commands": [
         "just build-release --verbose",
@@ -45,8 +49,8 @@
       "sources": [
         {
           "type": "git",
-          "url": "https://github.com/championpeak87/cosmic-classic-menu.git",
-          "tag": "0.0.3"
+          "url": "https://github.com/championpeak87/cosmic-ext-classic-menu.git",
+          "tag": "0.0.9"
         },
         "./cargo-sources.json"
       ]

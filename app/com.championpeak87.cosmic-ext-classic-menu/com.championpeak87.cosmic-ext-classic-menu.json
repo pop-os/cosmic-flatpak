@@ -50,7 +50,7 @@
         {
           "type": "git",
           "url": "https://github.com/championpeak87/cosmic-ext-classic-menu.git",
-          "tag": "0.0.9"
+          "tag": "0.0.10"
         },
         "./cargo-sources.json"
       ]

@@ -7,6 +7,8 @@
   "sdk-extensions": [
     "org.freedesktop.Sdk.Extension.rust-stable"
   ],
+  "base": "com.system76.Cosmic.BaseApp",
+  "base-version": "stable",
   "command": "cosmic-ext-applet-tempest",
   "finish-args": [
     "--share=ipc",

@@ -55,7 +55,7 @@ eol id rebase:
     ref="app/{{id}}/${arch}/master"
     if ostree --repo=repo show "${ref}"
     then
-        current_rebase="$(ostree --repo=repo show --print-metadata-key=ostree.endoflife-rebase "${ref}")"
+        current_rebase="$(ostree --repo=repo show --print-metadata-key=ostree.endoflife-rebase "${ref}" || true)"
         if [ "${current_rebase}" == "'app/{{rebase}}/${arch}/master'" ]
         then
             echo "{{id}} already rebased to {{rebase}}"

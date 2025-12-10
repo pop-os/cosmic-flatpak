@@ -45,7 +45,7 @@
         {
           "type": "git",
           "url": "https://github.com/cappsyco/cosmic-ext-applet-logomenu.git",
-	  "tag": "v0.6.9"
+	  "tag": "v0.6.10"
         },
         "./cargo-sources.json"
       ]

@@ -1,0 +1,19 @@
+diff --git a/resources/io.vulpapps.Chronomancer.desktop b/resources/io.vulpapps.Chronomancer.desktop
+index 1111111..2222222 100644
+--- a/resources/io.vulpapps.Chronomancer.desktop
++++ b/resources/io.vulpapps.Chronomancer.desktop
+@@ -3,13 +3,13 @@ Name=Chronomancer
+ Comment=An applet for creating and managing system timers
+ Type=Application
+ Icon=io.vulpapps.Chronomancer
+-Exec=chronomancer %F
++Exec=chronomancer
+ Terminal=false
+ StartupNotify=true
+ Categories=Utility;
+ Keywords=Timer;Reminder;Countdown;Systemd;Sleep;COSMIC;
+ MimeType=
+-NoDisplay=false
++NoDisplay=true
+ X-CosmicApplet=true
+ X-CosmicHoverPopup=Auto

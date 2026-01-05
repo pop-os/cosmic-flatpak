@@ -1,0 +1,50 @@
+{
+  "$schema": "https://raw.githubusercontent.com/flatpak/flatpak-builder/main/data/flatpak-manifest.schema.json",
+  "id": "com.vintagetechie.CosmicExtAppletCargoWatch",
+  "runtime": "org.freedesktop.Platform",
+  "runtime-version": "24.08",
+  "sdk": "org.freedesktop.Sdk",
+  "sdk-extensions": [
+    "org.freedesktop.Sdk.Extension.rust-stable"
+  ],
+  "base": "com.system76.Cosmic.BaseApp",
+  "base-version": "stable",
+  "command": "cosmic-ext-applet-cargowatch",
+  "finish-args": [
+    "--share=ipc",
+    "--socket=wayland",
+    "--socket=fallback-x11",
+    "--device=dri",
+    "--talk-name=com.system76.CosmicSettingsDaemon",
+    "--filesystem=xdg-config/cosmic:rw",
+    "--system-talk-name=org.freedesktop.UDisks2"
+  ],
+  "build-options": {
+    "append-path": "/usr/lib/sdk/rust-stable/bin",
+    "env": {
+      "CARGO_HOME": "/run/build/cosmic-ext-applet-cargowatch/cargo"
+    }
+  },
+  "modules": [
+    {
+      "name": "cosmic-ext-applet-cargowatch",
+      "buildsystem": "simple",
+      "build-commands": [
+        "cargo --offline fetch --manifest-path Cargo.toml",
+        "cargo --offline build --release",
+        "install -Dm755 target/release/cosmic-ext-applet-cargowatch -t /app/bin/",
+        "install -Dm644 res/com.vintagetechie.CosmicExtAppletCargoWatch.desktop -t /app/share/applications/",
+        "install -Dm644 res/com.vintagetechie.CosmicExtAppletCargoWatch.metainfo.xml -t /app/share/metainfo/",
+        "install -Dm644 res/icons/hicolor/scalable/apps/com.vintagetechie.CosmicExtAppletCargoWatch.svg -t /app/share/icons/hicolor/scalable/apps/"
+      ],
+      "sources": [
+        {
+          "type": "git",
+          "url": "https://codeberg.org/VintageTechie/cosmic-ext-applet-cargowatch.git",
+          "tag": "v0.1.2"
+        },
+        "cargo-sources.json"
+      ]
+    }
+  ]
+}

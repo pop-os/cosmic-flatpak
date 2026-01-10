@@ -1,0 +1,47 @@
+{
+  "id": "dev.heppen.CosmicExtConnect",
+  "runtime": "org.freedesktop.Platform",
+  "runtime-version": "24.08",
+  "base": "com.system76.Cosmic.BaseApp",
+  "base-version": "stable",
+  "sdk": "org.freedesktop.Sdk",
+  "sdk-extensions": ["org.freedesktop.Sdk.Extension.rust-stable"],
+  "command": "cosmic-ext-applet-connect",
+  "finish-args": [
+    "--share=ipc",
+    "--socket=wayland",
+    "--socket=inherit-wayland-socket",
+    "--socket=session-bus",
+    "--device=dri",
+    "--share=network",
+    "--filesystem=home:ro",
+    "--filesystem=xdg-download",
+    "--filesystem=xdg-config/cosmic:rw"
+  ],
+  "build-options": {
+    "append-path": "/usr/lib/sdk/rust-stable/bin"
+  },
+  "modules": [
+    {
+      "name": "cosmic-ext-applet-connect",
+      "buildsystem": "simple",
+        "build-options": {
+            "env": {
+                "CARGO_HOME": "/run/build/cosmic-ext-applet-connect/cargo"
+            }
+      },
+      "build-commands": [
+        "make build-offline",
+        "make install-flatpak"
+      ],
+      "sources": [
+        {
+            "type": "git",
+            "uri": "https://github.com/hepp3n/kdeconnect.git",
+            "commit": "9a0989b6897a3ad4d3e3bc09ce20a3110cfb040e"
+        },
+        "cargo-sources.json"
+      ]
+    }
+  ]
+}

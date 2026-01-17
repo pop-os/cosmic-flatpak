@@ -30,15 +30,13 @@
         "install -Dm0755 ./target/release/cosmic-ext-applet-weather /app/bin/cosmic-ext-applet-weather",
         "install -Dm0644 ./data/io.github.cosmic_utils.weather-applet.desktop -t /app/share/applications/",
         "install -Dm0644 ./data/io.github.cosmic_utils.weather-applet.metainfo.xml -t /app/share/metainfo/",
-        "install -Dm0644 ./data/io.github.cosmic_utils.weather-applet-symbolic.svg -t /app/share/icons/hicolor/scalable/apps/",
-        "install -Dm0644 ./data/io.github.cosmic_utils.weather-applet-symbolic-sun.svg -t /app/share/icons/hicolor/scalable/apps/",
-        "install -Dm0644 ./data/io.github.cosmic_utils.weather-applet-symbolic-moon.svg -t /app/share/icons/hicolor/scalable/apps/"
+        "install -Dm0644 ./data/io.github.cosmic_utils.weather-applet-symbolic.svg -t /app/share/icons/hicolor/scalable/apps/"
       ],
       "sources": [
         {
           "type": "git",
           "url": "https://github.com/cosmic-utils/cosmic-ext-applet-weather.git",
-          "commit": "3a1780a61dd44a02eb9115209f8b30917d12d4c9"
+          "commit": "ac8a3ea7addc37c258df828de7612148391c262a"
         },
         "cargo-sources.json"
       ]

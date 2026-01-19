@@ -37,8 +37,8 @@
       "sources": [
         {
             "type": "git",
-            "uri": "https://github.com/hepp3n/kdeconnect.git",
-            "commit": "9a0989b6897a3ad4d3e3bc09ce20a3110cfb040e"
+            "url": "https://github.com/hepp3n/kdeconnect",
+            "commit": "73faca8bd988fe9529a35fa861f29ba9ba720721"
         },
         "cargo-sources.json"
       ]

@@ -1,0 +1,46 @@
+{
+  "id": "dev.cappsy.CosmicExtAppletDrives",
+  "runtime": "org.freedesktop.Platform",
+  "runtime-version": "24.08",
+  "sdk": "org.freedesktop.Sdk",
+  "sdk-extensions": ["org.freedesktop.Sdk.Extension.rust-stable"],
+  "base": "com.system76.Cosmic.BaseApp",
+  "base-version": "stable",
+  "finish-args": [
+    "--socket=wayland",
+    "--socket=fallback-x11",
+    "--talk-name=com.system76.CosmicSettingsDaemon",
+    "--talk-name=org.freedesktop.Flatpak",
+    "--filesystem=xdg-config/cosmic:rw",
+    "--filesystem=host",
+    "--share=ipc"
+  ],
+  "build-options": {
+    "append-path": "/usr/lib/sdk/rust-stable/bin",
+    "env": {
+      "CARGO_HOME": "/run/build/cosmic-ext-applet-drives/cargo"
+    }
+  },
+  "modules": [
+    {
+      "name": "cosmic-ext-applet-drives",
+      "buildsystem": "simple",
+      "build-commands": [
+        "cargo --offline fetch --manifest-path Cargo.toml --verbose",
+        "cargo --offline build --release --features flatpak --verbose",
+        "install -Dm755 ./target/release/cosmic-ext-applet-drives -t /app/bin",
+        "install -Dm644 ./resources/app.desktop /app/share/applications/dev.cappsy.CosmicExtAppletDrives.desktop",
+        "install -Dm644 ./resources/app.metainfo.xml /app/share/metainfo/dev.cappsy.CosmicExtAppletDrives.metainfo.xml",
+        "install -Dm644 ./resources/icons/hicolor/scalable/apps/icon.svg /app/share/icons/hicolor/scalable/apps/dev.cappsy.CosmicExtAppletDrives-symbolic.svg"
+      ],
+      "sources": [
+        {
+          "type": "git",
+          "url": "https://github.com/cappsyco/cosmic-ext-applet-dict.git",
+          "tag": "v0.1.0"
+        },
+        "./cargo-sources.json"
+      ]
+    }
+  ]
+}

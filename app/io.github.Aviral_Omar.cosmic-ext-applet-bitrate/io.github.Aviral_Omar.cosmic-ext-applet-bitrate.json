@@ -36,7 +36,7 @@
         {
           "type": "git",
           "url": "https://github.com/Aviral-Omar/bitrate.git",
-          "commit": "db053e6a6de2349c6c61e6038640c27bd42e4ca9"
+          "tag": "2.0.2"
         },
         "cargo-sources.json"
       ]

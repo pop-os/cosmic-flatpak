@@ -64,7 +64,7 @@
         {
           "type": "git",
           "url": "https://github.com/D-Brox/cosmic-ext-applet-privacy-indicator.git",
-          "commit": "b6579762e10bec56161f31f84f66e08dd08127f3"
+          "commit": "96b9a81f90dce37416fed8df3c583e3f1bc5f0fa"
         },
         "generated-sources.json"
       ]

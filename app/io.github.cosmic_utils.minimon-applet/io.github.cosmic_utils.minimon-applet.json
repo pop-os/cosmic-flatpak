@@ -1,7 +1,7 @@
 {
   "id": "io.github.cosmic_utils.minimon-applet",
   "runtime": "org.freedesktop.Platform",
-  "runtime-version": "24.08",
+  "runtime-version": "25.08",
   "sdk": "org.freedesktop.Sdk",
   "sdk-extensions": ["org.freedesktop.Sdk.Extension.rust-stable"],
   "base": "com.system76.Cosmic.BaseApp",
@@ -47,7 +47,7 @@
         {
           "type": "git",
           "url": "https://github.com/cosmic-utils/minimon-applet.git",
-          "commit": "22c2b9e9583d3b585fc3d9df600e902ae59e7155"
+          "commit": "e13be10a0c463e9e469dd1b83286f680efc4bb8b"
         },
         "cargo-sources.json"
       ]

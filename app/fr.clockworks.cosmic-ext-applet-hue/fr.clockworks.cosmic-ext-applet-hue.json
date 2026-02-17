@@ -1,0 +1,46 @@
+{
+  "id": "fr.clockworks.cosmic-ext-applet-hue",
+  "runtime": "org.freedesktop.Platform",
+  "runtime-version": "25.08",
+  "sdk": "org.freedesktop.Sdk",
+  "sdk-extensions": ["org.freedesktop.Sdk.Extension.rust-stable"],
+  "base": "com.system76.Cosmic.BaseApp",
+  "base-version": "stable",
+  "finish-args": [
+    "--socket=wayland",
+    "--socket=fallback-x11",
+    "--share=network",
+    "--talk-name=com.system76.CosmicSettingsDaemon",
+    "--talk-name=org.freedesktop.Flatpak",
+    "--filesystem=xdg-config/cosmic:rw",
+    "--share=ipc"
+  ],
+  "build-options": {
+    "append-path": "/usr/lib/sdk/rust-stable/bin",
+    "env": {
+      "CARGO_HOME": "/run/build/cosmic-ext-applet-hue/cargo"
+    }
+  },
+  "modules": [
+    {
+      "name": "cosmic-ext-applet-hue",
+      "buildsystem": "simple",
+      "build-commands": [
+        "cargo --offline fetch --manifest-path Cargo.toml --verbose",
+        "cargo --offline build --release --verbose",
+        "install -Dm755 ./target/release/cosmic-ext-applet-hue -t /app/bin",
+        "install -Dm644 ./resources/app.desktop /app/share/applications/fr.clockworks.cosmic-ext-applet-hue.desktop",
+        "install -Dm644 ./resources/app.metainfo.xml /app/share/metainfo/fr.clockworks.cosmic-ext-applet-hue.metainfo.xml",
+        "install -Dm644 ./resources/icon.svg /app/share/icons/hicolor/scalable/apps/fr.clockworks.cosmic-ext-applet-hue.svg"
+      ],
+      "sources": [
+        {
+          "type": "git",
+          "url": "https://github.com/clockworksfr/cosmic-ext-applet-hue.git",
+          "tag": "v0.1.0"
+        },
+        "./cargo-sources.json"
+      ]
+    }
+  ]
+}

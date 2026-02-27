@@ -41,7 +41,7 @@
         {
           "type": "git",
           "url": "https://codeberg.org/VintageTechie/cosmic-ext-applet-tempest.git",
-          "tag": "v2.4.0"
+          "tag": "v2.4.1"
         },
         "cargo-sources.json"
       ]

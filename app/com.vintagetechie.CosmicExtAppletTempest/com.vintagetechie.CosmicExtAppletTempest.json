@@ -17,7 +17,8 @@
     "--device=dri",
     "--share=network",
     "--talk-name=com.system76.CosmicSettingsDaemon",
-    "--filesystem=xdg-config/cosmic:rw"
+    "--filesystem=xdg-config/cosmic:rw",
+    "--system-talk-name=org.freedesktop.NetworkManager"
   ],
   "build-options": {
     "append-path": "/usr/lib/sdk/rust-stable/bin",
@@ -40,8 +41,8 @@
       "sources": [
         {
           "type": "git",
-          "url": "https://codeberg.org/VintageTechie/cosmic-ext-applet-tempest.git",
-          "tag": "v2.4.1"
+          "url": "https://gitlab.com/vintagetechie/cosmic-ext-applet-tempest.git",
+          "tag": "v2.4.3"
         },
         "cargo-sources.json"
       ]

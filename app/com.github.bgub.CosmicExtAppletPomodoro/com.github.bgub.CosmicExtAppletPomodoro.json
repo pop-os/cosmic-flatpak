@@ -30,7 +30,7 @@
       "sources": [
         {
           "type": "git",
-          "url": "https://github.com/bgub/cosmic-ext-applet-pomodoro.git",
+          "url": "https://github.com/cosmic-utils/cosmic-ext-applet-pomodoro.git",
           "tag": "0.1.0"
         },
         "cargo-sources.json"

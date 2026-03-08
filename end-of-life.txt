@@ -1,3 +1,4 @@
 # These IDs are end of life
 # This is in the format OldID=NewID
 co.uk.cappsy.CosmicAppletLogoMenu=dev.cappsy.CosmicExtAppletLogoMenu
+io.github.Aviral_Omar.cosmic-ext-applet-bitrate=io.github.avomar.cosmic-ext-applet-bitrate

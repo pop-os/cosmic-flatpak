@@ -17,10 +17,7 @@
         "--device=dri",
         "--share=network",
         "--filesystem=xdg-download",
-        "--filesystem=xdg-config/cosmic:rw",
-        "--talk-name=org.freedesktop.Notifications",
-        "--talk-name=org.freedesktop.portal.Desktop",
-        "--own-name=io.github.hepp3n.kdeconnect"
+        "--filesystem=xdg-config/cosmic:rw"
     ],
     "build-options": {
         "append-path": "/usr/lib/sdk/rust-stable/bin"
@@ -42,7 +39,7 @@
                 {
                     "type": "git",
                     "url": "https://github.com/hepp3n/kdeconnect",
-                    "commit": "80f2d2143ef819d065aedfa0c91c13d7f2f36d72"
+                    "commit": "8e968d4c776526f7fec96c0d8b3b583bee371db6"
                 },
                 "cargo-sources.json"
             ]

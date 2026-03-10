@@ -40,7 +40,7 @@
         {
           "type": "git",
           "url": "https://github.com/petar030/cosmic-pomodoro.git",
-          "commit": "581700bb528e68f882da6b328d9551be27b58c0c"
+          "commit": "b76567db87dfa8dc95c20e19b0168546f6b2f17d"
         },
         "cargo-sources.json"
       ]

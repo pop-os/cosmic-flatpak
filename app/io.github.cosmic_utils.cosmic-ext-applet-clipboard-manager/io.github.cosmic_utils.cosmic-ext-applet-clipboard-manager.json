@@ -1,7 +1,7 @@
 {
   "id": "io.github.cosmic_utils.cosmic-ext-applet-clipboard-manager",
   "runtime": "org.freedesktop.Platform",
-  "runtime-version": "24.08",
+  "runtime-version": "25.08",
   "base": "com.system76.Cosmic.BaseApp",
   "base-version": "stable",
   "sdk": "org.freedesktop.Sdk",
@@ -10,6 +10,7 @@
   "finish-args": [
     "--share=ipc",
     "--socket=wayland",
+    "--filesystem=/run/user",
     "--talk-name=com.system76.CosmicSettingsDaemon",
     "--filesystem=xdg-config/cosmic:rw"
   ],
@@ -31,7 +32,7 @@
         {
           "type": "git",
           "url": "https://github.com/cosmic-utils/clipboard-manager.git",
-          "commit": "b54e0561b22e9bc2101892a0a84b2b8d37752cfc"
+          "commit": "a9c0d491640ab8f657cd85dc67151d1f9193cdea"
         },
         "cargo-sources.json"
       ]

@@ -1,7 +1,7 @@
 {
   "id": "com.github.bgub.CosmicExtAppletVigil",
   "runtime": "org.freedesktop.Platform",
-  "runtime-version": "24.08",
+  "runtime-version": "25.08",
   "base": "com.system76.Cosmic.BaseApp",
   "base-version": "stable",
   "sdk": "org.freedesktop.Sdk",
@@ -25,8 +25,12 @@
       "name": "cosmic-ext-applet-vigil",
       "buildsystem": "simple",
       "build-commands": [
-        "just build-release --verbose --offline",
-        "just prefix=/app install"
+        "cargo --offline fetch --manifest-path Cargo.toml --verbose",
+        "cargo --offline build --release --verbose",
+        "install -Dm0755 ./target/release/cosmic-ext-applet-vigil /app/bin/cosmic-ext-applet-vigil",
+        "install -Dm0644 ./resources/app.desktop /app/share/applications/com.github.bgub.CosmicExtAppletVigil.desktop",
+        "install -Dm0644 ./resources/app.metainfo.xml /app/share/metainfo/com.github.bgub.CosmicExtAppletVigil.metainfo.xml",
+        "install -Dm0644 ./resources/icon.svg /app/share/icons/hicolor/scalable/apps/com.github.bgub.CosmicExtAppletVigil.svg"
       ],
       "sources": [
         {

@@ -1,0 +1,66 @@
+{
+  "$schema": "https://raw.githubusercontent.com/flatpak/flatpak-builder/main/data/flatpak-manifest.schema.json",
+  "id": "com.github.MiracleForge.cosmic-ext-marketwatch",
+  "runtime": "org.freedesktop.Platform",
+  "runtime-version": "24.08",
+
+  "base": "com.system76.Cosmic.BaseApp",
+  "base-version": "stable",
+
+  "sdk": "org.freedesktop.Sdk",
+
+"sdk-extensions": [
+  "org.freedesktop.Sdk.Extension.rust-nightly"
+  ],
+
+  "command": "cosmic-ext-marketwatch",
+
+  "finish-args": [
+    "--share=ipc",
+    "--socket=wayland",
+    "--socket=fallback-x11",
+    "--device=dri",
+
+    "--share=network",
+
+    "--talk-name=com.system76.CosmicSettingsDaemon",
+
+    "--filesystem=xdg-config/cosmic:rw"
+  ],
+
+"build-options": {
+  "append-path": "/usr/lib/sdk/rust-nightly/bin",
+  "env": {
+    "CARGO_HOME": "/run/build/cosmic-ext-marketwatch/cargo"
+  }
+},
+
+  "modules": [
+    {
+      "name": "cosmic-ext-marketwatch",
+      "buildsystem": "simple",
+
+      "build-commands": [
+        "cargo --offline fetch --manifest-path Cargo.toml",
+        "cargo --offline build --release",
+
+        "install -Dm755 target/release/cosmic-ext-marketwatch /app/bin/cosmic-ext-marketwatch",
+
+        "install -Dm644 flatpak/com.github.MiracleForge.cosmic-ext-marketwatch.desktop /app/share/applications/com.github.MiracleForge.cosmic-ext-marketwatch.desktop",
+        "install -Dm644 resources/app.metainfo.xml /app/share/metainfo/com.github.MiracleForge.cosmic-ext-marketwatch.metainfo.xml",
+
+
+        "install -Dm644 resources/icons/hicolor/scalable/apps/com.github.MiracleForge.cosmic-ext-marketwatch.svg /app/share/icons/hicolor/scalable/apps/com.github.MiracleForge.cosmic-ext-marketwatch.svg",
+        "install -Dm644 resources/icons/hicolor/scalable/apps/com.github.MiracleForge.cosmic-ext-marketwatch-panel.svg /app/share/icons/hicolor/scalable/apps/com.github.MiracleForge.cosmic-ext-marketwatch-panel.svg"
+      ],
+      "sources": [
+        {
+          "type": "git",
+          "url": "https://github.com/MiracleForge/cosmic-ext-marketwatch.git",
+          "tag": "v1.0.1"
+        },
+        "cargo-sources.json"
+      ]
+    }
+  ]
+}

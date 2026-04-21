@@ -1,0 +1,50 @@
+{
+  "id": "io.github.k33wee.clippy-land",
+  "runtime": "org.freedesktop.Platform",
+  "runtime-version": "25.08",
+  "base": "com.system76.Cosmic.BaseApp",
+  "base-version": "stable",
+  "sdk": "org.freedesktop.Sdk",
+  "sdk-extensions": ["org.freedesktop.Sdk.Extension.rust-stable"],
+  "command": "cosmic-applet-clippy-land.sh",
+  "finish-args": [
+    "--share=ipc",
+    "--socket=wayland",
+    "--socket=fallback-x11",
+    "--filesystem=/run/user",
+    "--filesystem=xdg-config/cosmic:rw",
+    "--talk-name=com.system76.CosmicSettingsDaemon"
+  ],
+  "build-options": {
+    "append-path": "/usr/lib/sdk/rust-stable/bin",
+    "env": {
+      "CARGO_HOME": "/run/build/cosmic-applet-clippy-land/cargo"
+    }
+  },
+  "modules": [
+    {
+      "name": "cosmic-applet-clippy-land",
+      "buildsystem": "simple",
+      "build-commands": [
+        "cargo --offline fetch --manifest-path Cargo.toml --verbose",
+        "cargo --offline build --release --verbose",
+        "install -Dm0755 target/release/cosmic-applet-clippy-land /app/bin/cosmic-applet-clippy-land",
+        "install -Dm0755 resources/cosmic-applet-clippy-land.sh /app/bin/cosmic-applet-clippy-land.sh",
+        "install -Dm0644 resources/io.github.k33wee.clippy-land.desktop /app/share/applications/io.github.k33wee.clippy-land.desktop",
+        "install -Dm0644 resources/io.github.k33wee.clippy-land.metainfo.xml /app/share/metainfo/io.github.k33wee.clippy-land.metainfo.xml",
+        "install -Dm0644 resources/icon.svg /app/share/icons/hicolor/scalable/apps/io.github.k33wee.clippy-land.svg",
+        "install -Dm0644 resources/icon.svg /app/share/icons/hicolor/scalable/apps/io.github.k33wee.clippy-land-symbolic.svg",
+        "install -Dm0644 LICENSE /app/share/licenses/io.github.k33wee.clippy-land/LICENSE"
+      ],
+      "sources": [
+        {
+          "type": "git",
+          "url": "https://github.com/k33wee/clippy-land.git",
+          "tag": "v0.4.0",
+          "commit": "03ac599f3f4b05eb6d6ea3e3ec8a5015d7151627"
+        },
+        "cargo-sources.json"
+      ]
+    }
+  ]
+}

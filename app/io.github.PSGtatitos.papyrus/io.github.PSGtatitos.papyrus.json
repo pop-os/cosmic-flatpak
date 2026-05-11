@@ -1,13 +1,8 @@
 {
     "id": "io.github.PSGtatitos.papyrus",
-    "runtime": "org.freedesktop.Platform",
-    "runtime-version": "25.08",
-    "sdk": "org.freedesktop.Sdk",
-    "sdk-extensions": [
-        "org.freedesktop.Sdk.Extension.rust-stable"
-    ],
-    "base": "com.system76.Cosmic.BaseApp",
-    "base-version": "stable",
+    "runtime": "org.gnome.Platform",
+    "runtime-version": "47",
+    "sdk": "org.gnome.Sdk",
     "command": "papyrus",
     "finish-args": [
         "--share=ipc",
@@ -15,7 +10,9 @@
         "--device=dri",
         "--share=network",
         "--filesystem=home",
-        "--filesystem=xdg-config/cosmic:rw"
+        "--filesystem=xdg-config/cosmic:rw",
+        "--socket=session-bus",
+        "--env=PYTHONPATH=/app/lib/python3.13/site-packages"
     ],
     "modules": [
         {
@@ -132,6 +129,8 @@
             "name": "papyrus",
             "buildsystem": "simple",
             "build-commands": [
+                "chmod +x papyrus.py",
+                "sed -i '1i#!/usr/bin/env python3' papyrus.py || true",
                 "install -Dm755 papyrus.py /app/bin/papyrus",
                 "install -Dm644 io.github.PSGtatitos.papyrus.desktop /app/share/applications/io.github.PSGtatitos.papyrus.desktop",
                 "install -Dm644 assets/icon.png /app/share/icons/hicolor/256x256/apps/io.github.PSGtatitos.papyrus.png",

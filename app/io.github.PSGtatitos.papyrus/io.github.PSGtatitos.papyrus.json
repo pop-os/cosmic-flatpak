@@ -12,7 +12,8 @@
         "--filesystem=home",
         "--filesystem=xdg-config/cosmic:rw",
         "--socket=session-bus",
-        "--env=PYTHONPATH=/app/lib/python3.13/site-packages"
+        "--env=PYTHONPATH=/app/lib/python3.13/site-packages",
+        "--talk-name=org.freedesktop.Flatpak"
     ],
     "modules": [
         {

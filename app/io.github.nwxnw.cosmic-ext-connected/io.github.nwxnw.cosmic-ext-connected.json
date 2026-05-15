@@ -1,0 +1,48 @@
+{
+    "id": "io.github.nwxnw.cosmic-ext-connected",
+    "runtime": "org.freedesktop.Platform",
+    "runtime-version": "25.08",
+    "sdk": "org.freedesktop.Sdk",
+    "sdk-extensions": ["org.freedesktop.Sdk.Extension.rust-stable"],
+    "base": "com.system76.Cosmic.BaseApp",
+    "base-version": "stable",
+    "command": "cosmic-ext-connected.sh",
+    "finish-args": [
+        "--share=ipc",
+        "--socket=wayland",
+        "--socket=session-bus",
+        "--device=dri",
+        "--filesystem=xdg-config/cosmic:rw",
+        "--filesystem=xdg-data/kpeoplevcard:ro",
+        "--filesystem=xdg-cache/kdeconnect.daemon:ro"
+    ],
+    "build-options": {
+        "append-path": "/usr/lib/sdk/rust-stable/bin",
+        "env": {
+            "CARGO_HOME": "/run/build/cosmic-ext-connected/cargo",
+            "BIN_DIR": "/app/bin",
+            "APP_DIR": "/app/share/applications",
+            "METAINFO_DIR": "/app/share/metainfo",
+            "ICON_DIR": "/app/share/icons/hicolor/scalable/apps"
+        }
+    },
+    "modules": [
+        {
+            "name": "cosmic-ext-connected",
+            "buildsystem": "simple",
+            "build-commands": [
+                "just build-release --offline --verbose",
+                "just install"
+            ],
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://github.com/nwxnw/cosmic-ext-connected",
+                    "tag": "v0.5.1",
+                    "commit": "edd4ba20953862ddf479ef92a8b3d9fff54130ae"
+                },
+                "cargo-sources.json"
+            ]
+        }
+    ]
+}

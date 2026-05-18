@@ -1,0 +1,47 @@
+{
+  "id": "com.github.armaaar.CosmicAppletRotation",
+  "runtime": "org.freedesktop.Platform",
+  "runtime-version": "24.08",
+  "sdk": "org.freedesktop.Sdk",
+  "sdk-extensions": ["org.freedesktop.Sdk.Extension.rust-stable"],
+  "base": "com.system76.Cosmic.BaseApp",
+  "base-version": "stable",
+  "command": "cosmic-applet-rotation",
+  "finish-args": [
+    "--socket=wayland",
+    "--share=ipc",
+    "--device=dri",
+    "--system-talk-name=net.hadess.SensorProxy",
+    "--talk-name=org.freedesktop.Flatpak",
+    "--talk-name=com.system76.CosmicSettingsDaemon",
+    "--filesystem=xdg-config/cosmic:rw"
+  ],
+  "build-options": {
+    "append-path": "/usr/lib/sdk/rust-stable/bin",
+    "env": {
+      "CARGO_HOME": "/run/build/cosmic-applet-rotation/cargo"
+    }
+  },
+  "modules": [
+    {
+      "name": "cosmic-applet-rotation",
+      "buildsystem": "simple",
+      "build-commands": [
+        "cargo --offline fetch --manifest-path Cargo.toml --verbose",
+        "cargo --offline build --release --verbose",
+        "install -Dm755 target/release/cosmic-applet-rotation /app/bin/cosmic-applet-rotation",
+        "install -Dm644 resources/app.desktop /app/share/applications/com.github.armaaar.CosmicAppletRotation.desktop",
+        "install -Dm644 resources/com.github.armaaar.CosmicAppletRotation.metainfo.xml /app/share/metainfo/com.github.armaaar.CosmicAppletRotation.metainfo.xml",
+        "install -Dm644 resources/com.github.armaaar.CosmicAppletRotation-symbolic.svg /app/share/icons/hicolor/scalable/apps/com.github.armaaar.CosmicAppletRotation-symbolic.svg"
+      ],
+      "sources": [
+        {
+          "type": "git",
+          "url": "https://github.com/armaaar/cosmic-applet-rotation.git",
+          "tag": "v0.1.0"
+        },
+        "cargo-sources.json"
+      ]
+    }
+  ]
+}

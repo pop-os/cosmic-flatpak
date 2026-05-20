@@ -42,59 +42,55 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/libass/libass/releases/download/0.17.3/libass-0.17.3.tar.xz",
-                    "sha256": "eae425da50f0015c21f7b3a9c7262a910f0218af469e22e2931462fed3c50959"
+                    "url": "https://github.com/libass/libass/releases/download/0.17.1/libass-0.17.1.tar.xz",
+                    "sha256": "f0da0b4b45437de3e5dd9bda12b9228e13d3968ad02f3e0ec39f50689b940ae4"
                 }
             ]
         },
         {
             "name": "libmpv",
-            "cleanup": [
-                "/include",
-                "/lib/pkgconfig"
-            ],
             "buildsystem": "meson",
             "config-opts": [
-                "-Dlibmpv=true",
+                "-Ddefault_library=shared",
                 "-Dcplayer=false",
-                "-Dbuild-date=false",
+                "-Dlcms2=disabled",
+                "-Dlua=disabled",
+                "-Djavascript=disabled",
+                "-Dxv=disabled",
                 "-Dalsa=disabled",
+                "-Djack=disabled",
+                "-Dpipewire=disabled",
+                "-Dpulse=disabled",
+                "-Dsndio=disabled",
                 "--libdir=/app/lib"
             ],
             "sources": [
                 {
-                    "type": "archive",
-                    "url": "https://github.com/mpv-player/mpv/archive/refs/tags/v0.38.0.tar.gz",
-                    "sha256": "86d9ef40b6058732f67b46d0bbda24a074fae860b3eaae05bab3145041303066"
+                    "type": "git",
+                    "url": "https://github.com/mpv-player/mpv.git",
+                    "tag": "v0.37.0"
                 }
             ]
         },
         {
             "name": "mpvpaper",
             "buildsystem": "meson",
-            "config-opts": [
-                "--prefix=/app"
-            ],
             "sources": [
                 {
                     "type": "git",
                     "url": "https://github.com/GhostNaN/mpvpaper.git",
-                    "branch": "master"
+                    "tag": "1.5"
                 }
             ]
         },
         {
             "name": "python3-pygobject",
             "buildsystem": "meson",
-            "config-opts": [
-                "--prefix=/app",
-                "-Dpycairo=disabled"
-            ],
             "sources": [
                 {
                     "type": "archive",
                     "url": "https://download.gnome.org/sources/pygobject/3.50/pygobject-3.50.0.tar.xz",
-                    "sha256": "8d836e75b5a881d457ee1622cae4a32bcdba28a0ba562193adb3bbb472472212"
+                    "sha256": "47cb46f0436d933e36e6378a9c2ca247f1b95ff883eb9e5e6e30b6c69788d6f9"
                 }
             ]
         },
@@ -107,8 +103,8 @@
             "sources": [
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/source/p/pybind11/pybind11-2.13.6.tar.gz",
-                    "sha256": "ba6af10348c12b24e92fa086b39cfba0eff619b61ac77c406167d813b096d39a"
+                    "url": "https://files.pythonhosted.org/packages/49/73/0e698ef6577f8841753fb9ebbebf62677bc94b630b91d29c29d0f952f406/pybind11-2.13.6.tar.gz",
+                    "sha256": "164299b66aa10df48bfda6414704e6fe4ef0f878f7733c406167d813b096d39a"
                 }
             ]
         },
@@ -127,19 +123,32 @@
             ]
         },
         {
+            "name": "ffmpeg-cli",
+            "buildsystem": "simple",
+            "build-commands": [
+                "mkdir -p /app/bin",
+                "cp ffmpeg-*-static/ffmpeg /app/bin/ffmpeg"
+            ],
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://johnvansickle.com/ffmpeg/releases/ffmpeg-release-amd64-static.tar.xz",
+                    "sha256": "4e1a0b387796d1101b0f5b1129b16194b1509bca36f6d6df5419b4fcb5df8075"
+                }
+            ]
+        },
+        {
             "name": "papyrus",
             "buildsystem": "simple",
             "build-commands": [
                 "install -Dm755 papyrus.py /app/bin/papyrus",
                 "install -Dm644 io.github.PSGtatitos.papyrus.desktop /app/share/applications/io.github.PSGtatitos.papyrus.desktop",
-                "install -Dm644 assets/icon.png /app/share/icons/hicolor/256x256/apps/io.github.PSGtatitos.papyrus.png",
-                "install -Dm644 io.github.PSGtatitos.papyrus.metainfo.xml /app/share/metainfo/io.github.PSGtatitos.papyrus.metainfo.xml"
+                "install -Dm644 assets/icon.png /app/share/icons/hicolor/256x256/apps/io.github.PSGtatitos.papyrus.png"
             ],
             "sources": [
                 {
-                    "type": "git",
-                    "url": "https://github.com/PSGtatitos/papyrus.git",
-                    "branch": "main"
+                    "type": "dir",
+                    "path": "."
                 }
             ]
         }

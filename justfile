@@ -35,6 +35,7 @@ build id:
     flatpak-builder \
         --arch="${arch}" \
         --ccache \
+        --delete-build-dirs \
         --force-clean \
         --gpg-sign="${DEBEMAIL}" \
         --install-deps-from=flathub \

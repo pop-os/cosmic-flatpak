@@ -17,10 +17,16 @@ repo:
     done
 
     # Generate update information and appstream data
+    gpg_args=()
+    if [ -n "${DEBEMAIL:-}" ]
+    then
+        gpg_args+=(--gpg-sign="${DEBEMAIL}")
+    fi
+
     set -x
     flatpak \
         build-update-repo \
-        --gpg-sign="${DEBEMAIL}" \
+        "${gpg_args[@]}" \
         --generate-static-deltas \
         --prune \
         repo
@@ -30,6 +36,12 @@ build id:
     #!/usr/bin/env bash
     set -e
     arch="$(flatpak --default-arch)"
+    gpg_args=()
+    if [ -n "${DEBEMAIL:-}" ]
+    then
+        gpg_args+=(--gpg-sign="${DEBEMAIL}")
+    fi
+
     set -x
     mkdir -p "log/app/{{id}}"
     flatpak-builder \
@@ -37,7 +49,7 @@ build id:
         --ccache \
         --delete-build-dirs \
         --force-clean \
-        --gpg-sign="${DEBEMAIL}" \
+        "${gpg_args[@]}" \
         --install-deps-from=flathub \
         --repo=repo \
         --require-changes \
@@ -63,6 +75,12 @@ eol id rebase:
     #!/usr/bin/env bash
     set -e
     arch="$(flatpak --default-arch)"
+    gpg_args=()
+    if [ -n "${DEBEMAIL:-}" ]
+    then
+        gpg_args+=(--gpg-sign="${DEBEMAIL}")
+    fi
+
     ref="app/{{id}}/${arch}/master"
     if ostree --repo=repo show "${ref}"
     then
@@ -76,7 +94,7 @@ eol id rebase:
             flatpak build-commit-from \
                 --end-of-life="Application has been renamed to {{rebase}}" \
                 --end-of-life-rebase="{{id}}={{rebase}}" \
-                --gpg-sign="${DEBEMAIL}" \
+                "${gpg_args[@]}" \
                 --no-update-summary \
                 --src-repo=repo \
                 --verbose \

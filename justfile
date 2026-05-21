@@ -16,13 +16,13 @@ repo:
         just eol ${id} ${rebase}
     done
 
-    # Generate update information and appstream data
     gpg_args=()
     if [ -n "${DEBEMAIL:-}" ]
     then
         gpg_args+=(--gpg-sign="${DEBEMAIL}")
     fi
 
+    # Generate update information and appstream data
     set -x
     flatpak \
         build-update-repo \

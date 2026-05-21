@@ -11,8 +11,8 @@ repo:
 
     cat end-of-life.txt | grep -v '^#' | while read eol
     do
-        id="$(echo "${eol}" | cut -d '=' -f 1)" 
-        rebase="$(echo "${eol}" | cut -d '=' -f 2)" 
+        id="$(echo "${eol}" | cut -d '=' -f 1)"
+        rebase="$(echo "${eol}" | cut -d '=' -f 2)"
         just eol ${id} ${rebase}
     done
 
@@ -47,6 +47,16 @@ build id:
         "build/app/{{id}}/${arch}" \
         "app/{{id}}/{{id}}.json" \
         2>&1 | tee "log/app/{{id}}/${arch}.txt"
+
+# Build manifests changed from origin/master
+build-changed:
+    #!/usr/bin/env bash
+    set -e
+    git fetch origin master
+    git diff --name-only origin/master...HEAD | grep '^app/' | cut -d / -f2 | sort | uniq | while read id
+    do
+        just build ${id}
+    done
 
 # EOL app with specified id and rebase id
 eol id rebase:

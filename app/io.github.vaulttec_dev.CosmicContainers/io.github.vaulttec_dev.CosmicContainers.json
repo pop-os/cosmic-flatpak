@@ -12,6 +12,7 @@
     "--share=ipc",
     "--device=dri",
     "--talk-name=com.system76.CosmicSettingsDaemon",
+    "--talk-name=org.freedesktop.Flatpak",
     "--filesystem=xdg-config/cosmic:rw",
     "--filesystem=xdg-config/linux-pop-extension:rw",
     "--filesystem=xdg-config/io.github.vaulttec_dev.CosmicContainers:rw",

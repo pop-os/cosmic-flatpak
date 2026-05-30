@@ -1,0 +1,51 @@
+{
+    "id": "com.github.hmrdsmoke.soulless-launcher",
+    "runtime": "org.gnome.Platform",
+    "runtime-version": "48",
+    "sdk": "org.gnome.Sdk",
+    "sdk-extensions": [
+        "org.freedesktop.Sdk.Extension.rust-stable"
+    ],
+    "command": "soulless-launcher",
+    "finish-args": [
+        "--share=ipc",
+        "--socket=wayland",
+        "--share=network",
+        "--filesystem=home",
+        "--filesystem=/run/media",
+        "--talk-name=org.freedesktop.DBus",
+        "--talk-name=com.github.hmrdsmoke.SoullessApplet",
+        "--device=dri"
+    ],
+    "build-options": {
+        "append-path": "/usr/lib/sdk/rust-stable/bin",
+        "env": {
+            "CARGO_HOME": "/run/build/soulless-launcher/cargo",
+            "RUST_BACKTRACE": "1"
+        }
+    },
+    "modules": [
+        {
+            "name": "soulless-launcher",
+            "buildsystem": "simple",
+            "build-commands": [
+                "cargo build --release --manifest-path launcher/Cargo.toml",
+                "install -Dm755 target/release/soulless-launcher /app/bin/soulless-launcher",
+                "install -Dm644 assets/com.github.hmrdsmoke.soulless-launcher.desktop /app/share/applications/com.github.hmrdsmoke.soulless-launcher.desktop",
+                "install -Dm644 assets/com.github.hmrdsmoke.soulless-launcher.png /app/share/icons/hicolor/128x128/apps/com.github.hmrdsmoke.soulless-launcher.png",
+                "install -Dm644 assets/com.github.hmrdsmoke.soulless-launcher.metainfo.xml /app/share/metainfo/com.github.hmrdsmoke.soulless-launcher.metainfo.xml",
+                "install -Dm644 LICENSE /app/share/licenses/com.github.hmrdsmoke.soulless-launcher/LICENSE"
+            ],
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://github.com/hmrdsmoke/Soulless-Launcher",
+                    "tag": "v0.1.0",
+                    "commit": "b661a4b63f5b612f8ab3bc11c91487f2f019b544",
+                    "disable-submodules": false
+                },
+                "cargo-sources.json"
+            ]
+        }
+    ]
+}

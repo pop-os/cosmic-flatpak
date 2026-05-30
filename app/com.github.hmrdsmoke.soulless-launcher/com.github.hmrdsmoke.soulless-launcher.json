@@ -1,11 +1,13 @@
 {
     "id": "com.github.hmrdsmoke.soulless-launcher",
-    "runtime": "org.gnome.Platform",
-    "runtime-version": "48",
-    "sdk": "org.gnome.Sdk",
+    "runtime": "org.freedesktop.Platform",
+    "runtime-version": "25.08",
+    "sdk": "org.freedesktop.Sdk",
     "sdk-extensions": [
         "org.freedesktop.Sdk.Extension.rust-stable"
     ],
+    "base": "com.system76.Cosmic.BaseApp",
+    "base-version": "stable",
     "command": "soulless-launcher",
     "finish-args": [
         "--share=ipc",
@@ -20,8 +22,7 @@
     "build-options": {
         "append-path": "/usr/lib/sdk/rust-stable/bin",
         "env": {
-            "CARGO_HOME": "/run/build/soulless-launcher/cargo",
-            "RUST_BACKTRACE": "1"
+            "CARGO_HOME": "/run/build/soulless-launcher/cargo"
         }
     },
     "modules": [
@@ -29,7 +30,9 @@
             "name": "soulless-launcher",
             "buildsystem": "simple",
             "build-commands": [
-                "cargo build --release --manifest-path launcher/Cargo.toml",
+                "find flatpak-cargo -name \".git\" -type d -exec chmod -R u+w {} + 2>/dev/null || true",
+                "cargo --offline fetch --manifest-path Cargo.toml --verbose",
+                "cargo --offline build --release --verbose",
                 "install -Dm755 target/release/soulless-launcher /app/bin/soulless-launcher",
                 "install -Dm644 assets/com.github.hmrdsmoke.soulless-launcher.desktop /app/share/applications/com.github.hmrdsmoke.soulless-launcher.desktop",
                 "install -Dm644 assets/com.github.hmrdsmoke.soulless-launcher.png /app/share/icons/hicolor/128x128/apps/com.github.hmrdsmoke.soulless-launcher.png",
@@ -41,7 +44,7 @@
                     "type": "git",
                     "url": "https://github.com/hmrdsmoke/Soulless-Launcher",
                     "tag": "v0.1.0",
-                    "commit": "b661a4b63f5b612f8ab3bc11c91487f2f019b544",
+                    "commit": "bb995b7642aa805beaac48c916aef0c0fb318130",
                     "disable-submodules": false
                 },
                 "cargo-sources.json"

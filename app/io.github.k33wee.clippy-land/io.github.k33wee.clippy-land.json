@@ -31,6 +31,7 @@
         "cargo build --locked --offline --release --verbose",
         "install -Dm0755 target/release/cosmic-applet-clippy-land /app/bin/cosmic-applet-clippy-land",
         "install -Dm0755 resources/cosmic-applet-clippy-land.sh /app/bin/cosmic-applet-clippy-land.sh",
+        "sh scripts/render-debug-wrapper.sh resources/cosmic-applet-clippy-land-debug.sh.in /app/bin/cosmic-applet-clippy-land /app/bin/cosmic-applet-clippy-land-debug.sh",
         "install -Dm0644 resources/io.github.k33wee.clippy-land.desktop /app/share/applications/io.github.k33wee.clippy-land.desktop",
         "install -Dm0644 resources/io.github.k33wee.clippy-land.metainfo.xml /app/share/metainfo/io.github.k33wee.clippy-land.metainfo.xml",
         "install -Dm0644 resources/icon.svg /app/share/icons/hicolor/scalable/apps/io.github.k33wee.clippy-land.svg",
@@ -41,8 +42,8 @@
         {
           "type": "git",
           "url": "https://github.com/k33wee/clippy-land.git",
-          "tag": "v0.5.1",
-          "commit": "965f6704508f4e6a68535946a59dcce68e2c86f0"
+          "tag": "v0.5.2",
+          "commit": "b7611e7cda902f50a3332ed2efaf15da2e9fe6ec"
         },
         "cargo-sources.json"
       ]

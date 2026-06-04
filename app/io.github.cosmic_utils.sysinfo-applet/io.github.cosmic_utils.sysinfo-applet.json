@@ -36,7 +36,7 @@
         {
           "type": "git",
           "url": "https://github.com/cosmic-utils/cosmic-ext-applet-sysinfo.git",
-          "commit": "bd0a05fb47e853d5a2b7b9e24e9550eb603e775d"
+          "commit": "caa97acd05197f063e14e538c8ecc53e6616f4eb"
         },
         "./cargo-sources.json"
       ]

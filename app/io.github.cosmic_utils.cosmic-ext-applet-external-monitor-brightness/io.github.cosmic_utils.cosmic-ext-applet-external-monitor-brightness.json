@@ -1,7 +1,7 @@
 {
   "id": "io.github.cosmic_utils.cosmic-ext-applet-external-monitor-brightness",
   "runtime": "org.freedesktop.Platform",
-  "runtime-version": "24.08",
+  "runtime-version": "25.08",
   "base": "com.system76.Cosmic.BaseApp",
   "base-version": "stable",
   "sdk": "org.freedesktop.Sdk",
@@ -33,7 +33,7 @@
         {
           "type": "git",
           "url": "https://github.com/cosmic-utils/cosmic-ext-applet-external-monitor-brightness.git",
-          "commit": "dc1fc2a0fc432d2672aef173aac03a9f93f98f26"
+          "commit": "55fce241050df94a15322409f3c97da520ec7440"
         },
         "cargo-sources.json"
       ]

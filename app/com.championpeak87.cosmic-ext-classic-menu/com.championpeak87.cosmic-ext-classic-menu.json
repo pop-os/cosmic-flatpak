@@ -1,7 +1,7 @@
 {
   "id": "com.championpeak87.cosmic-ext-classic-menu",
   "runtime": "org.freedesktop.Platform",
-  "runtime-version": "24.08",
+  "runtime-version": "25.08",
   "base": "com.system76.Cosmic.BaseApp",
   "base-version": "stable",
   "sdk": "org.freedesktop.Sdk",
@@ -57,7 +57,7 @@
         {
           "type": "git",
           "url": "https://github.com/championpeak87/cosmic-ext-classic-menu.git",
-          "tag": "0.0.13"
+          "tag": "0.0.14"
         },
         "./cargo-sources.json"
       ]

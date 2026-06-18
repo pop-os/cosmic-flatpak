@@ -1,0 +1,37 @@
+{
+  "id": "io.github.diegoachury.CaffeineCosmic",
+  "runtime": "org.freedesktop.Platform",
+  "runtime-version": "25.08",
+  "sdk": "org.freedesktop.Sdk",
+  "sdk-extensions": ["org.freedesktop.Sdk.Extension.rust-stable"],
+  "command": "cosmic-caffeine",
+  "finish-args": [
+    "--talk-name=org.freedesktop.ScreenSaver",
+    "--talk-name=org.kde.StatusNotifierWatcher"
+  ],
+  "build-options": {
+    "append-path": "/usr/lib/sdk/rust-stable/bin",
+    "env": {
+      "CARGO_HOME": "/run/build/caffeine-cosmic/cargo"
+    }
+  },
+  "modules": [
+    {
+      "name": "caffeine-cosmic",
+      "buildsystem": "simple",
+      "build-commands": [
+        "cargo --offline fetch --manifest-path Cargo.toml --verbose",
+        "cargo --offline build --release --verbose",
+        "make install PREFIX=/app"
+      ],
+      "sources": [
+        {
+          "type": "git",
+          "url": "https://github.com/diegoachury/CaffeineCosmic.git",
+          "commit": "969fba03ee0b0330efe1cc654a609db0e0040d28"
+        },
+        "./cargo-sources.json"
+      ]
+    }
+  ]
+}

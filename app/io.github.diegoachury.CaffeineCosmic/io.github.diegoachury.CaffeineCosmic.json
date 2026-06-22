@@ -28,7 +28,7 @@
         {
           "type": "git",
           "url": "https://github.com/diegoachury/CaffeineCosmic.git",
-          "commit": "969fba03ee0b0330efe1cc654a609db0e0040d28"
+          "commit": "d363a2faa959fe58f7787032a27c36f31c5fa242"
         },
         "./cargo-sources.json"
       ]

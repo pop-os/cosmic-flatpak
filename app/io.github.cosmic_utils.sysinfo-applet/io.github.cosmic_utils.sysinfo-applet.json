@@ -7,10 +7,14 @@
   "command": "cosmic-ext-applet-sysinfo",
   "finish-args": [
     "--share=network",
+	"--socket=wayland",
+	"--device=dri",
     "--filesystem=xdg-config/cosmic:rw",
+    "--filesystem=/sys/class/hwmon:ro",
+    "--filesystem=/sys/class/drm:ro",
+    "--filesystem=/sys/class/accel:ro",
     "--talk-name=com.system76.CosmicSettingsDaemon",
-    "--socket=wayland",
-    "--device=dri",
+    "--talk-name=org.freedesktop.Flatpak",
     "--talk-name=org.freedesktop.portal.Desktop",
     "--talk-name=org.freedesktop.portal.Location"
   ],
@@ -36,7 +40,7 @@
         {
           "type": "git",
           "url": "https://github.com/cosmic-utils/cosmic-ext-applet-sysinfo.git",
-          "commit": "7e7f323db1cdb4fa14fe001cca6eaacc61ac81b0"
+          "commit": "34ed2a114ec327431e576dc8060e767d15d3571f"
         },
         "./cargo-sources.json"
       ]

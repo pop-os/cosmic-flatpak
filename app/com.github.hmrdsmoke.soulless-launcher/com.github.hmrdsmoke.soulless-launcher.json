@@ -1,53 +1,76 @@
 {
-    "id": "com.github.hmrdsmoke.soulless-launcher",
-    "runtime": "org.freedesktop.Platform",
-    "runtime-version": "25.08",
-    "sdk": "org.freedesktop.Sdk",
-    "sdk-extensions": [
-        "org.freedesktop.Sdk.Extension.rust-stable"
-    ],
-    "base": "com.system76.Cosmic.BaseApp",
-    "base-version": "stable",
-    "command": "soulless-launcher",
-    "finish-args": [
-        "--share=ipc",
-        "--socket=wayland",
-        "--share=network",
-        "--filesystem=home",
-        "--filesystem=/run/media",
-        "--talk-name=org.freedesktop.DBus",
-        "--talk-name=com.github.hmrdsmoke.SoullessApplet",
-        "--device=dri"
-    ],
-    "build-options": {
-        "append-path": "/usr/lib/sdk/rust-stable/bin",
-        "env": {
-            "CARGO_HOME": "/run/build/soulless-launcher/cargo"
-        }
-    },
-    "modules": [
+  "id": "com.github.hmrdsmoke.soulless-launcher",
+  "runtime": "org.freedesktop.Platform",
+  "runtime-version": "25.08",
+  "sdk": "org.freedesktop.Sdk",
+  "sdk-extensions": [
+    "org.freedesktop.Sdk.Extension.rust-stable"
+  ],
+  "base": "com.system76.Cosmic.BaseApp",
+  "base-version": "stable",
+  "command": "soulless-launcher",
+  "finish-args": [
+    "--share=ipc",
+    "--socket=wayland",
+    "--socket=fallback-x11",
+    "--share=network",
+    "--filesystem=home",
+    "--filesystem=/run/media",
+    "--filesystem=/usr/share/applications:ro",
+    "--filesystem=/usr/local/share/applications:ro",
+    "--filesystem=/var/lib/flatpak/exports/share:ro",
+    "--filesystem=xdg-data/applications:ro",
+    "--filesystem=xdg-data/flatpak/exports/share:ro",
+    "--filesystem=/usr/share/icons:ro",
+    "--filesystem=/usr/share/pixmaps:ro",
+    "--filesystem=xdg-data/icons:ro",
+    "--filesystem=/sys:ro",
+    "--talk-name=org.freedesktop.DBus",
+    "--talk-name=com.github.hmrdsmoke.SoullessApplet",
+    "--own-name=com.github.hmrdsmoke.SoullessLauncher",
+    "--talk-name=com.system76.CosmicTheme.Mode",
+    "--talk-name=com.system76.CosmicTheme.Dark",
+    "--talk-name=com.system76.CosmicTk",
+    "--system-talk-name=org.freedesktop.login1",
+    "--device=dri"
+  ],
+  "build-options": {
+    "append-path": "/usr/lib/sdk/rust-stable/bin",
+    "env": {
+      "CARGO_HOME": "/run/build/soulless-launcher/cargo"
+    }
+  },
+  "modules": [
+    {
+      "name": "soulless-launcher",
+      "buildsystem": "simple",
+      "build-commands": [
+        "find flatpak-cargo -name \".git\" -type d -exec chmod -R u+w {} + 2>/dev/null || true",
+        "cargo --offline fetch --manifest-path Cargo.toml --verbose",
+        "cargo --offline build --release --verbose",
+        "install -Dm755 target/release/soulless-launcher /app/bin/soulless-launcher",
+        "install -Dm644 assets/com.github.hmrdsmoke.soulless-launcher.desktop /app/share/applications/com.github.hmrdsmoke.soulless-launcher.desktop",
+        "install -Dm644 assets/icons/hicolor/16x16/apps/com.github.hmrdsmoke.soulless-launcher.png /app/share/icons/hicolor/16x16/apps/com.github.hmrdsmoke.soulless-launcher.png",
+        "install -Dm644 assets/icons/hicolor/22x22/apps/com.github.hmrdsmoke.soulless-launcher.png /app/share/icons/hicolor/22x22/apps/com.github.hmrdsmoke.soulless-launcher.png",
+        "install -Dm644 assets/icons/hicolor/24x24/apps/com.github.hmrdsmoke.soulless-launcher.png /app/share/icons/hicolor/24x24/apps/com.github.hmrdsmoke.soulless-launcher.png",
+        "install -Dm644 assets/icons/hicolor/48x48/apps/com.github.hmrdsmoke.soulless-launcher.png /app/share/icons/hicolor/48x48/apps/com.github.hmrdsmoke.soulless-launcher.png",
+        "install -Dm644 assets/icons/hicolor/64x64/apps/com.github.hmrdsmoke.soulless-launcher.png /app/share/icons/hicolor/64x64/apps/com.github.hmrdsmoke.soulless-launcher.png",
+        "install -Dm644 assets/icons/hicolor/128x128/apps/com.github.hmrdsmoke.soulless-launcher.png /app/share/icons/hicolor/128x128/apps/com.github.hmrdsmoke.soulless-launcher.png",
+        "install -Dm644 assets/icons/hicolor/256x256/apps/com.github.hmrdsmoke.soulless-launcher.png /app/share/icons/hicolor/256x256/apps/com.github.hmrdsmoke.soulless-launcher.png",
+        "install -Dm644 assets/com.github.hmrdsmoke.soulless-launcher.metainfo.xml /app/share/metainfo/com.github.hmrdsmoke.soulless-launcher.metainfo.xml",
+        "install -Dm644 LICENSE /app/share/licenses/com.github.hmrdsmoke.soulless-launcher/LICENSE"
+      ],
+      "sources": [
         {
-            "name": "soulless-launcher",
-            "buildsystem": "simple",
-            "build-commands": [
-                "find flatpak-cargo -name \".git\" -type d -exec chmod -R u+w {} + 2>/dev/null || true",
-                "cargo --offline fetch --manifest-path Cargo.toml --verbose",
-                "cargo --offline build --release --verbose",
-                "install -Dm755 target/release/soulless-launcher /app/bin/soulless-launcher",
-                "install -Dm644 assets/com.github.hmrdsmoke.soulless-launcher.desktop /app/share/applications/com.github.hmrdsmoke.soulless-launcher.desktop",
-                "install -Dm644 assets/com.github.hmrdsmoke.soulless-launcher.png /app/share/icons/hicolor/128x128/apps/com.github.hmrdsmoke.soulless-launcher.png",
-                "install -Dm644 assets/com.github.hmrdsmoke.soulless-launcher.metainfo.xml /app/share/metainfo/com.github.hmrdsmoke.soulless-launcher.metainfo.xml",
-                "install -Dm644 LICENSE /app/share/licenses/com.github.hmrdsmoke.soulless-launcher/LICENSE"
-            ],
-            "sources": [
-                {
-                    "type": "git",
-                    "url": "https://github.com/hmrdsmoke/Soulless-Launcher",
-                    "commit": "1f7ecad9085b829e4c55b13717165c0c873f4eb1",
-                    "disable-submodules": false
-                },
-                "cargo-sources.json"
-            ]
-        }
-    ]
+          "type": "git",
+          "url": "https://github.com/hmrdsmoke/Soulless-Launcher",
+          "commit": "bf1cf9ddae09d2b8aaed7b6c8396df4a8cbfc3fd",
+          "disable-submodules": false
+        },
+        "cargo-sources.json"
+      ]
+    }
+  ],
+  "appstream-compose": false
+}
 }

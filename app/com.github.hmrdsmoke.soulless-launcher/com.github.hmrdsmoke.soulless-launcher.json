@@ -28,6 +28,7 @@
     "--talk-name=org.freedesktop.DBus",
     "--talk-name=com.github.hmrdsmoke.SoullessApplet",
     "--own-name=com.github.hmrdsmoke.SoullessLauncher",
+    "--own-name=com.github.hmrdsmoke.SoullessApplet",
     "--talk-name=com.system76.CosmicTheme.Mode",
     "--talk-name=com.system76.CosmicTheme.Dark",
     "--talk-name=com.system76.CosmicTk",
@@ -49,7 +50,9 @@
         "cargo --offline fetch --manifest-path Cargo.toml --verbose",
         "cargo --offline build --release --verbose",
         "install -Dm755 target/release/soulless-launcher /app/bin/soulless-launcher",
+        "install -Dm755 target/release/soulless-applet /app/bin/soulless-applet",
         "install -Dm644 assets/com.github.hmrdsmoke.soulless-launcher.desktop /app/share/applications/com.github.hmrdsmoke.soulless-launcher.desktop",
+        "install -Dm644 applet/resources/app.desktop /app/share/applications/com.github.hmrdsmoke.soulless-applet.desktop",
         "install -Dm644 assets/icons/hicolor/16x16/apps/com.github.hmrdsmoke.soulless-launcher.png /app/share/icons/hicolor/16x16/apps/com.github.hmrdsmoke.soulless-launcher.png",
         "install -Dm644 assets/icons/hicolor/22x22/apps/com.github.hmrdsmoke.soulless-launcher.png /app/share/icons/hicolor/22x22/apps/com.github.hmrdsmoke.soulless-launcher.png",
         "install -Dm644 assets/icons/hicolor/24x24/apps/com.github.hmrdsmoke.soulless-launcher.png /app/share/icons/hicolor/24x24/apps/com.github.hmrdsmoke.soulless-launcher.png",
@@ -57,6 +60,7 @@
         "install -Dm644 assets/icons/hicolor/64x64/apps/com.github.hmrdsmoke.soulless-launcher.png /app/share/icons/hicolor/64x64/apps/com.github.hmrdsmoke.soulless-launcher.png",
         "install -Dm644 assets/icons/hicolor/128x128/apps/com.github.hmrdsmoke.soulless-launcher.png /app/share/icons/hicolor/128x128/apps/com.github.hmrdsmoke.soulless-launcher.png",
         "install -Dm644 assets/icons/hicolor/256x256/apps/com.github.hmrdsmoke.soulless-launcher.png /app/share/icons/hicolor/256x256/apps/com.github.hmrdsmoke.soulless-launcher.png",
+        "install -Dm644 applet/resources/icon.svg /app/share/icons/hicolor/scalable/apps/com.github.hmrdsmoke.soulless-applet.svg",
         "install -Dm644 assets/com.github.hmrdsmoke.soulless-launcher.metainfo.xml /app/share/metainfo/com.github.hmrdsmoke.soulless-launcher.metainfo.xml",
         "install -Dm644 LICENSE /app/share/licenses/com.github.hmrdsmoke.soulless-launcher/LICENSE"
       ],
@@ -72,5 +76,4 @@
     }
   ],
   "appstream-compose": false
-}
 }

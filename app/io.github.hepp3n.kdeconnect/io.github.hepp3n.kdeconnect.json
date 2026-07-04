@@ -41,7 +41,7 @@
                 {
                     "type": "git",
                     "url": "https://github.com/cosmic-utils/kdeconnect",
-                    "commit": "dd4f47bc30dabf719d6504a269dd5de601fd6cfd"
+                    "commit": "9c5c5adbe89c694ac6e38521056aedbfb9ed00e3"
                 },
                 "cargo-sources.json"
             ]

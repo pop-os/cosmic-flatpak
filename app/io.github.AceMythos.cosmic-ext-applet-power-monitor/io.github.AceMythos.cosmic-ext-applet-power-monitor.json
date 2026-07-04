@@ -1,5 +1,5 @@
 {
-  "app-id": "io.github.AceMythos.CosmicPowerMonitor",
+  "app-id": "io.github.AceMythos.cosmic-ext-applet-power-monitor",
   "runtime": "org.freedesktop.Platform",
   "runtime-version": "25.08",
   "sdk": "org.freedesktop.Sdk",
@@ -29,8 +29,8 @@
         "cargo --offline fetch --manifest-path Cargo.toml --verbose",
         "cargo --offline build --release --verbose",
         "install -Dm0755 ./target/release/cosmic-power-monitor /app/bin/cosmic-power-monitor",
-        "install -Dm0644 ./resources/io.github.AceMythos.CosmicPowerMonitor.desktop /app/share/applications/io.github.AceMythos.CosmicPowerMonitor.desktop",
-        "install -Dm0644 ./resources/io.github.AceMythos.CosmicPowerMonitor.metainfo.xml /app/share/metainfo/io.github.AceMythos.CosmicPowerMonitor.metainfo.xml"
+        "install -Dm0644 ./resources/io.github.AceMythos.cosmic-ext-applet-power-monitor.desktop /app/share/applications/io.github.AceMythos.cosmic-ext-applet-power-monitor.desktop",
+        "install -Dm0644 ./resources/io.github.AceMythos.cosmic-ext-applet-power-monitor.metainfo.xml /app/share/metainfo/io.github.AceMythos.cosmic-ext-applet-power-monitor.metainfo.xml"
       ],
       "sources": [
         {

@@ -1,0 +1,52 @@
+{
+  "id": "io.github.cosmic-ext-applet-app-switcher",
+  "runtime": "org.freedesktop.Platform",
+  "runtime-version": "25.08",
+  "base": "com.system76.Cosmic.BaseApp",
+  "base-version": "stable",
+  "sdk": "org.freedesktop.Sdk",
+  "sdk-extensions": ["org.freedesktop.Sdk.Extension.rust-stable"],
+  "command": "cosmic-ext-applet-app-switcher",
+  "finish-args": [
+    "--share=ipc",
+    "--socket=wayland",
+    "--device=dri",
+    "--filesystem=xdg-config/cosmic:rw",
+    "--filesystem=xdg-data/applications:ro",
+    "--filesystem=xdg-data/icons:ro",
+    "--filesystem=xdg-data/pixmaps:ro",
+    "--filesystem=/usr/share/applications:ro",
+    "--filesystem=/usr/share/icons:ro",
+    "--filesystem=/usr/share/pixmaps:ro",
+    "--talk-name=com.system76.CosmicSettingsDaemon"
+  ],
+  "build-options": {
+    "append-path": "/usr/lib/sdk/rust-stable/bin",
+    "env": {
+      "CARGO_HOME": "/run/build/cosmic-ext-app-switcher/cargo"
+    }
+  },
+  "modules": [
+    {
+      "name": "cosmic-ext-app-switcher",
+      "buildsystem": "simple",
+      "build-commands": [
+        "cargo --offline fetch --manifest-path Cargo.toml --verbose",
+        "cargo --offline build --release --workspace --verbose",
+        "install -Dm0755 target/release/cosmic-ext-app-switcher /app/bin/cosmic-ext-app-switcher",
+        "install -Dm0755 target/release/cosmic-ext-applet-app-switcher /app/bin/cosmic-ext-applet-app-switcher",
+        "install -Dm0644 applet/data/io.github.cosmic-ext-applet-app-switcher.desktop /app/share/applications/io.github.cosmic-ext-applet-app-switcher.desktop",
+        "install -Dm0644 applet/data/io.github.cosmic-ext-applet-app-switcher.metainfo.xml /app/share/metainfo/io.github.cosmic-ext-applet-app-switcher.metainfo.xml",
+        "install -Dm0644 applet/data/io.github.cosmic-ext-applet-app-switcher-symbolic.svg /app/share/icons/hicolor/scalable/apps/io.github.cosmic-ext-applet-app-switcher-symbolic.svg"
+      ],
+      "sources": [
+        {
+          "type": "git",
+          "url": "https://github.com/j0rdiun/cosmic-ext-app-switcher.git",
+          "commit": "8f62e4d5e3959b57c6cb895f145299fb9387c36b"
+        },
+        "cargo-sources.json"
+      ]
+    }
+  ]
+}

@@ -12,6 +12,8 @@
     "finish-args": [
         "--share=ipc",
         "--socket=wayland",
+        "--filesystem=xdg-run/wayland-0",
+        "--filesystem=xdg-run/wayland-1",
         "--socket=session-bus",
         "--device=dri",
         "--share=network",
@@ -29,6 +31,7 @@
             "name": "cosmic-ext-connect-applet",
             "buildsystem": "simple",
             "build-commands": [
+                "mv cargo/config cargo/config.toml",
                 "just build-rel-offline",
                 "just PREFIX=/app install"
             ],
@@ -41,7 +44,7 @@
                 {
                     "type": "git",
                     "url": "https://github.com/cosmic-utils/kdeconnect",
-                    "commit": "9c5c5adbe89c694ac6e38521056aedbfb9ed00e3"
+                    "commit": "26513c2063283777183813c7d8e83b2c7d82b955"
                 },
                 "cargo-sources.json"
             ]

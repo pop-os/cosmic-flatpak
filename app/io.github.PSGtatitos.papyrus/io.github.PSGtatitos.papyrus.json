@@ -163,7 +163,7 @@
                 {
                     "type": "git",
                     "url": "https://github.com/PSGtatitos/papyrus.git",
-                    "branch": "main"
+                    "commit": "0320369628b4834b51258fa5f0d9e36a2e4f47c5"
                 }
             ]
         }

@@ -1,0 +1,45 @@
+{
+  "app-id": "io.github.AceMythos.cosmic-ext-applet-power-monitor",
+  "runtime": "org.freedesktop.Platform",
+  "runtime-version": "25.08",
+  "sdk": "org.freedesktop.Sdk",
+  "sdk-extensions": ["org.freedesktop.Sdk.Extension.rust-stable"],
+  "base": "com.system76.Cosmic.BaseApp",
+  "base-version": "stable",
+  "command": "cosmic-power-monitor",
+  "finish-args": [
+    "--socket=wayland",
+    "--socket=fallback-x11",
+    "--filesystem=xdg-config/cosmic:rw",
+    "--talk-name=com.system76.CosmicSettingsDaemon",
+    "--share=ipc",
+    "--device=dri"
+  ],
+  "build-options": {
+    "append-path": "/usr/lib/sdk/rust-stable/bin",
+    "env": {
+      "CARGO_HOME": "/run/build/cosmic-power-monitor/cargo"
+    }
+  },
+  "modules": [
+    {
+      "name": "cosmic-power-monitor",
+      "buildsystem": "simple",
+      "build-commands": [
+        "cargo --offline fetch --manifest-path Cargo.toml --verbose",
+        "cargo --offline build --release --verbose",
+        "install -Dm0755 ./target/release/cosmic-power-monitor /app/bin/cosmic-power-monitor",
+        "install -Dm0644 ./resources/io.github.AceMythos.cosmic-ext-applet-power-monitor.desktop /app/share/applications/io.github.AceMythos.cosmic-ext-applet-power-monitor.desktop",
+        "install -Dm0644 ./resources/io.github.AceMythos.cosmic-ext-applet-power-monitor.metainfo.xml /app/share/metainfo/io.github.AceMythos.cosmic-ext-applet-power-monitor.metainfo.xml"
+      ],
+      "sources": [
+        {
+          "type": "git",
+          "url": "https://github.com/AceMythos/cosmic-power-monitor.git",
+          "tag": "v0.1.1"
+        },
+        "cargo-sources.json"
+      ]
+    }
+  ]
+}

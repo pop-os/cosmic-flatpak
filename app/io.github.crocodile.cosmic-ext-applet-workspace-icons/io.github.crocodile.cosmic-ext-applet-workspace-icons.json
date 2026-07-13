@@ -1,0 +1,66 @@
+{
+  "id": "io.github.crocodile.cosmic-ext-applet-workspace-icons",
+  "runtime": "org.freedesktop.Platform",
+  "runtime-version": "25.08",
+  "base": "com.system76.Cosmic.BaseApp",
+  "base-version": "stable",
+  "sdk": "org.freedesktop.Sdk",
+  "sdk-extensions": [
+    "org.freedesktop.Sdk.Extension.rust-stable"
+  ],
+  "command": "cosmic-ext-applet-workspace-icons",
+  "finish-args": [
+    "--share=ipc",
+    "--socket=wayland",
+    "--socket=fallback-x11",
+    "--device=dri",
+    "--talk-name=com.system76.CosmicSettingsDaemon",
+    "--talk-name=com.system76.CosmicSettingsDaemon.Config",
+    "--talk-name=com.system76.CosmicSettingsDaemon.Config.*",
+    "--filesystem=xdg-config/cosmic:rw",
+    "--filesystem=host-os:ro",
+    "--filesystem=/var/lib/snapd/desktop:ro",
+    "--filesystem=/var/lib/snapd/snap:ro",
+    "--filesystem=/var/lib/flatpak/exports/share/applications:ro",
+    "--filesystem=/var/lib/flatpak/exports/share/icons:ro",
+    "--filesystem=/var/lib/flatpak/app:ro",
+    "--filesystem=~/.local/share/flatpak/exports/share/applications:ro",
+    "--filesystem=~/.local/share/flatpak/exports/share/icons:ro",
+    "--filesystem=~/.local/share/applications:ro",
+    "--filesystem=~/.local/share/icons:ro",
+    "--filesystem=~/.icons:ro"
+  ],
+  "build-options": {
+    "append-path": "/usr/lib/sdk/rust-stable/bin",
+    "env": {
+      "CARGO_HOME": "/run/build/cosmic-ext-applet-workspace-icons/cargo"
+    }
+  },
+  "modules": [
+    {
+      "name": "cosmic-ext-applet-workspace-icons",
+      "buildsystem": "simple",
+      "build-commands": [
+        "cargo --offline fetch --manifest-path Cargo.toml --verbose",
+        "cargo --offline build --release --verbose",
+        "install -Dm0755 target/release/cosmic-ext-applet-workspace-icons /app/bin/cosmic-ext-applet-workspace-icons-bin",
+        "install -Dm0755 cosmic-ext-applet-workspace-icons-wrapper /app/bin/cosmic-ext-applet-workspace-icons",
+        "install -Dm0644 resources/io.github.crocodile.cosmic-ext-applet-workspace-icons.desktop /app/share/applications/io.github.crocodile.cosmic-ext-applet-workspace-icons.desktop",
+        "install -Dm0644 resources/io.github.crocodile.cosmic-ext-applet-workspace-icons.metainfo.xml /app/share/metainfo/io.github.crocodile.cosmic-ext-applet-workspace-icons.metainfo.xml",
+        "install -Dm0644 resources/io.github.crocodile.cosmic-ext-applet-workspace-icons.svg /app/share/icons/hicolor/scalable/apps/io.github.crocodile.cosmic-ext-applet-workspace-icons.svg"
+      ],
+      "sources": [
+        {
+          "type": "git",
+          "url": "https://github.com/crocodile/cosmic-ext-applet-workspace-icons.git",
+          "commit": "b1070c45d75e198e4c40cb6cacd998ab43b31b2c"
+        },
+        {
+          "type": "file",
+          "path": "cosmic-ext-applet-workspace-icons-wrapper"
+        },
+        "cargo-sources.json"
+      ]
+    }
+  ]
+}

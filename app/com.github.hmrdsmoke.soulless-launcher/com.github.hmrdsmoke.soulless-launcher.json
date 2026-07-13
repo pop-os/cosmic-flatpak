@@ -16,16 +16,14 @@
     "--share=network",
     "--filesystem=home",
     "--filesystem=/run/media",
-    "--filesystem=/usr/share/applications:ro",
-    "--filesystem=/usr/local/share/applications:ro",
+    "--filesystem=host-os:ro",
     "--filesystem=/var/lib/flatpak/exports/share:ro",
     "--filesystem=xdg-data/applications:ro",
     "--filesystem=xdg-data/flatpak/exports/share:ro",
-    "--filesystem=/usr/share/icons:ro",
-    "--filesystem=/usr/share/pixmaps:ro",
     "--filesystem=xdg-data/icons:ro",
     "--filesystem=/sys:ro",
     "--talk-name=org.freedesktop.DBus",
+    "--talk-name=org.freedesktop.Flatpak",
     "--own-name=com.github.hmrdsmoke.SoullessApplet",
     "--own-name=com.github.hmrdsmoke.SoullessLauncher",
     "--talk-name=com.system76.CosmicTheme.Mode",
@@ -66,7 +64,7 @@
         {
           "type": "git",
           "url": "https://github.com/hmrdsmoke/Soulless-Launcher",
-          "commit": "3862481212fdabe2ab1d13944f61a5d5856ef06a",
+          "commit": "7e11e1b58f106cde029a9b02f552f59e2c506d86",
           "disable-submodules": false
         },
         "cargo-sources.json"

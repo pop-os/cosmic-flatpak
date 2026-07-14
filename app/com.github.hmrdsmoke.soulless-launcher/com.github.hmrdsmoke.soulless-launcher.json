@@ -64,12 +64,11 @@
         {
           "type": "git",
           "url": "https://github.com/hmrdsmoke/Soulless-Launcher",
-          "commit": "7e11e1b58f106cde029a9b02f552f59e2c506d86",
+          "commit": "3c44bd3a39f9b6faf669303361bea7ad086f8793",
           "disable-submodules": false
         },
         "cargo-sources.json"
       ]
     }
-  ],
-  "appstream-compose": false
+  ]
 }

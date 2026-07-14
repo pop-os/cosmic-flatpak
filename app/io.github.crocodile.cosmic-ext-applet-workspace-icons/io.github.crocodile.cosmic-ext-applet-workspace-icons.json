@@ -26,6 +26,7 @@
     "--filesystem=/var/lib/flatpak/app:ro",
     "--filesystem=~/.local/share/flatpak/exports/share/applications:ro",
     "--filesystem=~/.local/share/flatpak/exports/share/icons:ro",
+    "--filesystem=~/.local/share/flatpak/app:ro",
     "--filesystem=~/.local/share/applications:ro",
     "--filesystem=~/.local/share/icons:ro",
     "--filesystem=~/.icons:ro"
@@ -53,7 +54,7 @@
         {
           "type": "git",
           "url": "https://github.com/crocodile/cosmic-ext-applet-workspace-icons.git",
-          "commit": "b1070c45d75e198e4c40cb6cacd998ab43b31b2c"
+          "commit": "622b99abccc69b79db08aa3f38112378dfbae031"
         },
         {
           "type": "file",

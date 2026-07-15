@@ -1,0 +1,46 @@
+{
+  "id": "io.github.nalladev.CosmicExtAppletEyedropper",
+  "runtime": "org.freedesktop.Platform",
+  "runtime-version": "25.08",
+  "sdk": "org.freedesktop.Sdk",
+  "sdk-extensions": ["org.freedesktop.Sdk.Extension.rust-stable", "org.freedesktop.Sdk.Extension.llvm20"],
+  "command": "cosmic-ext-applet-eyedropper",
+  "finish-args": [
+    "--share=ipc",
+    "--socket=wayland",
+    "--socket=fallback-x11",
+    "--talk-name=com.system76.CosmicSettingsDaemon",
+    "--talk-name=org.freedesktop.portal.Desktop",
+    "--filesystem=xdg-config/cosmic:rw",
+    "--filesystem=xdg-run/pipewire-0"
+  ],
+  "build-options": {
+    "append-path": "/usr/lib/sdk/rust-stable/bin:/usr/lib/sdk/llvm20/bin",
+    "env": {
+      "CARGO_HOME": "/run/build/cosmic-ext-applet-eyedropper/cargo",
+      "LIBCLANG_PATH": "/usr/lib/sdk/llvm20/lib"
+    }
+  },
+  "modules": [
+    {
+      "name": "cosmic-ext-applet-eyedropper",
+      "buildsystem": "simple",
+      "build-commands": [
+        "cargo --offline fetch --manifest-path Cargo.toml --verbose",
+        "cargo --offline build --release --verbose",
+        "install -Dm0755 ./target/release/cosmic-ext-applet-eyedropper /app/bin/cosmic-ext-applet-eyedropper",
+        "install -Dm0644 ./resources/app.desktop /app/share/applications/io.github.nalladev.CosmicExtAppletEyedropper.desktop",
+        "install -Dm0644 ./resources/app.metainfo.xml /app/share/metainfo/io.github.nalladev.CosmicExtAppletEyedropper.metainfo.xml",
+        "install -Dm0644 ./resources/icon.svg /app/share/icons/hicolor/scalable/apps/io.github.nalladev.CosmicExtAppletEyedropper.svg"
+      ],
+      "sources": [
+        {
+          "type": "git",
+          "url": "https://github.com/nalladev/cosmic-ext-applet-eyedropper.git",
+          "tag": "v0.4.1"
+        },
+        "./cargo-sources.json"
+      ]
+    }
+  ]
+}

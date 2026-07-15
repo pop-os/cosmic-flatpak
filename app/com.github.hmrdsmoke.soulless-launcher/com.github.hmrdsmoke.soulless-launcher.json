@@ -58,13 +58,15 @@
         "install -Dm644 assets/icons/hicolor/128x128/apps/com.github.hmrdsmoke.soulless-launcher.png /app/share/icons/hicolor/128x128/apps/com.github.hmrdsmoke.soulless-launcher.png",
         "install -Dm644 assets/icons/hicolor/256x256/apps/com.github.hmrdsmoke.soulless-launcher.png /app/share/icons/hicolor/256x256/apps/com.github.hmrdsmoke.soulless-launcher.png",
         "install -Dm644 assets/com.github.hmrdsmoke.soulless-launcher.metainfo.xml /app/share/metainfo/com.github.hmrdsmoke.soulless-launcher.metainfo.xml",
-        "install -Dm644 LICENSE /app/share/licenses/com.github.hmrdsmoke.soulless-launcher/LICENSE"
+        "install -Dm644 LICENSE /app/share/licenses/com.github.hmrdsmoke.soulless-launcher/LICENSE",
+        "install -Dm644 assets/soulless-launcher.1 /app/share/man/man1/soulless-launcher.1",
+        "ln -sf soulless-launcher.1 /app/share/man/man1/soulless.1"
       ],
       "sources": [
         {
           "type": "git",
           "url": "https://github.com/hmrdsmoke/Soulless-Launcher",
-          "commit": "3c44bd3a39f9b6faf669303361bea7ad086f8793",
+          "commit": "76086a1652557a44d3e5e77fb5238645ea44ec0f",
           "disable-submodules": false
         },
         "cargo-sources.json"

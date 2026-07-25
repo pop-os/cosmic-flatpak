@@ -1,7 +1,7 @@
 {
   "id": "io.github.cosmic_utils.weather-applet",
   "runtime": "org.freedesktop.Platform",
-  "runtime-version": "24.08",
+  "runtime-version": "25.08",
   "sdk": "org.freedesktop.Sdk",
   "sdk-extensions": ["org.freedesktop.Sdk.Extension.rust-stable"],
   "command": "cosmic-ext-applet-weather",
@@ -36,7 +36,7 @@
         {
           "type": "git",
           "url": "https://github.com/cosmic-utils/cosmic-ext-applet-weather.git",
-          "commit": "e98c57c586180df0abf6efbe3ee479fc4849f4f7"
+          "commit": "5d539ce2bc5229976cd57eb34b44b7b9aad26edc"
         },
         "cargo-sources.json"
       ]

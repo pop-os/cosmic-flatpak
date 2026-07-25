@@ -35,8 +35,8 @@
         {
           "type": "git",
           "url": "https://github.com/cosmic-utils/cosmic-ext-applet-pomodoro.git",
-          "tag": "0.1.1",
-          "commit": "98dc404fb552815541f3939cfa18db0e7d02c132"
+          "tag": "0.1.2",
+          "commit": "eaadeca0f88c2e602fb00ede7ea1bee6ca7760f5"
         },
         "cargo-sources.json"
       ]

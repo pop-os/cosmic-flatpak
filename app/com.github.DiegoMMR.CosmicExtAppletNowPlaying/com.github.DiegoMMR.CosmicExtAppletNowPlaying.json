@@ -1,0 +1,50 @@
+{
+  "id": "com.github.DiegoMMR.CosmicExtAppletNowPlaying",
+  "runtime": "org.freedesktop.Platform",
+  "runtime-version": "25.08",
+  "sdk": "org.freedesktop.Sdk",
+  "sdk-extensions": ["org.freedesktop.Sdk.Extension.rust-stable"],
+  "command": "cosmic-ext-applet-now-playing",
+  "finish-args": [
+    "--socket=wayland",
+    "--socket=session-bus",
+    "--talk-name=org.mpris.MediaPlayer2.*",
+    "--filesystem=xdg-cache:ro",
+    "--filesystem=~/.var/app:ro",
+    "--filesystem=xdg-config/cosmic:rw"
+  ],
+  "build-options": {
+    "append-path": "/usr/lib/sdk/rust-stable/bin",
+    "env": {
+      "CARGO_HOME": "/run/build/cosmic-ext-applet-now-playing/cargo"
+    }
+  },
+  "modules": [
+    {
+      "name": "cosmic-ext-applet-now-playing",
+      "buildsystem": "simple",
+      "build-commands": [
+        "cargo --offline fetch --manifest-path Cargo.toml --verbose",
+        "cargo --offline build --release --verbose",
+        "install -Dm0755 ./target/release/cosmic-ext-applet-now-playing /app/bin/cosmic-ext-applet-now-playing",
+        "install -Dm0644 ./res/com.github.DiegoMMR.CosmicExtAppletNowPlaying.desktop /app/share/applications/com.github.DiegoMMR.CosmicExtAppletNowPlaying.desktop",
+        "install -Dm0644 ./res/com.github.DiegoMMR.CosmicExtAppletNowPlaying.metainfo.xml /app/share/metainfo/com.github.DiegoMMR.CosmicExtAppletNowPlaying.metainfo.xml",
+        "install -Dm0644 ./res/icons/hicolor/16x16/apps/com.github.DiegoMMR.CosmicExtAppletNowPlaying.svg /app/share/icons/hicolor/16x16/apps/com.github.DiegoMMR.CosmicExtAppletNowPlaying.svg",
+        "install -Dm0644 ./res/icons/hicolor/24x24/apps/com.github.DiegoMMR.CosmicExtAppletNowPlaying.svg /app/share/icons/hicolor/24x24/apps/com.github.DiegoMMR.CosmicExtAppletNowPlaying.svg",
+        "install -Dm0644 ./res/icons/hicolor/32x32/apps/com.github.DiegoMMR.CosmicExtAppletNowPlaying.svg /app/share/icons/hicolor/32x32/apps/com.github.DiegoMMR.CosmicExtAppletNowPlaying.svg",
+        "install -Dm0644 ./res/icons/hicolor/48x48/apps/com.github.DiegoMMR.CosmicExtAppletNowPlaying.svg /app/share/icons/hicolor/48x48/apps/com.github.DiegoMMR.CosmicExtAppletNowPlaying.svg",
+        "install -Dm0644 ./res/icons/hicolor/64x64/apps/com.github.DiegoMMR.CosmicExtAppletNowPlaying.svg /app/share/icons/hicolor/64x64/apps/com.github.DiegoMMR.CosmicExtAppletNowPlaying.svg",
+        "install -Dm0644 ./res/icons/hicolor/128x128/apps/com.github.DiegoMMR.CosmicExtAppletNowPlaying.svg /app/share/icons/hicolor/128x128/apps/com.github.DiegoMMR.CosmicExtAppletNowPlaying.svg",
+        "install -Dm0644 ./res/icons/hicolor/256x256/apps/com.github.DiegoMMR.CosmicExtAppletNowPlaying.svg /app/share/icons/hicolor/256x256/apps/com.github.DiegoMMR.CosmicExtAppletNowPlaying.svg"
+      ],
+      "sources": [
+        {
+            "type": "git",
+            "url": "https://github.com/cosmic-utils/cosmic-ext-applet-now-playing.git",
+            "tag": "v0.1.0"
+        },
+        "cargo-sources.json"
+      ]
+    }
+  ]
+}

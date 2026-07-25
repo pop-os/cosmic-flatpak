@@ -1,0 +1,171 @@
+{
+    "id": "io.github.PSGtatitos.papyrus",
+    "runtime": "org.gnome.Platform",
+    "runtime-version": "50",
+    "sdk": "org.gnome.Sdk",
+    "command": "papyrus",
+    "finish-args": [
+        "--share=ipc",
+        "--socket=wayland",
+        "--socket=pulseaudio",
+        "--device=dri",
+        "--share=network",
+        "--filesystem=home",
+        "--filesystem=xdg-config/cosmic:rw",
+        "--socket=session-bus",
+        "--talk-name=org.freedesktop.Flatpak",
+        "--talk-name=org.freedesktop.portal.Desktop",
+        "--env=PYTHONPATH=/app/lib/python3.13/site-packages"
+    ],
+    "modules": [
+        {
+            "name": "wayland-protocols",
+            "buildsystem": "meson",
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://gitlab.freedesktop.org/wayland/wayland-protocols.git",
+                    "tag": "1.42"
+                }
+            ]
+        },
+        {
+            "name": "libplacebo",
+            "buildsystem": "meson",
+            "config-opts": [
+                "-Dvulkan=disabled",
+                "-Dglslang=disabled",
+                "-Ddemos=false",
+                "-Dlcms=disabled",
+                "--libdir=/app/lib"
+            ],
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://code.videolan.org/videolan/libplacebo.git",
+                    "tag": "v7.349.0"
+                }
+            ]
+        },
+        {
+            "name": "libass",
+            "config-opts": [
+                "--disable-static"
+            ],
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://github.com/libass/libass.git",
+                    "tag": "0.17.3"
+                }
+            ]
+        },
+        {
+            "name": "libmpv",
+            "buildsystem": "meson",
+            "config-opts": [
+                "-Dlibmpv=true",
+                "-Dcplayer=false",
+                "-Dbuild-date=false",
+                "-Dalsa=disabled",
+                "--libdir=/app/lib"
+            ],
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://github.com/mpv-player/mpv.git",
+                    "tag": "v0.39.0"
+                }
+            ]
+        },
+        {
+            "name": "mpvpaper",
+            "buildsystem": "meson",
+            "build-options": {
+                "env": {
+                    "LD_LIBRARY_PATH": "/app/lib",
+                    "CFLAGS": "-Wno-error=incompatible-pointer-types"
+                }
+            },
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://github.com/GhostNaN/mpvpaper.git",
+                    "tag": "1.5"
+                }
+            ]
+        },
+        {
+            "name": "python3-pygobject",
+            "buildsystem": "meson",
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://download.gnome.org/sources/pygobject/3.52/pygobject-3.52.4.tar.gz",
+                    "sha256": "5947250b27d8e5f4797e8e0ed801dcd1512a9433d5637a0b36065a850b3a5c5c"
+                }
+            ]
+        },
+        {
+            "name": "python3-pybind11",
+            "buildsystem": "simple",
+            "build-commands": [
+                "pip3 install --no-build-isolation --prefix=/app ."
+            ],
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://github.com/pybind/pybind11.git",
+                    "tag": "v2.13.6"
+                }
+            ]
+        },
+        {
+            "name": "python3-pillow",
+            "buildsystem": "simple",
+            "build-commands": [
+                "pip3 install --no-build-isolation --prefix=/app ."
+            ],
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://github.com/python-pillow/Pillow.git",
+                    "tag": "12.2.0"
+                }
+            ]
+        },
+        {
+            "name": "ffmpeg-cli",
+            "buildsystem": "simple",
+            "build-commands": [
+                "mkdir -p /app/bin",
+                "cp ffmpeg /app/bin/ffmpeg",
+                "cp ffprobe /app/bin/ffprobe"
+            ],
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://johnvansickle.com/ffmpeg/releases/ffmpeg-release-amd64-static.tar.xz",
+                    "sha256": "abda8d77ce8309141f83ab8edf0596834087c52467f6badf376a6a2a4c87cf67"
+                }
+            ]
+        },
+        {
+            "name": "papyrus",
+            "buildsystem": "simple",
+            "build-commands": [
+                "install -Dm755 papyrus.py /app/bin/papyrus",
+                "install -Dm644 io.github.PSGtatitos.papyrus.desktop /app/share/applications/io.github.PSGtatitos.papyrus.desktop",
+                "install -Dm644 io.github.PSGtatitos.papyrus.metainfo.xml -t /app/share/metainfo/",
+                "install -Dm644 assets/icon.png /app/share/icons/hicolor/256x256/apps/io.github.PSGtatitos.papyrus.png"
+            ],
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://github.com/PSGtatitos/papyrus.git",
+                    "commit": "0320369628b4834b51258fa5f0d9e36a2e4f47c5"
+                }
+            ]
+        }
+    ]
+}

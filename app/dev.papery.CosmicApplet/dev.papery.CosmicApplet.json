@@ -1,0 +1,46 @@
+{
+  "id": "dev.papery.CosmicApplet",
+  "runtime": "org.freedesktop.Platform",
+  "runtime-version": "24.08",
+  "sdk": "org.freedesktop.Sdk",
+  "sdk-extensions": ["org.freedesktop.Sdk.Extension.rust-stable"],
+  "command": "papery",
+  "finish-args": [
+    "--share=network",
+    "--filesystem=xdg-config/cosmic:rw",
+    "--filesystem=xdg-cache/papery:create",
+    "--socket=wayland",
+    "--device=dri",
+    "--talk-name=com.system76.CosmicSettingsDaemon",
+    "--talk-name=org.kde.StatusNotifierWatcher",
+    "--talk-name=org.freedesktop.portal.Desktop"
+  ],
+  "build-options": {
+    "append-path": "/usr/lib/sdk/rust-stable/bin",
+    "env": {
+      "CARGO_HOME": "/run/build/papery/cargo"
+    }
+  },
+  "modules": [
+    {
+      "name": "papery",
+      "buildsystem": "simple",
+      "build-commands": [
+        "cargo --offline fetch --manifest-path Cargo.toml --verbose",
+        "cargo --offline build --release --verbose",
+        "install -Dm0755 ./target/release/papery /app/bin/papery",
+        "install -Dm0644 ./data/dev.papery.CosmicApplet.desktop -t /app/share/applications/",
+        "install -Dm0644 ./data/dev.papery.CosmicApplet.metainfo.xml -t /app/share/metainfo/",
+        "install -Dm0644 ./data/icons/scalable/apps/dev.papery.CosmicApplet.svg -t /app/share/icons/hicolor/scalable/apps/"
+      ],
+      "sources": [
+        {
+          "type": "git",
+          "url": "https://github.com/jibsta210/papery.git",
+          "commit": "3d8c15934efb30448d755ef8d25865f9178c915b"
+        },
+        "cargo-sources.json"
+      ]
+    }
+  ]
+}

@@ -20,26 +20,20 @@
     {
         "type": "git",
         "url": "https://github.com/pop-os/cosmic-protocols",
-        "commit": "c253ec1d6804afbcdf250f5cc37ae1194bba7bd2",
-        "dest": "flatpak-cargo/git/cosmic-protocols-c253ec1"
+        "commit": "32283d76a8d0342da74c4cc022a533c52dcf378f",
+        "dest": "flatpak-cargo/git/cosmic-protocols-32283d7"
     },
     {
         "type": "git",
         "url": "https://github.com/pop-os/libcosmic",
-        "commit": "f0f68933f1552857e2165fc0fa953228107bddef",
-        "dest": "flatpak-cargo/git/libcosmic-f0f6893"
+        "commit": "fc5debccef41cd6bd6731cbc768cb719847d1a2f",
+        "dest": "flatpak-cargo/git/libcosmic-fc5debc"
     },
     {
         "type": "git",
         "url": "https://github.com/pop-os/freedesktop-icons",
-        "commit": "cb0a2f299dbc443697ce1674065e0d4f82915c02",
-        "dest": "flatpak-cargo/git/freedesktop-icons-cb0a2f2"
-    },
-    {
-        "type": "git",
-        "url": "https://github.com/pop-os/cosmic-panel",
-        "commit": "6119bb106255b2cd51cd281919662de3b6d8b433",
-        "dest": "flatpak-cargo/git/cosmic-panel-6119bb1"
+        "commit": "ab4c57b8e416c6af9297cb04d101889896fd9a92",
+        "dest": "flatpak-cargo/git/freedesktop-icons-ab4c57b"
     },
     {
         "type": "git",
@@ -239,6 +233,19 @@
     {
         "type": "archive",
         "archive-type": "tar-gzip",
+        "url": "https://static.crates.io/crates/aead/aead-0.5.2.crate",
+        "sha256": "d122413f284cf2d62fb1b7db97e02edb8cda96d769b16e443a4f6195e35662b0",
+        "dest": "cargo/vendor/aead-0.5.2"
+    },
+    {
+        "type": "inline",
+        "contents": "{\"package\": \"d122413f284cf2d62fb1b7db97e02edb8cda96d769b16e443a4f6195e35662b0\", \"files\": {}}",
+        "dest": "cargo/vendor/aead-0.5.2",
+        "dest-filename": ".cargo-checksum.json"
+    },
+    {
+        "type": "archive",
+        "archive-type": "tar-gzip",
         "url": "https://static.crates.io/crates/ahash/ahash-0.8.12.crate",
         "sha256": "5a15f179cd60c4584b8a8c596927aadc462e27f2ca70c04e0071964a73ba7a75",
         "dest": "cargo/vendor/ahash-0.8.12"
@@ -273,6 +280,32 @@
         "type": "inline",
         "contents": "{\"package\": \"250f629c0161ad8107cf89319e990051fae62832fd343083bea452d93e2205fd\", \"files\": {}}",
         "dest": "cargo/vendor/aliasable-0.1.3",
+        "dest-filename": ".cargo-checksum.json"
+    },
+    {
+        "type": "archive",
+        "archive-type": "tar-gzip",
+        "url": "https://static.crates.io/crates/aligned/aligned-0.4.3.crate",
+        "sha256": "ee4508988c62edf04abd8d92897fca0c2995d907ce1dfeaf369dac3716a40685",
+        "dest": "cargo/vendor/aligned-0.4.3"
+    },
+    {
+        "type": "inline",
+        "contents": "{\"package\": \"ee4508988c62edf04abd8d92897fca0c2995d907ce1dfeaf369dac3716a40685\", \"files\": {}}",
+        "dest": "cargo/vendor/aligned-0.4.3",
+        "dest-filename": ".cargo-checksum.json"
+    },
+    {
+        "type": "archive",
+        "archive-type": "tar-gzip",
+        "url": "https://static.crates.io/crates/aligned-vec/aligned-vec-0.6.4.crate",
+        "sha256": "dc890384c8602f339876ded803c97ad529f3842aba97f6392b3dba0dd171769b",
+        "dest": "cargo/vendor/aligned-vec-0.6.4"
+    },
+    {
+        "type": "inline",
+        "contents": "{\"package\": \"dc890384c8602f339876ded803c97ad529f3842aba97f6392b3dba0dd171769b\", \"files\": {}}",
+        "dest": "cargo/vendor/aligned-vec-0.6.4",
         "dest-filename": ".cargo-checksum.json"
     },
     {
@@ -382,6 +415,19 @@
     {
         "type": "archive",
         "archive-type": "tar-gzip",
+        "url": "https://static.crates.io/crates/arbitrary/arbitrary-1.4.2.crate",
+        "sha256": "c3d036a3c4ab069c7b410a2ce876bd74808d2d0888a82667669f8e783a898bf1",
+        "dest": "cargo/vendor/arbitrary-1.4.2"
+    },
+    {
+        "type": "inline",
+        "contents": "{\"package\": \"c3d036a3c4ab069c7b410a2ce876bd74808d2d0888a82667669f8e783a898bf1\", \"files\": {}}",
+        "dest": "cargo/vendor/arbitrary-1.4.2",
+        "dest-filename": ".cargo-checksum.json"
+    },
+    {
+        "type": "archive",
+        "archive-type": "tar-gzip",
         "url": "https://static.crates.io/crates/arc-swap/arc-swap-1.9.1.crate",
         "sha256": "6a3a1fd6f75306b68087b831f025c712524bcb19aad54e557b1129cfa0a2b207",
         "dest": "cargo/vendor/arc-swap-1.9.1"
@@ -390,6 +436,32 @@
         "type": "inline",
         "contents": "{\"package\": \"6a3a1fd6f75306b68087b831f025c712524bcb19aad54e557b1129cfa0a2b207\", \"files\": {}}",
         "dest": "cargo/vendor/arc-swap-1.9.1",
+        "dest-filename": ".cargo-checksum.json"
+    },
+    {
+        "type": "archive",
+        "archive-type": "tar-gzip",
+        "url": "https://static.crates.io/crates/arg_enum_proc_macro/arg_enum_proc_macro-0.3.4.crate",
+        "sha256": "0ae92a5119aa49cdbcf6b9f893fe4e1d98b04ccbf82ee0584ad948a44a734dea",
+        "dest": "cargo/vendor/arg_enum_proc_macro-0.3.4"
+    },
+    {
+        "type": "inline",
+        "contents": "{\"package\": \"0ae92a5119aa49cdbcf6b9f893fe4e1d98b04ccbf82ee0584ad948a44a734dea\", \"files\": {}}",
+        "dest": "cargo/vendor/arg_enum_proc_macro-0.3.4",
+        "dest-filename": ".cargo-checksum.json"
+    },
+    {
+        "type": "archive",
+        "archive-type": "tar-gzip",
+        "url": "https://static.crates.io/crates/argon2/argon2-0.5.3.crate",
+        "sha256": "3c3610892ee6e0cbce8ae2700349fcf8f98adb0dbfbee85aec3c9179d29cc072",
+        "dest": "cargo/vendor/argon2-0.5.3"
+    },
+    {
+        "type": "inline",
+        "contents": "{\"package\": \"3c3610892ee6e0cbce8ae2700349fcf8f98adb0dbfbee85aec3c9179d29cc072\", \"files\": {}}",
+        "dest": "cargo/vendor/argon2-0.5.3",
         "dest-filename": ".cargo-checksum.json"
     },
     {
@@ -429,6 +501,19 @@
         "type": "inline",
         "contents": "{\"package\": \"175571dd1d178ced59193a6fc02dde1b972eb0bc56c892cde9beeceac5bf0f6b\", \"files\": {}}",
         "dest": "cargo/vendor/as-raw-xcb-connection-1.0.1",
+        "dest-filename": ".cargo-checksum.json"
+    },
+    {
+        "type": "archive",
+        "archive-type": "tar-gzip",
+        "url": "https://static.crates.io/crates/as-slice/as-slice-0.2.1.crate",
+        "sha256": "516b6b4f0e40d50dcda9365d53964ec74560ad4284da2e7fc97122cd83174516",
+        "dest": "cargo/vendor/as-slice-0.2.1"
+    },
+    {
+        "type": "inline",
+        "contents": "{\"package\": \"516b6b4f0e40d50dcda9365d53964ec74560ad4284da2e7fc97122cd83174516\", \"files\": {}}",
+        "dest": "cargo/vendor/as-slice-0.2.1",
         "dest-filename": ".cargo-checksum.json"
     },
     {
@@ -699,6 +784,58 @@
     {
         "type": "archive",
         "archive-type": "tar-gzip",
+        "url": "https://static.crates.io/crates/av-scenechange/av-scenechange-0.14.1.crate",
+        "sha256": "0f321d77c20e19b92c39e7471cf986812cbb46659d2af674adc4331ef3f18394",
+        "dest": "cargo/vendor/av-scenechange-0.14.1"
+    },
+    {
+        "type": "inline",
+        "contents": "{\"package\": \"0f321d77c20e19b92c39e7471cf986812cbb46659d2af674adc4331ef3f18394\", \"files\": {}}",
+        "dest": "cargo/vendor/av-scenechange-0.14.1",
+        "dest-filename": ".cargo-checksum.json"
+    },
+    {
+        "type": "archive",
+        "archive-type": "tar-gzip",
+        "url": "https://static.crates.io/crates/av1-grain/av1-grain-0.2.5.crate",
+        "sha256": "8cfddb07216410377231960af4fcab838eaa12e013417781b78bd95ee22077f8",
+        "dest": "cargo/vendor/av1-grain-0.2.5"
+    },
+    {
+        "type": "inline",
+        "contents": "{\"package\": \"8cfddb07216410377231960af4fcab838eaa12e013417781b78bd95ee22077f8\", \"files\": {}}",
+        "dest": "cargo/vendor/av1-grain-0.2.5",
+        "dest-filename": ".cargo-checksum.json"
+    },
+    {
+        "type": "archive",
+        "archive-type": "tar-gzip",
+        "url": "https://static.crates.io/crates/avif-serialize/avif-serialize-0.8.9.crate",
+        "sha256": "e7178fe5f7d460b13895ebb9dcb28a3a6216d2df2574a0806cb51b555d297f38",
+        "dest": "cargo/vendor/avif-serialize-0.8.9"
+    },
+    {
+        "type": "inline",
+        "contents": "{\"package\": \"e7178fe5f7d460b13895ebb9dcb28a3a6216d2df2574a0806cb51b555d297f38\", \"files\": {}}",
+        "dest": "cargo/vendor/avif-serialize-0.8.9",
+        "dest-filename": ".cargo-checksum.json"
+    },
+    {
+        "type": "archive",
+        "archive-type": "tar-gzip",
+        "url": "https://static.crates.io/crates/base64/base64-0.21.7.crate",
+        "sha256": "9d297deb1925b89f2ccc13d7635fa0714f12c87adce1c75356b39ca9b7178567",
+        "dest": "cargo/vendor/base64-0.21.7"
+    },
+    {
+        "type": "inline",
+        "contents": "{\"package\": \"9d297deb1925b89f2ccc13d7635fa0714f12c87adce1c75356b39ca9b7178567\", \"files\": {}}",
+        "dest": "cargo/vendor/base64-0.21.7",
+        "dest-filename": ".cargo-checksum.json"
+    },
+    {
+        "type": "archive",
+        "archive-type": "tar-gzip",
         "url": "https://static.crates.io/crates/base64/base64-0.22.1.crate",
         "sha256": "72b3254f16251a8381aa12e40e3c4d2f0199f8c6508fbecb9d91f575e0fbb8c6",
         "dest": "cargo/vendor/base64-0.22.1"
@@ -712,6 +849,19 @@
     {
         "type": "archive",
         "archive-type": "tar-gzip",
+        "url": "https://static.crates.io/crates/base64ct/base64ct-1.8.3.crate",
+        "sha256": "2af50177e190e07a26ab74f8b1efbfe2ef87da2116221318cb1c2e82baf7de06",
+        "dest": "cargo/vendor/base64ct-1.8.3"
+    },
+    {
+        "type": "inline",
+        "contents": "{\"package\": \"2af50177e190e07a26ab74f8b1efbfe2ef87da2116221318cb1c2e82baf7de06\", \"files\": {}}",
+        "dest": "cargo/vendor/base64ct-1.8.3",
+        "dest-filename": ".cargo-checksum.json"
+    },
+    {
+        "type": "archive",
+        "archive-type": "tar-gzip",
         "url": "https://static.crates.io/crates/basic-toml/basic-toml-0.1.10.crate",
         "sha256": "ba62675e8242a4c4e806d12f11d136e626e6c8361d6b829310732241652a178a",
         "dest": "cargo/vendor/basic-toml-0.1.10"
@@ -720,6 +870,19 @@
         "type": "inline",
         "contents": "{\"package\": \"ba62675e8242a4c4e806d12f11d136e626e6c8361d6b829310732241652a178a\", \"files\": {}}",
         "dest": "cargo/vendor/basic-toml-0.1.10",
+        "dest-filename": ".cargo-checksum.json"
+    },
+    {
+        "type": "archive",
+        "archive-type": "tar-gzip",
+        "url": "https://static.crates.io/crates/bincode/bincode-1.3.3.crate",
+        "sha256": "b1f45e9417d87227c7a56d22e471c6206462cba514c7590c09aff4cf6d1ddcad",
+        "dest": "cargo/vendor/bincode-1.3.3"
+    },
+    {
+        "type": "inline",
+        "contents": "{\"package\": \"b1f45e9417d87227c7a56d22e471c6206462cba514c7590c09aff4cf6d1ddcad\", \"files\": {}}",
+        "dest": "cargo/vendor/bincode-1.3.3",
         "dest-filename": ".cargo-checksum.json"
     },
     {
@@ -751,6 +914,19 @@
     {
         "type": "archive",
         "archive-type": "tar-gzip",
+        "url": "https://static.crates.io/crates/bit_field/bit_field-0.10.3.crate",
+        "sha256": "1e4b40c7323adcfc0a41c4b88143ed58346ff65a288fc144329c5c45e05d70c6",
+        "dest": "cargo/vendor/bit_field-0.10.3"
+    },
+    {
+        "type": "inline",
+        "contents": "{\"package\": \"1e4b40c7323adcfc0a41c4b88143ed58346ff65a288fc144329c5c45e05d70c6\", \"files\": {}}",
+        "dest": "cargo/vendor/bit_field-0.10.3",
+        "dest-filename": ".cargo-checksum.json"
+    },
+    {
+        "type": "archive",
+        "archive-type": "tar-gzip",
         "url": "https://static.crates.io/crates/bitflags/bitflags-1.3.2.crate",
         "sha256": "bef38d45163c2f1dde094a7dfd33ccf595c92905c8f8f4fdc18d06fb1037718a",
         "dest": "cargo/vendor/bitflags-1.3.2"
@@ -772,6 +948,32 @@
         "type": "inline",
         "contents": "{\"package\": \"b4388bee8683e3d04af747c73422af53102d2bd24d9eadb6cbc100baef4b43f8\", \"files\": {}}",
         "dest": "cargo/vendor/bitflags-2.13.0",
+        "dest-filename": ".cargo-checksum.json"
+    },
+    {
+        "type": "archive",
+        "archive-type": "tar-gzip",
+        "url": "https://static.crates.io/crates/bitstream-io/bitstream-io-4.10.0.crate",
+        "sha256": "7eff00be299a18769011411c9def0d827e8f2d7bf0c3dbf53633147a8867fd1f",
+        "dest": "cargo/vendor/bitstream-io-4.10.0"
+    },
+    {
+        "type": "inline",
+        "contents": "{\"package\": \"7eff00be299a18769011411c9def0d827e8f2d7bf0c3dbf53633147a8867fd1f\", \"files\": {}}",
+        "dest": "cargo/vendor/bitstream-io-4.10.0",
+        "dest-filename": ".cargo-checksum.json"
+    },
+    {
+        "type": "archive",
+        "archive-type": "tar-gzip",
+        "url": "https://static.crates.io/crates/blake2/blake2-0.10.6.crate",
+        "sha256": "46502ad458c9a52b69d4d4d32775c788b7a1b85e8bc9d482d92250fc0e3f8efe",
+        "dest": "cargo/vendor/blake2-0.10.6"
+    },
+    {
+        "type": "inline",
+        "contents": "{\"package\": \"46502ad458c9a52b69d4d4d32775c788b7a1b85e8bc9d482d92250fc0e3f8efe\", \"files\": {}}",
+        "dest": "cargo/vendor/blake2-0.10.6",
         "dest-filename": ".cargo-checksum.json"
     },
     {
@@ -881,6 +1083,19 @@
     {
         "type": "archive",
         "archive-type": "tar-gzip",
+        "url": "https://static.crates.io/crates/built/built-0.8.1.crate",
+        "sha256": "5c0e531d93d39c34eef561e929e8a7f86d77a5af08aac4f6d6e39976c51858e9",
+        "dest": "cargo/vendor/built-0.8.1"
+    },
+    {
+        "type": "inline",
+        "contents": "{\"package\": \"5c0e531d93d39c34eef561e929e8a7f86d77a5af08aac4f6d6e39976c51858e9\", \"files\": {}}",
+        "dest": "cargo/vendor/built-0.8.1",
+        "dest-filename": ".cargo-checksum.json"
+    },
+    {
+        "type": "archive",
+        "archive-type": "tar-gzip",
         "url": "https://static.crates.io/crates/bumpalo/bumpalo-3.20.3.crate",
         "sha256": "72f5acc6cb2ba439de613abc23857ec3d78374d8ed5ac84e9d11336e87da8649",
         "dest": "cargo/vendor/bumpalo-3.20.3"
@@ -928,19 +1143,6 @@
         "type": "inline",
         "contents": "{\"package\": \"f9abbd1bc6865053c427f7198e6af43bfdedc55ab791faed4fbd361d789575ff\", \"files\": {}}",
         "dest": "cargo/vendor/bytemuck_derive-1.10.2",
-        "dest-filename": ".cargo-checksum.json"
-    },
-    {
-        "type": "archive",
-        "archive-type": "tar-gzip",
-        "url": "https://static.crates.io/crates/byteorder/byteorder-1.5.0.crate",
-        "sha256": "1fd0f2584146f6f2ef48085050886acf353beff7305ebd1ae69500e27c67f64b",
-        "dest": "cargo/vendor/byteorder-1.5.0"
-    },
-    {
-        "type": "inline",
-        "contents": "{\"package\": \"1fd0f2584146f6f2ef48085050886acf353beff7305ebd1ae69500e27c67f64b\", \"files\": {}}",
-        "dest": "cargo/vendor/byteorder-1.5.0",
         "dest-filename": ".cargo-checksum.json"
     },
     {
@@ -1032,6 +1234,45 @@
         "type": "inline",
         "contents": "{\"package\": \"613afe47fcd5fac7ccf1db93babcb082c5994d996f20b8b159f2ad1658eb5724\", \"files\": {}}",
         "dest": "cargo/vendor/cfg_aliases-0.2.1",
+        "dest-filename": ".cargo-checksum.json"
+    },
+    {
+        "type": "archive",
+        "archive-type": "tar-gzip",
+        "url": "https://static.crates.io/crates/chacha20/chacha20-0.9.1.crate",
+        "sha256": "c3613f74bd2eac03dad61bd53dbe620703d4371614fe0bc3b9f04dd36fe4e818",
+        "dest": "cargo/vendor/chacha20-0.9.1"
+    },
+    {
+        "type": "inline",
+        "contents": "{\"package\": \"c3613f74bd2eac03dad61bd53dbe620703d4371614fe0bc3b9f04dd36fe4e818\", \"files\": {}}",
+        "dest": "cargo/vendor/chacha20-0.9.1",
+        "dest-filename": ".cargo-checksum.json"
+    },
+    {
+        "type": "archive",
+        "archive-type": "tar-gzip",
+        "url": "https://static.crates.io/crates/chacha20poly1305/chacha20poly1305-0.10.1.crate",
+        "sha256": "10cd79432192d1c0f4e1a0fef9527696cc039165d729fb41b3f4f4f354c2dc35",
+        "dest": "cargo/vendor/chacha20poly1305-0.10.1"
+    },
+    {
+        "type": "inline",
+        "contents": "{\"package\": \"10cd79432192d1c0f4e1a0fef9527696cc039165d729fb41b3f4f4f354c2dc35\", \"files\": {}}",
+        "dest": "cargo/vendor/chacha20poly1305-0.10.1",
+        "dest-filename": ".cargo-checksum.json"
+    },
+    {
+        "type": "archive",
+        "archive-type": "tar-gzip",
+        "url": "https://static.crates.io/crates/cipher/cipher-0.4.4.crate",
+        "sha256": "773f3b9af64447d2ce9850330c473515014aa235e6a783b02db81ff39e4a3dad",
+        "dest": "cargo/vendor/cipher-0.4.4"
+    },
+    {
+        "type": "inline",
+        "contents": "{\"package\": \"773f3b9af64447d2ce9850330c473515014aa235e6a783b02db81ff39e4a3dad\", \"files\": {}}",
+        "dest": "cargo/vendor/cipher-0.4.4",
         "dest-filename": ".cargo-checksum.json"
     },
     {
@@ -1247,19 +1488,6 @@
     {
         "type": "archive",
         "archive-type": "tar-gzip",
-        "url": "https://static.crates.io/crates/core-graphics/core-graphics-0.24.0.crate",
-        "sha256": "fa95a34622365fa5bbf40b20b75dba8dfa8c94c734aea8ac9a5ca38af14316f1",
-        "dest": "cargo/vendor/core-graphics-0.24.0"
-    },
-    {
-        "type": "inline",
-        "contents": "{\"package\": \"fa95a34622365fa5bbf40b20b75dba8dfa8c94c734aea8ac9a5ca38af14316f1\", \"files\": {}}",
-        "dest": "cargo/vendor/core-graphics-0.24.0",
-        "dest-filename": ".cargo-checksum.json"
-    },
-    {
-        "type": "archive",
-        "archive-type": "tar-gzip",
         "url": "https://static.crates.io/crates/core-graphics-types/core-graphics-types-0.1.3.crate",
         "sha256": "45390e6114f68f718cc7a830514a96f903cccd70d02a8f6d9f643ac4ba45afaf",
         "dest": "cargo/vendor/core-graphics-types-0.1.3"
@@ -1299,12 +1527,12 @@
     {
         "type": "shell",
         "commands": [
-            "cp -r --reflink=auto \"flatpak-cargo/git/cosmic-protocols-c253ec1/client-toolkit\" \"cargo/vendor/cosmic-client-toolkit\""
+            "cp -r --reflink=auto \"flatpak-cargo/git/cosmic-protocols-32283d7/client-toolkit\" \"cargo/vendor/cosmic-client-toolkit\""
         ]
     },
     {
         "type": "inline",
-        "contents": "[package]\nname = \"cosmic-client-toolkit\"\nversion = \"0.2.0\"\nedition = \"2024\"\nrepository = \"https://github.com/pop-os/cosmic-protocols\"\nlicense = \"GPL-3.0-only\"\ndescription = \"Helpers for implement clients with COSMIC Wayland protocols\"\n\n[dependencies]\nlibc = \"0.2.175\"\nbitflags = \"2.9.3\"\n\n[dependencies.cosmic-protocols]\nversion = \"0.2.0\"\npath = \"../\"\n\n[dependencies.sctk]\npackage = \"smithay-client-toolkit\"\nversion = \"0.20.0\"\n\n[dependencies.wayland-client]\nversion = \"0.31.11\"\n\n[dependencies.wayland-protocols]\nversion = \"0.32.9\"\nfeatures = [\"client\", \"staging\"]\n\n[dev-dependencies]\npng = \"0.18.0\"\ngbm = \"0.18.0\"\n\n[dev-dependencies.wayland-backend]\nversion = \"0.3.11\"\nfeatures = [\"client_system\"]\n\n[dev-dependencies.smithay]\nversion = \"0.7.0\"\ndefault-features = false\nfeatures = [\"renderer_gl\", \"backend_drm\"]\n\n[features]\ndefault = []\n",
+        "contents": "[package]\nname = \"cosmic-client-toolkit\"\nversion = \"0.2.0\"\nedition = \"2024\"\nrepository = \"https://github.com/pop-os/cosmic-protocols\"\nlicense = \"GPL-3.0-only\"\ndescription = \"Helpers for implement clients with COSMIC Wayland protocols\"\n\n[dependencies]\nlibc = \"0.2.175\"\nbitflags = \"2.9.3\"\n\n[dependencies.cosmic-protocols]\nversion = \"0.2.0\"\npath = \"../\"\n\n[dependencies.sctk]\npackage = \"smithay-client-toolkit\"\nversion = \"0.20.0\"\n\n[dependencies.wayland-client]\nversion = \"0.31.11\"\n\n[dependencies.wayland-protocols]\nversion = \"0.32.9\"\nfeatures = [\"client\", \"staging\"]\n\n[dev-dependencies]\npng = \"0.18.0\"\ngbm = \"0.18.0\"\nxkbcommon = \"0.7.0\"\n\n[dev-dependencies.wayland-backend]\nversion = \"0.3.11\"\nfeatures = [\"client_system\"]\n\n[dev-dependencies.smithay]\nversion = \"0.7.0\"\ndefault-features = false\nfeatures = [\"renderer_gl\", \"backend_drm\"]\n\n[features]\ndefault = []\n",
         "dest": "cargo/vendor/cosmic-client-toolkit",
         "dest-filename": "Cargo.toml"
     },
@@ -1317,7 +1545,7 @@
     {
         "type": "shell",
         "commands": [
-            "cp -r --reflink=auto \"flatpak-cargo/git/libcosmic-f0f6893/cosmic-config\" \"cargo/vendor/cosmic-config\""
+            "cp -r --reflink=auto \"flatpak-cargo/git/libcosmic-fc5debc/cosmic-config\" \"cargo/vendor/cosmic-config\""
         ]
     },
     {
@@ -1335,7 +1563,7 @@
     {
         "type": "shell",
         "commands": [
-            "cp -r --reflink=auto \"flatpak-cargo/git/libcosmic-f0f6893/cosmic-config-derive\" \"cargo/vendor/cosmic-config-derive\""
+            "cp -r --reflink=auto \"flatpak-cargo/git/libcosmic-fc5debc/cosmic-config-derive\" \"cargo/vendor/cosmic-config-derive\""
         ]
     },
     {
@@ -1353,7 +1581,7 @@
     {
         "type": "shell",
         "commands": [
-            "cp -r --reflink=auto \"flatpak-cargo/git/freedesktop-icons-cb0a2f2/.\" \"cargo/vendor/cosmic-freedesktop-icons\""
+            "cp -r --reflink=auto \"flatpak-cargo/git/freedesktop-icons-ab4c57b/.\" \"cargo/vendor/cosmic-freedesktop-icons\""
         ]
     },
     {
@@ -1371,25 +1599,7 @@
     {
         "type": "shell",
         "commands": [
-            "cp -r --reflink=auto \"flatpak-cargo/git/cosmic-panel-6119bb1/cosmic-panel-config\" \"cargo/vendor/cosmic-panel-config\""
-        ]
-    },
-    {
-        "type": "inline",
-        "contents": "[package]\nname = \"cosmic-panel-config\"\nversion = \"0.1.0\"\nedition = \"2024\"\n\n[features]\ndefault = [\"wayland-rs\"]\nwayland-rs = [\"wayland-protocols-wlr\", \"xdg-shell-wrapper-config\", \"sctk\"]\n\n[dependencies]\nanyhow = \"1.0.102\"\ntracing = \"0.1.44\"\n\n[dependencies.serde]\nversion = \"1.0\"\nfeatures = [\"derive\"]\n\n[dependencies.wayland-protocols-wlr]\nversion = \"0.3.12\"\nfeatures = [\"server\", \"client\"]\noptional = true\n\n[dependencies.cosmic-config]\ngit = \"https://github.com/pop-os/libcosmic\"\n\n[dependencies.xdg-shell-wrapper-config]\npath = \"../xdg-shell-wrapper-config\"\noptional = true\n\n[dependencies.sctk]\noptional = true\npackage = \"smithay-client-toolkit\"\nversion = \"0.20.0\"\nfeatures = [\"calloop\", \"xkbcommon\"]\n",
-        "dest": "cargo/vendor/cosmic-panel-config",
-        "dest-filename": "Cargo.toml"
-    },
-    {
-        "type": "inline",
-        "contents": "{\"package\": null, \"files\": {}}",
-        "dest": "cargo/vendor/cosmic-panel-config",
-        "dest-filename": ".cargo-checksum.json"
-    },
-    {
-        "type": "shell",
-        "commands": [
-            "cp -r --reflink=auto \"flatpak-cargo/git/cosmic-protocols-c253ec1/.\" \"cargo/vendor/cosmic-protocols\""
+            "cp -r --reflink=auto \"flatpak-cargo/git/cosmic-protocols-32283d7/.\" \"cargo/vendor/cosmic-protocols\""
         ]
     },
     {
@@ -1438,12 +1648,12 @@
     {
         "type": "shell",
         "commands": [
-            "cp -r --reflink=auto \"flatpak-cargo/git/libcosmic-f0f6893/cosmic-theme\" \"cargo/vendor/cosmic-theme\""
+            "cp -r --reflink=auto \"flatpak-cargo/git/libcosmic-fc5debc/cosmic-theme\" \"cargo/vendor/cosmic-theme\""
         ]
     },
     {
         "type": "inline",
-        "contents": "[package]\nname = \"cosmic-theme\"\nversion = \"1.0.0\"\nedition = \"2024\"\n\n[package.metadata.docs.rs]\nfeatures = [\"test_all_features\"]\nrustdoc-args = [\"--cfg\", \"docsrs\"]\n\n[features]\ndefault = [\"export\"]\nexport = [\"serde_json\"]\nno-default = []\n\n[dependencies]\nalmost = \"0.2\"\nron = \"0.12\"\nconfigparser = \"3.1.0\"\ndirs = \"6.0\"\nthiserror = \"2.0\"\n\n[dependencies.palette]\nfeatures = [\"serializing\"]\nversion = \"0.7\"\n\n[dependencies.serde]\nfeatures = [\"derive\"]\nversion = \"1.0\"\n\n[dependencies.serde_json]\nversion = \"1.0.149\"\noptional = true\nfeatures = [\"preserve_order\"]\n\n[dependencies.csscolorparser]\nversion = \"0.8.3\"\nfeatures = [\"serde\"]\n\n[dependencies.cosmic-config]\npath = \"../cosmic-config/\"\ndefault-features = false\nfeatures = [\"subscription\", \"macro\"]\n\n[dev-dependencies]\ninsta = \"1.47.2\"\n\n[profile.dev.package.insta]\nopt-level = 3\n\n[profile.dev.package.similar]\nopt-level = 3\n",
+        "contents": "[package]\nname = \"cosmic-theme\"\nversion = \"1.0.0\"\nedition = \"2024\"\n\n[package.metadata.docs.rs]\nfeatures = [\"test_all_features\"]\nrustdoc-args = [\"--cfg\", \"docsrs\"]\n\n[features]\ndefault = [\"export\"]\nexport = [\"serde_json\"]\nno-default = []\n\n[dependencies]\nalmost = \"0.2\"\nron = \"0.12\"\nconfigparser = \"3.1.0\"\ndirs = \"6.0\"\nthiserror = \"2.0\"\n\n[dependencies.palette]\nfeatures = [\"serializing\"]\nversion = \"0.7\"\n\n[dependencies.hex_color]\nversion = \"3\"\nfeatures = [\"serde\"]\n\n[dependencies.serde]\nfeatures = [\"derive\"]\nversion = \"1.0\"\n\n[dependencies.serde_json]\nversion = \"1.0.149\"\noptional = true\nfeatures = [\"preserve_order\"]\n\n[dependencies.csscolorparser]\nversion = \"0.8.3\"\nfeatures = [\"serde\"]\n\n[dependencies.cosmic-config]\npath = \"../cosmic-config/\"\ndefault-features = false\nfeatures = [\"subscription\", \"macro\"]\n\n[dev-dependencies]\ninsta = \"1.47.2\"\n\n[profile.dev.package.insta]\nopt-level = 3\n\n[profile.dev.package.similar]\nopt-level = 3\n",
         "dest": "cargo/vendor/cosmic-theme",
         "dest-filename": "Cargo.toml"
     },
@@ -1477,6 +1687,32 @@
         "type": "inline",
         "contents": "{\"package\": \"9481c1c90cbf2ac953f07c8d4a58aa3945c425b7185c9154d67a65e4230da511\", \"files\": {}}",
         "dest": "cargo/vendor/crc32fast-1.5.0",
+        "dest-filename": ".cargo-checksum.json"
+    },
+    {
+        "type": "archive",
+        "archive-type": "tar-gzip",
+        "url": "https://static.crates.io/crates/crossbeam-deque/crossbeam-deque-0.8.6.crate",
+        "sha256": "9dd111b7b7f7d55b72c0a6ae361660ee5853c9af73f70c3c2ef6858b950e2e51",
+        "dest": "cargo/vendor/crossbeam-deque-0.8.6"
+    },
+    {
+        "type": "inline",
+        "contents": "{\"package\": \"9dd111b7b7f7d55b72c0a6ae361660ee5853c9af73f70c3c2ef6858b950e2e51\", \"files\": {}}",
+        "dest": "cargo/vendor/crossbeam-deque-0.8.6",
+        "dest-filename": ".cargo-checksum.json"
+    },
+    {
+        "type": "archive",
+        "archive-type": "tar-gzip",
+        "url": "https://static.crates.io/crates/crossbeam-epoch/crossbeam-epoch-0.9.18.crate",
+        "sha256": "5b82ac4a3c2ca9c3460964f020e1402edd5753411d7737aa39c3714ad1b5420e",
+        "dest": "cargo/vendor/crossbeam-epoch-0.9.18"
+    },
+    {
+        "type": "inline",
+        "contents": "{\"package\": \"5b82ac4a3c2ca9c3460964f020e1402edd5753411d7737aa39c3714ad1b5420e\", \"files\": {}}",
+        "dest": "cargo/vendor/crossbeam-epoch-0.9.18",
         "dest-filename": ".cargo-checksum.json"
     },
     {
@@ -1591,6 +1827,19 @@
     {
         "type": "archive",
         "archive-type": "tar-gzip",
+        "url": "https://static.crates.io/crates/darling/darling-0.20.11.crate",
+        "sha256": "fc7f46116c46ff9ab3eb1597a45688b6715c6e628b5c133e288e709a29bcb4ee",
+        "dest": "cargo/vendor/darling-0.20.11"
+    },
+    {
+        "type": "inline",
+        "contents": "{\"package\": \"fc7f46116c46ff9ab3eb1597a45688b6715c6e628b5c133e288e709a29bcb4ee\", \"files\": {}}",
+        "dest": "cargo/vendor/darling-0.20.11",
+        "dest-filename": ".cargo-checksum.json"
+    },
+    {
+        "type": "archive",
+        "archive-type": "tar-gzip",
         "url": "https://static.crates.io/crates/darling/darling-0.21.3.crate",
         "sha256": "9cdf337090841a411e2a7f3deb9187445851f91b309c0c0a29e05f74a00a48c0",
         "dest": "cargo/vendor/darling-0.21.3"
@@ -1604,6 +1853,19 @@
     {
         "type": "archive",
         "archive-type": "tar-gzip",
+        "url": "https://static.crates.io/crates/darling_core/darling_core-0.20.11.crate",
+        "sha256": "0d00b9596d185e565c2207a0b01f8bd1a135483d02d9b7b0a54b11da8d53412e",
+        "dest": "cargo/vendor/darling_core-0.20.11"
+    },
+    {
+        "type": "inline",
+        "contents": "{\"package\": \"0d00b9596d185e565c2207a0b01f8bd1a135483d02d9b7b0a54b11da8d53412e\", \"files\": {}}",
+        "dest": "cargo/vendor/darling_core-0.20.11",
+        "dest-filename": ".cargo-checksum.json"
+    },
+    {
+        "type": "archive",
+        "archive-type": "tar-gzip",
         "url": "https://static.crates.io/crates/darling_core/darling_core-0.21.3.crate",
         "sha256": "1247195ecd7e3c85f83c8d2a366e4210d588e802133e1e355180a9870b517ea4",
         "dest": "cargo/vendor/darling_core-0.21.3"
@@ -1612,6 +1874,19 @@
         "type": "inline",
         "contents": "{\"package\": \"1247195ecd7e3c85f83c8d2a366e4210d588e802133e1e355180a9870b517ea4\", \"files\": {}}",
         "dest": "cargo/vendor/darling_core-0.21.3",
+        "dest-filename": ".cargo-checksum.json"
+    },
+    {
+        "type": "archive",
+        "archive-type": "tar-gzip",
+        "url": "https://static.crates.io/crates/darling_macro/darling_macro-0.20.11.crate",
+        "sha256": "fc34b93ccb385b40dc71c6fceac4b2ad23662c7eeb248cf10d529b7e055b6ead",
+        "dest": "cargo/vendor/darling_macro-0.20.11"
+    },
+    {
+        "type": "inline",
+        "contents": "{\"package\": \"fc34b93ccb385b40dc71c6fceac4b2ad23662c7eeb248cf10d529b7e055b6ead\", \"files\": {}}",
+        "dest": "cargo/vendor/darling_macro-0.20.11",
         "dest-filename": ".cargo-checksum.json"
     },
     {
@@ -1638,71 +1913,6 @@
         "type": "inline",
         "contents": "{\"package\": \"be1e0bca6c3637f992fc1cc7cbc52a78c1ef6db076dbf1059c4323d6a2048376\", \"files\": {}}",
         "dest": "cargo/vendor/data-url-0.3.2",
-        "dest-filename": ".cargo-checksum.json"
-    },
-    {
-        "type": "archive",
-        "archive-type": "tar-gzip",
-        "url": "https://static.crates.io/crates/ddc/ddc-0.2.2.crate",
-        "sha256": "ba69f2c53e320fc4abad17cb02bbbf04d1a36f18e9907f347589ec5991b3c6c5",
-        "dest": "cargo/vendor/ddc-0.2.2"
-    },
-    {
-        "type": "inline",
-        "contents": "{\"package\": \"ba69f2c53e320fc4abad17cb02bbbf04d1a36f18e9907f347589ec5991b3c6c5\", \"files\": {}}",
-        "dest": "cargo/vendor/ddc-0.2.2",
-        "dest-filename": ".cargo-checksum.json"
-    },
-    {
-        "type": "archive",
-        "archive-type": "tar-gzip",
-        "url": "https://static.crates.io/crates/ddc-hi/ddc-hi-0.4.1.crate",
-        "sha256": "9c6747b17c926a2aa34739b30f1a6cc726e3a7baf0e2f69a4c03a95cf5de94de",
-        "dest": "cargo/vendor/ddc-hi-0.4.1"
-    },
-    {
-        "type": "inline",
-        "contents": "{\"package\": \"9c6747b17c926a2aa34739b30f1a6cc726e3a7baf0e2f69a4c03a95cf5de94de\", \"files\": {}}",
-        "dest": "cargo/vendor/ddc-hi-0.4.1",
-        "dest-filename": ".cargo-checksum.json"
-    },
-    {
-        "type": "archive",
-        "archive-type": "tar-gzip",
-        "url": "https://static.crates.io/crates/ddc-i2c/ddc-i2c-0.2.2.crate",
-        "sha256": "1ef18fac9fd5c11d0c7b85a80887b01f7361b49edb2b4627243928b90ce2691b",
-        "dest": "cargo/vendor/ddc-i2c-0.2.2"
-    },
-    {
-        "type": "inline",
-        "contents": "{\"package\": \"1ef18fac9fd5c11d0c7b85a80887b01f7361b49edb2b4627243928b90ce2691b\", \"files\": {}}",
-        "dest": "cargo/vendor/ddc-i2c-0.2.2",
-        "dest-filename": ".cargo-checksum.json"
-    },
-    {
-        "type": "archive",
-        "archive-type": "tar-gzip",
-        "url": "https://static.crates.io/crates/ddc-macos/ddc-macos-0.2.2.crate",
-        "sha256": "28aca22e30b33daf41a5d269a19b00588adf5242ed5525d3818195de17a534dc",
-        "dest": "cargo/vendor/ddc-macos-0.2.2"
-    },
-    {
-        "type": "inline",
-        "contents": "{\"package\": \"28aca22e30b33daf41a5d269a19b00588adf5242ed5525d3818195de17a534dc\", \"files\": {}}",
-        "dest": "cargo/vendor/ddc-macos-0.2.2",
-        "dest-filename": ".cargo-checksum.json"
-    },
-    {
-        "type": "archive",
-        "archive-type": "tar-gzip",
-        "url": "https://static.crates.io/crates/ddc-winapi/ddc-winapi-0.2.2.crate",
-        "sha256": "5b65693556bdf54c77e0c82db4951686e4f030e7eb1c643d1bc781de2a4bce35",
-        "dest": "cargo/vendor/ddc-winapi-0.2.2"
-    },
-    {
-        "type": "inline",
-        "contents": "{\"package\": \"5b65693556bdf54c77e0c82db4951686e4f030e7eb1c643d1bc781de2a4bce35\", \"files\": {}}",
-        "dest": "cargo/vendor/ddc-winapi-0.2.2",
         "dest-filename": ".cargo-checksum.json"
     },
     {
@@ -1747,6 +1957,19 @@
     {
         "type": "archive",
         "archive-type": "tar-gzip",
+        "url": "https://static.crates.io/crates/dirs/dirs-5.0.1.crate",
+        "sha256": "44c45a9d03d6676652bcb5e724c7e988de1acad23a711b5217ab9cbecbec2225",
+        "dest": "cargo/vendor/dirs-5.0.1"
+    },
+    {
+        "type": "inline",
+        "contents": "{\"package\": \"44c45a9d03d6676652bcb5e724c7e988de1acad23a711b5217ab9cbecbec2225\", \"files\": {}}",
+        "dest": "cargo/vendor/dirs-5.0.1",
+        "dest-filename": ".cargo-checksum.json"
+    },
+    {
+        "type": "archive",
+        "archive-type": "tar-gzip",
         "url": "https://static.crates.io/crates/dirs/dirs-6.0.0.crate",
         "sha256": "c3e8aa94d75141228480295a7d0e7feb620b1a5ad9f12bc40be62411e38cce4e",
         "dest": "cargo/vendor/dirs-6.0.0"
@@ -1755,6 +1978,19 @@
         "type": "inline",
         "contents": "{\"package\": \"c3e8aa94d75141228480295a7d0e7feb620b1a5ad9f12bc40be62411e38cce4e\", \"files\": {}}",
         "dest": "cargo/vendor/dirs-6.0.0",
+        "dest-filename": ".cargo-checksum.json"
+    },
+    {
+        "type": "archive",
+        "archive-type": "tar-gzip",
+        "url": "https://static.crates.io/crates/dirs-sys/dirs-sys-0.4.1.crate",
+        "sha256": "520f05a5cbd335fae5a99ff7a6ab8627577660ee5cfd6a94a6a929b52ff0321c",
+        "dest": "cargo/vendor/dirs-sys-0.4.1"
+    },
+    {
+        "type": "inline",
+        "contents": "{\"package\": \"520f05a5cbd335fae5a99ff7a6ab8627577660ee5cfd6a94a6a929b52ff0321c\", \"files\": {}}",
+        "dest": "cargo/vendor/dirs-sys-0.4.1",
         "dest-filename": ".cargo-checksum.json"
     },
     {
@@ -1926,19 +2162,6 @@
     {
         "type": "archive",
         "archive-type": "tar-gzip",
-        "url": "https://static.crates.io/crates/dtoa/dtoa-0.4.8.crate",
-        "sha256": "56899898ce76aaf4a0f24d914c97ea6ed976d42fec6ad33fcbb0a1103e07b2b0",
-        "dest": "cargo/vendor/dtoa-0.4.8"
-    },
-    {
-        "type": "inline",
-        "contents": "{\"package\": \"56899898ce76aaf4a0f24d914c97ea6ed976d42fec6ad33fcbb0a1103e07b2b0\", \"files\": {}}",
-        "dest": "cargo/vendor/dtoa-0.4.8",
-        "dest-filename": ".cargo-checksum.json"
-    },
-    {
-        "type": "archive",
-        "archive-type": "tar-gzip",
         "url": "https://static.crates.io/crates/dtor/dtor-0.8.1.crate",
         "sha256": "edf234dd1594d6dd434a8fb8cada51ddbbc593e40e4a01556a0b31c62da2775b",
         "dest": "cargo/vendor/dtor-0.8.1"
@@ -1952,14 +2175,14 @@
     {
         "type": "archive",
         "archive-type": "tar-gzip",
-        "url": "https://static.crates.io/crates/edid/edid-0.3.0.crate",
-        "sha256": "24ce75530893d834dcfe3bb67ce0e7dec489484e7cb4423ca31618af4bab24fe",
-        "dest": "cargo/vendor/edid-0.3.0"
+        "url": "https://static.crates.io/crates/either/either-1.16.0.crate",
+        "sha256": "91622ff5e7162018101f2fea40d6ebf4a78bbe5a49736a2020649edf9693679e",
+        "dest": "cargo/vendor/either-1.16.0"
     },
     {
         "type": "inline",
-        "contents": "{\"package\": \"24ce75530893d834dcfe3bb67ce0e7dec489484e7cb4423ca31618af4bab24fe\", \"files\": {}}",
-        "dest": "cargo/vendor/edid-0.3.0",
+        "contents": "{\"package\": \"91622ff5e7162018101f2fea40d6ebf4a78bbe5a49736a2020649edf9693679e\", \"files\": {}}",
+        "dest": "cargo/vendor/either-1.16.0",
         "dest-filename": ".cargo-checksum.json"
     },
     {
@@ -1999,6 +2222,32 @@
         "type": "inline",
         "contents": "{\"package\": \"67c78a4d8fdf9953a5c9d458f9efe940fd97a0cab0941c075a813ac594733827\", \"files\": {}}",
         "dest": "cargo/vendor/enumflags2_derive-0.7.12",
+        "dest-filename": ".cargo-checksum.json"
+    },
+    {
+        "type": "archive",
+        "archive-type": "tar-gzip",
+        "url": "https://static.crates.io/crates/equator/equator-0.4.2.crate",
+        "sha256": "4711b213838dfee0117e3be6ac926007d7f433d7bbe33595975d4190cb07e6fc",
+        "dest": "cargo/vendor/equator-0.4.2"
+    },
+    {
+        "type": "inline",
+        "contents": "{\"package\": \"4711b213838dfee0117e3be6ac926007d7f433d7bbe33595975d4190cb07e6fc\", \"files\": {}}",
+        "dest": "cargo/vendor/equator-0.4.2",
+        "dest-filename": ".cargo-checksum.json"
+    },
+    {
+        "type": "archive",
+        "archive-type": "tar-gzip",
+        "url": "https://static.crates.io/crates/equator-macro/equator-macro-0.4.2.crate",
+        "sha256": "44f23cf4b44bfce11a86ace86f8a73ffdec849c9fd00a386a53d278bd9e81fb3",
+        "dest": "cargo/vendor/equator-macro-0.4.2"
+    },
+    {
+        "type": "inline",
+        "contents": "{\"package\": \"44f23cf4b44bfce11a86ace86f8a73ffdec849c9fd00a386a53d278bd9e81fb3\", \"files\": {}}",
+        "dest": "cargo/vendor/equator-macro-0.4.2",
         "dest-filename": ".cargo-checksum.json"
     },
     {
@@ -2095,6 +2344,19 @@
     {
         "type": "archive",
         "archive-type": "tar-gzip",
+        "url": "https://static.crates.io/crates/exr/exr-1.74.0.crate",
+        "sha256": "4300e043a56aa2cb633c01af81ca8f699a321879a7854d3896a0ba89056363be",
+        "dest": "cargo/vendor/exr-1.74.0"
+    },
+    {
+        "type": "inline",
+        "contents": "{\"package\": \"4300e043a56aa2cb633c01af81ca8f699a321879a7854d3896a0ba89056363be\", \"files\": {}}",
+        "dest": "cargo/vendor/exr-1.74.0",
+        "dest-filename": ".cargo-checksum.json"
+    },
+    {
+        "type": "archive",
+        "archive-type": "tar-gzip",
         "url": "https://static.crates.io/crates/fast-srgb8/fast-srgb8-1.0.0.crate",
         "sha256": "dd2e7510819d6fbf51a5545c8f922716ecfb14df168a3242f7d33e0239efe6a1",
         "dest": "cargo/vendor/fast-srgb8-1.0.0"
@@ -2116,6 +2378,19 @@
         "type": "inline",
         "contents": "{\"package\": \"9f1f227452a390804cdb637b74a86990f2a7d7ba4b7d5693aac9b4dd6defd8d6\", \"files\": {}}",
         "dest": "cargo/vendor/fastrand-2.4.1",
+        "dest-filename": ".cargo-checksum.json"
+    },
+    {
+        "type": "archive",
+        "archive-type": "tar-gzip",
+        "url": "https://static.crates.io/crates/fax/fax-0.2.7.crate",
+        "sha256": "caf1079563223d5d59d83c85886a56e586cfd5c1a26292e971a0fa266531ac5a",
+        "dest": "cargo/vendor/fax-0.2.7"
+    },
+    {
+        "type": "inline",
+        "contents": "{\"package\": \"caf1079563223d5d59d83c85886a56e586cfd5c1a26292e971a0fa266531ac5a\", \"files\": {}}",
+        "dest": "cargo/vendor/fax-0.2.7",
         "dest-filename": ".cargo-checksum.json"
     },
     {
@@ -2329,6 +2604,19 @@
     {
         "type": "archive",
         "archive-type": "tar-gzip",
+        "url": "https://static.crates.io/crates/fontdb/fontdb-0.22.0.crate",
+        "sha256": "a3a6f9af55fb97ad673fb7a69533eb2f967648a06fa21f8c9bb2cd6d33975716",
+        "dest": "cargo/vendor/fontdb-0.22.0"
+    },
+    {
+        "type": "inline",
+        "contents": "{\"package\": \"a3a6f9af55fb97ad673fb7a69533eb2f967648a06fa21f8c9bb2cd6d33975716\", \"files\": {}}",
+        "dest": "cargo/vendor/fontdb-0.22.0",
+        "dest-filename": ".cargo-checksum.json"
+    },
+    {
+        "type": "archive",
+        "archive-type": "tar-gzip",
         "url": "https://static.crates.io/crates/fontdb/fontdb-0.23.0.crate",
         "sha256": "457e789b3d1202543297a350643cf459f836cade38934e7a4cf6a39e7cde2905",
         "dest": "cargo/vendor/fontdb-0.23.0"
@@ -2389,6 +2677,32 @@
         "type": "inline",
         "contents": "{\"package\": \"cb4cb245038516f5f85277875cdaa4f7d2c9a0fa0468de06ed190163b1581fcf\", \"files\": {}}",
         "dest": "cargo/vendor/form_urlencoded-1.2.2",
+        "dest-filename": ".cargo-checksum.json"
+    },
+    {
+        "type": "archive",
+        "archive-type": "tar-gzip",
+        "url": "https://static.crates.io/crates/freedesktop-desktop-entry/freedesktop-desktop-entry-0.6.2.crate",
+        "sha256": "e33809936d2fa9ac78750c5c04696a7aabdb09f928454957c77a2c8247f5ff98",
+        "dest": "cargo/vendor/freedesktop-desktop-entry-0.6.2"
+    },
+    {
+        "type": "inline",
+        "contents": "{\"package\": \"e33809936d2fa9ac78750c5c04696a7aabdb09f928454957c77a2c8247f5ff98\", \"files\": {}}",
+        "dest": "cargo/vendor/freedesktop-desktop-entry-0.6.2",
+        "dest-filename": ".cargo-checksum.json"
+    },
+    {
+        "type": "archive",
+        "archive-type": "tar-gzip",
+        "url": "https://static.crates.io/crates/fs2/fs2-0.4.3.crate",
+        "sha256": "9564fc758e15025b46aa6643b1b77d047d1a56a1aea6e01002ac0c7026876213",
+        "dest": "cargo/vendor/fs2-0.4.3"
+    },
+    {
+        "type": "inline",
+        "contents": "{\"package\": \"9564fc758e15025b46aa6643b1b77d047d1a56a1aea6e01002ac0c7026876213\", \"files\": {}}",
+        "dest": "cargo/vendor/fs2-0.4.3",
         "dest-filename": ".cargo-checksum.json"
     },
     {
@@ -2602,6 +2916,32 @@
     {
         "type": "archive",
         "archive-type": "tar-gzip",
+        "url": "https://static.crates.io/crates/gettext-rs/gettext-rs-0.7.7.crate",
+        "sha256": "5d5857dc1b7f0fee86961de833f434e29494d72af102ce5355738c0664222bdf",
+        "dest": "cargo/vendor/gettext-rs-0.7.7"
+    },
+    {
+        "type": "inline",
+        "contents": "{\"package\": \"5d5857dc1b7f0fee86961de833f434e29494d72af102ce5355738c0664222bdf\", \"files\": {}}",
+        "dest": "cargo/vendor/gettext-rs-0.7.7",
+        "dest-filename": ".cargo-checksum.json"
+    },
+    {
+        "type": "archive",
+        "archive-type": "tar-gzip",
+        "url": "https://static.crates.io/crates/gettext-sys/gettext-sys-0.26.0.crate",
+        "sha256": "4ea859ab0dd7e70ff823032b3e077d03d39c965d68c6c10775add60e999d8ee9",
+        "dest": "cargo/vendor/gettext-sys-0.26.0"
+    },
+    {
+        "type": "inline",
+        "contents": "{\"package\": \"4ea859ab0dd7e70ff823032b3e077d03d39c965d68c6c10775add60e999d8ee9\", \"files\": {}}",
+        "dest": "cargo/vendor/gettext-sys-0.26.0",
+        "dest-filename": ".cargo-checksum.json"
+    },
+    {
+        "type": "archive",
+        "archive-type": "tar-gzip",
         "url": "https://static.crates.io/crates/gif/gif-0.13.3.crate",
         "sha256": "4ae047235e33e2829703574b54fdec96bfbad892062d97fed2f76022287de61b",
         "dest": "cargo/vendor/gif-0.13.3"
@@ -2610,6 +2950,19 @@
         "type": "inline",
         "contents": "{\"package\": \"4ae047235e33e2829703574b54fdec96bfbad892062d97fed2f76022287de61b\", \"files\": {}}",
         "dest": "cargo/vendor/gif-0.13.3",
+        "dest-filename": ".cargo-checksum.json"
+    },
+    {
+        "type": "archive",
+        "archive-type": "tar-gzip",
+        "url": "https://static.crates.io/crates/gif/gif-0.14.2.crate",
+        "sha256": "ee8cfcc411d9adbbaba82fb72661cc1bcca13e8bba98b364e62b2dba8f960159",
+        "dest": "cargo/vendor/gif-0.14.2"
+    },
+    {
+        "type": "inline",
+        "contents": "{\"package\": \"ee8cfcc411d9adbbaba82fb72661cc1bcca13e8bba98b364e62b2dba8f960159\", \"files\": {}}",
+        "dest": "cargo/vendor/gif-0.14.2",
         "dest-filename": ".cargo-checksum.json"
     },
     {
@@ -2849,6 +3202,19 @@
     {
         "type": "archive",
         "archive-type": "tar-gzip",
+        "url": "https://static.crates.io/crates/hex_color/hex_color-3.0.0.crate",
+        "sha256": "d37f101bf4c633f7ca2e4b5e136050314503dd198e78e325ea602c327c484ef0",
+        "dest": "cargo/vendor/hex_color-3.0.0"
+    },
+    {
+        "type": "inline",
+        "contents": "{\"package\": \"d37f101bf4c633f7ca2e4b5e136050314503dd198e78e325ea602c327c484ef0\", \"files\": {}}",
+        "dest": "cargo/vendor/hex_color-3.0.0",
+        "dest-filename": ".cargo-checksum.json"
+    },
+    {
+        "type": "archive",
+        "archive-type": "tar-gzip",
         "url": "https://static.crates.io/crates/hexf-parse/hexf-parse-0.2.1.crate",
         "sha256": "dfa686283ad6dd069f105e5ab091b04c62850d3e4cf5d67debad1933f55023df",
         "dest": "cargo/vendor/hexf-parse-0.2.1"
@@ -2912,53 +3278,14 @@
         "dest-filename": ".cargo-checksum.json"
     },
     {
-        "type": "archive",
-        "archive-type": "tar-gzip",
-        "url": "https://static.crates.io/crates/i2c/i2c-0.1.0.crate",
-        "sha256": "60c7b7bdd7b3a985fdcf94a0d7d98e7a47fde8b7f22fb55ce1a91cc104a2ce9a",
-        "dest": "cargo/vendor/i2c-0.1.0"
-    },
-    {
-        "type": "inline",
-        "contents": "{\"package\": \"60c7b7bdd7b3a985fdcf94a0d7d98e7a47fde8b7f22fb55ce1a91cc104a2ce9a\", \"files\": {}}",
-        "dest": "cargo/vendor/i2c-0.1.0",
-        "dest-filename": ".cargo-checksum.json"
-    },
-    {
-        "type": "archive",
-        "archive-type": "tar-gzip",
-        "url": "https://static.crates.io/crates/i2c-linux/i2c-linux-0.1.2.crate",
-        "sha256": "c0268a871aaa071221d6c2875ebedcf64710e59b0d87c68c8faf5e98b87dd2a4",
-        "dest": "cargo/vendor/i2c-linux-0.1.2"
-    },
-    {
-        "type": "inline",
-        "contents": "{\"package\": \"c0268a871aaa071221d6c2875ebedcf64710e59b0d87c68c8faf5e98b87dd2a4\", \"files\": {}}",
-        "dest": "cargo/vendor/i2c-linux-0.1.2",
-        "dest-filename": ".cargo-checksum.json"
-    },
-    {
-        "type": "archive",
-        "archive-type": "tar-gzip",
-        "url": "https://static.crates.io/crates/i2c-linux-sys/i2c-linux-sys-0.2.1.crate",
-        "sha256": "55cd060ed0016621d3da4ed3a23b0158084de90d1f3a8e59f3d391aacd3bbcf8",
-        "dest": "cargo/vendor/i2c-linux-sys-0.2.1"
-    },
-    {
-        "type": "inline",
-        "contents": "{\"package\": \"55cd060ed0016621d3da4ed3a23b0158084de90d1f3a8e59f3d391aacd3bbcf8\", \"files\": {}}",
-        "dest": "cargo/vendor/i2c-linux-sys-0.2.1",
-        "dest-filename": ".cargo-checksum.json"
-    },
-    {
         "type": "shell",
         "commands": [
-            "cp -r --reflink=auto \"flatpak-cargo/git/libcosmic-f0f6893/iced\" \"cargo/vendor/iced\""
+            "cp -r --reflink=auto \"flatpak-cargo/git/libcosmic-fc5debc/iced\" \"cargo/vendor/iced\""
         ]
     },
     {
         "type": "inline",
-        "contents": "[package]\nname = \"iced\"\ndescription = \"A cross-platform GUI library inspired by Elm\"\nversion = \"0.14.0\"\nedition = \"2024\"\nauthors = [\"H\u00e9ctor Ram\u00f3n Jim\u00e9nez <hector@hecrj.dev>\"]\nlicense = \"MIT\"\nrepository = \"https://github.com/iced-rs/iced\"\nhomepage = \"https://iced.rs\"\ncategories = [\"gui\"]\nkeywords = [\"gui\", \"ui\", \"graphics\", \"interface\", \"widgets\"]\nrust-version = \"1.92\"\n\n[package.metadata.docs.rs]\nrustdoc-args = [\"--cfg\", \"docsrs\"]\nall-features = true\n\n[lints.rust]\nunused_results = \"deny\"\n\n[lints.rust.rust_2018_idioms]\nlevel = \"deny\"\npriority = -1\n\n[lints.clippy]\ntype-complexity = \"allow\"\nmap-entry = \"allow\"\nlarge-enum-variant = \"allow\"\nresult_large_err = \"allow\"\nsemicolon_if_nothing_returned = \"deny\"\ntrivially-copy-pass-by-ref = \"deny\"\ndefault_trait_access = \"deny\"\nmatch-wildcard-for-single-variants = \"deny\"\nredundant-closure-for-method-calls = \"deny\"\nfilter_map_next = \"deny\"\nmanual_let_else = \"deny\"\nunused_async = \"deny\"\nfrom_over_into = \"deny\"\nneedless_borrow = \"deny\"\nnew_without_default = \"deny\"\nuseless_conversion = \"deny\"\n\n[lints.rustdoc]\nbroken_intra_doc_links = \"forbid\"\n\n[badges.maintenance]\nstatus = \"actively-developed\"\n\n[features]\nwgpu = [\"wgpu-bare\", \"iced_renderer/wgpu\"]\nwgpu-bare = [\"iced_renderer/wgpu-bare\", \"iced_widget/wgpu\"]\ndefault = [\"a11y\", \"tiny-skia\", \"tokio\", \"wayland\", \"x11\"]\ntiny-skia = [\"iced_renderer/tiny-skia\"]\nimage = [\"image-without-codecs\", \"image/default\"]\nimage-without-codecs = [\"iced_widget/image\", \"dep:image\"]\nsvg = [\"iced_widget/svg\"]\ncanvas = [\"iced_widget/canvas\"]\nqr_code = [\"iced_widget/qr_code\"]\nlazy = [\"iced_widget/lazy\"]\nmarkdown = [\"iced_widget/markdown\"]\ndebug = [\"iced_winit/debug\", \"dep:iced_devtools\"]\ntime-travel = [\"debug\", \"iced_devtools/time-travel\"]\nhot = [\"debug\", \"iced_debug/hot\"]\ntester = [\"dep:iced_tester\"]\nthread-pool = [\"iced_futures/thread-pool\"]\ntokio = [\"iced_futures/tokio\", \"iced_accessibility?/tokio\"]\nasync-std = [\"iced_accessibility?/async-io\"]\nsmol = [\"iced_futures/smol\"]\nsysinfo = [\"iced_winit/sysinfo\"]\nweb-colors = [\"iced_renderer/web-colors\"]\ncrisp = [\"iced_core/crisp\", \"iced_widget/crisp\"]\nwebgl = [\"iced_renderer/webgl\"]\nhighlighter = [\"iced_highlighter\", \"iced_widget/highlighter\"]\nselector = [\"iced_runtime/selector\"]\nfira-sans = [\"iced_renderer/fira-sans\"]\nadvanced = [\"iced_core/advanced\", \"iced_widget/advanced\"]\nbasic-shaping = [\"iced_core/basic-shaping\"]\nadvanced-shaping = [\"iced_core/advanced-shaping\"]\nstrict-assertions = [\"iced_renderer/strict-assertions\"]\nunconditional-rendering = [\"iced_winit/unconditional-rendering\"]\nsipper = [\"iced_runtime/sipper\"]\nlinux-theme-detection = [\"iced_winit/linux-theme-detection\"]\nx11 = [\"iced_renderer/x11\", \"iced_winit/x11\"]\na11y = [\"iced_accessibility\", \"iced_core/a11y\", \"iced_widget/a11y\", \"iced_winit?/a11y\"]\nwinit = [\"iced_winit\", \"iced_accessibility?/accesskit_winit\", \"iced_program/winit\"]\nwayland = [\"iced_renderer/wayland\", \"iced_winit/wayland\"]\ncctk = [\"iced_winit/cctk\", \"iced_widget/cctk\", \"iced_core/cctk\", \"wayland\"]\n\n[dependencies]\nthiserror = \"2\"\n\n[dependencies.iced_devtools]\noptional = true\nversion = \"0.14.0\"\npath = \"devtools\"\n\n[dependencies.iced_debug]\nversion = \"0.14.0\"\npath = \"debug\"\n\n[dependencies.iced_program]\nversion = \"0.14.0\"\npath = \"program\"\n\n[dependencies.iced_core]\nversion = \"0.14.0\"\npath = \"core\"\n\n[dependencies.iced_futures]\nversion = \"0.14.0\"\npath = \"futures\"\n\n[dependencies.iced_renderer]\nversion = \"0.14.0\"\npath = \"renderer\"\n\n[dependencies.iced_runtime]\nversion = \"0.14.0\"\npath = \"runtime\"\n\n[dependencies.iced_widget]\nversion = \"0.14.0\"\npath = \"widget\"\n\n[dependencies.iced_winit]\noptional = true\nversion = \"0.14.0\"\npath = \"winit\"\ndefault-features = false\n\n[dependencies.iced_tester]\noptional = true\nversion = \"0.14.0\"\npath = \"tester\"\n\n[dependencies.iced_highlighter]\noptional = true\nversion = \"0.14.0\"\npath = \"highlighter\"\n\n[dependencies.iced_accessibility]\noptional = true\nversion = \"0.1\"\npath = \"accessibility\"\n\n[dependencies.window_clipboard]\ngit = \"https://github.com/pop-os/window_clipboard.git\"\ntag = \"sctk-0.20\"\n\n[dependencies.mime]\ngit = \"https://github.com/pop-os/window_clipboard.git\"\ntag = \"sctk-0.20\"\n\n[dependencies.dnd]\ngit = \"https://github.com/pop-os/window_clipboard.git\"\ntag = \"sctk-0.20\"\n\n[dependencies.image]\noptional = true\nversion = \"0.25\"\ndefault-features = false\n\n[dev-dependencies]\ncriterion = \"0.5\"\n\n[dev-dependencies.iced_wgpu]\nversion = \"0.14.0\"\npath = \"wgpu\"\ndefault-features = false\n\n[[bench]]\nname = \"wgpu\"\nharness = false\nrequired-features = [\"canvas\"]\n\n[profile.release-opt]\ninherits = \"release\"\ncodegen-units = 1\ndebug = false\nlto = true\nincremental = false\nopt-level = 3\noverflow-checks = false\nstrip = \"debuginfo\"\n\n[workspace]\nmembers = [\"beacon\", \"core\", \"debug\", \"devtools\", \"futures\", \"graphics\", \"highlighter\", \"program\", \"renderer\", \"runtime\", \"selector\", \"test\", \"tester\", \"tiny_skia\", \"wgpu\", \"widget\", \"winit\", \"examples/*\", \"accessibility\"]\nexclude = [\"examples/integration\"]\n\n[workspace.package]\nversion = \"0.14.0\"\nauthors = [\"H\u00e9ctor Ram\u00f3n Jim\u00e9nez <hector@hecrj.dev>\"]\nedition = \"2024\"\nlicense = \"MIT\"\nrepository = \"https://github.com/iced-rs/iced\"\nhomepage = \"https://iced.rs\"\ncategories = [\"gui\"]\nkeywords = [\"gui\", \"ui\", \"graphics\", \"interface\", \"widgets\"]\nrust-version = \"1.92\"\n\n[workspace.dependencies]\nbincode = \"1.3\"\nglam = \"0.25\"\nasync-std = \"1.0\"\nbitflags = \"2.5\"\nbytes = \"1.6\"\ncosmic-text = \"0.19\"\ndark-light = \"1.0\"\nresvg = \"0.45\"\nweb-sys = \"0.3.69\"\nguillotiere = \"0.6\"\nhalf = \"2.2\"\nkamadak-exif = \"0.6\"\nkurbo = \"0.10\"\nlilt = \"0.8\"\nlog = \"0.4\"\nlyon = \"1.0\"\nlyon_path = \"1.0\"\nnom = \"8\"\nnum-traits = \"0.2\"\nouroboros = \"0.18\"\npng = \"0.18\"\npulldown-cmark = \"0.12\"\nraw-window-handle = \"0.6\"\nrfd = \"0.16\"\nrustc-hash = \"2.0\"\nsemver = \"1.0\"\nserde = \"1.0\"\nsha2 = \"0.10\"\nsipper = \"0.1\"\nsmol = \"2\"\nsmol_str = \"0.3\"\nsysinfo = \"0.33\"\nthiserror = \"2\"\nsyntect = \"5.2\"\ntokio = \"1.0\"\ntracing = \"0.1\"\nunicode-segmentation = \"1.0\"\nurl = \"2.5\"\nwasm-bindgen-futures = \"0.4\"\nwasmtimer = \"0.4.2\"\nweb-time = \"1.1\"\nwinapi = \"0.3\"\ncursor-icon = \"1.1.0\"\n\n[workspace.dependencies.iced]\nversion = \"0.14.0\"\npath = \".\"\n\n[workspace.dependencies.iced_beacon]\nversion = \"0.14.0\"\npath = \"beacon\"\n\n[workspace.dependencies.iced_core]\nversion = \"0.14.0\"\npath = \"core\"\n\n[workspace.dependencies.iced_debug]\nversion = \"0.14.0\"\npath = \"debug\"\n\n[workspace.dependencies.iced_devtools]\nversion = \"0.14.0\"\npath = \"devtools\"\n\n[workspace.dependencies.iced_futures]\nversion = \"0.14.0\"\npath = \"futures\"\n\n[workspace.dependencies.iced_graphics]\nversion = \"0.14.0\"\npath = \"graphics\"\n\n[workspace.dependencies.iced_highlighter]\nversion = \"0.14.0\"\npath = \"highlighter\"\n\n[workspace.dependencies.iced_program]\nversion = \"0.14.0\"\npath = \"program\"\n\n[workspace.dependencies.iced_renderer]\nversion = \"0.14.0\"\npath = \"renderer\"\n\n[workspace.dependencies.iced_runtime]\nversion = \"0.14.0\"\npath = \"runtime\"\n\n[workspace.dependencies.iced_selector]\nversion = \"0.14.0\"\npath = \"selector\"\n\n[workspace.dependencies.iced_test]\nversion = \"0.14.0\"\npath = \"test\"\n\n[workspace.dependencies.iced_tester]\nversion = \"0.14.0\"\npath = \"tester\"\n\n[workspace.dependencies.iced_tiny_skia]\nversion = \"0.14.0\"\npath = \"tiny_skia\"\ndefault-features = false\n\n[workspace.dependencies.iced_wgpu]\nversion = \"0.14.0\"\npath = \"wgpu\"\ndefault-features = false\n\n[workspace.dependencies.iced_widget]\nversion = \"0.14.0\"\npath = \"widget\"\n\n[workspace.dependencies.iced_winit]\nversion = \"0.14.0\"\npath = \"winit\"\ndefault-features = false\n\n[workspace.dependencies.cargo-hot]\nversion = \"0.1\"\npackage = \"cargo-hot-protocol\"\n\n[workspace.dependencies.futures]\nversion = \"0.3\"\ndefault-features = false\nfeatures = [\"std\", \"async-await\"]\n\n[workspace.dependencies.iced_accessibility]\nversion = \"0.1\"\npath = \"accessibility\"\n\n[workspace.dependencies.bytemuck]\nversion = \"1.0\"\nfeatures = [\"derive\"]\n\n[workspace.dependencies.cryoglyph]\ngit = \"https://github.com/iced-rs/cryoglyph.git\"\nrev = \"e429a025df36ab8145708acb309080ae3deec17a\"\n\n[workspace.dependencies.image]\nversion = \"0.25\"\ndefault-features = false\n\n[workspace.dependencies.mundy]\nversion = \"0.2\"\ndefault-features = false\n\n[workspace.dependencies.qrcode]\nversion = \"0.13\"\ndefault-features = false\n\n[workspace.dependencies.tiny-skia]\nversion = \"0.11\"\ndefault-features = false\nfeatures = [\"std\", \"simd\"]\n\n[workspace.dependencies.cctk]\ngit = \"https://github.com/pop-os/cosmic-protocols\"\npackage = \"cosmic-client-toolkit\"\nrev = \"c253ec1\"\n\n[workspace.dependencies.softbuffer]\ngit = \"https://github.com/pop-os/softbuffer\"\ntag = \"cosmic-4.0\"\n\n[workspace.dependencies.two-face]\nversion = \"0.4\"\ndefault-features = false\nfeatures = [\"syntect-default-fancy\"]\n\n[workspace.dependencies.wgpu]\nversion = \"28.0\"\ndefault-features = false\nfeatures = [\"std\", \"wgsl\"]\n\n[workspace.dependencies.wayland-protocols]\nversion = \"0.32.1\"\nfeatures = [\"staging\"]\n\n[workspace.dependencies.wayland-client]\nversion = \"0.31.5\"\n\n[workspace.dependencies.window_clipboard]\ngit = \"https://github.com/pop-os/window_clipboard.git\"\ntag = \"sctk-0.20\"\n\n[workspace.dependencies.dnd]\ngit = \"https://github.com/pop-os/window_clipboard.git\"\ntag = \"sctk-0.20\"\n\n[workspace.dependencies.mime]\ngit = \"https://github.com/pop-os/window_clipboard.git\"\ntag = \"sctk-0.20\"\n\n[workspace.dependencies.winit]\ngit = \"https://github.com/pop-os/winit.git\"\ntag = \"cosmic-0.14\"\n\n[workspace.dependencies.winit-core]\ngit = \"https://github.com/pop-os/winit.git\"\ntag = \"cosmic-0.14\"\n\n[workspace.lints.rust]\nunused_results = \"deny\"\n\n[workspace.lints.rust.rust_2018_idioms]\nlevel = \"deny\"\npriority = -1\n\n[workspace.lints.clippy]\ntype-complexity = \"allow\"\nmap-entry = \"allow\"\nlarge-enum-variant = \"allow\"\nresult_large_err = \"allow\"\nsemicolon_if_nothing_returned = \"deny\"\ntrivially-copy-pass-by-ref = \"deny\"\ndefault_trait_access = \"deny\"\nmatch-wildcard-for-single-variants = \"deny\"\nredundant-closure-for-method-calls = \"deny\"\nfilter_map_next = \"deny\"\nmanual_let_else = \"deny\"\nunused_async = \"deny\"\nfrom_over_into = \"deny\"\nneedless_borrow = \"deny\"\nnew_without_default = \"deny\"\nuseless_conversion = \"deny\"\n\n[workspace.lints.rustdoc]\nbroken_intra_doc_links = \"forbid\"\n",
+        "contents": "[package]\nname = \"iced\"\ndescription = \"A cross-platform GUI library inspired by Elm\"\nversion = \"0.14.0\"\nedition = \"2024\"\nauthors = [\"H\u00e9ctor Ram\u00f3n Jim\u00e9nez <hector@hecrj.dev>\"]\nlicense = \"MIT\"\nrepository = \"https://github.com/iced-rs/iced\"\nhomepage = \"https://iced.rs\"\ncategories = [\"gui\"]\nkeywords = [\"gui\", \"ui\", \"graphics\", \"interface\", \"widgets\"]\nrust-version = \"1.92\"\n\n[package.metadata.docs.rs]\nrustdoc-args = [\"--cfg\", \"docsrs\"]\nall-features = true\n\n[lints.rust]\nunused_results = \"deny\"\n\n[lints.rust.rust_2018_idioms]\nlevel = \"deny\"\npriority = -1\n\n[lints.clippy]\ntype-complexity = \"allow\"\nmap-entry = \"allow\"\nlarge-enum-variant = \"allow\"\nresult_large_err = \"allow\"\nsemicolon_if_nothing_returned = \"deny\"\ntrivially-copy-pass-by-ref = \"deny\"\ndefault_trait_access = \"deny\"\nmatch-wildcard-for-single-variants = \"deny\"\nredundant-closure-for-method-calls = \"deny\"\nfilter_map_next = \"deny\"\nmanual_let_else = \"deny\"\nunused_async = \"deny\"\nfrom_over_into = \"deny\"\nneedless_borrow = \"deny\"\nnew_without_default = \"deny\"\nuseless_conversion = \"deny\"\n\n[lints.rustdoc]\nbroken_intra_doc_links = \"forbid\"\n\n[badges.maintenance]\nstatus = \"actively-developed\"\n\n[features]\nwgpu = [\"wgpu-bare\", \"iced_renderer/wgpu\"]\nwgpu-bare = [\"iced_renderer/wgpu-bare\", \"iced_widget/wgpu\"]\ndefault = [\"a11y\", \"tiny-skia\", \"tokio\", \"wayland\", \"x11\"]\ntiny-skia = [\"iced_renderer/tiny-skia\"]\nimage = [\"image-without-codecs\", \"image/default\"]\nimage-without-codecs = [\"iced_widget/image\", \"dep:image\"]\nsvg = [\"iced_widget/svg\"]\ncanvas = [\"iced_widget/canvas\"]\nqr_code = [\"iced_widget/qr_code\"]\nlazy = [\"iced_widget/lazy\"]\nmarkdown = [\"iced_widget/markdown\"]\ndebug = [\"iced_winit/debug\", \"dep:iced_devtools\"]\ntime-travel = [\"debug\", \"iced_devtools/time-travel\"]\nhot = [\"debug\", \"iced_debug/hot\"]\ntester = [\"dep:iced_tester\"]\nthread-pool = [\"iced_futures/thread-pool\"]\ntokio = [\"iced_futures/tokio\", \"iced_accessibility?/tokio\"]\nasync-std = [\"iced_accessibility?/async-io\"]\nsmol = [\"iced_futures/smol\"]\nsysinfo = [\"iced_winit/sysinfo\"]\nweb-colors = [\"iced_renderer/web-colors\"]\ncrisp = [\"iced_core/crisp\", \"iced_widget/crisp\"]\nwebgl = [\"iced_renderer/webgl\"]\nhighlighter = [\"iced_highlighter\", \"iced_widget/highlighter\"]\nselector = [\"iced_runtime/selector\"]\nfira-sans = [\"iced_renderer/fira-sans\"]\nadvanced = [\"iced_core/advanced\", \"iced_widget/advanced\"]\nbasic-shaping = [\"iced_core/basic-shaping\"]\nadvanced-shaping = [\"iced_core/advanced-shaping\"]\nstrict-assertions = [\"iced_renderer/strict-assertions\"]\nunconditional-rendering = [\"iced_winit/unconditional-rendering\"]\nsipper = [\"iced_runtime/sipper\"]\nlinux-theme-detection = [\"iced_winit/linux-theme-detection\"]\nx11 = [\"iced_renderer/x11\", \"iced_winit/x11\"]\na11y = [\"iced_accessibility\", \"iced_core/a11y\", \"iced_widget/a11y\", \"iced_winit?/a11y\"]\nwinit = [\"iced_winit\", \"iced_accessibility?/accesskit_winit\", \"iced_program/winit\"]\nwayland = [\"iced_renderer/wayland\", \"iced_winit/wayland\"]\ncctk = [\"iced_winit/cctk\", \"iced_widget/cctk\", \"iced_core/cctk\", \"wayland\"]\n\n[dependencies]\nthiserror = \"2\"\n\n[dependencies.iced_devtools]\noptional = true\nversion = \"0.14.0\"\npath = \"devtools\"\n\n[dependencies.iced_debug]\nversion = \"0.14.0\"\npath = \"debug\"\n\n[dependencies.iced_program]\nversion = \"0.14.0\"\npath = \"program\"\n\n[dependencies.iced_core]\nversion = \"0.14.0\"\npath = \"core\"\n\n[dependencies.iced_futures]\nversion = \"0.14.0\"\npath = \"futures\"\n\n[dependencies.iced_renderer]\nversion = \"0.14.0\"\npath = \"renderer\"\n\n[dependencies.iced_runtime]\nversion = \"0.14.0\"\npath = \"runtime\"\n\n[dependencies.iced_widget]\nversion = \"0.14.0\"\npath = \"widget\"\n\n[dependencies.iced_winit]\noptional = true\nversion = \"0.14.0\"\npath = \"winit\"\ndefault-features = false\n\n[dependencies.iced_tester]\noptional = true\nversion = \"0.14.0\"\npath = \"tester\"\n\n[dependencies.iced_highlighter]\noptional = true\nversion = \"0.14.0\"\npath = \"highlighter\"\n\n[dependencies.iced_accessibility]\noptional = true\nversion = \"0.1\"\npath = \"accessibility\"\n\n[dependencies.window_clipboard]\ngit = \"https://github.com/pop-os/window_clipboard.git\"\ntag = \"sctk-0.20\"\n\n[dependencies.mime]\ngit = \"https://github.com/pop-os/window_clipboard.git\"\ntag = \"sctk-0.20\"\n\n[dependencies.dnd]\ngit = \"https://github.com/pop-os/window_clipboard.git\"\ntag = \"sctk-0.20\"\n\n[dependencies.image]\noptional = true\nversion = \"0.25\"\ndefault-features = false\n\n[dev-dependencies]\ncriterion = \"0.5\"\n\n[dev-dependencies.iced_wgpu]\nversion = \"0.14.0\"\npath = \"wgpu\"\ndefault-features = false\n\n[[bench]]\nname = \"wgpu\"\nharness = false\nrequired-features = [\"canvas\"]\n\n[profile.release-opt]\ninherits = \"release\"\ncodegen-units = 1\ndebug = false\nlto = true\nincremental = false\nopt-level = 3\noverflow-checks = false\nstrip = \"debuginfo\"\n\n[workspace]\nmembers = [\"beacon\", \"core\", \"debug\", \"devtools\", \"futures\", \"graphics\", \"highlighter\", \"program\", \"renderer\", \"runtime\", \"selector\", \"test\", \"tester\", \"tiny_skia\", \"wgpu\", \"widget\", \"winit\", \"examples/*\", \"accessibility\"]\nexclude = [\"examples/integration\"]\n\n[workspace.package]\nversion = \"0.14.0\"\nauthors = [\"H\u00e9ctor Ram\u00f3n Jim\u00e9nez <hector@hecrj.dev>\"]\nedition = \"2024\"\nlicense = \"MIT\"\nrepository = \"https://github.com/iced-rs/iced\"\nhomepage = \"https://iced.rs\"\ncategories = [\"gui\"]\nkeywords = [\"gui\", \"ui\", \"graphics\", \"interface\", \"widgets\"]\nrust-version = \"1.92\"\n\n[workspace.dependencies]\nbincode = \"1.3\"\nglam = \"0.25\"\nasync-std = \"1.0\"\nbitflags = \"2.5\"\nbytes = \"1.6\"\ncosmic-text = \"0.19\"\ndark-light = \"1.0\"\nresvg = \"0.45\"\nweb-sys = \"0.3.69\"\nguillotiere = \"0.6\"\nhalf = \"2.2\"\nkamadak-exif = \"0.6\"\nkurbo = \"0.10\"\nlilt = \"0.8\"\nlog = \"0.4\"\nlyon = \"1.0\"\nlyon_path = \"1.0\"\nnom = \"8\"\nnum-traits = \"0.2\"\nouroboros = \"0.18\"\npng = \"0.18\"\npulldown-cmark = \"0.12\"\nraw-window-handle = \"0.6\"\nrfd = \"0.16\"\nrustc-hash = \"2.0\"\nsemver = \"1.0\"\nserde = \"1.0\"\nsha2 = \"0.10\"\nsipper = \"0.1\"\nsmol = \"2\"\nsmol_str = \"0.3\"\nsysinfo = \"0.33\"\nthiserror = \"2\"\nsyntect = \"5.2\"\ntokio = \"1.0\"\ntracing = \"0.1\"\nunicode-segmentation = \"1.0\"\nurl = \"2.5\"\nwasm-bindgen-futures = \"0.4\"\nwasmtimer = \"0.4.2\"\nweb-time = \"1.1\"\nwinapi = \"0.3\"\ncursor-icon = \"1.1.0\"\n\n[workspace.dependencies.iced]\nversion = \"0.14.0\"\npath = \".\"\n\n[workspace.dependencies.iced_beacon]\nversion = \"0.14.0\"\npath = \"beacon\"\n\n[workspace.dependencies.iced_core]\nversion = \"0.14.0\"\npath = \"core\"\n\n[workspace.dependencies.iced_debug]\nversion = \"0.14.0\"\npath = \"debug\"\n\n[workspace.dependencies.iced_devtools]\nversion = \"0.14.0\"\npath = \"devtools\"\n\n[workspace.dependencies.iced_futures]\nversion = \"0.14.0\"\npath = \"futures\"\n\n[workspace.dependencies.iced_graphics]\nversion = \"0.14.0\"\npath = \"graphics\"\n\n[workspace.dependencies.iced_highlighter]\nversion = \"0.14.0\"\npath = \"highlighter\"\n\n[workspace.dependencies.iced_program]\nversion = \"0.14.0\"\npath = \"program\"\n\n[workspace.dependencies.iced_renderer]\nversion = \"0.14.0\"\npath = \"renderer\"\n\n[workspace.dependencies.iced_runtime]\nversion = \"0.14.0\"\npath = \"runtime\"\n\n[workspace.dependencies.iced_selector]\nversion = \"0.14.0\"\npath = \"selector\"\n\n[workspace.dependencies.iced_test]\nversion = \"0.14.0\"\npath = \"test\"\n\n[workspace.dependencies.iced_tester]\nversion = \"0.14.0\"\npath = \"tester\"\n\n[workspace.dependencies.iced_tiny_skia]\nversion = \"0.14.0\"\npath = \"tiny_skia\"\ndefault-features = false\n\n[workspace.dependencies.iced_wgpu]\nversion = \"0.14.0\"\npath = \"wgpu\"\ndefault-features = false\n\n[workspace.dependencies.iced_widget]\nversion = \"0.14.0\"\npath = \"widget\"\n\n[workspace.dependencies.iced_winit]\nversion = \"0.14.0\"\npath = \"winit\"\ndefault-features = false\n\n[workspace.dependencies.cargo-hot]\nversion = \"0.1\"\npackage = \"cargo-hot-protocol\"\n\n[workspace.dependencies.futures]\nversion = \"0.3\"\ndefault-features = false\nfeatures = [\"std\", \"async-await\"]\n\n[workspace.dependencies.iced_accessibility]\nversion = \"0.1\"\npath = \"accessibility\"\n\n[workspace.dependencies.bytemuck]\nversion = \"1.0\"\nfeatures = [\"derive\"]\n\n[workspace.dependencies.cryoglyph]\ngit = \"https://github.com/iced-rs/cryoglyph.git\"\nrev = \"e429a025df36ab8145708acb309080ae3deec17a\"\n\n[workspace.dependencies.image]\nversion = \"0.25\"\ndefault-features = false\n\n[workspace.dependencies.mundy]\nversion = \"0.2\"\ndefault-features = false\n\n[workspace.dependencies.qrcode]\nversion = \"0.13\"\ndefault-features = false\n\n[workspace.dependencies.tiny-skia]\nversion = \"0.11\"\ndefault-features = false\nfeatures = [\"std\", \"simd\"]\n\n[workspace.dependencies.cctk]\ngit = \"https://github.com/pop-os/cosmic-protocols\"\npackage = \"cosmic-client-toolkit\"\nrev = \"32283d7\"\n\n[workspace.dependencies.softbuffer]\ngit = \"https://github.com/pop-os/softbuffer\"\ntag = \"cosmic-4.0\"\n\n[workspace.dependencies.two-face]\nversion = \"0.4\"\ndefault-features = false\nfeatures = [\"syntect-default-fancy\"]\n\n[workspace.dependencies.wgpu]\nversion = \"28.0\"\ndefault-features = false\nfeatures = [\"std\", \"wgsl\"]\n\n[workspace.dependencies.wayland-protocols]\nversion = \"0.32.1\"\nfeatures = [\"staging\"]\n\n[workspace.dependencies.wayland-client]\nversion = \"0.31.5\"\n\n[workspace.dependencies.window_clipboard]\ngit = \"https://github.com/pop-os/window_clipboard.git\"\ntag = \"sctk-0.20\"\n\n[workspace.dependencies.dnd]\ngit = \"https://github.com/pop-os/window_clipboard.git\"\ntag = \"sctk-0.20\"\n\n[workspace.dependencies.mime]\ngit = \"https://github.com/pop-os/window_clipboard.git\"\ntag = \"sctk-0.20\"\n\n[workspace.dependencies.winit]\ngit = \"https://github.com/pop-os/winit.git\"\ntag = \"cosmic-0.14\"\n\n[workspace.dependencies.winit-core]\ngit = \"https://github.com/pop-os/winit.git\"\ntag = \"cosmic-0.14\"\n\n[workspace.dependencies.sctk]\npackage = \"smithay-client-toolkit\"\nversion = \"0.20.0\"\n\n[workspace.lints.rust]\nunused_results = \"deny\"\n\n[workspace.lints.rust.rust_2018_idioms]\nlevel = \"deny\"\npriority = -1\n\n[workspace.lints.clippy]\ntype-complexity = \"allow\"\nmap-entry = \"allow\"\nlarge-enum-variant = \"allow\"\nresult_large_err = \"allow\"\nsemicolon_if_nothing_returned = \"deny\"\ntrivially-copy-pass-by-ref = \"deny\"\ndefault_trait_access = \"deny\"\nmatch-wildcard-for-single-variants = \"deny\"\nredundant-closure-for-method-calls = \"deny\"\nfilter_map_next = \"deny\"\nmanual_let_else = \"deny\"\nunused_async = \"deny\"\nfrom_over_into = \"deny\"\nneedless_borrow = \"deny\"\nnew_without_default = \"deny\"\nuseless_conversion = \"deny\"\n\n[workspace.lints.rustdoc]\nbroken_intra_doc_links = \"forbid\"\n",
         "dest": "cargo/vendor/iced",
         "dest-filename": "Cargo.toml"
     },
@@ -2971,7 +3298,7 @@
     {
         "type": "shell",
         "commands": [
-            "cp -r --reflink=auto \"flatpak-cargo/git/libcosmic-f0f6893/iced/accessibility\" \"cargo/vendor/iced_accessibility\""
+            "cp -r --reflink=auto \"flatpak-cargo/git/libcosmic-fc5debc/iced/accessibility\" \"cargo/vendor/iced_accessibility\""
         ]
     },
     {
@@ -2989,12 +3316,12 @@
     {
         "type": "shell",
         "commands": [
-            "cp -r --reflink=auto \"flatpak-cargo/git/libcosmic-f0f6893/iced/core\" \"cargo/vendor/iced_core\""
+            "cp -r --reflink=auto \"flatpak-cargo/git/libcosmic-fc5debc/iced/core\" \"cargo/vendor/iced_core\""
         ]
     },
     {
         "type": "inline",
-        "contents": "[package]\nname = \"iced_core\"\ndescription = \"The essential ideas of iced\"\nversion = \"0.14.0\"\nedition = \"2024\"\nauthors = [\"H\u00e9ctor Ram\u00f3n Jim\u00e9nez <hector@hecrj.dev>\"]\nlicense = \"MIT\"\nrepository = \"https://github.com/iced-rs/iced\"\nhomepage = \"https://iced.rs\"\ncategories = [\"gui\"]\nkeywords = [\"gui\", \"ui\", \"graphics\", \"interface\", \"widgets\"]\n\n[lints.rust]\nunused_results = \"deny\"\n\n[lints.rust.rust_2018_idioms]\nlevel = \"deny\"\npriority = -1\n\n[lints.clippy]\ntype-complexity = \"allow\"\nmap-entry = \"allow\"\nlarge-enum-variant = \"allow\"\nresult_large_err = \"allow\"\nsemicolon_if_nothing_returned = \"deny\"\ntrivially-copy-pass-by-ref = \"deny\"\ndefault_trait_access = \"deny\"\nmatch-wildcard-for-single-variants = \"deny\"\nredundant-closure-for-method-calls = \"deny\"\nfilter_map_next = \"deny\"\nmanual_let_else = \"deny\"\nunused_async = \"deny\"\nfrom_over_into = \"deny\"\nneedless_borrow = \"deny\"\nnew_without_default = \"deny\"\nuseless_conversion = \"deny\"\n\n[lints.rustdoc]\nbroken_intra_doc_links = \"forbid\"\n\n[features]\nadvanced = []\ncrisp = []\nbasic-shaping = []\nadvanced-shaping = []\na11y = [\"iced_accessibility\"]\n\n[dependencies]\npalette = \"0.7\"\nbitflags = \"2.5\"\nbytes = \"1.6\"\nglam = \"0.25\"\nlilt = \"0.8\"\nlog = \"0.4\"\nnum-traits = \"0.2\"\nrustc-hash = \"2.0\"\nsmol_str = \"0.3\"\nthiserror = \"2\"\nunicode-segmentation = \"1.0\"\nweb-time = \"1.1\"\n\n[dependencies.serde]\noptional = true\nfeatures = [\"derive\"]\nversion = \"1.0\"\n\n[dependencies.window_clipboard]\ngit = \"https://github.com/pop-os/window_clipboard.git\"\ntag = \"sctk-0.20\"\n\n[dependencies.dnd]\ngit = \"https://github.com/pop-os/window_clipboard.git\"\ntag = \"sctk-0.20\"\n\n[dependencies.mime]\ngit = \"https://github.com/pop-os/window_clipboard.git\"\ntag = \"sctk-0.20\"\n\n[dependencies.cctk]\noptional = true\ngit = \"https://github.com/pop-os/cosmic-protocols\"\npackage = \"cosmic-client-toolkit\"\nrev = \"c253ec1\"\n\n[dependencies.iced_accessibility]\nversion = \"0.1.0\"\npath = \"../accessibility\"\noptional = true\n\n[target.\"cfg(windows)\".dependencies]\nraw-window-handle = \"0.6\"\n\n[dev-dependencies]\napprox = \"0.5\"\n",
+        "contents": "[package]\nname = \"iced_core\"\ndescription = \"The essential ideas of iced\"\nversion = \"0.14.0\"\nedition = \"2024\"\nauthors = [\"H\u00e9ctor Ram\u00f3n Jim\u00e9nez <hector@hecrj.dev>\"]\nlicense = \"MIT\"\nrepository = \"https://github.com/iced-rs/iced\"\nhomepage = \"https://iced.rs\"\ncategories = [\"gui\"]\nkeywords = [\"gui\", \"ui\", \"graphics\", \"interface\", \"widgets\"]\n\n[lints.rust]\nunused_results = \"deny\"\n\n[lints.rust.rust_2018_idioms]\nlevel = \"deny\"\npriority = -1\n\n[lints.clippy]\ntype-complexity = \"allow\"\nmap-entry = \"allow\"\nlarge-enum-variant = \"allow\"\nresult_large_err = \"allow\"\nsemicolon_if_nothing_returned = \"deny\"\ntrivially-copy-pass-by-ref = \"deny\"\ndefault_trait_access = \"deny\"\nmatch-wildcard-for-single-variants = \"deny\"\nredundant-closure-for-method-calls = \"deny\"\nfilter_map_next = \"deny\"\nmanual_let_else = \"deny\"\nunused_async = \"deny\"\nfrom_over_into = \"deny\"\nneedless_borrow = \"deny\"\nnew_without_default = \"deny\"\nuseless_conversion = \"deny\"\n\n[lints.rustdoc]\nbroken_intra_doc_links = \"forbid\"\n\n[features]\nadvanced = []\ncrisp = []\nbasic-shaping = []\nadvanced-shaping = []\na11y = [\"iced_accessibility\"]\n\n[dependencies]\npalette = \"0.7\"\nbitflags = \"2.5\"\nbytes = \"1.6\"\nglam = \"0.25\"\nlilt = \"0.8\"\nlog = \"0.4\"\nnum-traits = \"0.2\"\nrustc-hash = \"2.0\"\nsmol_str = \"0.3\"\nthiserror = \"2\"\nunicode-segmentation = \"1.0\"\nweb-time = \"1.1\"\n\n[dependencies.serde]\noptional = true\nfeatures = [\"derive\"]\nversion = \"1.0\"\n\n[dependencies.window_clipboard]\ngit = \"https://github.com/pop-os/window_clipboard.git\"\ntag = \"sctk-0.20\"\n\n[dependencies.dnd]\ngit = \"https://github.com/pop-os/window_clipboard.git\"\ntag = \"sctk-0.20\"\n\n[dependencies.mime]\ngit = \"https://github.com/pop-os/window_clipboard.git\"\ntag = \"sctk-0.20\"\n\n[dependencies.cctk]\noptional = true\ngit = \"https://github.com/pop-os/cosmic-protocols\"\npackage = \"cosmic-client-toolkit\"\nrev = \"32283d7\"\n\n[dependencies.iced_accessibility]\nversion = \"0.1.0\"\npath = \"../accessibility\"\noptional = true\n\n[target.\"cfg(windows)\".dependencies]\nraw-window-handle = \"0.6\"\n\n[dev-dependencies]\napprox = \"0.5\"\n",
         "dest": "cargo/vendor/iced_core",
         "dest-filename": "Cargo.toml"
     },
@@ -3007,7 +3334,7 @@
     {
         "type": "shell",
         "commands": [
-            "cp -r --reflink=auto \"flatpak-cargo/git/libcosmic-f0f6893/iced/debug\" \"cargo/vendor/iced_debug\""
+            "cp -r --reflink=auto \"flatpak-cargo/git/libcosmic-fc5debc/iced/debug\" \"cargo/vendor/iced_debug\""
         ]
     },
     {
@@ -3025,7 +3352,7 @@
     {
         "type": "shell",
         "commands": [
-            "cp -r --reflink=auto \"flatpak-cargo/git/libcosmic-f0f6893/iced/futures\" \"cargo/vendor/iced_futures\""
+            "cp -r --reflink=auto \"flatpak-cargo/git/libcosmic-fc5debc/iced/futures\" \"cargo/vendor/iced_futures\""
         ]
     },
     {
@@ -3043,7 +3370,7 @@
     {
         "type": "shell",
         "commands": [
-            "cp -r --reflink=auto \"flatpak-cargo/git/libcosmic-f0f6893/iced/graphics\" \"cargo/vendor/iced_graphics\""
+            "cp -r --reflink=auto \"flatpak-cargo/git/libcosmic-fc5debc/iced/graphics\" \"cargo/vendor/iced_graphics\""
         ]
     },
     {
@@ -3061,7 +3388,7 @@
     {
         "type": "shell",
         "commands": [
-            "cp -r --reflink=auto \"flatpak-cargo/git/libcosmic-f0f6893/iced/program\" \"cargo/vendor/iced_program\""
+            "cp -r --reflink=auto \"flatpak-cargo/git/libcosmic-fc5debc/iced/program\" \"cargo/vendor/iced_program\""
         ]
     },
     {
@@ -3079,7 +3406,7 @@
     {
         "type": "shell",
         "commands": [
-            "cp -r --reflink=auto \"flatpak-cargo/git/libcosmic-f0f6893/iced/renderer\" \"cargo/vendor/iced_renderer\""
+            "cp -r --reflink=auto \"flatpak-cargo/git/libcosmic-fc5debc/iced/renderer\" \"cargo/vendor/iced_renderer\""
         ]
     },
     {
@@ -3097,12 +3424,12 @@
     {
         "type": "shell",
         "commands": [
-            "cp -r --reflink=auto \"flatpak-cargo/git/libcosmic-f0f6893/iced/runtime\" \"cargo/vendor/iced_runtime\""
+            "cp -r --reflink=auto \"flatpak-cargo/git/libcosmic-fc5debc/iced/runtime\" \"cargo/vendor/iced_runtime\""
         ]
     },
     {
         "type": "inline",
-        "contents": "[package]\nname = \"iced_runtime\"\ndescription = \"A renderer-agnostic runtime for iced\"\nversion = \"0.14.0\"\nedition = \"2024\"\nauthors = [\"H\u00e9ctor Ram\u00f3n Jim\u00e9nez <hector@hecrj.dev>\"]\nlicense = \"MIT\"\nrepository = \"https://github.com/iced-rs/iced\"\nhomepage = \"https://iced.rs\"\ncategories = [\"gui\"]\nkeywords = [\"gui\", \"ui\", \"graphics\", \"interface\", \"widgets\"]\n\n[lints.rust]\nunused_results = \"deny\"\n\n[lints.rust.rust_2018_idioms]\nlevel = \"deny\"\npriority = -1\n\n[lints.clippy]\ntype-complexity = \"allow\"\nmap-entry = \"allow\"\nlarge-enum-variant = \"allow\"\nresult_large_err = \"allow\"\nsemicolon_if_nothing_returned = \"deny\"\ntrivially-copy-pass-by-ref = \"deny\"\ndefault_trait_access = \"deny\"\nmatch-wildcard-for-single-variants = \"deny\"\nredundant-closure-for-method-calls = \"deny\"\nfilter_map_next = \"deny\"\nmanual_let_else = \"deny\"\nunused_async = \"deny\"\nfrom_over_into = \"deny\"\nneedless_borrow = \"deny\"\nnew_without_default = \"deny\"\nuseless_conversion = \"deny\"\n\n[lints.rustdoc]\nbroken_intra_doc_links = \"forbid\"\n\n[features]\ndebug = []\nselector = [\"dep:iced_selector\"]\na11y = [\"iced_accessibility\", \"iced_core/a11y\"]\ncctk = [\"iced_core/cctk\", \"dep:cctk\"]\n\n[dependencies]\nbytes = \"1.6\"\nraw-window-handle = \"0.6\"\nthiserror = \"2\"\n\n[dependencies.iced_core]\nversion = \"0.14.0\"\npath = \"core\"\n\n[dependencies.iced_futures]\nfeatures = [\"thread-pool\"]\nversion = \"0.14.0\"\npath = \"futures\"\n\n[dependencies.sipper]\noptional = true\nversion = \"0.1\"\n\n[dependencies.iced_selector]\noptional = true\nversion = \"0.14.0\"\npath = \"selector\"\n\n[dependencies.cctk]\noptional = true\ngit = \"https://github.com/pop-os/cosmic-protocols\"\npackage = \"cosmic-client-toolkit\"\nrev = \"c253ec1\"\n\n[dependencies.iced_accessibility]\noptional = true\nversion = \"0.1\"\npath = \"accessibility\"\n\n[dependencies.window_clipboard]\ngit = \"https://github.com/pop-os/window_clipboard.git\"\ntag = \"sctk-0.20\"\n\n[dependencies.dnd]\ngit = \"https://github.com/pop-os/window_clipboard.git\"\ntag = \"sctk-0.20\"\n",
+        "contents": "[package]\nname = \"iced_runtime\"\ndescription = \"A renderer-agnostic runtime for iced\"\nversion = \"0.14.0\"\nedition = \"2024\"\nauthors = [\"H\u00e9ctor Ram\u00f3n Jim\u00e9nez <hector@hecrj.dev>\"]\nlicense = \"MIT\"\nrepository = \"https://github.com/iced-rs/iced\"\nhomepage = \"https://iced.rs\"\ncategories = [\"gui\"]\nkeywords = [\"gui\", \"ui\", \"graphics\", \"interface\", \"widgets\"]\n\n[lints.rust]\nunused_results = \"deny\"\n\n[lints.rust.rust_2018_idioms]\nlevel = \"deny\"\npriority = -1\n\n[lints.clippy]\ntype-complexity = \"allow\"\nmap-entry = \"allow\"\nlarge-enum-variant = \"allow\"\nresult_large_err = \"allow\"\nsemicolon_if_nothing_returned = \"deny\"\ntrivially-copy-pass-by-ref = \"deny\"\ndefault_trait_access = \"deny\"\nmatch-wildcard-for-single-variants = \"deny\"\nredundant-closure-for-method-calls = \"deny\"\nfilter_map_next = \"deny\"\nmanual_let_else = \"deny\"\nunused_async = \"deny\"\nfrom_over_into = \"deny\"\nneedless_borrow = \"deny\"\nnew_without_default = \"deny\"\nuseless_conversion = \"deny\"\n\n[lints.rustdoc]\nbroken_intra_doc_links = \"forbid\"\n\n[features]\ndebug = []\nselector = [\"dep:iced_selector\"]\na11y = [\"iced_accessibility\", \"iced_core/a11y\"]\ncctk = [\"iced_core/cctk\", \"dep:cctk\"]\n\n[dependencies]\nbytes = \"1.6\"\nraw-window-handle = \"0.6\"\nthiserror = \"2\"\n\n[dependencies.iced_core]\nversion = \"0.14.0\"\npath = \"core\"\n\n[dependencies.iced_futures]\nfeatures = [\"thread-pool\"]\nversion = \"0.14.0\"\npath = \"futures\"\n\n[dependencies.sipper]\noptional = true\nversion = \"0.1\"\n\n[dependencies.iced_selector]\noptional = true\nversion = \"0.14.0\"\npath = \"selector\"\n\n[dependencies.cctk]\noptional = true\ngit = \"https://github.com/pop-os/cosmic-protocols\"\npackage = \"cosmic-client-toolkit\"\nrev = \"32283d7\"\n\n[dependencies.iced_accessibility]\noptional = true\nversion = \"0.1\"\npath = \"accessibility\"\n\n[dependencies.window_clipboard]\ngit = \"https://github.com/pop-os/window_clipboard.git\"\ntag = \"sctk-0.20\"\n\n[dependencies.dnd]\ngit = \"https://github.com/pop-os/window_clipboard.git\"\ntag = \"sctk-0.20\"\n",
         "dest": "cargo/vendor/iced_runtime",
         "dest-filename": "Cargo.toml"
     },
@@ -3115,7 +3442,7 @@
     {
         "type": "shell",
         "commands": [
-            "cp -r --reflink=auto \"flatpak-cargo/git/libcosmic-f0f6893/iced/tiny_skia\" \"cargo/vendor/iced_tiny_skia\""
+            "cp -r --reflink=auto \"flatpak-cargo/git/libcosmic-fc5debc/iced/tiny_skia\" \"cargo/vendor/iced_tiny_skia\""
         ]
     },
     {
@@ -3133,12 +3460,12 @@
     {
         "type": "shell",
         "commands": [
-            "cp -r --reflink=auto \"flatpak-cargo/git/libcosmic-f0f6893/iced/wgpu\" \"cargo/vendor/iced_wgpu\""
+            "cp -r --reflink=auto \"flatpak-cargo/git/libcosmic-fc5debc/iced/wgpu\" \"cargo/vendor/iced_wgpu\""
         ]
     },
     {
         "type": "inline",
-        "contents": "[package]\nname = \"iced_wgpu\"\ndescription = \"A renderer for iced on top of wgpu\"\nversion = \"0.14.0\"\nedition = \"2024\"\nauthors = [\"H\u00e9ctor Ram\u00f3n Jim\u00e9nez <hector@hecrj.dev>\"]\nlicense = \"MIT\"\nrepository = \"https://github.com/iced-rs/iced\"\nhomepage = \"https://iced.rs\"\ncategories = [\"gui\"]\nkeywords = [\"gui\", \"ui\", \"graphics\", \"interface\", \"widgets\"]\n\n[package.metadata.docs.rs]\nrustdoc-args = [\"--cfg\", \"docsrs\"]\nall-features = true\n\n[lints.rust]\nunused_results = \"deny\"\n\n[lints.rust.rust_2018_idioms]\nlevel = \"deny\"\npriority = -1\n\n[lints.clippy]\ntype-complexity = \"allow\"\nmap-entry = \"allow\"\nlarge-enum-variant = \"allow\"\nresult_large_err = \"allow\"\nsemicolon_if_nothing_returned = \"deny\"\ntrivially-copy-pass-by-ref = \"deny\"\ndefault_trait_access = \"deny\"\nmatch-wildcard-for-single-variants = \"deny\"\nredundant-closure-for-method-calls = \"deny\"\nfilter_map_next = \"deny\"\nmanual_let_else = \"deny\"\nunused_async = \"deny\"\nfrom_over_into = \"deny\"\nneedless_borrow = \"deny\"\nnew_without_default = \"deny\"\nuseless_conversion = \"deny\"\n\n[lints.rustdoc]\nbroken_intra_doc_links = \"forbid\"\n\n[features]\ndefault = [\"wgpu/default\"]\ngeometry = [\"iced_graphics/geometry\", \"lyon\"]\nimage = [\"iced_graphics/image\"]\nsvg = [\"iced_graphics/svg\", \"resvg/text\"]\nweb-colors = [\"iced_graphics/web-colors\"]\nwebgl = [\"wgpu/webgl\"]\nstrict-assertions = []\n\n[dependencies]\nbitflags = \"2.5\"\nglam = \"0.25\"\nguillotiere = \"0.6\"\nlog = \"0.4\"\nrustc-hash = \"2.0\"\nthiserror = \"2\"\n\n[dependencies.iced_debug]\nversion = \"0.14.0\"\npath = \"debug\"\n\n[dependencies.iced_graphics]\nversion = \"0.14.0\"\npath = \"graphics\"\n\n[dependencies.bytemuck]\nversion = \"1.0\"\nfeatures = [\"derive\"]\n\n[dependencies.futures]\nversion = \"0.3\"\ndefault-features = false\nfeatures = [\"std\", \"async-await\"]\n\n[dependencies.cryoglyph]\ngit = \"https://github.com/iced-rs/cryoglyph.git\"\nrev = \"e429a025df36ab8145708acb309080ae3deec17a\"\n\n[dependencies.wgpu]\nversion = \"28.0\"\ndefault-features = false\nfeatures = [\"std\", \"wgsl\"]\n\n[dependencies.lyon]\noptional = true\nversion = \"1.0\"\n\n[dependencies.resvg]\noptional = true\nversion = \"0.45\"\n\n[target.\"cfg(all(unix, not(target_os = \\\"macos\\\"), not(target_os = \\\"redox\\\")))\".dependencies]\nraw-window-handle = \"0.6\"\nas-raw-xcb-connection = \"1.0.1\"\ntiny-xlib = \"0.2.3\"\n\n[target.\"cfg(all(unix, not(target_os = \\\"macos\\\"), not(target_os = \\\"redox\\\")))\".dependencies.rustix]\nversion = \"0.38\"\nfeatures = [\"fs\"]\n\n[target.\"cfg(all(unix, not(target_os = \\\"macos\\\"), not(target_os = \\\"redox\\\")))\".dependencies.cctk]\noptional = true\ngit = \"https://github.com/pop-os/cosmic-protocols\"\npackage = \"cosmic-client-toolkit\"\nrev = \"c253ec1\"\n\n[target.\"cfg(all(unix, not(target_os = \\\"macos\\\"), not(target_os = \\\"redox\\\")))\".dependencies.wayland-protocols]\nversion = \"0.32.1\"\nfeatures = [\"staging\"]\n\n[target.\"cfg(all(unix, not(target_os = \\\"macos\\\"), not(target_os = \\\"redox\\\")))\".dependencies.wayland-backend]\nversion = \"0.3.3\"\nfeatures = [\"client_system\"]\n\n[target.\"cfg(all(unix, not(target_os = \\\"macos\\\"), not(target_os = \\\"redox\\\")))\".dependencies.wayland-client]\nversion = \"0.31.2\"\n\n[target.\"cfg(all(unix, not(target_os = \\\"macos\\\"), not(target_os = \\\"redox\\\")))\".dependencies.wayland-sys]\nversion = \"0.31.1\"\nfeatures = [\"dlopen\"]\n\n[target.\"cfg(all(unix, not(target_os = \\\"macos\\\"), not(target_os = \\\"redox\\\")))\".dependencies.x11rb]\nversion = \"0.13.1\"\nfeatures = [\"allow-unsafe-code\", \"dl-libxcb\", \"dri3\", \"randr\"]\n",
+        "contents": "[package]\nname = \"iced_wgpu\"\ndescription = \"A renderer for iced on top of wgpu\"\nversion = \"0.14.0\"\nedition = \"2024\"\nauthors = [\"H\u00e9ctor Ram\u00f3n Jim\u00e9nez <hector@hecrj.dev>\"]\nlicense = \"MIT\"\nrepository = \"https://github.com/iced-rs/iced\"\nhomepage = \"https://iced.rs\"\ncategories = [\"gui\"]\nkeywords = [\"gui\", \"ui\", \"graphics\", \"interface\", \"widgets\"]\n\n[package.metadata.docs.rs]\nrustdoc-args = [\"--cfg\", \"docsrs\"]\nall-features = true\n\n[lints.rust]\nunused_results = \"deny\"\n\n[lints.rust.rust_2018_idioms]\nlevel = \"deny\"\npriority = -1\n\n[lints.clippy]\ntype-complexity = \"allow\"\nmap-entry = \"allow\"\nlarge-enum-variant = \"allow\"\nresult_large_err = \"allow\"\nsemicolon_if_nothing_returned = \"deny\"\ntrivially-copy-pass-by-ref = \"deny\"\ndefault_trait_access = \"deny\"\nmatch-wildcard-for-single-variants = \"deny\"\nredundant-closure-for-method-calls = \"deny\"\nfilter_map_next = \"deny\"\nmanual_let_else = \"deny\"\nunused_async = \"deny\"\nfrom_over_into = \"deny\"\nneedless_borrow = \"deny\"\nnew_without_default = \"deny\"\nuseless_conversion = \"deny\"\n\n[lints.rustdoc]\nbroken_intra_doc_links = \"forbid\"\n\n[features]\ndefault = [\"wgpu/default\"]\ngeometry = [\"iced_graphics/geometry\", \"lyon\"]\nimage = [\"iced_graphics/image\"]\nsvg = [\"iced_graphics/svg\", \"resvg/text\"]\nweb-colors = [\"iced_graphics/web-colors\"]\nwebgl = [\"wgpu/webgl\"]\nstrict-assertions = []\n\n[dependencies]\nbitflags = \"2.5\"\nglam = \"0.25\"\nguillotiere = \"0.6\"\nlog = \"0.4\"\nrustc-hash = \"2.0\"\nthiserror = \"2\"\n\n[dependencies.iced_debug]\nversion = \"0.14.0\"\npath = \"debug\"\n\n[dependencies.iced_graphics]\nversion = \"0.14.0\"\npath = \"graphics\"\n\n[dependencies.bytemuck]\nversion = \"1.0\"\nfeatures = [\"derive\"]\n\n[dependencies.futures]\nversion = \"0.3\"\ndefault-features = false\nfeatures = [\"std\", \"async-await\"]\n\n[dependencies.cryoglyph]\ngit = \"https://github.com/iced-rs/cryoglyph.git\"\nrev = \"e429a025df36ab8145708acb309080ae3deec17a\"\n\n[dependencies.wgpu]\nversion = \"28.0\"\ndefault-features = false\nfeatures = [\"std\", \"wgsl\"]\n\n[dependencies.lyon]\noptional = true\nversion = \"1.0\"\n\n[dependencies.resvg]\noptional = true\nversion = \"0.45\"\n\n[target.\"cfg(all(unix, not(target_os = \\\"macos\\\"), not(target_os = \\\"redox\\\")))\".dependencies]\nraw-window-handle = \"0.6\"\nas-raw-xcb-connection = \"1.0.1\"\ntiny-xlib = \"0.2.3\"\n\n[target.\"cfg(all(unix, not(target_os = \\\"macos\\\"), not(target_os = \\\"redox\\\")))\".dependencies.rustix]\nversion = \"0.38\"\nfeatures = [\"fs\"]\n\n[target.\"cfg(all(unix, not(target_os = \\\"macos\\\"), not(target_os = \\\"redox\\\")))\".dependencies.cctk]\noptional = true\ngit = \"https://github.com/pop-os/cosmic-protocols\"\npackage = \"cosmic-client-toolkit\"\nrev = \"32283d7\"\n\n[target.\"cfg(all(unix, not(target_os = \\\"macos\\\"), not(target_os = \\\"redox\\\")))\".dependencies.wayland-protocols]\nversion = \"0.32.1\"\nfeatures = [\"staging\"]\n\n[target.\"cfg(all(unix, not(target_os = \\\"macos\\\"), not(target_os = \\\"redox\\\")))\".dependencies.wayland-backend]\nversion = \"0.3.3\"\nfeatures = [\"client_system\"]\n\n[target.\"cfg(all(unix, not(target_os = \\\"macos\\\"), not(target_os = \\\"redox\\\")))\".dependencies.wayland-client]\nversion = \"0.31.2\"\n\n[target.\"cfg(all(unix, not(target_os = \\\"macos\\\"), not(target_os = \\\"redox\\\")))\".dependencies.wayland-sys]\nversion = \"0.31.1\"\nfeatures = [\"dlopen\"]\n\n[target.\"cfg(all(unix, not(target_os = \\\"macos\\\"), not(target_os = \\\"redox\\\")))\".dependencies.x11rb]\nversion = \"0.13.1\"\nfeatures = [\"allow-unsafe-code\", \"dl-libxcb\", \"dri3\", \"randr\"]\n\n[target.\"cfg(all(unix, not(target_os = \\\"macos\\\"), not(target_os = \\\"redox\\\")))\".dependencies.sctk]\npackage = \"smithay-client-toolkit\"\nversion = \"0.20.0\"\n",
         "dest": "cargo/vendor/iced_wgpu",
         "dest-filename": "Cargo.toml"
     },
@@ -3151,12 +3478,12 @@
     {
         "type": "shell",
         "commands": [
-            "cp -r --reflink=auto \"flatpak-cargo/git/libcosmic-f0f6893/iced/widget\" \"cargo/vendor/iced_widget\""
+            "cp -r --reflink=auto \"flatpak-cargo/git/libcosmic-fc5debc/iced/widget\" \"cargo/vendor/iced_widget\""
         ]
     },
     {
         "type": "inline",
-        "contents": "[package]\nname = \"iced_widget\"\ndescription = \"The built-in widgets for iced\"\nversion = \"0.14.2\"\nedition = \"2024\"\nauthors = [\"H\u00e9ctor Ram\u00f3n Jim\u00e9nez <hector@hecrj.dev>\"]\nlicense = \"MIT\"\nrepository = \"https://github.com/iced-rs/iced\"\nhomepage = \"https://iced.rs\"\ncategories = [\"gui\"]\nkeywords = [\"gui\", \"ui\", \"graphics\", \"interface\", \"widgets\"]\n\n[package.metadata.docs.rs]\nrustdoc-args = [\"--cfg\", \"docsrs\"]\nall-features = true\n\n[lints.rust]\nunused_results = \"deny\"\n\n[lints.rust.rust_2018_idioms]\nlevel = \"deny\"\npriority = -1\n\n[lints.clippy]\ntype-complexity = \"allow\"\nmap-entry = \"allow\"\nlarge-enum-variant = \"allow\"\nresult_large_err = \"allow\"\nsemicolon_if_nothing_returned = \"deny\"\ntrivially-copy-pass-by-ref = \"deny\"\ndefault_trait_access = \"deny\"\nmatch-wildcard-for-single-variants = \"deny\"\nredundant-closure-for-method-calls = \"deny\"\nfilter_map_next = \"deny\"\nmanual_let_else = \"deny\"\nunused_async = \"deny\"\nfrom_over_into = \"deny\"\nneedless_borrow = \"deny\"\nnew_without_default = \"deny\"\nuseless_conversion = \"deny\"\n\n[lints.rustdoc]\nbroken_intra_doc_links = \"forbid\"\n\n[features]\nlazy = [\"ouroboros\"]\nimage = [\"iced_renderer/image\"]\nsvg = [\"iced_renderer/svg\"]\ncanvas = [\"iced_renderer/geometry\"]\nqr_code = [\"canvas\", \"dep:qrcode\"]\nwgpu = [\"iced_renderer/wgpu-bare\"]\nmarkdown = [\"dep:pulldown-cmark\"]\nhighlighter = [\"dep:iced_highlighter\"]\nadvanced = []\ncrisp = []\na11y = [\"iced_accessibility\"]\ncctk = [\"iced_runtime/cctk\", \"dep:cctk\"]\n\n[dependencies]\nnum-traits = \"0.2\"\nlog = \"0.4\"\nrustc-hash = \"2.0\"\nthiserror = \"2\"\nunicode-segmentation = \"1.0\"\n\n[dependencies.iced_renderer]\nversion = \"0.14.0\"\npath = \"renderer\"\n\n[dependencies.iced_runtime]\nversion = \"0.14.0\"\npath = \"runtime\"\n\n[dependencies.iced_accessibility]\noptional = true\nversion = \"0.1\"\npath = \"accessibility\"\n\n[dependencies.cctk]\noptional = true\ngit = \"https://github.com/pop-os/cosmic-protocols\"\npackage = \"cosmic-client-toolkit\"\nrev = \"c253ec1\"\n\n[dependencies.window_clipboard]\ngit = \"https://github.com/pop-os/window_clipboard.git\"\ntag = \"sctk-0.20\"\n\n[dependencies.dnd]\ngit = \"https://github.com/pop-os/window_clipboard.git\"\ntag = \"sctk-0.20\"\n\n[dependencies.ouroboros]\noptional = true\nversion = \"0.18\"\n\n[dependencies.qrcode]\noptional = true\nversion = \"0.13\"\ndefault-features = false\n\n[dependencies.pulldown-cmark]\noptional = true\nversion = \"0.12\"\n\n[dependencies.iced_highlighter]\noptional = true\nversion = \"0.14.0\"\npath = \"highlighter\"\n",
+        "contents": "[package]\nname = \"iced_widget\"\ndescription = \"The built-in widgets for iced\"\nversion = \"0.14.2\"\nedition = \"2024\"\nauthors = [\"H\u00e9ctor Ram\u00f3n Jim\u00e9nez <hector@hecrj.dev>\"]\nlicense = \"MIT\"\nrepository = \"https://github.com/iced-rs/iced\"\nhomepage = \"https://iced.rs\"\ncategories = [\"gui\"]\nkeywords = [\"gui\", \"ui\", \"graphics\", \"interface\", \"widgets\"]\n\n[package.metadata.docs.rs]\nrustdoc-args = [\"--cfg\", \"docsrs\"]\nall-features = true\n\n[lints.rust]\nunused_results = \"deny\"\n\n[lints.rust.rust_2018_idioms]\nlevel = \"deny\"\npriority = -1\n\n[lints.clippy]\ntype-complexity = \"allow\"\nmap-entry = \"allow\"\nlarge-enum-variant = \"allow\"\nresult_large_err = \"allow\"\nsemicolon_if_nothing_returned = \"deny\"\ntrivially-copy-pass-by-ref = \"deny\"\ndefault_trait_access = \"deny\"\nmatch-wildcard-for-single-variants = \"deny\"\nredundant-closure-for-method-calls = \"deny\"\nfilter_map_next = \"deny\"\nmanual_let_else = \"deny\"\nunused_async = \"deny\"\nfrom_over_into = \"deny\"\nneedless_borrow = \"deny\"\nnew_without_default = \"deny\"\nuseless_conversion = \"deny\"\n\n[lints.rustdoc]\nbroken_intra_doc_links = \"forbid\"\n\n[features]\nlazy = [\"ouroboros\"]\nimage = [\"iced_renderer/image\"]\nsvg = [\"iced_renderer/svg\"]\ncanvas = [\"iced_renderer/geometry\"]\nqr_code = [\"canvas\", \"dep:qrcode\"]\nwgpu = [\"iced_renderer/wgpu-bare\"]\nmarkdown = [\"dep:pulldown-cmark\"]\nhighlighter = [\"dep:iced_highlighter\"]\nadvanced = []\ncrisp = []\na11y = [\"iced_accessibility\"]\ncctk = [\"iced_runtime/cctk\", \"dep:cctk\"]\n\n[dependencies]\nnum-traits = \"0.2\"\nlog = \"0.4\"\nrustc-hash = \"2.0\"\nthiserror = \"2\"\nunicode-segmentation = \"1.0\"\n\n[dependencies.iced_renderer]\nversion = \"0.14.0\"\npath = \"renderer\"\n\n[dependencies.iced_runtime]\nversion = \"0.14.0\"\npath = \"runtime\"\n\n[dependencies.iced_accessibility]\noptional = true\nversion = \"0.1\"\npath = \"accessibility\"\n\n[dependencies.cctk]\noptional = true\ngit = \"https://github.com/pop-os/cosmic-protocols\"\npackage = \"cosmic-client-toolkit\"\nrev = \"32283d7\"\n\n[dependencies.window_clipboard]\ngit = \"https://github.com/pop-os/window_clipboard.git\"\ntag = \"sctk-0.20\"\n\n[dependencies.dnd]\ngit = \"https://github.com/pop-os/window_clipboard.git\"\ntag = \"sctk-0.20\"\n\n[dependencies.ouroboros]\noptional = true\nversion = \"0.18\"\n\n[dependencies.qrcode]\noptional = true\nversion = \"0.13\"\ndefault-features = false\n\n[dependencies.pulldown-cmark]\noptional = true\nversion = \"0.12\"\n\n[dependencies.iced_highlighter]\noptional = true\nversion = \"0.14.0\"\npath = \"highlighter\"\n",
         "dest": "cargo/vendor/iced_widget",
         "dest-filename": "Cargo.toml"
     },
@@ -3169,12 +3496,12 @@
     {
         "type": "shell",
         "commands": [
-            "cp -r --reflink=auto \"flatpak-cargo/git/libcosmic-f0f6893/iced/winit\" \"cargo/vendor/iced_winit\""
+            "cp -r --reflink=auto \"flatpak-cargo/git/libcosmic-fc5debc/iced/winit\" \"cargo/vendor/iced_winit\""
         ]
     },
     {
         "type": "inline",
-        "contents": "[package]\nname = \"iced_winit\"\ndescription = \"A runtime for iced on top of winit\"\nversion = \"0.14.0\"\nedition = \"2024\"\nauthors = [\"H\u00e9ctor Ram\u00f3n Jim\u00e9nez <hector@hecrj.dev>\"]\nlicense = \"MIT\"\nrepository = \"https://github.com/iced-rs/iced\"\nhomepage = \"https://iced.rs\"\ncategories = [\"gui\"]\nkeywords = [\"gui\", \"ui\", \"graphics\", \"interface\", \"widgets\"]\n\n[lints.rust]\nunused_results = \"deny\"\n\n[lints.rust.rust_2018_idioms]\nlevel = \"deny\"\npriority = -1\n\n[lints.clippy]\ntype-complexity = \"allow\"\nmap-entry = \"allow\"\nlarge-enum-variant = \"allow\"\nresult_large_err = \"allow\"\nsemicolon_if_nothing_returned = \"deny\"\ntrivially-copy-pass-by-ref = \"deny\"\ndefault_trait_access = \"deny\"\nmatch-wildcard-for-single-variants = \"deny\"\nredundant-closure-for-method-calls = \"deny\"\nfilter_map_next = \"deny\"\nmanual_let_else = \"deny\"\nunused_async = \"deny\"\nfrom_over_into = \"deny\"\nneedless_borrow = \"deny\"\nnew_without_default = \"deny\"\nuseless_conversion = \"deny\"\n\n[lints.rustdoc]\nbroken_intra_doc_links = \"forbid\"\n\n[features]\nwayland = [\"winit/wayland\", \"wayland-csd-adwaita\"]\ndefault = [\"x11\", \"wayland-dlopen\"]\ndebug = [\"iced_debug/enable\"]\nsysinfo = [\"dep:sysinfo\"]\nunconditional-rendering = []\nlinux-theme-detection = [\"dep:mundy\", \"mundy/async-io\", \"mundy/color-scheme\"]\nx11 = [\"winit/x11\"]\nsystem = [\"sysinfo\"]\nprogram = []\nwayland-dlopen = [\"winit/wayland-dlopen\"]\nwayland-csd-adwaita = [\"winit/wayland-csd-adwaita\"]\na11y = [\"iced_accessibility\", \"iced_runtime/a11y\"]\ncctk = [\"wayland\", \"wayland-protocols\", \"raw-window-handle\", \"iced_runtime/cctk\", \"wayland-backend\", \"xkbcommon\", \"xkbcommon-dl\", \"xkeysym\", \"dep:cctk\"]\nsingle-instance = []\n\n[dependencies]\nlog = \"0.4\"\nrustc-hash = \"2.0\"\nthiserror = \"2\"\ncursor-icon = \"1.1.0\"\n\n[dependencies.iced_futures]\nversion = \"0.14.0\"\npath = \"futures\"\n\n[dependencies.iced_graphics]\nversion = \"0.14.0\"\npath = \"graphics\"\n\n[dependencies.iced_runtime]\nversion = \"0.14.0\"\npath = \"runtime\"\n\n[dependencies.iced_accessibility]\noptional = true\nfeatures = [\"accesskit_winit\"]\nversion = \"0.1\"\npath = \"accessibility\"\n\n[dependencies.window_clipboard]\ngit = \"https://github.com/pop-os/window_clipboard.git\"\ntag = \"sctk-0.20\"\n\n[dependencies.dnd]\ngit = \"https://github.com/pop-os/window_clipboard.git\"\ntag = \"sctk-0.20\"\n\n[dependencies.winit]\ngit = \"https://github.com/pop-os/winit.git\"\ntag = \"cosmic-0.14\"\n\n[dependencies.winit-core]\ngit = \"https://github.com/pop-os/winit.git\"\ntag = \"cosmic-0.14\"\n\n[dependencies.sysinfo]\noptional = true\nversion = \"0.33\"\n\n[dependencies.iced_debug]\nversion = \"0.14.0\"\npath = \"debug\"\n\n[dependencies.iced_program]\nversion = \"0.14.0\"\npath = \"program\"\n\n[target.\"cfg(target_os = \\\"linux\\\")\".dependencies.mundy]\noptional = true\nversion = \"0.2\"\ndefault-features = false\n\n[target.\"cfg(target_os = \\\"linux\\\")\".dependencies.raw-window-handle]\nversion = \"0.6\"\noptional = true\n\n[target.\"cfg(target_os = \\\"linux\\\")\".dependencies.cctk]\noptional = true\ngit = \"https://github.com/pop-os/cosmic-protocols\"\npackage = \"cosmic-client-toolkit\"\nrev = \"c253ec1\"\n\n[target.\"cfg(target_os = \\\"linux\\\")\".dependencies.wayland-protocols]\noptional = true\nversion = \"0.32.1\"\nfeatures = [\"staging\"]\n\n[target.\"cfg(target_os = \\\"linux\\\")\".dependencies.wayland-client]\nversion = \"0.31.5\"\n\n[target.\"cfg(target_os = \\\"linux\\\")\".dependencies.wayland-backend]\nversion = \"0.3.1\"\nfeatures = [\"client_system\"]\noptional = true\n\n[target.\"cfg(target_os = \\\"linux\\\")\".dependencies.xkbcommon]\nversion = \"0.7\"\nfeatures = [\"wayland\"]\noptional = true\n\n[target.\"cfg(target_os = \\\"linux\\\")\".dependencies.xkbcommon-dl]\nversion = \"0.4.1\"\noptional = true\n\n[target.\"cfg(target_os = \\\"linux\\\")\".dependencies.xkeysym]\nversion = \"0.2.0\"\noptional = true\n\n[target.\"cfg(target_os = \\\"linux\\\")\".dependencies.rustix]\nversion = \"0.38\"\n\n[target.\"cfg(target_os = \\\"windows\\\")\".dependencies]\nwinapi = \"0.3\"\n\n[target.\"cfg(target_arch = \\\"wasm32\\\")\".dependencies]\nwasm-bindgen-futures = \"0.4\"\n\n[target.\"cfg(target_arch = \\\"wasm32\\\")\".dependencies.web-sys]\nfeatures = [\"Document\", \"Window\", \"HtmlCanvasElement\"]\nversion = \"0.3.69\"\n",
+        "contents": "[package]\nname = \"iced_winit\"\ndescription = \"A runtime for iced on top of winit\"\nversion = \"0.14.0\"\nedition = \"2024\"\nauthors = [\"H\u00e9ctor Ram\u00f3n Jim\u00e9nez <hector@hecrj.dev>\"]\nlicense = \"MIT\"\nrepository = \"https://github.com/iced-rs/iced\"\nhomepage = \"https://iced.rs\"\ncategories = [\"gui\"]\nkeywords = [\"gui\", \"ui\", \"graphics\", \"interface\", \"widgets\"]\n\n[lints.rust]\nunused_results = \"deny\"\n\n[lints.rust.rust_2018_idioms]\nlevel = \"deny\"\npriority = -1\n\n[lints.clippy]\ntype-complexity = \"allow\"\nmap-entry = \"allow\"\nlarge-enum-variant = \"allow\"\nresult_large_err = \"allow\"\nsemicolon_if_nothing_returned = \"deny\"\ntrivially-copy-pass-by-ref = \"deny\"\ndefault_trait_access = \"deny\"\nmatch-wildcard-for-single-variants = \"deny\"\nredundant-closure-for-method-calls = \"deny\"\nfilter_map_next = \"deny\"\nmanual_let_else = \"deny\"\nunused_async = \"deny\"\nfrom_over_into = \"deny\"\nneedless_borrow = \"deny\"\nnew_without_default = \"deny\"\nuseless_conversion = \"deny\"\n\n[lints.rustdoc]\nbroken_intra_doc_links = \"forbid\"\n\n[features]\nwayland = [\"winit/wayland\", \"wayland-csd-adwaita\"]\ndefault = [\"x11\", \"wayland-dlopen\"]\ndebug = [\"iced_debug/enable\"]\nsysinfo = [\"dep:sysinfo\"]\nunconditional-rendering = []\nlinux-theme-detection = [\"dep:mundy\", \"mundy/async-io\", \"mundy/color-scheme\"]\nx11 = [\"winit/x11\"]\nsystem = [\"sysinfo\"]\nprogram = []\nwayland-dlopen = [\"winit/wayland-dlopen\"]\nwayland-csd-adwaita = [\"winit/wayland-csd-adwaita\"]\na11y = [\"iced_accessibility\", \"iced_runtime/a11y\"]\ncctk = [\"wayland\", \"wayland-protocols\", \"raw-window-handle\", \"iced_runtime/cctk\", \"wayland-backend\", \"xkbcommon\", \"xkbcommon-dl\", \"xkeysym\", \"dep:cctk\"]\nsingle-instance = []\n\n[dependencies]\nlog = \"0.4\"\nrustc-hash = \"2.0\"\nthiserror = \"2\"\ncursor-icon = \"1.1.0\"\n\n[dependencies.iced_futures]\nversion = \"0.14.0\"\npath = \"futures\"\n\n[dependencies.iced_graphics]\nversion = \"0.14.0\"\npath = \"graphics\"\n\n[dependencies.iced_runtime]\nversion = \"0.14.0\"\npath = \"runtime\"\n\n[dependencies.iced_accessibility]\noptional = true\nfeatures = [\"accesskit_winit\"]\nversion = \"0.1\"\npath = \"accessibility\"\n\n[dependencies.window_clipboard]\ngit = \"https://github.com/pop-os/window_clipboard.git\"\ntag = \"sctk-0.20\"\n\n[dependencies.dnd]\ngit = \"https://github.com/pop-os/window_clipboard.git\"\ntag = \"sctk-0.20\"\n\n[dependencies.winit]\ngit = \"https://github.com/pop-os/winit.git\"\ntag = \"cosmic-0.14\"\n\n[dependencies.winit-core]\ngit = \"https://github.com/pop-os/winit.git\"\ntag = \"cosmic-0.14\"\n\n[dependencies.sysinfo]\noptional = true\nversion = \"0.33\"\n\n[dependencies.iced_debug]\nversion = \"0.14.0\"\npath = \"debug\"\n\n[dependencies.iced_program]\nversion = \"0.14.0\"\npath = \"program\"\n\n[target.\"cfg(target_os = \\\"linux\\\")\".dependencies.mundy]\noptional = true\nversion = \"0.2\"\ndefault-features = false\n\n[target.\"cfg(target_os = \\\"linux\\\")\".dependencies.raw-window-handle]\nversion = \"0.6\"\noptional = true\n\n[target.\"cfg(target_os = \\\"linux\\\")\".dependencies.cctk]\noptional = true\ngit = \"https://github.com/pop-os/cosmic-protocols\"\npackage = \"cosmic-client-toolkit\"\nrev = \"32283d7\"\n\n[target.\"cfg(target_os = \\\"linux\\\")\".dependencies.wayland-protocols]\noptional = true\nversion = \"0.32.1\"\nfeatures = [\"staging\"]\n\n[target.\"cfg(target_os = \\\"linux\\\")\".dependencies.wayland-client]\nversion = \"0.31.5\"\n\n[target.\"cfg(target_os = \\\"linux\\\")\".dependencies.wayland-backend]\nversion = \"0.3.1\"\nfeatures = [\"client_system\"]\noptional = true\n\n[target.\"cfg(target_os = \\\"linux\\\")\".dependencies.xkbcommon]\nversion = \"0.7\"\nfeatures = [\"wayland\"]\noptional = true\n\n[target.\"cfg(target_os = \\\"linux\\\")\".dependencies.xkbcommon-dl]\nversion = \"0.4.1\"\noptional = true\n\n[target.\"cfg(target_os = \\\"linux\\\")\".dependencies.xkeysym]\nversion = \"0.2.0\"\noptional = true\n\n[target.\"cfg(target_os = \\\"linux\\\")\".dependencies.rustix]\nversion = \"0.38\"\n\n[target.\"cfg(target_os = \\\"windows\\\")\".dependencies]\nwinapi = \"0.3\"\n\n[target.\"cfg(target_arch = \\\"wasm32\\\")\".dependencies]\nwasm-bindgen-futures = \"0.4\"\n\n[target.\"cfg(target_arch = \\\"wasm32\\\")\".dependencies.web-sys]\nfeatures = [\"Document\", \"Window\", \"HtmlCanvasElement\"]\nversion = \"0.3.69\"\n",
         "dest": "cargo/vendor/iced_winit",
         "dest-filename": "Cargo.toml"
     },
@@ -3343,6 +3670,19 @@
     {
         "type": "archive",
         "archive-type": "tar-gzip",
+        "url": "https://static.crates.io/crates/image-webp/image-webp-0.1.3.crate",
+        "sha256": "f79afb8cbee2ef20f59ccd477a218c12a93943d075b492015ecb1bb81f8ee904",
+        "dest": "cargo/vendor/image-webp-0.1.3"
+    },
+    {
+        "type": "inline",
+        "contents": "{\"package\": \"f79afb8cbee2ef20f59ccd477a218c12a93943d075b492015ecb1bb81f8ee904\", \"files\": {}}",
+        "dest": "cargo/vendor/image-webp-0.1.3",
+        "dest-filename": ".cargo-checksum.json"
+    },
+    {
+        "type": "archive",
+        "archive-type": "tar-gzip",
         "url": "https://static.crates.io/crates/image-webp/image-webp-0.2.4.crate",
         "sha256": "525e9ff3e1a4be2fbea1fdf0e98686a6d98b4d8f937e1bf7402245af1909e8c3",
         "dest": "cargo/vendor/image-webp-0.2.4"
@@ -3364,6 +3704,19 @@
         "type": "inline",
         "contents": "{\"package\": \"edcd27d72f2f071c64249075f42e205ff93c9a4c5f6c6da53e79ed9f9832c285\", \"files\": {}}",
         "dest": "cargo/vendor/imagesize-0.13.0",
+        "dest-filename": ".cargo-checksum.json"
+    },
+    {
+        "type": "archive",
+        "archive-type": "tar-gzip",
+        "url": "https://static.crates.io/crates/imgref/imgref-1.12.2.crate",
+        "sha256": "89194689a993ab15268672e99e7b0e19da2da3268ac682e8f02d29d4d1434cd7",
+        "dest": "cargo/vendor/imgref-1.12.2"
+    },
+    {
+        "type": "inline",
+        "contents": "{\"package\": \"89194689a993ab15268672e99e7b0e19da2da3268ac682e8f02d29d4d1434cd7\", \"files\": {}}",
+        "dest": "cargo/vendor/imgref-1.12.2",
         "dest-filename": ".cargo-checksum.json"
     },
     {
@@ -3408,6 +3761,32 @@
     {
         "type": "archive",
         "archive-type": "tar-gzip",
+        "url": "https://static.crates.io/crates/inout/inout-0.1.4.crate",
+        "sha256": "879f10e63c20629ecabbb64a8010319738c66a5cd0c29b02d63d272b03751d01",
+        "dest": "cargo/vendor/inout-0.1.4"
+    },
+    {
+        "type": "inline",
+        "contents": "{\"package\": \"879f10e63c20629ecabbb64a8010319738c66a5cd0c29b02d63d272b03751d01\", \"files\": {}}",
+        "dest": "cargo/vendor/inout-0.1.4",
+        "dest-filename": ".cargo-checksum.json"
+    },
+    {
+        "type": "archive",
+        "archive-type": "tar-gzip",
+        "url": "https://static.crates.io/crates/interpolate_name/interpolate_name-0.2.4.crate",
+        "sha256": "c34819042dc3d3971c46c2190835914dfbe0c3c13f61449b2997f4e9722dfa60",
+        "dest": "cargo/vendor/interpolate_name-0.2.4"
+    },
+    {
+        "type": "inline",
+        "contents": "{\"package\": \"c34819042dc3d3971c46c2190835914dfbe0c3c13f61449b2997f4e9722dfa60\", \"files\": {}}",
+        "dest": "cargo/vendor/interpolate_name-0.2.4",
+        "dest-filename": ".cargo-checksum.json"
+    },
+    {
+        "type": "archive",
+        "archive-type": "tar-gzip",
         "url": "https://static.crates.io/crates/intl-memoizer/intl-memoizer-0.5.3.crate",
         "sha256": "310da2e345f5eb861e7a07ee182262e94975051db9e4223e909ba90f392f163f",
         "dest": "cargo/vendor/intl-memoizer-0.5.3"
@@ -3434,14 +3813,14 @@
     {
         "type": "archive",
         "archive-type": "tar-gzip",
-        "url": "https://static.crates.io/crates/io-kit-sys/io-kit-sys-0.4.1.crate",
-        "sha256": "617ee6cf8e3f66f3b4ea67a4058564628cde41901316e19f559e14c7c72c5e7b",
-        "dest": "cargo/vendor/io-kit-sys-0.4.1"
+        "url": "https://static.crates.io/crates/itertools/itertools-0.14.0.crate",
+        "sha256": "2b192c782037fadd9cfa75548310488aabdbf3d2da73885b31bd0abd03351285",
+        "dest": "cargo/vendor/itertools-0.14.0"
     },
     {
         "type": "inline",
-        "contents": "{\"package\": \"617ee6cf8e3f66f3b4ea67a4058564628cde41901316e19f559e14c7c72c5e7b\", \"files\": {}}",
-        "dest": "cargo/vendor/io-kit-sys-0.4.1",
+        "contents": "{\"package\": \"2b192c782037fadd9cfa75548310488aabdbf3d2da73885b31bd0abd03351285\", \"files\": {}}",
+        "dest": "cargo/vendor/itertools-0.14.0",
         "dest-filename": ".cargo-checksum.json"
     },
     {
@@ -3590,14 +3969,14 @@
     {
         "type": "archive",
         "archive-type": "tar-gzip",
-        "url": "https://static.crates.io/crates/js-sys/js-sys-0.3.99.crate",
-        "sha256": "142bc4740e452c1e57ade0cbc129f139c9093e354346f0872ef985f4f5cf5f11",
-        "dest": "cargo/vendor/js-sys-0.3.99"
+        "url": "https://static.crates.io/crates/js-sys/js-sys-0.3.100.crate",
+        "sha256": "f2025f20d7a4fa7785846e7b63d10a76d3f1cee98ee5cb79ea59703f95e42162",
+        "dest": "cargo/vendor/js-sys-0.3.100"
     },
     {
         "type": "inline",
-        "contents": "{\"package\": \"142bc4740e452c1e57ade0cbc129f139c9093e354346f0872ef985f4f5cf5f11\", \"files\": {}}",
-        "dest": "cargo/vendor/js-sys-0.3.99",
+        "contents": "{\"package\": \"f2025f20d7a4fa7785846e7b63d10a76d3f1cee98ee5cb79ea59703f95e42162\", \"files\": {}}",
+        "dest": "cargo/vendor/js-sys-0.3.100",
         "dest-filename": ".cargo-checksum.json"
     },
     {
@@ -3746,6 +4125,19 @@
     {
         "type": "archive",
         "archive-type": "tar-gzip",
+        "url": "https://static.crates.io/crates/lebe/lebe-0.5.3.crate",
+        "sha256": "7a79a3332a6609480d7d0c9eab957bca6b455b91bb84e66d19f5ff66294b85b8",
+        "dest": "cargo/vendor/lebe-0.5.3"
+    },
+    {
+        "type": "inline",
+        "contents": "{\"package\": \"7a79a3332a6609480d7d0c9eab957bca6b455b91bb84e66d19f5ff66294b85b8\", \"files\": {}}",
+        "dest": "cargo/vendor/lebe-0.5.3",
+        "dest-filename": ".cargo-checksum.json"
+    },
+    {
+        "type": "archive",
+        "archive-type": "tar-gzip",
         "url": "https://static.crates.io/crates/libc/libc-0.2.186.crate",
         "sha256": "68ab91017fe16c622486840e4c83c9a37afeff978bd239b5293d61ece587de66",
         "dest": "cargo/vendor/libc-0.2.186"
@@ -3759,12 +4151,12 @@
     {
         "type": "shell",
         "commands": [
-            "cp -r --reflink=auto \"flatpak-cargo/git/libcosmic-f0f6893/.\" \"cargo/vendor/libcosmic\""
+            "cp -r --reflink=auto \"flatpak-cargo/git/libcosmic-fc5debc/.\" \"cargo/vendor/libcosmic\""
         ]
     },
     {
         "type": "inline",
-        "contents": "[package]\nname = \"libcosmic\"\nversion = \"1.0.0\"\nedition = \"2024\"\nrust-version = \"1.93\"\n\n[lib]\nname = \"cosmic\"\n\n[features]\ndefault = [\"winit\", \"tokio\", \"a11y\", \"dbus-config\", \"x11\", \"iced-wayland\", \"multi-window\"]\nadvanced-shaping = [\"iced/advanced-shaping\"]\na11y = [\"iced/a11y\", \"iced_accessibility\"]\nabout = []\nanimated-image = [\"dep:async-fs\", \"image/gif\", \"image/webp\", \"image/png\", \"tokio?/io-util\", \"tokio?/fs\"]\nautosize = []\napplet = [\"autosize\", \"winit\", \"wayland\", \"tokio\", \"cosmic-panel-config\", \"ron\", \"multi-window\"]\napplet-token = [\"applet\"]\ndbus-config = []\ndebug = [\"iced/debug\"]\npipewire = [\"ashpd?/pipewire\"]\nprocess = [\"dep:libc\", \"dep:rustix\"]\nrfd = [\"dep:rfd\"]\ndesktop = [\"process\", \"dep:cosmic-settings-config\", \"dep:freedesktop-desktop-entry\", \"dep:image-extras\", \"dep:mime\", \"dep:shlex\", \"tokio?/io-util\", \"tokio?/net\"]\ndesktop-systemd-scope = [\"desktop\", \"dep:zbus\"]\nserde-keycode = [\"iced_core/serde\"]\nsingle-instance = [\"iced_winit/single-instance\", \"zbus/blocking-api\", \"ron\"]\nsmol = [\"dep:smol\", \"iced/smol\", \"zbus?/async-io\", \"rfd?/async-std\"]\ntokio = [\"dep:tokio\", \"ashpd?/tokio\", \"iced/tokio\", \"rfd?/tokio\", \"zbus?/tokio\", \"cosmic-config/tokio\"]\niced-wayland = [\"ashpd?/wayland\", \"autosize\", \"iced/wayland\", \"iced_winit/wayland\", \"surface-message\"]\nwayland = [\"iced-wayland\", \"iced_runtime/cctk\", \"iced_winit/cctk\", \"iced_wgpu/cctk\", \"iced/cctk\", \"dep:cctk\"]\nsurface-message = []\nmulti-window = []\nwgpu = [\"iced/wgpu\", \"iced_wgpu\"]\nwinit = [\"iced/winit\", \"iced_winit\"]\nwinit_debug = [\"winit\", \"debug\"]\nwinit_tokio = [\"winit\", \"tokio\"]\nwinit_wgpu = [\"winit\", \"wgpu\"]\nxdg-portal = [\"ashpd\"]\nqr_code = [\"iced/qr_code\"]\nmarkdown = [\"iced/markdown\"]\nhighlighter = [\"iced/highlighter\"]\nasync-std = [\"dep:async-std\", \"ashpd?/async-std\", \"rfd?/async-std\", \"zbus?/async-io\", \"iced/async-std\"]\nx11 = [\"iced/x11\", \"iced_winit/x11\"]\n\n[dependencies]\napply = \"0.3.0\"\nauto_enums = \"0.8.8\"\njiff = \"0.2\"\ni18n-embed-fl = \"0.10\"\nrust-embed = \"8.11.0\"\ncss-color = \"0.2.8\"\nderive_setters = \"0.1.9\"\nfutures = \"0.3\"\nlog = \"0.4\"\npalette = \"0.7\"\nslotmap = \"1.1.1\"\nthiserror = \"2.0\"\ntracing = \"0.1\"\nunicode-segmentation = \"1.13\"\nurl = \"2.5.8\"\nfloat-cmp = \"0.10.0\"\n\n[dependencies.ashpd]\nversion = \"0.12.3\"\ndefault-features = false\noptional = true\n\n[dependencies.async-fs]\nversion = \"2.2\"\noptional = true\n\n[dependencies.async-std]\noptional = true\nversion = \"1.13\"\n\n[dependencies.cctk]\ngit = \"https://github.com/pop-os/cosmic-protocols\"\npackage = \"cosmic-client-toolkit\"\nrev = \"c253ec1\"\noptional = true\n\n[dependencies.cosmic-config]\npath = \"cosmic-config\"\n\n[dependencies.cosmic-settings-config]\ngit = \"https://github.com/pop-os/cosmic-settings-daemon\"\noptional = true\n\n[dependencies.i18n-embed]\nversion = \"0.16.0\"\nfeatures = [\"fluent-system\", \"desktop-requester\"]\n\n[dependencies.image]\nversion = \"0.25.10\"\ndefault-features = false\nfeatures = [\"ico\", \"jpeg\", \"png\"]\n\n[dependencies.image-extras]\nversion = \"0.1.0\"\ndefault-features = false\nfeatures = [\"xpm\", \"xbm\"]\noptional = true\n\n[dependencies.libc]\nversion = \"0.2.186\"\noptional = true\n\n[dependencies.mime]\nversion = \"0.3.17\"\noptional = true\n\n[dependencies.rfd]\nversion = \"0.16.0\"\ndefault-features = false\nfeatures = [\"xdg-portal\"]\noptional = true\n\n[dependencies.rustix]\nversion = \"1.1\"\nfeatures = [\"pipe\", \"process\"]\noptional = true\n\n[dependencies.serde]\nfeatures = [\"derive\"]\nversion = \"1.0\"\n\n[dependencies.smol]\nversion = \"2.0.2\"\noptional = true\n\n[dependencies.taffy]\nversion = \"0.9.2\"\nfeatures = [\"grid\"]\n\n[dependencies.tokio]\noptional = true\nversion = \"1.52\"\n\n[dependencies.zbus]\noptional = true\nversion = \"5.15\"\ndefault-features = false\n\n[dependencies.ron]\noptional = true\nversion = \"0.12\"\n\n[dependencies.cosmic-theme]\npath = \"cosmic-theme\"\n\n[dependencies.iced]\npath = \"./iced\"\ndefault-features = false\nfeatures = [\"advanced\", \"image-without-codecs\", \"lazy\", \"svg\", \"web-colors\", \"tiny-skia\"]\n\n[dependencies.iced_runtime]\npath = \"./iced/runtime\"\n\n[dependencies.iced_renderer]\npath = \"./iced/renderer\"\n\n[dependencies.iced_core]\npath = \"./iced/core\"\nfeatures = [\"serde\"]\n\n[dependencies.iced_widget]\npath = \"./iced/widget\"\nfeatures = [\"canvas\"]\n\n[dependencies.iced_futures]\npath = \"./iced/futures\"\n\n[dependencies.iced_accessibility]\npath = \"./iced/accessibility\"\noptional = true\n\n[dependencies.iced_tiny_skia]\npath = \"./iced/tiny_skia\"\n\n[dependencies.iced_winit]\npath = \"./iced/winit\"\noptional = true\n\n[dependencies.iced_wgpu]\npath = \"./iced/wgpu\"\noptional = true\n\n[dependencies.cosmic-panel-config]\ngit = \"https://github.com/pop-os/cosmic-panel\"\noptional = true\n\n[target.\"cfg(target_os = \\\"linux\\\")\".dependencies.cosmic-config]\npath = \"cosmic-config\"\nfeatures = [\"dbus\"]\n\n[target.\"cfg(target_os = \\\"linux\\\")\".dependencies.cosmic-settings-daemon]\ngit = \"https://github.com/pop-os/dbus-settings-bindings\"\n\n[target.\"cfg(target_os = \\\"linux\\\")\".dependencies.zbus]\nversion = \"5.15\"\ndefault-features = false\n\n[target.\"cfg(all(unix, not(target_os = \\\"macos\\\")))\".dependencies.freedesktop-icons]\npackage = \"cosmic-freedesktop-icons\"\ngit = \"https://github.com/pop-os/freedesktop-icons\"\n\n[target.\"cfg(all(unix, not(target_os = \\\"macos\\\")))\".dependencies.freedesktop-desktop-entry]\nversion = \"0.8.1\"\noptional = true\n\n[target.\"cfg(all(unix, not(target_os = \\\"macos\\\")))\".dependencies.shlex]\nversion = \"1.3.0\"\noptional = true\n\n[target.\"cfg(any(not(unix), target_os = \\\"macos\\\"))\".dependencies.phf]\nversion = \"0.13.1\"\nfeatures = [\"macros\"]\n\n[workspace]\nmembers = [\"cosmic-config\", \"cosmic-config-derive\", \"cosmic-theme\", \"examples/*\"]\nexclude = [\"iced\"]\n\n[workspace.dependencies]\nasync-std = \"1.13\"\ndirs = \"6.0\"\npalette = \"0.7\"\nron = \"0.12\"\nserde = \"1.0\"\nthiserror = \"2.0\"\ntracing = \"0.1\"\ntokio = \"1.52\"\n\n[workspace.dependencies.zbus]\nversion = \"5.15\"\ndefault-features = false\n\n[dev-dependencies]\ntempfile = \"3.27.0\"\n",
+        "contents": "[package]\nname = \"libcosmic\"\nversion = \"1.0.0\"\nedition = \"2024\"\nrust-version = \"1.93\"\n\n[lib]\nname = \"cosmic\"\n\n[features]\ndefault = [\"winit\", \"tokio\", \"a11y\", \"dbus-config\", \"x11\", \"iced-wayland\", \"multi-window\"]\nadvanced-shaping = [\"iced/advanced-shaping\"]\na11y = [\"iced/a11y\", \"iced_accessibility\"]\nabout = []\nanimated-image = [\"dep:async-fs\", \"image/gif\", \"image/webp\", \"image/png\", \"tokio?/io-util\", \"tokio?/fs\"]\nautosize = []\napplet = [\"autosize\", \"winit\", \"wayland\", \"tokio\", \"cosmic-panel-config\", \"ron\", \"multi-window\"]\napplet-token = [\"applet\"]\ndbus-config = []\ndebug = [\"iced/debug\"]\npipewire = [\"ashpd?/pipewire\"]\nprocess = [\"dep:libc\", \"dep:rustix\"]\nrfd = [\"dep:rfd\"]\ndesktop = [\"process\", \"dep:cosmic-settings-config\", \"dep:freedesktop-desktop-entry\", \"dep:image-extras\", \"dep:mime\", \"dep:shlex\", \"tokio?/io-util\", \"tokio?/net\"]\ndesktop-systemd-scope = [\"desktop\", \"dep:zbus\"]\nserde-keycode = [\"iced_core/serde\"]\nsingle-instance = [\"iced_winit/single-instance\", \"zbus/blocking-api\", \"ron\"]\nsmol = [\"dep:smol\", \"iced/smol\", \"zbus?/async-io\", \"rfd?/async-std\"]\ntokio = [\"dep:tokio\", \"ashpd?/tokio\", \"iced/tokio\", \"rfd?/tokio\", \"zbus?/tokio\", \"cosmic-config/tokio\"]\niced-wayland = [\"ashpd?/wayland\", \"autosize\", \"iced/wayland\", \"iced_winit/wayland\", \"surface-message\"]\nwayland = [\"iced-wayland\", \"iced_runtime/cctk\", \"iced_winit/cctk\", \"iced_wgpu/cctk\", \"iced/cctk\", \"dep:cctk\"]\nsurface-message = []\nmulti-window = []\nwgpu = [\"iced/wgpu\", \"iced_wgpu\"]\nwinit = [\"iced/winit\", \"iced_winit\"]\nwinit_debug = [\"winit\", \"debug\"]\nwinit_tokio = [\"winit\", \"tokio\"]\nwinit_wgpu = [\"winit\", \"wgpu\"]\nxdg-portal = [\"ashpd\"]\nqr_code = [\"iced/qr_code\"]\nmarkdown = [\"iced/markdown\"]\nhighlighter = [\"iced/highlighter\"]\nasync-std = [\"dep:async-std\", \"ashpd?/async-std\", \"rfd?/async-std\", \"zbus?/async-io\", \"iced/async-std\"]\nx11 = [\"iced/x11\", \"iced_winit/x11\"]\n\n[dependencies]\napply = \"0.3.0\"\nauto_enums = \"0.8.8\"\njiff = \"0.2\"\ni18n-embed-fl = \"0.10\"\nrust-embed = \"8.11.0\"\ncss-color = \"0.2.8\"\nderive_setters = \"0.1.9\"\nfutures = \"0.3\"\nlog = \"0.4\"\npalette = \"0.7\"\nslotmap = \"1.1.1\"\nthiserror = \"2.0\"\ntracing = \"0.1\"\nunicode-segmentation = \"1.13\"\nurl = \"2.5.8\"\nfloat-cmp = \"0.10.0\"\nenumflags2 = \"0.7.12\"\n\n[dependencies.ashpd]\nversion = \"0.12.3\"\ndefault-features = false\noptional = true\n\n[dependencies.async-fs]\nversion = \"2.2\"\noptional = true\n\n[dependencies.async-std]\noptional = true\nversion = \"1.13\"\n\n[dependencies.cctk]\ngit = \"https://github.com/pop-os/cosmic-protocols\"\npackage = \"cosmic-client-toolkit\"\nrev = \"32283d7\"\noptional = true\n\n[dependencies.cosmic-config]\npath = \"cosmic-config\"\n\n[dependencies.cosmic-settings-config]\ngit = \"https://github.com/pop-os/cosmic-settings-daemon\"\noptional = true\n\n[dependencies.i18n-embed]\nversion = \"0.16.0\"\nfeatures = [\"fluent-system\", \"desktop-requester\"]\n\n[dependencies.image]\nversion = \"0.25.10\"\ndefault-features = false\nfeatures = [\"ico\", \"jpeg\", \"png\"]\n\n[dependencies.image-extras]\nversion = \"0.1.0\"\ndefault-features = false\nfeatures = [\"xpm\", \"xbm\"]\noptional = true\n\n[dependencies.libc]\nversion = \"0.2.186\"\noptional = true\n\n[dependencies.mime]\nversion = \"0.3.17\"\noptional = true\n\n[dependencies.rfd]\nversion = \"0.16.0\"\ndefault-features = false\nfeatures = [\"xdg-portal\"]\noptional = true\n\n[dependencies.rustix]\nversion = \"1.1\"\nfeatures = [\"pipe\", \"process\"]\noptional = true\n\n[dependencies.serde]\nfeatures = [\"derive\"]\nversion = \"1.0\"\n\n[dependencies.smol]\nversion = \"2.0.2\"\noptional = true\n\n[dependencies.taffy]\nversion = \"0.9.2\"\nfeatures = [\"grid\"]\n\n[dependencies.tokio]\noptional = true\nversion = \"1.52\"\n\n[dependencies.zbus]\noptional = true\nversion = \"5.15\"\ndefault-features = false\n\n[dependencies.ron]\noptional = true\nversion = \"0.12\"\n\n[dependencies.cosmic-theme]\npath = \"cosmic-theme\"\n\n[dependencies.iced]\npath = \"./iced\"\ndefault-features = false\nfeatures = [\"advanced\", \"image-without-codecs\", \"lazy\", \"svg\", \"web-colors\", \"tiny-skia\"]\n\n[dependencies.iced_runtime]\npath = \"./iced/runtime\"\n\n[dependencies.iced_renderer]\npath = \"./iced/renderer\"\n\n[dependencies.iced_core]\npath = \"./iced/core\"\nfeatures = [\"serde\"]\n\n[dependencies.iced_widget]\npath = \"./iced/widget\"\nfeatures = [\"canvas\"]\n\n[dependencies.iced_futures]\npath = \"./iced/futures\"\n\n[dependencies.iced_accessibility]\npath = \"./iced/accessibility\"\noptional = true\n\n[dependencies.iced_tiny_skia]\npath = \"./iced/tiny_skia\"\n\n[dependencies.iced_winit]\npath = \"./iced/winit\"\noptional = true\n\n[dependencies.iced_wgpu]\npath = \"./iced/wgpu\"\noptional = true\n\n[dependencies.cosmic-panel-config]\ngit = \"https://github.com/pop-os/cosmic-panel\"\noptional = true\n\n[target.\"cfg(target_os = \\\"linux\\\")\".dependencies.cosmic-config]\npath = \"cosmic-config\"\nfeatures = [\"dbus\"]\n\n[target.\"cfg(target_os = \\\"linux\\\")\".dependencies.cosmic-settings-daemon]\ngit = \"https://github.com/pop-os/dbus-settings-bindings\"\n\n[target.\"cfg(target_os = \\\"linux\\\")\".dependencies.zbus]\nversion = \"5.15\"\ndefault-features = false\n\n[target.\"cfg(all(unix, not(target_os = \\\"macos\\\")))\".dependencies.freedesktop-icons]\npackage = \"cosmic-freedesktop-icons\"\ngit = \"https://github.com/pop-os/freedesktop-icons\"\n\n[target.\"cfg(all(unix, not(target_os = \\\"macos\\\")))\".dependencies.freedesktop-desktop-entry]\nversion = \"0.8.1\"\noptional = true\n\n[target.\"cfg(all(unix, not(target_os = \\\"macos\\\")))\".dependencies.shlex]\nversion = \"1.3.0\"\noptional = true\n\n[target.\"cfg(any(not(unix), target_os = \\\"macos\\\"))\".dependencies.phf]\nversion = \"0.13.1\"\nfeatures = [\"macros\"]\n\n[workspace]\nmembers = [\"cosmic-config\", \"cosmic-config-derive\", \"cosmic-theme\", \"examples/*\"]\nexclude = [\"iced\"]\n\n[workspace.dependencies]\nasync-std = \"1.13\"\ndirs = \"6.0\"\npalette = \"0.7\"\nron = \"0.12\"\nserde = \"1.0\"\nthiserror = \"2.0\"\ntracing = \"0.1\"\ntokio = \"1.52\"\n\n[workspace.dependencies.zbus]\nversion = \"5.15\"\ndefault-features = false\n\n[dev-dependencies]\ntempfile = \"3.27.0\"\n",
         "dest": "cargo/vendor/libcosmic",
         "dest-filename": "Cargo.toml"
     },
@@ -3772,6 +4164,19 @@
         "type": "inline",
         "contents": "{\"package\": null, \"files\": {}}",
         "dest": "cargo/vendor/libcosmic",
+        "dest-filename": ".cargo-checksum.json"
+    },
+    {
+        "type": "archive",
+        "archive-type": "tar-gzip",
+        "url": "https://static.crates.io/crates/libfuzzer-sys/libfuzzer-sys-0.4.13.crate",
+        "sha256": "a9fd2f41a1cba099f79a0b6b6c35656cf7c03351a7bae8ff0f28f25270f929d2",
+        "dest": "cargo/vendor/libfuzzer-sys-0.4.13"
+    },
+    {
+        "type": "inline",
+        "contents": "{\"package\": \"a9fd2f41a1cba099f79a0b6b6c35656cf7c03351a7bae8ff0f28f25270f929d2\", \"files\": {}}",
+        "dest": "cargo/vendor/libfuzzer-sys-0.4.13",
         "dest-filename": ".cargo-checksum.json"
     },
     {
@@ -3816,19 +4221,6 @@
     {
         "type": "archive",
         "archive-type": "tar-gzip",
-        "url": "https://static.crates.io/crates/libudev-sys/libudev-sys-0.1.4.crate",
-        "sha256": "3c8469b4a23b962c1396b9b451dda50ef5b283e8dd309d69033475fa9b334324",
-        "dest": "cargo/vendor/libudev-sys-0.1.4"
-    },
-    {
-        "type": "inline",
-        "contents": "{\"package\": \"3c8469b4a23b962c1396b9b451dda50ef5b283e8dd309d69033475fa9b334324\", \"files\": {}}",
-        "dest": "cargo/vendor/libudev-sys-0.1.4",
-        "dest-filename": ".cargo-checksum.json"
-    },
-    {
-        "type": "archive",
-        "archive-type": "tar-gzip",
         "url": "https://static.crates.io/crates/lilt/lilt-0.8.1.crate",
         "sha256": "f67562e5eff6b20553fa9be1c503356768420994e28f67e3eafe6f41910e57ad",
         "dest": "cargo/vendor/lilt-0.8.1"
@@ -3850,19 +4242,6 @@
         "type": "inline",
         "contents": "{\"package\": \"d4a5ff6bcca6c4867b1c4fd4ef63e4db7436ef363e0ad7531d1558856bae64f4\", \"files\": {}}",
         "dest": "cargo/vendor/linebender_resource_handle-0.1.1",
-        "dest-filename": ".cargo-checksum.json"
-    },
-    {
-        "type": "archive",
-        "archive-type": "tar-gzip",
-        "url": "https://static.crates.io/crates/linked-hash-map/linked-hash-map-0.5.6.crate",
-        "sha256": "0717cef1bc8b636c6e1c1bbdefc09e6322da8a9321966e8928ef80d20f7f770f",
-        "dest": "cargo/vendor/linked-hash-map-0.5.6"
-    },
-    {
-        "type": "inline",
-        "contents": "{\"package\": \"0717cef1bc8b636c6e1c1bbdefc09e6322da8a9321966e8928ef80d20f7f770f\", \"files\": {}}",
-        "dest": "cargo/vendor/linked-hash-map-0.5.6",
         "dest-filename": ".cargo-checksum.json"
     },
     {
@@ -3933,6 +4312,19 @@
     {
         "type": "archive",
         "archive-type": "tar-gzip",
+        "url": "https://static.crates.io/crates/locale_config/locale_config-0.3.0.crate",
+        "sha256": "08d2c35b16f4483f6c26f0e4e9550717a2f6575bcd6f12a53ff0c490a94a6934",
+        "dest": "cargo/vendor/locale_config-0.3.0"
+    },
+    {
+        "type": "inline",
+        "contents": "{\"package\": \"08d2c35b16f4483f6c26f0e4e9550717a2f6575bcd6f12a53ff0c490a94a6934\", \"files\": {}}",
+        "dest": "cargo/vendor/locale_config-0.3.0",
+        "dest-filename": ".cargo-checksum.json"
+    },
+    {
+        "type": "archive",
+        "archive-type": "tar-gzip",
         "url": "https://static.crates.io/crates/lock_api/lock_api-0.4.14.crate",
         "sha256": "224399e74b87b5f3557511d98dff8b14089b3dadafcab6bb93eab67d3aace965",
         "dest": "cargo/vendor/lock_api-0.4.14"
@@ -3954,6 +4346,19 @@
         "type": "inline",
         "contents": "{\"package\": \"953f07c43838f8e6f9758cab68bf5bed85465e7587ebe0b823f1bcd81978ad3a\", \"files\": {}}",
         "dest": "cargo/vendor/log-0.4.32",
+        "dest-filename": ".cargo-checksum.json"
+    },
+    {
+        "type": "archive",
+        "archive-type": "tar-gzip",
+        "url": "https://static.crates.io/crates/loop9/loop9-0.1.5.crate",
+        "sha256": "0fae87c125b03c1d2c0150c90365d7d6bcc53fb73a9acaef207d2d065860f062",
+        "dest": "cargo/vendor/loop9-0.1.5"
+    },
+    {
+        "type": "inline",
+        "contents": "{\"package\": \"0fae87c125b03c1d2c0150c90365d7d6bcc53fb73a9acaef207d2d065860f062\", \"files\": {}}",
+        "dest": "cargo/vendor/loop9-0.1.5",
         "dest-filename": ".cargo-checksum.json"
     },
     {
@@ -4037,19 +4442,6 @@
     {
         "type": "archive",
         "archive-type": "tar-gzip",
-        "url": "https://static.crates.io/crates/mach2/mach2-0.4.3.crate",
-        "sha256": "d640282b302c0bb0a2a8e0233ead9035e3bed871f0b7e81fe4a1ec829765db44",
-        "dest": "cargo/vendor/mach2-0.4.3"
-    },
-    {
-        "type": "inline",
-        "contents": "{\"package\": \"d640282b302c0bb0a2a8e0233ead9035e3bed871f0b7e81fe4a1ec829765db44\", \"files\": {}}",
-        "dest": "cargo/vendor/mach2-0.4.3",
-        "dest-filename": ".cargo-checksum.json"
-    },
-    {
-        "type": "archive",
-        "archive-type": "tar-gzip",
         "url": "https://static.crates.io/crates/malloc_buf/malloc_buf-0.0.6.crate",
         "sha256": "62bb907fe88d54d8d9ce32a3cceab4218ed2f6b7d35617cafe9adf84e43919cb",
         "dest": "cargo/vendor/malloc_buf-0.0.6"
@@ -4076,53 +4468,14 @@
     {
         "type": "archive",
         "archive-type": "tar-gzip",
-        "url": "https://static.crates.io/crates/mccs/mccs-0.1.3.crate",
-        "sha256": "6090d6b3ded42fed158b660a6b9cdaa1924f3eef6c6598e82a9ca9b70a1988cd",
-        "dest": "cargo/vendor/mccs-0.1.3"
+        "url": "https://static.crates.io/crates/maybe-rayon/maybe-rayon-0.1.1.crate",
+        "sha256": "8ea1f30cedd69f0a2954655f7188c6a834246d2bcf1e315e2ac40c4b24dc9519",
+        "dest": "cargo/vendor/maybe-rayon-0.1.1"
     },
     {
         "type": "inline",
-        "contents": "{\"package\": \"6090d6b3ded42fed158b660a6b9cdaa1924f3eef6c6598e82a9ca9b70a1988cd\", \"files\": {}}",
-        "dest": "cargo/vendor/mccs-0.1.3",
-        "dest-filename": ".cargo-checksum.json"
-    },
-    {
-        "type": "archive",
-        "archive-type": "tar-gzip",
-        "url": "https://static.crates.io/crates/mccs-caps/mccs-caps-0.1.3.crate",
-        "sha256": "8eb961d01a3bb07969cfa276be2ab88c31d0fefa77a872696832732d6e9ec094",
-        "dest": "cargo/vendor/mccs-caps-0.1.3"
-    },
-    {
-        "type": "inline",
-        "contents": "{\"package\": \"8eb961d01a3bb07969cfa276be2ab88c31d0fefa77a872696832732d6e9ec094\", \"files\": {}}",
-        "dest": "cargo/vendor/mccs-caps-0.1.3",
-        "dest-filename": ".cargo-checksum.json"
-    },
-    {
-        "type": "archive",
-        "archive-type": "tar-gzip",
-        "url": "https://static.crates.io/crates/mccs-db/mccs-db-0.1.3.crate",
-        "sha256": "3cdaa8fe19a1a1918becc1b8cbbbdc1058bc71411dff4de0a6ec6b5269f49d38",
-        "dest": "cargo/vendor/mccs-db-0.1.3"
-    },
-    {
-        "type": "inline",
-        "contents": "{\"package\": \"3cdaa8fe19a1a1918becc1b8cbbbdc1058bc71411dff4de0a6ec6b5269f49d38\", \"files\": {}}",
-        "dest": "cargo/vendor/mccs-db-0.1.3",
-        "dest-filename": ".cargo-checksum.json"
-    },
-    {
-        "type": "archive",
-        "archive-type": "tar-gzip",
-        "url": "https://static.crates.io/crates/memchr/memchr-1.0.2.crate",
-        "sha256": "148fab2e51b4f1cfc66da2a7c32981d1d3c083a803978268bb11fe4b86925e7a",
-        "dest": "cargo/vendor/memchr-1.0.2"
-    },
-    {
-        "type": "inline",
-        "contents": "{\"package\": \"148fab2e51b4f1cfc66da2a7c32981d1d3c083a803978268bb11fe4b86925e7a\", \"files\": {}}",
-        "dest": "cargo/vendor/memchr-1.0.2",
+        "contents": "{\"package\": \"8ea1f30cedd69f0a2954655f7188c6a834246d2bcf1e315e2ac40c4b24dc9519\", \"files\": {}}",
+        "dest": "cargo/vendor/maybe-rayon-0.1.1",
         "dest-filename": ".cargo-checksum.json"
     },
     {
@@ -4315,14 +4668,53 @@
     {
         "type": "archive",
         "archive-type": "tar-gzip",
-        "url": "https://static.crates.io/crates/nom/nom-3.2.1.crate",
-        "sha256": "05aec50c70fd288702bcd93284a8444607f3292dbdf2a30de5ea5dcdbe72287b",
-        "dest": "cargo/vendor/nom-3.2.1"
+        "url": "https://static.crates.io/crates/new_debug_unreachable/new_debug_unreachable-1.0.6.crate",
+        "sha256": "650eef8c711430f1a879fdd01d4745a7deea475becfb90269c06775983bbf086",
+        "dest": "cargo/vendor/new_debug_unreachable-1.0.6"
     },
     {
         "type": "inline",
-        "contents": "{\"package\": \"05aec50c70fd288702bcd93284a8444607f3292dbdf2a30de5ea5dcdbe72287b\", \"files\": {}}",
-        "dest": "cargo/vendor/nom-3.2.1",
+        "contents": "{\"package\": \"650eef8c711430f1a879fdd01d4745a7deea475becfb90269c06775983bbf086\", \"files\": {}}",
+        "dest": "cargo/vendor/new_debug_unreachable-1.0.6",
+        "dest-filename": ".cargo-checksum.json"
+    },
+    {
+        "type": "archive",
+        "archive-type": "tar-gzip",
+        "url": "https://static.crates.io/crates/no_std_io2/no_std_io2-0.9.4.crate",
+        "sha256": "418abd1b6d34fbf6cae440dc874771b0525a604428704c76e48b29a5e67b8003",
+        "dest": "cargo/vendor/no_std_io2-0.9.4"
+    },
+    {
+        "type": "inline",
+        "contents": "{\"package\": \"418abd1b6d34fbf6cae440dc874771b0525a604428704c76e48b29a5e67b8003\", \"files\": {}}",
+        "dest": "cargo/vendor/no_std_io2-0.9.4",
+        "dest-filename": ".cargo-checksum.json"
+    },
+    {
+        "type": "archive",
+        "archive-type": "tar-gzip",
+        "url": "https://static.crates.io/crates/nom/nom-8.0.0.crate",
+        "sha256": "df9761775871bdef83bee530e60050f7e54b1105350d6884eb0fb4f46c2f9405",
+        "dest": "cargo/vendor/nom-8.0.0"
+    },
+    {
+        "type": "inline",
+        "contents": "{\"package\": \"df9761775871bdef83bee530e60050f7e54b1105350d6884eb0fb4f46c2f9405\", \"files\": {}}",
+        "dest": "cargo/vendor/nom-8.0.0",
+        "dest-filename": ".cargo-checksum.json"
+    },
+    {
+        "type": "archive",
+        "archive-type": "tar-gzip",
+        "url": "https://static.crates.io/crates/noop_proc_macro/noop_proc_macro-0.3.0.crate",
+        "sha256": "0676bb32a98c1a483ce53e500a81ad9c3d5b3f7c920c28c24e9cb0980d0b5bc8",
+        "dest": "cargo/vendor/noop_proc_macro-0.3.0"
+    },
+    {
+        "type": "inline",
+        "contents": "{\"package\": \"0676bb32a98c1a483ce53e500a81ad9c3d5b3f7c920c28c24e9cb0980d0b5bc8\", \"files\": {}}",
+        "dest": "cargo/vendor/noop_proc_macro-0.3.0",
         "dest-filename": ".cargo-checksum.json"
     },
     {
@@ -4354,14 +4746,79 @@
     {
         "type": "archive",
         "archive-type": "tar-gzip",
-        "url": "https://static.crates.io/crates/nu-ansi-term/nu-ansi-term-0.50.3.crate",
-        "sha256": "7957b9740744892f114936ab4a57b3f487491bbeafaf8083688b16841a4240e5",
-        "dest": "cargo/vendor/nu-ansi-term-0.50.3"
+        "url": "https://static.crates.io/crates/ntapi/ntapi-0.4.3.crate",
+        "sha256": "c3b335231dfd352ffb0f8017f3b6027a4917f7df785ea2143d8af2adc66980ae",
+        "dest": "cargo/vendor/ntapi-0.4.3"
     },
     {
         "type": "inline",
-        "contents": "{\"package\": \"7957b9740744892f114936ab4a57b3f487491bbeafaf8083688b16841a4240e5\", \"files\": {}}",
-        "dest": "cargo/vendor/nu-ansi-term-0.50.3",
+        "contents": "{\"package\": \"c3b335231dfd352ffb0f8017f3b6027a4917f7df785ea2143d8af2adc66980ae\", \"files\": {}}",
+        "dest": "cargo/vendor/ntapi-0.4.3",
+        "dest-filename": ".cargo-checksum.json"
+    },
+    {
+        "type": "archive",
+        "archive-type": "tar-gzip",
+        "url": "https://static.crates.io/crates/nucleo-matcher/nucleo-matcher-0.3.1.crate",
+        "sha256": "bf33f538733d1a5a3494b836ba913207f14d9d4a1d3cd67030c5061bdd2cac85",
+        "dest": "cargo/vendor/nucleo-matcher-0.3.1"
+    },
+    {
+        "type": "inline",
+        "contents": "{\"package\": \"bf33f538733d1a5a3494b836ba913207f14d9d4a1d3cd67030c5061bdd2cac85\", \"files\": {}}",
+        "dest": "cargo/vendor/nucleo-matcher-0.3.1",
+        "dest-filename": ".cargo-checksum.json"
+    },
+    {
+        "type": "archive",
+        "archive-type": "tar-gzip",
+        "url": "https://static.crates.io/crates/num-bigint/num-bigint-0.4.6.crate",
+        "sha256": "a5e44f723f1133c9deac646763579fdb3ac745e418f2a7af9cd0c431da1f20b9",
+        "dest": "cargo/vendor/num-bigint-0.4.6"
+    },
+    {
+        "type": "inline",
+        "contents": "{\"package\": \"a5e44f723f1133c9deac646763579fdb3ac745e418f2a7af9cd0c431da1f20b9\", \"files\": {}}",
+        "dest": "cargo/vendor/num-bigint-0.4.6",
+        "dest-filename": ".cargo-checksum.json"
+    },
+    {
+        "type": "archive",
+        "archive-type": "tar-gzip",
+        "url": "https://static.crates.io/crates/num-derive/num-derive-0.4.2.crate",
+        "sha256": "ed3955f1a9c7c0c15e092f9c887db08b1fc683305fdf6eb6684f22555355e202",
+        "dest": "cargo/vendor/num-derive-0.4.2"
+    },
+    {
+        "type": "inline",
+        "contents": "{\"package\": \"ed3955f1a9c7c0c15e092f9c887db08b1fc683305fdf6eb6684f22555355e202\", \"files\": {}}",
+        "dest": "cargo/vendor/num-derive-0.4.2",
+        "dest-filename": ".cargo-checksum.json"
+    },
+    {
+        "type": "archive",
+        "archive-type": "tar-gzip",
+        "url": "https://static.crates.io/crates/num-integer/num-integer-0.1.46.crate",
+        "sha256": "7969661fd2958a5cb096e56c8e1ad0444ac2bbcd0061bd28660485a44879858f",
+        "dest": "cargo/vendor/num-integer-0.1.46"
+    },
+    {
+        "type": "inline",
+        "contents": "{\"package\": \"7969661fd2958a5cb096e56c8e1ad0444ac2bbcd0061bd28660485a44879858f\", \"files\": {}}",
+        "dest": "cargo/vendor/num-integer-0.1.46",
+        "dest-filename": ".cargo-checksum.json"
+    },
+    {
+        "type": "archive",
+        "archive-type": "tar-gzip",
+        "url": "https://static.crates.io/crates/num-rational/num-rational-0.4.2.crate",
+        "sha256": "f83d14da390562dca69fc84082e73e548e1ad308d24accdedd2720017cb37824",
+        "dest": "cargo/vendor/num-rational-0.4.2"
+    },
+    {
+        "type": "inline",
+        "contents": "{\"package\": \"f83d14da390562dca69fc84082e73e548e1ad308d24accdedd2720017cb37824\", \"files\": {}}",
+        "dest": "cargo/vendor/num-rational-0.4.2",
         "dest-filename": ".cargo-checksum.json"
     },
     {
@@ -4406,27 +4863,27 @@
     {
         "type": "archive",
         "archive-type": "tar-gzip",
-        "url": "https://static.crates.io/crates/nvapi/nvapi-0.1.4.crate",
-        "sha256": "7c63de8cd8362e2c38d1a48dea6ae68e6293a8d8d22a52180d0f8dcc779b3158",
-        "dest": "cargo/vendor/nvapi-0.1.4"
+        "url": "https://static.crates.io/crates/nvml-wrapper/nvml-wrapper-0.10.0.crate",
+        "sha256": "0c9bff0aa1d48904a1385ea2a8b97576fbdcbc9a3cfccd0d31fe978e1c4038c5",
+        "dest": "cargo/vendor/nvml-wrapper-0.10.0"
     },
     {
         "type": "inline",
-        "contents": "{\"package\": \"7c63de8cd8362e2c38d1a48dea6ae68e6293a8d8d22a52180d0f8dcc779b3158\", \"files\": {}}",
-        "dest": "cargo/vendor/nvapi-0.1.4",
+        "contents": "{\"package\": \"0c9bff0aa1d48904a1385ea2a8b97576fbdcbc9a3cfccd0d31fe978e1c4038c5\", \"files\": {}}",
+        "dest": "cargo/vendor/nvml-wrapper-0.10.0",
         "dest-filename": ".cargo-checksum.json"
     },
     {
         "type": "archive",
         "archive-type": "tar-gzip",
-        "url": "https://static.crates.io/crates/nvapi-sys/nvapi-sys-0.1.3.crate",
-        "sha256": "b29e9a9393c69ee856bfcf5f76ed1ef32d2c0dd6f58558fd43334278fc1e7ea7",
-        "dest": "cargo/vendor/nvapi-sys-0.1.3"
+        "url": "https://static.crates.io/crates/nvml-wrapper-sys/nvml-wrapper-sys-0.8.0.crate",
+        "sha256": "698d45156f28781a4e79652b6ebe2eaa0589057d588d3aec1333f6466f13fcb5",
+        "dest": "cargo/vendor/nvml-wrapper-sys-0.8.0"
     },
     {
         "type": "inline",
-        "contents": "{\"package\": \"b29e9a9393c69ee856bfcf5f76ed1ef32d2c0dd6f58558fd43334278fc1e7ea7\", \"files\": {}}",
-        "dest": "cargo/vendor/nvapi-sys-0.1.3",
+        "contents": "{\"package\": \"698d45156f28781a4e79652b6ebe2eaa0589057d588d3aec1333f6466f13fcb5\", \"files\": {}}",
+        "dest": "cargo/vendor/nvml-wrapper-sys-0.8.0",
         "dest-filename": ".cargo-checksum.json"
     },
     {
@@ -4627,6 +5084,19 @@
     {
         "type": "archive",
         "archive-type": "tar-gzip",
+        "url": "https://static.crates.io/crates/objc2-io-kit/objc2-io-kit-0.3.2.crate",
+        "sha256": "33fafba39597d6dc1fb709123dfa8289d39406734be322956a69f0931c73bb15",
+        "dest": "cargo/vendor/objc2-io-kit-0.3.2"
+    },
+    {
+        "type": "inline",
+        "contents": "{\"package\": \"33fafba39597d6dc1fb709123dfa8289d39406734be322956a69f0931c73bb15\", \"files\": {}}",
+        "dest": "cargo/vendor/objc2-io-kit-0.3.2",
+        "dest-filename": ".cargo-checksum.json"
+    },
+    {
+        "type": "archive",
+        "archive-type": "tar-gzip",
         "url": "https://static.crates.io/crates/objc2-metal/objc2-metal-0.2.2.crate",
         "sha256": "dd0cba1276f6023976a406a14ffa85e1fdd19df6b0f737b063b95f6c8c7aadd6",
         "dest": "cargo/vendor/objc2-metal-0.2.2"
@@ -4635,6 +5105,19 @@
         "type": "inline",
         "contents": "{\"package\": \"dd0cba1276f6023976a406a14ffa85e1fdd19df6b0f737b063b95f6c8c7aadd6\", \"files\": {}}",
         "dest": "cargo/vendor/objc2-metal-0.2.2",
+        "dest-filename": ".cargo-checksum.json"
+    },
+    {
+        "type": "archive",
+        "archive-type": "tar-gzip",
+        "url": "https://static.crates.io/crates/objc2-open-directory/objc2-open-directory-0.3.2.crate",
+        "sha256": "bb82bed227edf5201dfedf072bba4015a33d3d4a98519837295a90f0a23f676d",
+        "dest": "cargo/vendor/objc2-open-directory-0.3.2"
+    },
+    {
+        "type": "inline",
+        "contents": "{\"package\": \"bb82bed227edf5201dfedf072bba4015a33d3d4a98519837295a90f0a23f676d\", \"files\": {}}",
+        "dest": "cargo/vendor/objc2-open-directory-0.3.2",
         "dest-filename": ".cargo-checksum.json"
     },
     {
@@ -4687,6 +5170,19 @@
         "type": "inline",
         "contents": "{\"package\": \"9f7c3e4beb33f85d45ae3e3a1792185706c8e16d043238c593331cc7cd313b50\", \"files\": {}}",
         "dest": "cargo/vendor/once_cell-1.21.4",
+        "dest-filename": ".cargo-checksum.json"
+    },
+    {
+        "type": "archive",
+        "archive-type": "tar-gzip",
+        "url": "https://static.crates.io/crates/opaque-debug/opaque-debug-0.3.1.crate",
+        "sha256": "c08d65885ee38876c4f86fa503fb49d7b507c2b62552df7c70b2fce627e06381",
+        "dest": "cargo/vendor/opaque-debug-0.3.1"
+    },
+    {
+        "type": "inline",
+        "contents": "{\"package\": \"c08d65885ee38876c4f86fa503fb49d7b507c2b62552df7c70b2fce627e06381\", \"files\": {}}",
+        "dest": "cargo/vendor/opaque-debug-0.3.1",
         "dest-filename": ".cargo-checksum.json"
     },
     {
@@ -4848,6 +5344,19 @@
     {
         "type": "archive",
         "archive-type": "tar-gzip",
+        "url": "https://static.crates.io/crates/password-hash/password-hash-0.5.0.crate",
+        "sha256": "346f04948ba92c43e8469c1ee6736c7563d71012b17d40745260fe106aac2166",
+        "dest": "cargo/vendor/password-hash-0.5.0"
+    },
+    {
+        "type": "inline",
+        "contents": "{\"package\": \"346f04948ba92c43e8469c1ee6736c7563d71012b17d40745260fe106aac2166\", \"files\": {}}",
+        "dest": "cargo/vendor/password-hash-0.5.0",
+        "dest-filename": ".cargo-checksum.json"
+    },
+    {
+        "type": "archive",
+        "archive-type": "tar-gzip",
         "url": "https://static.crates.io/crates/paste/paste-1.0.15.crate",
         "sha256": "57c0d7b74b563b49d38dae00a0c37d4d6de9b432382b2892f0574ddcae73fd0a",
         "dest": "cargo/vendor/paste-1.0.15"
@@ -4856,6 +5365,19 @@
         "type": "inline",
         "contents": "{\"package\": \"57c0d7b74b563b49d38dae00a0c37d4d6de9b432382b2892f0574ddcae73fd0a\", \"files\": {}}",
         "dest": "cargo/vendor/paste-1.0.15",
+        "dest-filename": ".cargo-checksum.json"
+    },
+    {
+        "type": "archive",
+        "archive-type": "tar-gzip",
+        "url": "https://static.crates.io/crates/pastey/pastey-0.1.1.crate",
+        "sha256": "35fb2e5f958ec131621fdd531e9fc186ed768cbe395337403ae56c17a74c68ec",
+        "dest": "cargo/vendor/pastey-0.1.1"
+    },
+    {
+        "type": "inline",
+        "contents": "{\"package\": \"35fb2e5f958ec131621fdd531e9fc186ed768cbe395337403ae56c17a74c68ec\", \"files\": {}}",
+        "dest": "cargo/vendor/pastey-0.1.1",
         "dest-filename": ".cargo-checksum.json"
     },
     {
@@ -5134,6 +5656,19 @@
     {
         "type": "archive",
         "archive-type": "tar-gzip",
+        "url": "https://static.crates.io/crates/poly1305/poly1305-0.8.0.crate",
+        "sha256": "8159bd90725d2df49889a078b54f4f79e87f1f8a8444194cdca81d38f5393abf",
+        "dest": "cargo/vendor/poly1305-0.8.0"
+    },
+    {
+        "type": "inline",
+        "contents": "{\"package\": \"8159bd90725d2df49889a078b54f4f79e87f1f8a8444194cdca81d38f5393abf\", \"files\": {}}",
+        "dest": "cargo/vendor/poly1305-0.8.0",
+        "dest-filename": ".cargo-checksum.json"
+    },
+    {
+        "type": "archive",
+        "archive-type": "tar-gzip",
         "url": "https://static.crates.io/crates/portable-atomic/portable-atomic-1.13.1.crate",
         "sha256": "c33a9471896f1c69cecef8d20cbe2f7accd12527ce60845ff44c153bb2a21b49",
         "dest": "cargo/vendor/portable-atomic-1.13.1"
@@ -5290,6 +5825,19 @@
     {
         "type": "archive",
         "archive-type": "tar-gzip",
+        "url": "https://static.crates.io/crates/profiling-procmacros/profiling-procmacros-1.0.18.crate",
+        "sha256": "4488a4a36b9a4ba6b9334a32a39971f77c1436ec82c38707bce707699cc3bbcb",
+        "dest": "cargo/vendor/profiling-procmacros-1.0.18"
+    },
+    {
+        "type": "inline",
+        "contents": "{\"package\": \"4488a4a36b9a4ba6b9334a32a39971f77c1436ec82c38707bce707699cc3bbcb\", \"files\": {}}",
+        "dest": "cargo/vendor/profiling-procmacros-1.0.18",
+        "dest-filename": ".cargo-checksum.json"
+    },
+    {
+        "type": "archive",
+        "archive-type": "tar-gzip",
         "url": "https://static.crates.io/crates/pxfm/pxfm-0.1.29.crate",
         "sha256": "e0c5ccf5294c6ccd63a74f1565028353830a9c2f5eb0c682c355c471726a6e3f",
         "dest": "cargo/vendor/pxfm-0.1.29"
@@ -5298,6 +5846,19 @@
         "type": "inline",
         "contents": "{\"package\": \"e0c5ccf5294c6ccd63a74f1565028353830a9c2f5eb0c682c355c471726a6e3f\", \"files\": {}}",
         "dest": "cargo/vendor/pxfm-0.1.29",
+        "dest-filename": ".cargo-checksum.json"
+    },
+    {
+        "type": "archive",
+        "archive-type": "tar-gzip",
+        "url": "https://static.crates.io/crates/qoi/qoi-0.4.1.crate",
+        "sha256": "7f6d64c71eb498fe9eae14ce4ec935c555749aef511cca85b5568910d6e48001",
+        "dest": "cargo/vendor/qoi-0.4.1"
+    },
+    {
+        "type": "inline",
+        "contents": "{\"package\": \"7f6d64c71eb498fe9eae14ce4ec935c555749aef511cca85b5568910d6e48001\", \"files\": {}}",
+        "dest": "cargo/vendor/qoi-0.4.1",
         "dest-filename": ".cargo-checksum.json"
     },
     {
@@ -5394,6 +5955,19 @@
     {
         "type": "archive",
         "archive-type": "tar-gzip",
+        "url": "https://static.crates.io/crates/rand_chacha/rand_chacha-0.3.1.crate",
+        "sha256": "e6c10a63a0fa32252be49d21e7709d4d4baf8d231c2dbce1eaa8141b9b127d88",
+        "dest": "cargo/vendor/rand_chacha-0.3.1"
+    },
+    {
+        "type": "inline",
+        "contents": "{\"package\": \"e6c10a63a0fa32252be49d21e7709d4d4baf8d231c2dbce1eaa8141b9b127d88\", \"files\": {}}",
+        "dest": "cargo/vendor/rand_chacha-0.3.1",
+        "dest-filename": ".cargo-checksum.json"
+    },
+    {
+        "type": "archive",
+        "archive-type": "tar-gzip",
         "url": "https://static.crates.io/crates/rand_chacha/rand_chacha-0.9.0.crate",
         "sha256": "d3022b5f1df60f26e1ffddd6c66e8aa15de382ae63b3a0c1bfc0e4d3e3f325cb",
         "dest": "cargo/vendor/rand_chacha-0.9.0"
@@ -5459,6 +6033,32 @@
     {
         "type": "archive",
         "archive-type": "tar-gzip",
+        "url": "https://static.crates.io/crates/rav1e/rav1e-0.8.1.crate",
+        "sha256": "43b6dd56e85d9483277cde964fd1bdb0428de4fec5ebba7540995639a21cb32b",
+        "dest": "cargo/vendor/rav1e-0.8.1"
+    },
+    {
+        "type": "inline",
+        "contents": "{\"package\": \"43b6dd56e85d9483277cde964fd1bdb0428de4fec5ebba7540995639a21cb32b\", \"files\": {}}",
+        "dest": "cargo/vendor/rav1e-0.8.1",
+        "dest-filename": ".cargo-checksum.json"
+    },
+    {
+        "type": "archive",
+        "archive-type": "tar-gzip",
+        "url": "https://static.crates.io/crates/ravif/ravif-0.13.0.crate",
+        "sha256": "e52310197d971b0f5be7fe6b57530dcd27beb35c1b013f29d66c1ad73fbbcc45",
+        "dest": "cargo/vendor/ravif-0.13.0"
+    },
+    {
+        "type": "inline",
+        "contents": "{\"package\": \"e52310197d971b0f5be7fe6b57530dcd27beb35c1b013f29d66c1ad73fbbcc45\", \"files\": {}}",
+        "dest": "cargo/vendor/ravif-0.13.0",
+        "dest-filename": ".cargo-checksum.json"
+    },
+    {
+        "type": "archive",
+        "archive-type": "tar-gzip",
         "url": "https://static.crates.io/crates/raw-window-handle/raw-window-handle-0.6.2.crate",
         "sha256": "20675572f6f24e9e76ef639bc5552774ed45f1c30e2951e1e99c59888861c539",
         "dest": "cargo/vendor/raw-window-handle-0.6.2"
@@ -5472,6 +6072,32 @@
     {
         "type": "archive",
         "archive-type": "tar-gzip",
+        "url": "https://static.crates.io/crates/rayon/rayon-1.12.0.crate",
+        "sha256": "fb39b166781f92d482534ef4b4b1b2568f42613b53e5b6c160e24cfbfa30926d",
+        "dest": "cargo/vendor/rayon-1.12.0"
+    },
+    {
+        "type": "inline",
+        "contents": "{\"package\": \"fb39b166781f92d482534ef4b4b1b2568f42613b53e5b6c160e24cfbfa30926d\", \"files\": {}}",
+        "dest": "cargo/vendor/rayon-1.12.0",
+        "dest-filename": ".cargo-checksum.json"
+    },
+    {
+        "type": "archive",
+        "archive-type": "tar-gzip",
+        "url": "https://static.crates.io/crates/rayon-core/rayon-core-1.13.0.crate",
+        "sha256": "22e18b0f0062d30d4230b2e85ff77fdfe4326feb054b9783a3460d8435c8ab91",
+        "dest": "cargo/vendor/rayon-core-1.13.0"
+    },
+    {
+        "type": "inline",
+        "contents": "{\"package\": \"22e18b0f0062d30d4230b2e85ff77fdfe4326feb054b9783a3460d8435c8ab91\", \"files\": {}}",
+        "dest": "cargo/vendor/rayon-core-1.13.0",
+        "dest-filename": ".cargo-checksum.json"
+    },
+    {
+        "type": "archive",
+        "archive-type": "tar-gzip",
         "url": "https://static.crates.io/crates/read-fonts/read-fonts-0.37.0.crate",
         "sha256": "7b634fabf032fab15307ffd272149b622260f55974d9fad689292a5d33df02e5",
         "dest": "cargo/vendor/read-fonts-0.37.0"
@@ -5480,6 +6106,19 @@
         "type": "inline",
         "contents": "{\"package\": \"7b634fabf032fab15307ffd272149b622260f55974d9fad689292a5d33df02e5\", \"files\": {}}",
         "dest": "cargo/vendor/read-fonts-0.37.0",
+        "dest-filename": ".cargo-checksum.json"
+    },
+    {
+        "type": "archive",
+        "archive-type": "tar-gzip",
+        "url": "https://static.crates.io/crates/read-fonts/read-fonts-0.39.2.crate",
+        "sha256": "c4ed38b89c2c77ff968c524145ad65fb010f38af5c7a224b53b81d47ac2daa81",
+        "dest": "cargo/vendor/read-fonts-0.39.2"
+    },
+    {
+        "type": "inline",
+        "contents": "{\"package\": \"c4ed38b89c2c77ff968c524145ad65fb010f38af5c7a224b53b81d47ac2daa81\", \"files\": {}}",
+        "dest": "cargo/vendor/read-fonts-0.39.2",
         "dest-filename": ".cargo-checksum.json"
     },
     {
@@ -5524,6 +6163,19 @@
     {
         "type": "archive",
         "archive-type": "tar-gzip",
+        "url": "https://static.crates.io/crates/redox_users/redox_users-0.4.6.crate",
+        "sha256": "ba009ff324d1fc1b900bd1fdb31564febe58a8ccc8a6fdbb93b543d33b13ca43",
+        "dest": "cargo/vendor/redox_users-0.4.6"
+    },
+    {
+        "type": "inline",
+        "contents": "{\"package\": \"ba009ff324d1fc1b900bd1fdb31564febe58a8ccc8a6fdbb93b543d33b13ca43\", \"files\": {}}",
+        "dest": "cargo/vendor/redox_users-0.4.6",
+        "dest-filename": ".cargo-checksum.json"
+    },
+    {
+        "type": "archive",
+        "archive-type": "tar-gzip",
         "url": "https://static.crates.io/crates/redox_users/redox_users-0.5.2.crate",
         "sha256": "a4e608c6638b9c18977b00b475ac1f28d14e84b27d8d42f70e0bf1e3dec127ac",
         "dest": "cargo/vendor/redox_users-0.5.2"
@@ -5532,6 +6184,19 @@
         "type": "inline",
         "contents": "{\"package\": \"a4e608c6638b9c18977b00b475ac1f28d14e84b27d8d42f70e0bf1e3dec127ac\", \"files\": {}}",
         "dest": "cargo/vendor/redox_users-0.5.2",
+        "dest-filename": ".cargo-checksum.json"
+    },
+    {
+        "type": "archive",
+        "archive-type": "tar-gzip",
+        "url": "https://static.crates.io/crates/regex/regex-1.12.4.crate",
+        "sha256": "f1292b7759ae1cb9ec195452d1390a074f0cd8541ab7a5a8c31cd6db45d4a6ba",
+        "dest": "cargo/vendor/regex-1.12.4"
+    },
+    {
+        "type": "inline",
+        "contents": "{\"package\": \"f1292b7759ae1cb9ec195452d1390a074f0cd8541ab7a5a8c31cd6db45d4a6ba\", \"files\": {}}",
+        "dest": "cargo/vendor/regex-1.12.4",
         "dest-filename": ".cargo-checksum.json"
     },
     {
@@ -5550,14 +6215,14 @@
     {
         "type": "archive",
         "archive-type": "tar-gzip",
-        "url": "https://static.crates.io/crates/regex-syntax/regex-syntax-0.8.10.crate",
-        "sha256": "dc897dd8d9e8bd1ed8cdad82b5966c3e0ecae09fb1907d58efaa013543185d0a",
-        "dest": "cargo/vendor/regex-syntax-0.8.10"
+        "url": "https://static.crates.io/crates/regex-syntax/regex-syntax-0.8.11.crate",
+        "sha256": "d6f6ff9a378485b298a5286656da665ba74413d36db0979633275d2e708145d4",
+        "dest": "cargo/vendor/regex-syntax-0.8.11"
     },
     {
         "type": "inline",
-        "contents": "{\"package\": \"dc897dd8d9e8bd1ed8cdad82b5966c3e0ecae09fb1907d58efaa013543185d0a\", \"files\": {}}",
-        "dest": "cargo/vendor/regex-syntax-0.8.10",
+        "contents": "{\"package\": \"d6f6ff9a378485b298a5286656da665ba74413d36db0979633275d2e708145d4\", \"files\": {}}",
+        "dest": "cargo/vendor/regex-syntax-0.8.11",
         "dest-filename": ".cargo-checksum.json"
     },
     {
@@ -5576,14 +6241,14 @@
     {
         "type": "archive",
         "archive-type": "tar-gzip",
-        "url": "https://static.crates.io/crates/resize-slice/resize-slice-0.1.3.crate",
-        "sha256": "8a3cb2f74a9891e76958b9e0ccd269a25b466c3ae3bb3efd71db157248308c4a",
-        "dest": "cargo/vendor/resize-slice-0.1.3"
+        "url": "https://static.crates.io/crates/resvg/resvg-0.44.0.crate",
+        "sha256": "4a325d5e8d1cebddd070b13f44cec8071594ab67d1012797c121f27a669b7958",
+        "dest": "cargo/vendor/resvg-0.44.0"
     },
     {
         "type": "inline",
-        "contents": "{\"package\": \"8a3cb2f74a9891e76958b9e0ccd269a25b466c3ae3bb3efd71db157248308c4a\", \"files\": {}}",
-        "dest": "cargo/vendor/resize-slice-0.1.3",
+        "contents": "{\"package\": \"4a325d5e8d1cebddd070b13f44cec8071594ab67d1012797c121f27a669b7958\", \"files\": {}}",
+        "dest": "cargo/vendor/resvg-0.44.0",
         "dest-filename": ".cargo-checksum.json"
     },
     {
@@ -5623,6 +6288,19 @@
         "type": "inline",
         "contents": "{\"package\": \"47b34b781b31e5d73e9fbc8689c70551fd1ade9a19e3e28cfec8580a79290cc4\", \"files\": {}}",
         "dest": "cargo/vendor/rgb-0.8.53",
+        "dest-filename": ".cargo-checksum.json"
+    },
+    {
+        "type": "archive",
+        "archive-type": "tar-gzip",
+        "url": "https://static.crates.io/crates/ron/ron-0.8.1.crate",
+        "sha256": "b91f7eff05f748767f183df4320a63d6936e9c6107d97c9e6bdd9784f4289c94",
+        "dest": "cargo/vendor/ron-0.8.1"
+    },
+    {
+        "type": "inline",
+        "contents": "{\"package\": \"b91f7eff05f748767f183df4320a63d6936e9c6107d97c9e6bdd9784f4289c94\", \"files\": {}}",
+        "dest": "cargo/vendor/ron-0.8.1",
         "dest-filename": ".cargo-checksum.json"
     },
     {
@@ -5771,6 +6449,19 @@
     {
         "type": "archive",
         "archive-type": "tar-gzip",
+        "url": "https://static.crates.io/crates/rustybuzz/rustybuzz-0.18.0.crate",
+        "sha256": "c85d1ccd519e61834798eb52c4e886e8c2d7d698dd3d6ce0b1b47eb8557f1181",
+        "dest": "cargo/vendor/rustybuzz-0.18.0"
+    },
+    {
+        "type": "inline",
+        "contents": "{\"package\": \"c85d1ccd519e61834798eb52c4e886e8c2d7d698dd3d6ce0b1b47eb8557f1181\", \"files\": {}}",
+        "dest": "cargo/vendor/rustybuzz-0.18.0",
+        "dest-filename": ".cargo-checksum.json"
+    },
+    {
+        "type": "archive",
+        "archive-type": "tar-gzip",
         "url": "https://static.crates.io/crates/rustybuzz/rustybuzz-0.20.1.crate",
         "sha256": "fd3c7c96f8a08ee34eff8857b11b49b07d71d1c3f4e88f8a88d4c9e9f90b1702",
         "dest": "cargo/vendor/rustybuzz-0.20.1"
@@ -5831,6 +6522,19 @@
         "type": "inline",
         "contents": "{\"package\": \"1dd3accc0f3f4bbaf2c9e1957a030dc582028130c67660d44c0a0345a22ca69b\", \"files\": {}}",
         "dest": "cargo/vendor/sctk-adwaita-0.11.0",
+        "dest-filename": ".cargo-checksum.json"
+    },
+    {
+        "type": "archive",
+        "archive-type": "tar-gzip",
+        "url": "https://static.crates.io/crates/secrecy/secrecy-0.8.0.crate",
+        "sha256": "9bd1c54ea06cfd2f6b63219704de0b9b4f72dcc2b8fdef820be6cd799780e91e",
+        "dest": "cargo/vendor/secrecy-0.8.0"
+    },
+    {
+        "type": "inline",
+        "contents": "{\"package\": \"9bd1c54ea06cfd2f6b63219704de0b9b4f72dcc2b8fdef820be6cd799780e91e\", \"files\": {}}",
+        "dest": "cargo/vendor/secrecy-0.8.0",
         "dest-filename": ".cargo-checksum.json"
     },
     {
@@ -5927,19 +6631,6 @@
     {
         "type": "archive",
         "archive-type": "tar-gzip",
-        "url": "https://static.crates.io/crates/serde_yaml/serde_yaml-0.7.5.crate",
-        "sha256": "ef8099d3df28273c99a1728190c7a9f19d444c941044f64adf986bee7ec53051",
-        "dest": "cargo/vendor/serde_yaml-0.7.5"
-    },
-    {
-        "type": "inline",
-        "contents": "{\"package\": \"ef8099d3df28273c99a1728190c7a9f19d444c941044f64adf986bee7ec53051\", \"files\": {}}",
-        "dest": "cargo/vendor/serde_yaml-0.7.5",
-        "dest-filename": ".cargo-checksum.json"
-    },
-    {
-        "type": "archive",
-        "archive-type": "tar-gzip",
         "url": "https://static.crates.io/crates/sha2/sha2-0.10.9.crate",
         "sha256": "a7507d819769d01a365ab707794a4084392c824f54a7a6a7862f8c3d0892b283",
         "dest": "cargo/vendor/sha2-0.10.9"
@@ -6018,6 +6709,19 @@
     {
         "type": "archive",
         "archive-type": "tar-gzip",
+        "url": "https://static.crates.io/crates/simd_helpers/simd_helpers-0.1.0.crate",
+        "sha256": "95890f873bec569a0362c235787f3aca6e1e887302ba4840839bcc6459c42da6",
+        "dest": "cargo/vendor/simd_helpers-0.1.0"
+    },
+    {
+        "type": "inline",
+        "contents": "{\"package\": \"95890f873bec569a0362c235787f3aca6e1e887302ba4840839bcc6459c42da6\", \"files\": {}}",
+        "dest": "cargo/vendor/simd_helpers-0.1.0",
+        "dest-filename": ".cargo-checksum.json"
+    },
+    {
+        "type": "archive",
+        "archive-type": "tar-gzip",
         "url": "https://static.crates.io/crates/simdutf8/simdutf8-0.1.5.crate",
         "sha256": "e3a9fe34e3e7a50316060351f37187a3f546bce95496156754b601a5fa71b76e",
         "dest": "cargo/vendor/simdutf8-0.1.5"
@@ -6065,6 +6769,19 @@
         "type": "inline",
         "contents": "{\"package\": \"7fbdfe3d2475fbd7ddd1f3e5cf8288a30eb3e5f95832829570cd88115a7434ac\", \"files\": {}}",
         "dest": "cargo/vendor/skrifa-0.40.0",
+        "dest-filename": ".cargo-checksum.json"
+    },
+    {
+        "type": "archive",
+        "archive-type": "tar-gzip",
+        "url": "https://static.crates.io/crates/skrifa/skrifa-0.42.1.crate",
+        "sha256": "0c34617370ae968efb7161bb2beb517d9084659aae19e24b89e3db25b46e4564",
+        "dest": "cargo/vendor/skrifa-0.42.1"
+    },
+    {
+        "type": "inline",
+        "contents": "{\"package\": \"0c34617370ae968efb7161bb2beb517d9084659aae19e24b89e3db25b46e4564\", \"files\": {}}",
+        "dest": "cargo/vendor/skrifa-0.42.1",
         "dest-filename": ".cargo-checksum.json"
     },
     {
@@ -6249,6 +6966,19 @@
     {
         "type": "archive",
         "archive-type": "tar-gzip",
+        "url": "https://static.crates.io/crates/subtle/subtle-2.6.1.crate",
+        "sha256": "13c2bddecc57b384dee18652358fb23172facb8a2c51ccc10d74c157bdea3292",
+        "dest": "cargo/vendor/subtle-2.6.1"
+    },
+    {
+        "type": "inline",
+        "contents": "{\"package\": \"13c2bddecc57b384dee18652358fb23172facb8a2c51ccc10d74c157bdea3292\", \"files\": {}}",
+        "dest": "cargo/vendor/subtle-2.6.1",
+        "dest-filename": ".cargo-checksum.json"
+    },
+    {
+        "type": "archive",
+        "archive-type": "tar-gzip",
         "url": "https://static.crates.io/crates/svg_fmt/svg_fmt-0.4.5.crate",
         "sha256": "0193cc4331cfd2f3d2011ef287590868599a2f33c3e69bc22c1a3d3acf9e02fb",
         "dest": "cargo/vendor/svg_fmt-0.4.5"
@@ -6275,14 +7005,14 @@
     {
         "type": "archive",
         "archive-type": "tar-gzip",
-        "url": "https://static.crates.io/crates/swash/swash-0.2.7.crate",
-        "sha256": "842f3cd369c2ba38966204f983eaa5e54a8e84a7d7159ed36ade2b6c335aae64",
-        "dest": "cargo/vendor/swash-0.2.7"
+        "url": "https://static.crates.io/crates/swash/swash-0.2.8.crate",
+        "sha256": "d1804632b66a35ca2b1d277eb0a138e10f46cb365b9a6d297e876b69ef79de43",
+        "dest": "cargo/vendor/swash-0.2.8"
     },
     {
         "type": "inline",
-        "contents": "{\"package\": \"842f3cd369c2ba38966204f983eaa5e54a8e84a7d7159ed36ade2b6c335aae64\", \"files\": {}}",
-        "dest": "cargo/vendor/swash-0.2.7",
+        "contents": "{\"package\": \"d1804632b66a35ca2b1d277eb0a138e10f46cb365b9a6d297e876b69ef79de43\", \"files\": {}}",
+        "dest": "cargo/vendor/swash-0.2.8",
         "dest-filename": ".cargo-checksum.json"
     },
     {
@@ -6327,6 +7057,19 @@
     {
         "type": "archive",
         "archive-type": "tar-gzip",
+        "url": "https://static.crates.io/crates/sysinfo/sysinfo-0.39.2.crate",
+        "sha256": "14311e7e9a03114cd4b65eedd54e8fed2945e17f08586ae97ef53bc0669f9581",
+        "dest": "cargo/vendor/sysinfo-0.39.2"
+    },
+    {
+        "type": "inline",
+        "contents": "{\"package\": \"14311e7e9a03114cd4b65eedd54e8fed2945e17f08586ae97ef53bc0669f9581\", \"files\": {}}",
+        "dest": "cargo/vendor/sysinfo-0.39.2",
+        "dest-filename": ".cargo-checksum.json"
+    },
+    {
+        "type": "archive",
+        "archive-type": "tar-gzip",
         "url": "https://static.crates.io/crates/taffy/taffy-0.9.2.crate",
         "sha256": "41ba83ebaf2954d31d05d67340fd46cebe99da2b7133b0dd68d70c65473a437b",
         "dest": "cargo/vendor/taffy-0.9.2"
@@ -6335,6 +7078,19 @@
         "type": "inline",
         "contents": "{\"package\": \"41ba83ebaf2954d31d05d67340fd46cebe99da2b7133b0dd68d70c65473a437b\", \"files\": {}}",
         "dest": "cargo/vendor/taffy-0.9.2",
+        "dest-filename": ".cargo-checksum.json"
+    },
+    {
+        "type": "archive",
+        "archive-type": "tar-gzip",
+        "url": "https://static.crates.io/crates/temp-dir/temp-dir-0.1.16.crate",
+        "sha256": "83176759e9416cf81ee66cb6508dbfe9c96f20b8b56265a39917551c23c70964",
+        "dest": "cargo/vendor/temp-dir-0.1.16"
+    },
+    {
+        "type": "inline",
+        "contents": "{\"package\": \"83176759e9416cf81ee66cb6508dbfe9c96f20b8b56265a39917551c23c70964\", \"files\": {}}",
+        "dest": "cargo/vendor/temp-dir-0.1.16",
         "dest-filename": ".cargo-checksum.json"
     },
     {
@@ -6361,6 +7117,19 @@
         "type": "inline",
         "contents": "{\"package\": \"06794f8f6c5c898b3275aebefa6b8a1cb24cd2c6c79397ab15774837a0bc5755\", \"files\": {}}",
         "dest": "cargo/vendor/termcolor-1.4.1",
+        "dest-filename": ".cargo-checksum.json"
+    },
+    {
+        "type": "archive",
+        "archive-type": "tar-gzip",
+        "url": "https://static.crates.io/crates/textdistance/textdistance-1.1.1.crate",
+        "sha256": "aa672c55ab69f787dbc9126cc387dbe57fdd595f585e4524cf89018fa44ab819",
+        "dest": "cargo/vendor/textdistance-1.1.1"
+    },
+    {
+        "type": "inline",
+        "contents": "{\"package\": \"aa672c55ab69f787dbc9126cc387dbe57fdd595f585e4524cf89018fa44ab819\", \"files\": {}}",
+        "dest": "cargo/vendor/textdistance-1.1.1",
         "dest-filename": ".cargo-checksum.json"
     },
     {
@@ -6426,6 +7195,19 @@
         "type": "inline",
         "contents": "{\"package\": \"f60246a4944f24f6e018aa17cdeffb7818b76356965d03b07d6a9886e8962185\", \"files\": {}}",
         "dest": "cargo/vendor/thread_local-1.1.9",
+        "dest-filename": ".cargo-checksum.json"
+    },
+    {
+        "type": "archive",
+        "archive-type": "tar-gzip",
+        "url": "https://static.crates.io/crates/tiff/tiff-0.11.3.crate",
+        "sha256": "b63feaf3343d35b6ca4d50483f94843803b0f51634937cc2ec519fc32232bc52",
+        "dest": "cargo/vendor/tiff-0.11.3"
+    },
+    {
+        "type": "inline",
+        "contents": "{\"package\": \"b63feaf3343d35b6ca4d50483f94843803b0f51634937cc2ec519fc32232bc52\", \"files\": {}}",
+        "dest": "cargo/vendor/tiff-0.11.3",
         "dest-filename": ".cargo-checksum.json"
     },
     {
@@ -6639,32 +7421,6 @@
     {
         "type": "archive",
         "archive-type": "tar-gzip",
-        "url": "https://static.crates.io/crates/tracing-journald/tracing-journald-0.3.2.crate",
-        "sha256": "2d3a81ed245bfb62592b1e2bc153e77656d94ee6a0497683a65a12ccaf2438d0",
-        "dest": "cargo/vendor/tracing-journald-0.3.2"
-    },
-    {
-        "type": "inline",
-        "contents": "{\"package\": \"2d3a81ed245bfb62592b1e2bc153e77656d94ee6a0497683a65a12ccaf2438d0\", \"files\": {}}",
-        "dest": "cargo/vendor/tracing-journald-0.3.2",
-        "dest-filename": ".cargo-checksum.json"
-    },
-    {
-        "type": "archive",
-        "archive-type": "tar-gzip",
-        "url": "https://static.crates.io/crates/tracing-log/tracing-log-0.2.0.crate",
-        "sha256": "ee855f1f400bd0e5c02d150ae5de3840039a3f54b025156404e34c23c03f47c3",
-        "dest": "cargo/vendor/tracing-log-0.2.0"
-    },
-    {
-        "type": "inline",
-        "contents": "{\"package\": \"ee855f1f400bd0e5c02d150ae5de3840039a3f54b025156404e34c23c03f47c3\", \"files\": {}}",
-        "dest": "cargo/vendor/tracing-log-0.2.0",
-        "dest-filename": ".cargo-checksum.json"
-    },
-    {
-        "type": "archive",
-        "archive-type": "tar-gzip",
         "url": "https://static.crates.io/crates/tracing-subscriber/tracing-subscriber-0.3.23.crate",
         "sha256": "cb7f578e5945fb242538965c2d0b04418d38ec25c79d160cd279bf0731c8d319",
         "dest": "cargo/vendor/tracing-subscriber-0.3.23"
@@ -6673,6 +7429,19 @@
         "type": "inline",
         "contents": "{\"package\": \"cb7f578e5945fb242538965c2d0b04418d38ec25c79d160cd279bf0731c8d319\", \"files\": {}}",
         "dest": "cargo/vendor/tracing-subscriber-0.3.23",
+        "dest-filename": ".cargo-checksum.json"
+    },
+    {
+        "type": "archive",
+        "archive-type": "tar-gzip",
+        "url": "https://static.crates.io/crates/ttf-parser/ttf-parser-0.24.1.crate",
+        "sha256": "5be21190ff5d38e8b4a2d3b6a3ae57f612cc39c96e83cedeaf7abc338a8bac4a",
+        "dest": "cargo/vendor/ttf-parser-0.24.1"
+    },
+    {
+        "type": "inline",
+        "contents": "{\"package\": \"5be21190ff5d38e8b4a2d3b6a3ae57f612cc39c96e83cedeaf7abc338a8bac4a\", \"files\": {}}",
+        "dest": "cargo/vendor/ttf-parser-0.24.1",
         "dest-filename": ".cargo-checksum.json"
     },
     {
@@ -6725,19 +7494,6 @@
         "type": "inline",
         "contents": "{\"package\": \"b6f5e870be6c3b371b77fe0ee0bafb859fa4964b4404c27de1d380043c4dda20\", \"files\": {}}",
         "dest": "cargo/vendor/typenum-1.20.1",
-        "dest-filename": ".cargo-checksum.json"
-    },
-    {
-        "type": "archive",
-        "archive-type": "tar-gzip",
-        "url": "https://static.crates.io/crates/udev/udev-0.2.0.crate",
-        "sha256": "47504d1a49b2ea1b133e7ddd1d9f0a83cf03feb9b440c2c470d06db4589cf301",
-        "dest": "cargo/vendor/udev-0.2.0"
-    },
-    {
-        "type": "inline",
-        "contents": "{\"package\": \"47504d1a49b2ea1b133e7ddd1d9f0a83cf03feb9b440c2c470d06db4589cf301\", \"files\": {}}",
-        "dest": "cargo/vendor/udev-0.2.0",
         "dest-filename": ".cargo-checksum.json"
     },
     {
@@ -6808,6 +7564,19 @@
     {
         "type": "archive",
         "archive-type": "tar-gzip",
+        "url": "https://static.crates.io/crates/unicode-bidi-mirroring/unicode-bidi-mirroring-0.3.0.crate",
+        "sha256": "64af057ad7466495ca113126be61838d8af947f41d93a949980b2389a118082f",
+        "dest": "cargo/vendor/unicode-bidi-mirroring-0.3.0"
+    },
+    {
+        "type": "inline",
+        "contents": "{\"package\": \"64af057ad7466495ca113126be61838d8af947f41d93a949980b2389a118082f\", \"files\": {}}",
+        "dest": "cargo/vendor/unicode-bidi-mirroring-0.3.0",
+        "dest-filename": ".cargo-checksum.json"
+    },
+    {
+        "type": "archive",
+        "archive-type": "tar-gzip",
         "url": "https://static.crates.io/crates/unicode-bidi-mirroring/unicode-bidi-mirroring-0.4.0.crate",
         "sha256": "5dfa6e8c60bb66d49db113e0125ee8711b7647b5579dc7f5f19c42357ed039fe",
         "dest": "cargo/vendor/unicode-bidi-mirroring-0.4.0"
@@ -6816,6 +7585,19 @@
         "type": "inline",
         "contents": "{\"package\": \"5dfa6e8c60bb66d49db113e0125ee8711b7647b5579dc7f5f19c42357ed039fe\", \"files\": {}}",
         "dest": "cargo/vendor/unicode-bidi-mirroring-0.4.0",
+        "dest-filename": ".cargo-checksum.json"
+    },
+    {
+        "type": "archive",
+        "archive-type": "tar-gzip",
+        "url": "https://static.crates.io/crates/unicode-ccc/unicode-ccc-0.3.0.crate",
+        "sha256": "260bc6647b3893a9a90668360803a15f96b85a5257b1c3a0c3daf6ae2496de42",
+        "dest": "cargo/vendor/unicode-ccc-0.3.0"
+    },
+    {
+        "type": "inline",
+        "contents": "{\"package\": \"260bc6647b3893a9a90668360803a15f96b85a5257b1c3a0c3daf6ae2496de42\", \"files\": {}}",
+        "dest": "cargo/vendor/unicode-ccc-0.3.0",
         "dest-filename": ".cargo-checksum.json"
     },
     {
@@ -6938,14 +7720,14 @@
     {
         "type": "archive",
         "archive-type": "tar-gzip",
-        "url": "https://static.crates.io/crates/uninitialized/uninitialized-0.0.2.crate",
-        "sha256": "74c1aa4511c38276c548406f0b1f5f8b793f000cfb51e18f278a102abd057e81",
-        "dest": "cargo/vendor/uninitialized-0.0.2"
+        "url": "https://static.crates.io/crates/universal-hash/universal-hash-0.5.1.crate",
+        "sha256": "fc1de2c688dc15305988b563c3854064043356019f97a4b46276fe734c4f07ea",
+        "dest": "cargo/vendor/universal-hash-0.5.1"
     },
     {
         "type": "inline",
-        "contents": "{\"package\": \"74c1aa4511c38276c548406f0b1f5f8b793f000cfb51e18f278a102abd057e81\", \"files\": {}}",
-        "dest": "cargo/vendor/uninitialized-0.0.2",
+        "contents": "{\"package\": \"fc1de2c688dc15305988b563c3854064043356019f97a4b46276fe734c4f07ea\", \"files\": {}}",
+        "dest": "cargo/vendor/universal-hash-0.5.1",
         "dest-filename": ".cargo-checksum.json"
     },
     {
@@ -6977,6 +7759,19 @@
     {
         "type": "archive",
         "archive-type": "tar-gzip",
+        "url": "https://static.crates.io/crates/usvg/usvg-0.44.0.crate",
+        "sha256": "7447e703d7223b067607655e625e0dbca80822880248937da65966194c4864e6",
+        "dest": "cargo/vendor/usvg-0.44.0"
+    },
+    {
+        "type": "inline",
+        "contents": "{\"package\": \"7447e703d7223b067607655e625e0dbca80822880248937da65966194c4864e6\", \"files\": {}}",
+        "dest": "cargo/vendor/usvg-0.44.0",
+        "dest-filename": ".cargo-checksum.json"
+    },
+    {
+        "type": "archive",
+        "archive-type": "tar-gzip",
         "url": "https://static.crates.io/crates/usvg/usvg-0.45.1.crate",
         "sha256": "80be9b06fbae3b8b303400ab20778c80bbaf338f563afe567cf3c9eea17b47ef",
         "dest": "cargo/vendor/usvg-0.45.1"
@@ -7003,27 +7798,27 @@
     {
         "type": "archive",
         "archive-type": "tar-gzip",
-        "url": "https://static.crates.io/crates/uuid/uuid-1.23.2.crate",
-        "sha256": "d258b83ceec21034727ecee8c382cfa6c3e133699b0742c64571814fb420c9f7",
-        "dest": "cargo/vendor/uuid-1.23.2"
+        "url": "https://static.crates.io/crates/uuid/uuid-1.23.3.crate",
+        "sha256": "144d6b123cef80b301b8f72a9e2ca4370ddec21950d0a103dd22c437006d2db7",
+        "dest": "cargo/vendor/uuid-1.23.3"
     },
     {
         "type": "inline",
-        "contents": "{\"package\": \"d258b83ceec21034727ecee8c382cfa6c3e133699b0742c64571814fb420c9f7\", \"files\": {}}",
-        "dest": "cargo/vendor/uuid-1.23.2",
+        "contents": "{\"package\": \"144d6b123cef80b301b8f72a9e2ca4370ddec21950d0a103dd22c437006d2db7\", \"files\": {}}",
+        "dest": "cargo/vendor/uuid-1.23.3",
         "dest-filename": ".cargo-checksum.json"
     },
     {
         "type": "archive",
         "archive-type": "tar-gzip",
-        "url": "https://static.crates.io/crates/valuable/valuable-0.1.1.crate",
-        "sha256": "ba73ea9cf16a25df0c8caa16c51acb937d5712a8429db78a3ee29d5dcacd3a65",
-        "dest": "cargo/vendor/valuable-0.1.1"
+        "url": "https://static.crates.io/crates/v_frame/v_frame-0.3.9.crate",
+        "sha256": "666b7727c8875d6ab5db9533418d7c764233ac9c0cff1d469aec8fa127597be2",
+        "dest": "cargo/vendor/v_frame-0.3.9"
     },
     {
         "type": "inline",
-        "contents": "{\"package\": \"ba73ea9cf16a25df0c8caa16c51acb937d5712a8429db78a3ee29d5dcacd3a65\", \"files\": {}}",
-        "dest": "cargo/vendor/valuable-0.1.1",
+        "contents": "{\"package\": \"666b7727c8875d6ab5db9533418d7c764233ac9c0cff1d469aec8fa127597be2\", \"files\": {}}",
+        "dest": "cargo/vendor/v_frame-0.3.9",
         "dest-filename": ".cargo-checksum.json"
     },
     {
@@ -7037,19 +7832,6 @@
         "type": "inline",
         "contents": "{\"package\": \"0b928f33d975fc6ad9f86c8f283853ad26bdd5b10b7f1542aa2fa15e2289105a\", \"files\": {}}",
         "dest": "cargo/vendor/version_check-0.9.5",
-        "dest-filename": ".cargo-checksum.json"
-    },
-    {
-        "type": "archive",
-        "archive-type": "tar-gzip",
-        "url": "https://static.crates.io/crates/void/void-1.0.2.crate",
-        "sha256": "6a02e4885ed3bc0f2de90ea6dd45ebcbb66dacffe03547fadbb0eeae2770887d",
-        "dest": "cargo/vendor/void-1.0.2"
-    },
-    {
-        "type": "inline",
-        "contents": "{\"package\": \"6a02e4885ed3bc0f2de90ea6dd45ebcbb66dacffe03547fadbb0eeae2770887d\", \"files\": {}}",
-        "dest": "cargo/vendor/void-1.0.2",
         "dest-filename": ".cargo-checksum.json"
     },
     {
@@ -7107,66 +7889,66 @@
     {
         "type": "archive",
         "archive-type": "tar-gzip",
-        "url": "https://static.crates.io/crates/wasm-bindgen/wasm-bindgen-0.2.122.crate",
-        "sha256": "3ed04576f974d2b2fba0f38c51dbc5518011e38c36bf1143164be765528fd409",
-        "dest": "cargo/vendor/wasm-bindgen-0.2.122"
+        "url": "https://static.crates.io/crates/wasm-bindgen/wasm-bindgen-0.2.123.crate",
+        "sha256": "a254a4b10c19a76f09a27640e7ffbf9bc30bf67e16a3bf28aaefa4920fe81563",
+        "dest": "cargo/vendor/wasm-bindgen-0.2.123"
     },
     {
         "type": "inline",
-        "contents": "{\"package\": \"3ed04576f974d2b2fba0f38c51dbc5518011e38c36bf1143164be765528fd409\", \"files\": {}}",
-        "dest": "cargo/vendor/wasm-bindgen-0.2.122",
+        "contents": "{\"package\": \"a254a4b10c19a76f09a27640e7ffbf9bc30bf67e16a3bf28aaefa4920fe81563\", \"files\": {}}",
+        "dest": "cargo/vendor/wasm-bindgen-0.2.123",
         "dest-filename": ".cargo-checksum.json"
     },
     {
         "type": "archive",
         "archive-type": "tar-gzip",
-        "url": "https://static.crates.io/crates/wasm-bindgen-futures/wasm-bindgen-futures-0.4.72.crate",
-        "sha256": "9473dbd2991ae90b6291c3c32c30c6187ac49aa32f9905d1cce280ec1e110b0f",
-        "dest": "cargo/vendor/wasm-bindgen-futures-0.4.72"
+        "url": "https://static.crates.io/crates/wasm-bindgen-futures/wasm-bindgen-futures-0.4.73.crate",
+        "sha256": "54568702fabf5d4849ce2b90fadfa64168a097eaf4b351ce9df8b687a0086aaf",
+        "dest": "cargo/vendor/wasm-bindgen-futures-0.4.73"
     },
     {
         "type": "inline",
-        "contents": "{\"package\": \"9473dbd2991ae90b6291c3c32c30c6187ac49aa32f9905d1cce280ec1e110b0f\", \"files\": {}}",
-        "dest": "cargo/vendor/wasm-bindgen-futures-0.4.72",
+        "contents": "{\"package\": \"54568702fabf5d4849ce2b90fadfa64168a097eaf4b351ce9df8b687a0086aaf\", \"files\": {}}",
+        "dest": "cargo/vendor/wasm-bindgen-futures-0.4.73",
         "dest-filename": ".cargo-checksum.json"
     },
     {
         "type": "archive",
         "archive-type": "tar-gzip",
-        "url": "https://static.crates.io/crates/wasm-bindgen-macro/wasm-bindgen-macro-0.2.122.crate",
-        "sha256": "916151b09da36bd82f6615cbf3a419e2f0ba23a03c6160e8e92eb6bd4aa1dec6",
-        "dest": "cargo/vendor/wasm-bindgen-macro-0.2.122"
+        "url": "https://static.crates.io/crates/wasm-bindgen-macro/wasm-bindgen-macro-0.2.123.crate",
+        "sha256": "24a40fc75b0ec6f3746ceb10d36f53a93dcd68a93b11b6445983945d79eba0dc",
+        "dest": "cargo/vendor/wasm-bindgen-macro-0.2.123"
     },
     {
         "type": "inline",
-        "contents": "{\"package\": \"916151b09da36bd82f6615cbf3a419e2f0ba23a03c6160e8e92eb6bd4aa1dec6\", \"files\": {}}",
-        "dest": "cargo/vendor/wasm-bindgen-macro-0.2.122",
+        "contents": "{\"package\": \"24a40fc75b0ec6f3746ceb10d36f53a93dcd68a93b11b6445983945d79eba0dc\", \"files\": {}}",
+        "dest": "cargo/vendor/wasm-bindgen-macro-0.2.123",
         "dest-filename": ".cargo-checksum.json"
     },
     {
         "type": "archive",
         "archive-type": "tar-gzip",
-        "url": "https://static.crates.io/crates/wasm-bindgen-macro-support/wasm-bindgen-macro-support-0.2.122.crate",
-        "sha256": "299047362ccbfce148b67ab7e73349f77748e00c8296f9542adfad2ad82c5c5e",
-        "dest": "cargo/vendor/wasm-bindgen-macro-support-0.2.122"
+        "url": "https://static.crates.io/crates/wasm-bindgen-macro-support/wasm-bindgen-macro-support-0.2.123.crate",
+        "sha256": "908f34bd9b9ce3d4caf07b72dfab63d61504d156856c6bd3cd87fa350cf3985b",
+        "dest": "cargo/vendor/wasm-bindgen-macro-support-0.2.123"
     },
     {
         "type": "inline",
-        "contents": "{\"package\": \"299047362ccbfce148b67ab7e73349f77748e00c8296f9542adfad2ad82c5c5e\", \"files\": {}}",
-        "dest": "cargo/vendor/wasm-bindgen-macro-support-0.2.122",
+        "contents": "{\"package\": \"908f34bd9b9ce3d4caf07b72dfab63d61504d156856c6bd3cd87fa350cf3985b\", \"files\": {}}",
+        "dest": "cargo/vendor/wasm-bindgen-macro-support-0.2.123",
         "dest-filename": ".cargo-checksum.json"
     },
     {
         "type": "archive",
         "archive-type": "tar-gzip",
-        "url": "https://static.crates.io/crates/wasm-bindgen-shared/wasm-bindgen-shared-0.2.122.crate",
-        "sha256": "9a929b2c61f11ba3e9bc35b50c1f25cb38e0e892c0c231ae2b8cf78d5dad4437",
-        "dest": "cargo/vendor/wasm-bindgen-shared-0.2.122"
+        "url": "https://static.crates.io/crates/wasm-bindgen-shared/wasm-bindgen-shared-0.2.123.crate",
+        "sha256": "7acbf7616c27b194bbb550bf77ed0c2c3e5b7fd1260a93082b95fb7f47959b92",
+        "dest": "cargo/vendor/wasm-bindgen-shared-0.2.123"
     },
     {
         "type": "inline",
-        "contents": "{\"package\": \"9a929b2c61f11ba3e9bc35b50c1f25cb38e0e892c0c231ae2b8cf78d5dad4437\", \"files\": {}}",
-        "dest": "cargo/vendor/wasm-bindgen-shared-0.2.122",
+        "contents": "{\"package\": \"7acbf7616c27b194bbb550bf77ed0c2c3e5b7fd1260a93082b95fb7f47959b92\", \"files\": {}}",
+        "dest": "cargo/vendor/wasm-bindgen-shared-0.2.123",
         "dest-filename": ".cargo-checksum.json"
     },
     {
@@ -7380,14 +8162,14 @@
     {
         "type": "archive",
         "archive-type": "tar-gzip",
-        "url": "https://static.crates.io/crates/web-sys/web-sys-0.3.99.crate",
-        "sha256": "6d621441cfc37b84979402712047321980c178f299193a3589d05b99e8763436",
-        "dest": "cargo/vendor/web-sys-0.3.99"
+        "url": "https://static.crates.io/crates/web-sys/web-sys-0.3.100.crate",
+        "sha256": "6e0871acf327f283dc6da28a1696cdc64fb355ba9f935d052021fa77f35cce69",
+        "dest": "cargo/vendor/web-sys-0.3.100"
     },
     {
         "type": "inline",
-        "contents": "{\"package\": \"6d621441cfc37b84979402712047321980c178f299193a3589d05b99e8763436\", \"files\": {}}",
-        "dest": "cargo/vendor/web-sys-0.3.99",
+        "contents": "{\"package\": \"6e0871acf327f283dc6da28a1696cdc64fb355ba9f935d052021fa77f35cce69\", \"files\": {}}",
+        "dest": "cargo/vendor/web-sys-0.3.100",
         "dest-filename": ".cargo-checksum.json"
     },
     {
@@ -7505,19 +8287,6 @@
         "type": "inline",
         "contents": "{\"package\": \"e18308757e594ed2cd27dddbb16a139c42a683819d32a2e0b1b0167552f5840c\", \"files\": {}}",
         "dest": "cargo/vendor/wgpu-types-28.0.0",
-        "dest-filename": ".cargo-checksum.json"
-    },
-    {
-        "type": "archive",
-        "archive-type": "tar-gzip",
-        "url": "https://static.crates.io/crates/widestring/widestring-1.2.1.crate",
-        "sha256": "72069c3113ab32ab29e5584db3c6ec55d416895e60715417b5b883a357c3e471",
-        "dest": "cargo/vendor/widestring-1.2.1"
-    },
-    {
-        "type": "inline",
-        "contents": "{\"package\": \"72069c3113ab32ab29e5584db3c6ec55d416895e60715417b5b883a357c3e471\", \"files\": {}}",
-        "dest": "cargo/vendor/widestring-1.2.1",
         "dest-filename": ".cargo-checksum.json"
     },
     {
@@ -8558,6 +9327,19 @@
     {
         "type": "archive",
         "archive-type": "tar-gzip",
+        "url": "https://static.crates.io/crates/wrapcenum-derive/wrapcenum-derive-0.4.1.crate",
+        "sha256": "a76ff259533532054cfbaefb115c613203c73707017459206380f03b3b3f266e",
+        "dest": "cargo/vendor/wrapcenum-derive-0.4.1"
+    },
+    {
+        "type": "inline",
+        "contents": "{\"package\": \"a76ff259533532054cfbaefb115c613203c73707017459206380f03b3b3f266e\", \"files\": {}}",
+        "dest": "cargo/vendor/wrapcenum-derive-0.4.1",
+        "dest-filename": ".cargo-checksum.json"
+    },
+    {
+        "type": "archive",
+        "archive-type": "tar-gzip",
         "url": "https://static.crates.io/crates/writeable/writeable-0.6.3.crate",
         "sha256": "1ffae5123b2d3fc086436f8834ae3ab053a283cfac8fe0a0b8eaae044768a4c4",
         "dest": "cargo/vendor/writeable-0.6.3"
@@ -8623,6 +9405,19 @@
     {
         "type": "archive",
         "archive-type": "tar-gzip",
+        "url": "https://static.crates.io/crates/xdg/xdg-2.5.2.crate",
+        "sha256": "213b7324336b53d2414b2db8537e56544d981803139155afa84f76eeebb7a546",
+        "dest": "cargo/vendor/xdg-2.5.2"
+    },
+    {
+        "type": "inline",
+        "contents": "{\"package\": \"213b7324336b53d2414b2db8537e56544d981803139155afa84f76eeebb7a546\", \"files\": {}}",
+        "dest": "cargo/vendor/xdg-2.5.2",
+        "dest-filename": ".cargo-checksum.json"
+    },
+    {
+        "type": "archive",
+        "archive-type": "tar-gzip",
         "url": "https://static.crates.io/crates/xdg/xdg-3.0.0.crate",
         "sha256": "2fb433233f2df9344722454bc7e96465c9d03bff9d77c248f9e7523fe79585b5",
         "dest": "cargo/vendor/xdg-3.0.0"
@@ -8631,24 +9426,6 @@
         "type": "inline",
         "contents": "{\"package\": \"2fb433233f2df9344722454bc7e96465c9d03bff9d77c248f9e7523fe79585b5\", \"files\": {}}",
         "dest": "cargo/vendor/xdg-3.0.0",
-        "dest-filename": ".cargo-checksum.json"
-    },
-    {
-        "type": "shell",
-        "commands": [
-            "cp -r --reflink=auto \"flatpak-cargo/git/cosmic-panel-6119bb1/xdg-shell-wrapper-config\" \"cargo/vendor/xdg-shell-wrapper-config\""
-        ]
-    },
-    {
-        "type": "inline",
-        "contents": "[package]\nname = \"xdg-shell-wrapper-config\"\nversion = \"0.1.0\"\nedition = \"2024\"\n\n[dependencies.serde]\nversion = \"1.0\"\nfeatures = [\"derive\"]\n\n[dependencies.wayland-protocols-wlr]\nversion = \"0.3.12\"\nfeatures = [\"client\"]\n",
-        "dest": "cargo/vendor/xdg-shell-wrapper-config",
-        "dest-filename": "Cargo.toml"
-    },
-    {
-        "type": "inline",
-        "contents": "{\"package\": null, \"files\": {}}",
-        "dest": "cargo/vendor/xdg-shell-wrapper-config",
         "dest-filename": ".cargo-checksum.json"
     },
     {
@@ -8732,14 +9509,14 @@
     {
         "type": "archive",
         "archive-type": "tar-gzip",
-        "url": "https://static.crates.io/crates/yaml-rust/yaml-rust-0.4.5.crate",
-        "sha256": "56c1936c4cc7a1c9ab21a1ebb602eb942ba868cbd44a99cb7cdc5892335e1c85",
-        "dest": "cargo/vendor/yaml-rust-0.4.5"
+        "url": "https://static.crates.io/crates/y4m/y4m-0.8.0.crate",
+        "sha256": "7a5a4b21e1a62b67a2970e6831bc091d7b87e119e7f9791aef9702e3bef04448",
+        "dest": "cargo/vendor/y4m-0.8.0"
     },
     {
         "type": "inline",
-        "contents": "{\"package\": \"56c1936c4cc7a1c9ab21a1ebb602eb942ba868cbd44a99cb7cdc5892335e1c85\", \"files\": {}}",
-        "dest": "cargo/vendor/yaml-rust-0.4.5",
+        "contents": "{\"package\": \"7a5a4b21e1a62b67a2970e6831bc091d7b87e119e7f9791aef9702e3bef04448\", \"files\": {}}",
+        "dest": "cargo/vendor/y4m-0.8.0",
         "dest-filename": ".cargo-checksum.json"
     },
     {
@@ -8888,27 +9665,27 @@
     {
         "type": "archive",
         "archive-type": "tar-gzip",
-        "url": "https://static.crates.io/crates/zerocopy/zerocopy-0.8.50.crate",
-        "sha256": "3b065d4f0e55f82fae73202e189638116a87c55ab6b8e6c2721e13dd9d854ad1",
-        "dest": "cargo/vendor/zerocopy-0.8.50"
+        "url": "https://static.crates.io/crates/zerocopy/zerocopy-0.8.52.crate",
+        "sha256": "ce1022995ff5ff5d841ad7d994facc23098cd40152f2c1d11cd607c6f530653f",
+        "dest": "cargo/vendor/zerocopy-0.8.52"
     },
     {
         "type": "inline",
-        "contents": "{\"package\": \"3b065d4f0e55f82fae73202e189638116a87c55ab6b8e6c2721e13dd9d854ad1\", \"files\": {}}",
-        "dest": "cargo/vendor/zerocopy-0.8.50",
+        "contents": "{\"package\": \"ce1022995ff5ff5d841ad7d994facc23098cd40152f2c1d11cd607c6f530653f\", \"files\": {}}",
+        "dest": "cargo/vendor/zerocopy-0.8.52",
         "dest-filename": ".cargo-checksum.json"
     },
     {
         "type": "archive",
         "archive-type": "tar-gzip",
-        "url": "https://static.crates.io/crates/zerocopy-derive/zerocopy-derive-0.8.50.crate",
-        "sha256": "0b631b19d36a892ab55420c92dbc83ccd79274f25be714855d3074aa71cab639",
-        "dest": "cargo/vendor/zerocopy-derive-0.8.50"
+        "url": "https://static.crates.io/crates/zerocopy-derive/zerocopy-derive-0.8.52.crate",
+        "sha256": "1ae7f38b72ec2a254e2b87ef277cf2cd4fb97cbebf944faa6f33354da0867930",
+        "dest": "cargo/vendor/zerocopy-derive-0.8.52"
     },
     {
         "type": "inline",
-        "contents": "{\"package\": \"0b631b19d36a892ab55420c92dbc83ccd79274f25be714855d3074aa71cab639\", \"files\": {}}",
-        "dest": "cargo/vendor/zerocopy-derive-0.8.50",
+        "contents": "{\"package\": \"1ae7f38b72ec2a254e2b87ef277cf2cd4fb97cbebf944faa6f33354da0867930\", \"files\": {}}",
+        "dest": "cargo/vendor/zerocopy-derive-0.8.52",
         "dest-filename": ".cargo-checksum.json"
     },
     {
@@ -8935,6 +9712,19 @@
         "type": "inline",
         "contents": "{\"package\": \"11532158c46691caf0f2593ea8358fed6bbf68a0315e80aae9bd41fbade684a1\", \"files\": {}}",
         "dest": "cargo/vendor/zerofrom-derive-0.1.7",
+        "dest-filename": ".cargo-checksum.json"
+    },
+    {
+        "type": "archive",
+        "archive-type": "tar-gzip",
+        "url": "https://static.crates.io/crates/zeroize/zeroize-1.8.2.crate",
+        "sha256": "b97154e67e32c85465826e8bcc1c59429aaaf107c1e4a9e53c8d8ccd5eff88d0",
+        "dest": "cargo/vendor/zeroize-1.8.2"
+    },
+    {
+        "type": "inline",
+        "contents": "{\"package\": \"b97154e67e32c85465826e8bcc1c59429aaaf107c1e4a9e53c8d8ccd5eff88d0\", \"files\": {}}",
+        "dest": "cargo/vendor/zeroize-1.8.2",
         "dest-filename": ".cargo-checksum.json"
     },
     {
@@ -9018,6 +9808,19 @@
     {
         "type": "archive",
         "archive-type": "tar-gzip",
+        "url": "https://static.crates.io/crates/zune-inflate/zune-inflate-0.2.54.crate",
+        "sha256": "73ab332fe2f6680068f3582b16a24f90ad7096d5d39b974d1c0aff0125116f02",
+        "dest": "cargo/vendor/zune-inflate-0.2.54"
+    },
+    {
+        "type": "inline",
+        "contents": "{\"package\": \"73ab332fe2f6680068f3582b16a24f90ad7096d5d39b974d1c0aff0125116f02\", \"files\": {}}",
+        "dest": "cargo/vendor/zune-inflate-0.2.54",
+        "dest-filename": ".cargo-checksum.json"
+    },
+    {
+        "type": "archive",
+        "archive-type": "tar-gzip",
         "url": "https://static.crates.io/crates/zune-jpeg/zune-jpeg-0.4.21.crate",
         "sha256": "29ce2c8a9384ad323cf564b67da86e21d3cfdff87908bc1223ed5c99bc792713",
         "dest": "cargo/vendor/zune-jpeg-0.4.21"
@@ -9082,7 +9885,7 @@
     },
     {
         "type": "inline",
-        "contents": "[source.vendored-sources]\ndirectory = \"cargo/vendor\"\n\n[source.crates-io]\nreplace-with = \"vendored-sources\"\n\n[source.\"https://github.com/wash2/accesskit\"]\ngit = \"https://github.com/wash2/accesskit\"\nreplace-with = \"vendored-sources\"\ntag = \"cosmic-0.14\"\n\n[source.\"https://github.com/jackpot51/rust-atomicwrites\"]\ngit = \"https://github.com/jackpot51/rust-atomicwrites\"\nreplace-with = \"vendored-sources\"\n\n[source.\"https://github.com/pop-os/window_clipboard\"]\ngit = \"https://github.com/pop-os/window_clipboard\"\nreplace-with = \"vendored-sources\"\ntag = \"sctk-0.20\"\n\n[source.\"https://github.com/pop-os/cosmic-protocols\"]\ngit = \"https://github.com/pop-os/cosmic-protocols\"\nreplace-with = \"vendored-sources\"\nrev = \"c253ec1\"\n\n[source.\"https://github.com/pop-os/libcosmic\"]\ngit = \"https://github.com/pop-os/libcosmic\"\nreplace-with = \"vendored-sources\"\n\n[source.\"https://github.com/pop-os/freedesktop-icons\"]\ngit = \"https://github.com/pop-os/freedesktop-icons\"\nreplace-with = \"vendored-sources\"\n\n[source.\"https://github.com/pop-os/cosmic-panel\"]\ngit = \"https://github.com/pop-os/cosmic-panel\"\nreplace-with = \"vendored-sources\"\n\n[source.\"https://github.com/pop-os/dbus-settings-bindings\"]\ngit = \"https://github.com/pop-os/dbus-settings-bindings\"\nreplace-with = \"vendored-sources\"\n\n[source.\"https://github.com/iced-rs/cryoglyph\"]\ngit = \"https://github.com/iced-rs/cryoglyph\"\nreplace-with = \"vendored-sources\"\nrev = \"e429a025df36ab8145708acb309080ae3deec17a\"\n\n[source.\"https://github.com/pop-os/winit\"]\ngit = \"https://github.com/pop-os/winit\"\nreplace-with = \"vendored-sources\"\ntag = \"cosmic-0.14\"\n\n[source.\"https://github.com/pop-os/smithay-clipboard\"]\ngit = \"https://github.com/pop-os/smithay-clipboard\"\nreplace-with = \"vendored-sources\"\ntag = \"sctk-0.20\"\n\n[source.\"https://github.com/pop-os/softbuffer\"]\ngit = \"https://github.com/pop-os/softbuffer\"\nreplace-with = \"vendored-sources\"\ntag = \"cosmic-4.0\"\n",
+        "contents": "[source.vendored-sources]\ndirectory = \"cargo/vendor\"\n\n[source.crates-io]\nreplace-with = \"vendored-sources\"\n\n[source.\"https://github.com/wash2/accesskit\"]\ngit = \"https://github.com/wash2/accesskit\"\nreplace-with = \"vendored-sources\"\ntag = \"cosmic-0.14\"\n\n[source.\"https://github.com/jackpot51/rust-atomicwrites\"]\ngit = \"https://github.com/jackpot51/rust-atomicwrites\"\nreplace-with = \"vendored-sources\"\n\n[source.\"https://github.com/pop-os/window_clipboard\"]\ngit = \"https://github.com/pop-os/window_clipboard\"\nreplace-with = \"vendored-sources\"\ntag = \"sctk-0.20\"\n\n[source.\"https://github.com/pop-os/cosmic-protocols\"]\ngit = \"https://github.com/pop-os/cosmic-protocols\"\nreplace-with = \"vendored-sources\"\nrev = \"32283d7\"\n\n[source.\"https://github.com/pop-os/libcosmic\"]\ngit = \"https://github.com/pop-os/libcosmic\"\nreplace-with = \"vendored-sources\"\nrev = \"fc5debccef41cd6bd6731cbc768cb719847d1a2f\"\n\n[source.\"https://github.com/pop-os/freedesktop-icons\"]\ngit = \"https://github.com/pop-os/freedesktop-icons\"\nreplace-with = \"vendored-sources\"\n\n[source.\"https://github.com/pop-os/dbus-settings-bindings\"]\ngit = \"https://github.com/pop-os/dbus-settings-bindings\"\nreplace-with = \"vendored-sources\"\n\n[source.\"https://github.com/iced-rs/cryoglyph\"]\ngit = \"https://github.com/iced-rs/cryoglyph\"\nreplace-with = \"vendored-sources\"\nrev = \"e429a025df36ab8145708acb309080ae3deec17a\"\n\n[source.\"https://github.com/pop-os/winit\"]\ngit = \"https://github.com/pop-os/winit\"\nreplace-with = \"vendored-sources\"\ntag = \"cosmic-0.14\"\n\n[source.\"https://github.com/pop-os/smithay-clipboard\"]\ngit = \"https://github.com/pop-os/smithay-clipboard\"\nreplace-with = \"vendored-sources\"\ntag = \"sctk-0.20\"\n\n[source.\"https://github.com/pop-os/softbuffer\"]\ngit = \"https://github.com/pop-os/softbuffer\"\nreplace-with = \"vendored-sources\"\ntag = \"cosmic-4.0\"\n",
         "dest": "cargo",
         "dest-filename": "config"
     }

@@ -9,9 +9,8 @@
     "--share=ipc",
     "--socket=wayland",
     "--socket=fallback-x11",
+    "--talk-name=com.system76.CosmicSettingsDaemon.*",
     "--talk-name=com.system76.CosmicSettingsDaemon",
-    "--talk-name=com.system76.CosmicSettingsDaemon.Config",
-    "--talk-name=com.system76.CosmicSettingsDaemon.Config.*",
     "--talk-name=org.freedesktop.portal.Desktop",
     "--filesystem=xdg-config/cosmic:rw",
     "--filesystem=xdg-run/pipewire-0"
@@ -33,7 +32,7 @@
         "install -Dm0755 ./target/release/cosmic-ext-applet-eyedropper /app/bin/cosmic-ext-applet-eyedropper",
         "install -Dm0644 ./resources/app.desktop /app/share/applications/io.github.nalladev.CosmicExtAppletEyedropper.desktop",
         "install -Dm0644 ./resources/app.metainfo.xml /app/share/metainfo/io.github.nalladev.CosmicExtAppletEyedropper.metainfo.xml",
-        "install -Dm0644 ./resources/icon.svg /app/share/icons/hicolor/scalable/apps/io.github.nalladev.CosmicExtAppletEyedropper.svg"
+        "install -Dm0644 ./resources/icon.svg /app/share/icons/hicolor/scalable/apps/io.github.nalladev.CosmicExtAppletEyedropper-symbolic.svg"
       ],
       "sources": [
         {

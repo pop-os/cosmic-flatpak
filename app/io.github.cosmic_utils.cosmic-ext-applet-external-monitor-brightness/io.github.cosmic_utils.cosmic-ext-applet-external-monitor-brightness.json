@@ -11,6 +11,7 @@
     "--share=ipc",
     "--socket=wayland",
     "--talk-name=com.system76.CosmicSettingsDaemon",
+    "--talk-name=com.system76.CosmicSettingsDaemon.*",
     "--device=all",
     "--filesystem=xdg-config/cosmic/com.system76.CosmicTheme.Mode:rw",
     "--filesystem=xdg-config/cosmic:rw"
@@ -33,7 +34,7 @@
         {
           "type": "git",
           "url": "https://github.com/cosmic-utils/cosmic-ext-applet-external-monitor-brightness.git",
-          "commit": "55fce241050df94a15322409f3c97da520ec7440"
+          "commit": "3e6486ff11dba8cdb729420c27b4ce2c519f8443"
         },
         "cargo-sources.json"
       ]

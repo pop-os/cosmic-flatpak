@@ -37,7 +37,7 @@
         {
           "type": "git",
           "url": "https://github.com/cappsyco/cosmic-ext-applet-dict.git",
-	  "tag": "v0.2.0"
+	  "tag": "v0.3.0"
         },
         "./cargo-sources.json"
       ]

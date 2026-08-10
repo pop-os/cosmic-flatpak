@@ -3,12 +3,16 @@
   "runtime": "org.freedesktop.Platform",
   "runtime-version": "25.08",
   "sdk": "org.freedesktop.Sdk",
-  "sdk-extensions": ["org.freedesktop.Sdk.Extension.rust-stable", "org.freedesktop.Sdk.Extension.llvm20"],
+  "sdk-extensions": [
+    "org.freedesktop.Sdk.Extension.rust-stable",
+    "org.freedesktop.Sdk.Extension.llvm20"
+  ],
   "command": "cosmic-ext-applet-eyedropper",
   "finish-args": [
     "--share=ipc",
     "--socket=wayland",
     "--socket=fallback-x11",
+    "--own-name=io.github.nalladev.CosmicExtAppletEyedropper",
     "--talk-name=com.system76.CosmicSettingsDaemon.*",
     "--talk-name=com.system76.CosmicSettingsDaemon",
     "--talk-name=org.freedesktop.portal.Desktop",
@@ -38,9 +42,9 @@
         {
           "type": "git",
           "url": "https://github.com/nalladev/cosmic-ext-applet-eyedropper.git",
-          "tag": "v0.5.1"
+          "tag": "v0.6.1"
         },
-        "./cargo-sources.json"
+        "cargo-sources.json"
       ]
     }
   ]

@@ -1,0 +1,51 @@
+{
+  "id": "io.github.andrew_verde.cosmic-ext-applet-codexbar",
+  "runtime": "org.freedesktop.Platform",
+  "runtime-version": "25.08",
+  "sdk": "org.freedesktop.Sdk",
+  "sdk-extensions": [
+    "org.freedesktop.Sdk.Extension.rust-stable"
+  ],
+  "base": "com.system76.Cosmic.BaseApp",
+  "base-version": "stable",
+  "command": "cosmic-ext-applet-codexbar",
+  "finish-args": [
+    "--socket=wayland",
+    "--share=ipc",
+    "--device=dri",
+    "--filesystem=xdg-config/cosmic:rw",
+    "--filesystem=xdg-config/cosmic-ext-applet-codexbar:create",
+    "--talk-name=com.system76.CosmicSettingsDaemon",
+    "--talk-name=org.freedesktop.Flatpak"
+  ],
+  "build-options": {
+    "append-path": "/usr/lib/sdk/rust-stable/bin",
+    "env": {
+      "CARGO_HOME": "/run/build/cosmic-ext-applet-codexbar/cargo"
+    }
+  },
+  "modules": [
+    {
+      "name": "cosmic-ext-applet-codexbar",
+      "buildsystem": "simple",
+      "build-commands": [
+        "cargo --offline fetch --manifest-path Cargo.toml --verbose",
+        "cargo --offline build --release --verbose",
+        "install -Dm0755 ./target/release/cosmic-ext-applet-codexbar /app/bin/cosmic-ext-applet-codexbar",
+        "install -Dm0644 ./data/io.github.andrew_verde.cosmic-ext-applet-codexbar.desktop /app/share/applications/io.github.andrew_verde.cosmic-ext-applet-codexbar.desktop",
+        "install -Dm0644 ./data/io.github.andrew_verde.cosmic-ext-applet-codexbar.metainfo.xml /app/share/metainfo/io.github.andrew_verde.cosmic-ext-applet-codexbar.metainfo.xml",
+        "install -Dm0644 ./data/icons/scalable/apps/io.github.andrew_verde.cosmic-ext-applet-codexbar-symbolic.svg /app/share/icons/hicolor/scalable/apps/io.github.andrew_verde.cosmic-ext-applet-codexbar-symbolic.svg",
+        "install -Dm0644 ./data/icons/scalable/apps/io.github.andrew_verde.cosmic-ext-applet-codexbar.svg /app/share/icons/hicolor/scalable/apps/io.github.andrew_verde.cosmic-ext-applet-codexbar.svg"
+      ],
+      "sources": [
+        {
+          "type": "git",
+          "url": "https://github.com/andrew-verde/cosmic-ext-applet-codexbar.git",
+          "tag": "v0.1.0",
+          "commit": "6cc9597db743df0ae6d22489484ab6e5b92648dc"
+        },
+        "cargo-sources.json"
+      ]
+    }
+  ]
+}

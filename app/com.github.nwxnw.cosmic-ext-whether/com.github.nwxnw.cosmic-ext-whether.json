@@ -1,25 +1,26 @@
 {
-    "id": "io.github.nwxnw.cosmic-ext-connected",
+    "id": "com.github.nwxnw.cosmic-ext-whether",
     "runtime": "org.freedesktop.Platform",
     "runtime-version": "25.08",
     "sdk": "org.freedesktop.Sdk",
     "sdk-extensions": ["org.freedesktop.Sdk.Extension.rust-stable"],
     "base": "com.system76.Cosmic.BaseApp",
     "base-version": "stable",
-    "command": "cosmic-ext-connected.sh",
+    "command": "cosmic-ext-whether.sh",
     "finish-args": [
         "--share=ipc",
+        "--share=network",
         "--socket=wayland",
-        "--socket=session-bus",
         "--device=dri",
-        "--filesystem=xdg-config/cosmic:rw",
-        "--filesystem=xdg-data/kpeoplevcard:ro",
-        "--filesystem=xdg-cache/kdeconnect.daemon:ro"
+        "--talk-name=com.system76.CosmicSettingsDaemon",
+        "--talk-name=org.freedesktop.portal.Desktop",
+        "--talk-name=org.freedesktop.portal.Settings",
+        "--filesystem=xdg-config/cosmic:rw"
     ],
     "build-options": {
         "append-path": "/usr/lib/sdk/rust-stable/bin",
         "env": {
-            "CARGO_HOME": "/run/build/cosmic-ext-connected/cargo",
+            "CARGO_HOME": "/run/build/cosmic-ext-whether/cargo",
             "BIN_DIR": "/app/bin",
             "APP_DIR": "/app/share/applications",
             "METAINFO_DIR": "/app/share/metainfo",
@@ -28,7 +29,7 @@
     },
     "modules": [
         {
-            "name": "cosmic-ext-connected",
+            "name": "cosmic-ext-whether",
             "buildsystem": "simple",
             "build-commands": [
                 "just build-release --offline --verbose",
@@ -37,9 +38,9 @@
             "sources": [
                 {
                     "type": "git",
-                    "url": "https://github.com/nwxnw/cosmic-ext-connected",
-                    "tag": "v0.7.0",
-                    "commit": "29be454a950384986af0499b50f20b884f8f0e15"
+                    "url": "https://github.com/nwxnw/cosmic-ext-whether",
+                    "tag": "v0.3.2",
+                    "commit": "b34aa053049646d4e8075ad4dada0325eb38c297"
                 },
                 "cargo-sources.json"
             ]

@@ -1,0 +1,49 @@
+{
+  "id": "io.github.BlakeGardner.cosmic-ext-applet-torrent-throttle",
+  "runtime": "org.freedesktop.Platform",
+  "runtime-version": "25.08",
+  "base": "com.system76.Cosmic.BaseApp",
+  "base-version": "stable",
+  "sdk": "org.freedesktop.Sdk",
+  "sdk-extensions": ["org.freedesktop.Sdk.Extension.rust-stable"],
+  "command": "cosmic-ext-applet-torrent-throttle",
+  "finish-args": [
+    "--share=ipc",
+    "--share=network",
+    "--socket=wayland",
+    "--talk-name=com.system76.CosmicSettingsDaemon",
+    "--talk-name=com.system76.CosmicSettingsDaemon.*",
+    "--filesystem=xdg-config/cosmic:rw",
+    "--filesystem=~/.local/state/cosmic/io.github.BlakeGardner.cosmic-ext-applet-torrent-throttle:create",
+    "--talk-name=org.freedesktop.Flatpak"
+  ],
+  "build-options": {
+    "append-path": "/usr/lib/sdk/rust-stable/bin",
+    "env": {
+      "CARGO_HOME": "/run/build/cosmic-ext-applet-torrent-throttle/cargo"
+    }
+  },
+  "modules": [
+    {
+      "name": "cosmic-ext-applet-torrent-throttle",
+      "buildsystem": "simple",
+      "build-options": {
+        "env": {
+          "CARGO_HOME": "/run/build/cosmic-ext-applet-torrent-throttle/cargo"
+        }
+      },
+      "build-commands": [
+        "just build-release --offline",
+        "just prefix=/app install"
+      ],
+      "sources": [
+        "cargo-sources.json",
+        {
+          "type": "git",
+          "url": "https://github.com/BlakeGardner/cosmic-ext-applet-torrent-throttle.git",
+          "commit": "7fd9746131a012445199013c819a2129b712ec57"
+        }
+      ]
+    }
+  ]
+}

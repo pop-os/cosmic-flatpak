@@ -9,10 +9,10 @@
   "command": "cosmic-ext-applet-minimon",
   "finish-args": [
     "--socket=wayland",
-    "--socket=fallback-x11",
     "--filesystem=xdg-config/cosmic:rw",
     "--talk-name=com.system76.CosmicSettingsDaemon",
     "--talk-name=org.freedesktop.Flatpak",
+    "--system-talk-name=org.freedesktop.UPower",
     "--filesystem=/sys/class/hwmon:ro",
     "--filesystem=/sys/class/drm:ro",
     "--filesystem=/sys/devices:ro",
@@ -47,7 +47,7 @@
         {
           "type": "git",
           "url": "https://github.com/cosmic-utils/minimon-applet.git",
-          "commit": "223b84b7dcd019a05ec5ab7d62eed9647d1df9ba"
+          "commit": "d5b00f8348f951ce48d94771af2b9001ab838295"
         },
         "cargo-sources.json"
       ]

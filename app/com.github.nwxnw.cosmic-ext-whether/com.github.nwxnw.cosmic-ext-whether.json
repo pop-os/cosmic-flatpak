@@ -39,8 +39,8 @@
                 {
                     "type": "git",
                     "url": "https://github.com/nwxnw/cosmic-ext-whether",
-                    "tag": "v0.3.2",
-                    "commit": "b34aa053049646d4e8075ad4dada0325eb38c297"
+                    "tag": "v0.4.0",
+                    "commit": "8484fd1a54f036af361763ccfbef3bd40042c669"
                 },
                 "cargo-sources.json"
             ]

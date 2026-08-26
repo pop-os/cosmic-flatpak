@@ -1,7 +1,7 @@
 {
   "id": "io.github.avomar.cosmic-ext-applet-bitrate",
   "runtime": "org.freedesktop.Platform",
-  "runtime-version": "24.08",
+  "runtime-version": "25.08",
   "base": "com.system76.Cosmic.BaseApp",
   "base-version": "stable",
   "sdk": "org.freedesktop.Sdk",
@@ -12,7 +12,8 @@
     "--filesystem=/sys/class/net:ro",
     "--socket=wayland",
     "--device=dri",
-    "--talk-name=com.system76.CosmicSettingsDaemon"
+    "--talk-name=com.system76.CosmicSettingsDaemon",
+    "--talk-name=org.freedesktop.portal.Desktop"
   ],
   "build-options": {
     "append-path": "/usr/lib/sdk/rust-stable/bin",
@@ -25,8 +26,8 @@
       "name": "cosmic-ext-applet-bitrate",
       "buildsystem": "simple",
       "build-commands": [
-        "cargo --offline fetch --manifest-path Cargo.toml",
-        "cargo --offline build --release",
+        "cargo --offline fetch --manifest-path Cargo.toml --verbose",
+        "cargo --offline build --release --verbose",
         "install -Dm0755 ./target/release/cosmic-ext-applet-bitrate /app/bin/cosmic-ext-applet-bitrate",
         "install -Dm0644 ./res/io.github.avomar.cosmic-ext-applet-bitrate.desktop -t /app/share/applications/",
         "install -Dm0644 ./res/io.github.avomar.cosmic-ext-applet-bitrate.metainfo.xml -t /app/share/metainfo/",
@@ -36,8 +37,8 @@
         {
           "type": "git",
           "url": "https://github.com/Aviral-Omar/bitrate.git",
-          "tag": "v3.0.1",
-          "commit": "630565e689656b5163cdca4e0d5e6e51b040003a"
+          "tag": "v3.0.2",
+          "commit": "e059dfe26cdc8097621a57dee54bd95189adfd00"
         },
         "cargo-sources.json"
       ]

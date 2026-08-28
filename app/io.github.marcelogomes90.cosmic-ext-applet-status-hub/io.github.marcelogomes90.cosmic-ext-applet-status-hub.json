@@ -1,0 +1,64 @@
+{
+  "id": "io.github.marcelogomes90.cosmic-ext-applet-status-hub",
+  "runtime": "org.freedesktop.Platform",
+  "runtime-version": "25.08",
+  "base": "com.system76.Cosmic.BaseApp",
+  "base-version": "stable",
+  "sdk": "org.freedesktop.Sdk",
+  "sdk-extensions": [
+    "org.freedesktop.Sdk.Extension.rust-stable"
+  ],
+  "command": "cosmic-status-hub",
+  "finish-args": [
+    "--share=ipc",
+    "--socket=wayland",
+    "--device=dri",
+    "--socket=session-bus",
+    "--filesystem=xdg-config/cosmic:ro",
+    "--filesystem=host-os:ro",
+    "--filesystem=/var/lib/flatpak/exports/share:ro",
+    "--filesystem=~/.local/share/flatpak/exports/share:ro",
+    "--filesystem=/var/lib/flatpak/app:ro",
+    "--filesystem=~/.local/share/flatpak/app:ro",
+    "--filesystem=~/.var/app:ro",
+    "--filesystem=~/.local/share/icons:ro",
+    "--filesystem=~/.icons:ro",
+    "--filesystem=/var/lib/snapd/desktop:ro"
+  ],
+  "build-options": {
+    "append-path": "/usr/lib/sdk/rust-stable/bin",
+    "env": {
+      "CARGO_HOME": "/run/build/cosmic-status-hub/cargo"
+    }
+  },
+  "modules": [
+    {
+      "name": "cosmic-status-hub",
+      "buildsystem": "simple",
+      "build-commands": [
+        "test -f cargo/config && mv cargo/config cargo/config.toml || true",
+        "cargo --offline fetch --manifest-path Cargo.toml --verbose",
+        "cargo --offline build --release --verbose",
+        "install -Dm0755 target/release/cosmic-status-hub /app/bin/cosmic-status-hub-bin",
+        "install -Dm0755 target/release/cosmic-status-hub-dump /app/bin/cosmic-status-hub-dump",
+        "install -Dm0755 cosmic-status-hub-wrapper /app/bin/cosmic-status-hub",
+        "install -Dm0644 resources/io.github.marcelogomes90.cosmic-ext-applet-status-hub.desktop /app/share/applications/io.github.marcelogomes90.cosmic-ext-applet-status-hub.desktop",
+        "install -Dm0644 resources/io.github.marcelogomes90.cosmic-ext-applet-status-hub.metainfo.xml /app/share/metainfo/io.github.marcelogomes90.cosmic-ext-applet-status-hub.metainfo.xml",
+        "install -Dm0644 resources/io.github.marcelogomes90.cosmic-ext-applet-status-hub.svg /app/share/icons/hicolor/scalable/apps/io.github.marcelogomes90.cosmic-ext-applet-status-hub.svg"
+      ],
+      "sources": [
+        {
+          "type": "git",
+          "url": "https://github.com/marcelogomes90/cosmic-ext-applet-status-hub.git",
+          "tag": "v1.0.2",
+          "commit": "e2b52801bb9e74ed5819fd00770392e0fd7649c7"
+        },
+        {
+          "type": "file",
+          "path": "cosmic-status-hub-wrapper"
+        },
+        "cargo-sources.json"
+      ]
+    }
+  ]
+}

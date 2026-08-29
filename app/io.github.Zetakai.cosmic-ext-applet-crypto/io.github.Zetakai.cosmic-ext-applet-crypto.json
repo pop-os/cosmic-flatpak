@@ -1,0 +1,50 @@
+{
+  "app-id": "io.github.Zetakai.cosmic-ext-applet-crypto",
+  "runtime": "org.freedesktop.Platform",
+  "runtime-version": "25.08",
+  "sdk": "org.freedesktop.Sdk",
+  "sdk-extensions": [
+    "org.freedesktop.Sdk.Extension.rust-stable"
+  ],
+  "base": "com.system76.Cosmic.BaseApp",
+  "base-version": "stable",
+  "command": "cosmic-ext-applet-crypto",
+  "finish-args": [
+    "--socket=wayland",
+    "--socket=fallback-x11",
+    "--share=ipc",
+    "--device=dri",
+    "--talk-name=com.system76.CosmicSettingsDaemon",
+    "--share=network"
+  ],
+  "build-options": {
+    "append-path": "/usr/lib/sdk/rust-stable/bin",
+    "env": {
+      "CARGO_HOME": "/run/build/cosmic-ext-applet-crypto/cargo"
+    }
+  },
+  "modules": [
+    {
+      "name": "cosmic-ext-applet-crypto",
+      "buildsystem": "simple",
+      "build-commands": [
+        "cargo --offline fetch --manifest-path Cargo.toml --verbose",
+        "cargo --offline build --release --verbose",
+        "install -Dm0755 ./target/release/cosmic-ext-applet-crypto /app/bin/cosmic-ext-applet-crypto",
+        "install -Dm0644 ./target/xdgen/app.desktop /app/share/applications/io.github.Zetakai.cosmic-ext-applet-crypto.desktop",
+        "install -Dm0644 ./target/xdgen/app.metainfo.xml /app/share/metainfo/io.github.Zetakai.cosmic-ext-applet-crypto.metainfo.xml",
+        "install -Dm0644 ./resources/icons/hicolor/scalable/apps/io.github.Zetakai.cosmic-ext-applet-crypto.svg /app/share/icons/hicolor/scalable/apps/io.github.Zetakai.cosmic-ext-applet-crypto.svg",
+        "install -Dm0644 ./resources/icons/hicolor/scalable/apps/io.github.Zetakai.cosmic-ext-applet-crypto-symbolic.svg /app/share/icons/hicolor/scalable/apps/io.github.Zetakai.cosmic-ext-applet-crypto-symbolic.svg"
+      ],
+      "sources": [
+        {
+          "type": "git",
+          "url": "https://github.com/Zetakai/cosmic-ext-applet-crypto.git",
+          "tag": "v0.1.0",
+          "commit": "359e7c17b3deab9f2721881a7c6fc85c4e588901"
+        },
+        "cargo-sources.json"
+      ]
+    }
+  ]
+}

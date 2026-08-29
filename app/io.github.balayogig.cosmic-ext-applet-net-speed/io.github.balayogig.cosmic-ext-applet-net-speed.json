@@ -1,0 +1,45 @@
+{
+  "id": "io.github.balayogig.cosmic-ext-applet-net-speed",
+  "runtime": "org.freedesktop.Platform",
+  "runtime-version": "25.08",
+  "sdk": "org.freedesktop.Sdk",
+  "sdk-extensions": ["org.freedesktop.Sdk.Extension.rust-stable"],
+  "command": "cosmic-ext-applet-net-speed",
+  "finish-args": [
+    "--filesystem=/sys/class/net:ro",
+    "--talk-name=com.system76.CosmicSettingsDaemon.*",
+    "--talk-name=com.system76.CosmicSettingsDaemon",
+    "--socket=wayland",
+    "--talk-name=org.freedesktop.Flatpak",
+    "--talk-name=org.freedesktop.portal.Desktop"
+  ],
+  "build-options": {
+    "append-path": "/usr/lib/sdk/rust-stable/bin",
+    "env": {
+      "CARGO_HOME": "/run/build/cosmic-ext-applet-net-speed/cargo"
+    }
+  },
+  "modules": [
+    {
+      "name": "cosmic-ext-applet-net-speed",
+      "buildsystem": "simple",
+      "build-commands": [
+        "cargo --offline fetch --manifest-path Cargo.toml --verbose",
+        "cargo --offline build --release --verbose",
+        "install -Dm0755 ./target/release/cosmic-ext-applet-net-speed /app/bin/cosmic-ext-applet-net-speed",
+        "install -Dm0644 ./data/io.github.balayogig.cosmic-ext-applet-net-speed.desktop -t /app/share/applications/",
+        "install -Dm0644 ./data/io.github.balayogig.cosmic-ext-applet-net-speed.metainfo.xml -t /app/share/metainfo/",
+        "install -Dm0644 ./data/io.github.balayogig.cosmic-ext-applet-net-speed-symbolic.svg -t /app/share/icons/hicolor/scalable/apps/"
+      ],
+      "sources": [
+        {
+          "type": "git",
+          "url": "https://github.com/BalayogiG/cosmic-ext-applet-net-speed.git",
+          "commit": "4e3fae9090fb5d40403e988332f1ce3645e1ef32",
+          "tag": "v0.1.0"
+        },
+        "./cargo-sources.json"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "id": "io.github.marcelogomes90.cosmic-ext-applet-clip-keep",
+  "runtime": "org.freedesktop.Platform",
+  "runtime-version": "25.08",
+  "base": "com.system76.Cosmic.BaseApp",
+  "base-version": "stable",
+  "sdk": "org.freedesktop.Sdk",
+  "sdk-extensions": [
+    "org.freedesktop.Sdk.Extension.rust-stable"
+  ],
+  "command": "cosmic-ext-applet-clip-keep",
+  "finish-args": [
+    "--share=ipc",
+    "--socket=wayland",
+    "--filesystem=/run/user",
+    "--filesystem=xdg-config/cosmic:ro",
+    "--filesystem=xdg-config/cosmic/io.github.marcelogomes90.cosmic-ext-applet-clip-keep:create",
+    "--talk-name=com.system76.CosmicSettingsDaemon",
+    "--talk-name=com.system76.CosmicSettingsDaemon.*"
+  ],
+  "build-options": {
+    "append-path": "/usr/lib/sdk/rust-stable/bin",
+    "env": {
+      "CARGO_HOME": "/run/build/cosmic-ext-applet-clip-keep/cargo"
+    }
+  },
+  "modules": [
+    {
+      "name": "cosmic-ext-applet-clip-keep",
+      "buildsystem": "simple",
+      "build-commands": [
+        "cargo --offline fetch --manifest-path Cargo.toml --verbose",
+        "just build-release --offline --locked",
+        "just prefix=/app install"
+      ],
+      "sources": [
+        {
+          "type": "git",
+          "url": "https://github.com/marcelogomes90/cosmic-ext-applet-clip-keep.git",
+          "tag": "v1.1.1",
+          "commit": "f4d6c38eb9cdb832375ab4f9ab798729ab4d774e"
+        },
+        "cargo-sources.json"
+      ]
+    }
+  ]
+}

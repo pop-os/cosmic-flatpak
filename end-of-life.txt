@@ -1,4 +1,15 @@
 # These IDs are end of life
-# This is in the format OldID=NewID
+#
+# Format: OldID=NewID[=Reason]
+#
+#   OldID=NewID          the app was renamed; existing installs are rebased onto NewID
+#   OldID=               the app was withdrawn; it is marked end of life with no replacement
+#   OldID==Reason        as above, with a custom reason shown to users
+#
+# A Reason may also be given for a rename. When it is omitted, a default is used.
+#
+# Deleting a manifest from app/ only stops it being rebuilt -- the ref stays in the
+# repo and the app stays installable -- so a withdrawn app needs an entry here too.
 co.uk.cappsy.CosmicAppletLogoMenu=dev.cappsy.CosmicExtAppletLogoMenu
 io.github.Aviral_Omar.cosmic-ext-applet-bitrate=io.github.avomar.cosmic-ext-applet-bitrate
+io.github.cosmic-ext-applet-app-switcher==This applet cannot function inside the Flatpak sandbox. Install it from https://github.com/j0rdiun/cosmic-ext-app-switcher instead.

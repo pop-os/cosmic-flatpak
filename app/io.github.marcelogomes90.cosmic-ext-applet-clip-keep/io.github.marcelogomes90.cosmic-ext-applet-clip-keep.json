@@ -8,7 +8,7 @@
   "sdk-extensions": [
     "org.freedesktop.Sdk.Extension.rust-stable"
   ],
-  "command": "cosmic-clip-keep",
+  "command": "cosmic-ext-applet-clip-keep",
   "finish-args": [
     "--share=ipc",
     "--socket=wayland",
@@ -21,12 +21,12 @@
   "build-options": {
     "append-path": "/usr/lib/sdk/rust-stable/bin",
     "env": {
-      "CARGO_HOME": "/run/build/cosmic-clip-keep/cargo"
+      "CARGO_HOME": "/run/build/cosmic-ext-applet-clip-keep/cargo"
     }
   },
   "modules": [
     {
-      "name": "cosmic-clip-keep",
+      "name": "cosmic-ext-applet-clip-keep",
       "buildsystem": "simple",
       "build-commands": [
         "cargo --offline fetch --manifest-path Cargo.toml --verbose",
@@ -37,7 +37,8 @@
         {
           "type": "git",
           "url": "https://github.com/marcelogomes90/cosmic-ext-applet-clip-keep.git",
-          "tag": "v1.1.0"
+          "tag": "v1.1.1",
+          "commit": "f4d6c38eb9cdb832375ab4f9ab798729ab4d774e"
         },
         "cargo-sources.json"
       ]

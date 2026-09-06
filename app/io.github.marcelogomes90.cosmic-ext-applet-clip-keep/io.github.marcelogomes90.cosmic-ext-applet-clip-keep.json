@@ -37,8 +37,8 @@
         {
           "type": "git",
           "url": "https://github.com/marcelogomes90/cosmic-ext-applet-clip-keep.git",
-          "tag": "v1.1.1",
-          "commit": "f4d6c38eb9cdb832375ab4f9ab798729ab4d774e"
+          "tag": "v1.2.0",
+          "commit": "5267dc0f0c7a0d7845494c28e3898f3f23734dba"
         },
         "cargo-sources.json"
       ]

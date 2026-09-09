@@ -1,0 +1,52 @@
+{
+  "id": "io.github.JaredTweed.WeeklyCommits",
+  "runtime": "org.freedesktop.Platform",
+  "runtime-version": "25.08",
+  "base": "com.system76.Cosmic.BaseApp",
+  "base-version": "stable",
+  "sdk": "org.freedesktop.Sdk",
+  "sdk-extensions": [
+    "org.freedesktop.Sdk.Extension.rust-stable"
+  ],
+  "command": "cosmic-weekly-commits",
+  "finish-args": [
+    "--share=ipc",
+    "--socket=wayland",
+    "--socket=fallback-x11",
+    "--device=dri",
+    "--share=network",
+    "--talk-name=com.system76.CosmicSettingsDaemon",
+    "--talk-name=com.system76.CosmicSettingsDaemon.Config",
+    "--talk-name=com.system76.CosmicSettingsDaemon.Config.*",
+    "--filesystem=xdg-config/cosmic:rw"
+  ],
+  "build-options": {
+    "append-path": "/usr/lib/sdk/rust-stable/bin",
+    "env": {
+      "CARGO_HOME": "/run/build/cosmic-weekly-commits/cargo"
+    }
+  },
+  "modules": [
+    {
+      "name": "cosmic-weekly-commits",
+      "buildsystem": "simple",
+      "build-commands": [
+        "cargo --offline fetch --manifest-path Cargo.toml --verbose",
+        "cargo --offline build --release --verbose",
+        "install -Dm0755 target/release/cosmic-weekly-commits /app/bin/cosmic-weekly-commits",
+        "install -Dm0755 target/release/cosmic-weekly-commits-settings /app/bin/cosmic-weekly-commits-settings",
+        "install -Dm0644 res/io.github.JaredTweed.WeeklyCommits.desktop /app/share/applications/io.github.JaredTweed.WeeklyCommits.desktop",
+        "install -Dm0644 res/io.github.JaredTweed.WeeklyCommits.metainfo.xml /app/share/metainfo/io.github.JaredTweed.WeeklyCommits.metainfo.xml",
+        "install -Dm0644 res/io.github.JaredTweed.WeeklyCommits.svg /app/share/icons/hicolor/scalable/apps/io.github.JaredTweed.WeeklyCommits.svg"
+      ],
+      "sources": [
+        {
+          "type": "git",
+          "url": "https://github.com/JaredTweed/weekly-commits.git",
+          "commit": "3425bf631bebb60a7f8d6a9a628dbdc6b48a9487"
+        },
+        "cargo-sources.json"
+      ]
+    }
+  ]
+}

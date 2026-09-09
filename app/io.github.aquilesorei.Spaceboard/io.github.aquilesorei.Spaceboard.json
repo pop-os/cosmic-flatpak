@@ -1,0 +1,72 @@
+{
+  "id": "io.github.aquilesorei.Spaceboard",
+  "runtime": "org.freedesktop.Platform",
+  "runtime-version": "24.08",
+  "sdk": "org.freedesktop.Sdk",
+  "sdk-extensions": ["org.freedesktop.Sdk.Extension.rust-stable"],
+  "command": "cosmic-ext-spaceboard",
+  "finish-args": [
+    "--socket=wayland",
+    "--socket=session-bus",
+    "--filesystem=~/.local/bin:ro",
+    "--talk-name=com.system76.CosmicSettingsDaemon",
+    "--talk-name=org.freedesktop.portal.Desktop",
+    "--device=dri"
+  ],
+  "build-options": {
+    "append-path": "/usr/lib/sdk/rust-stable/bin",
+    "env": {
+      "CARGO_HOME": "/run/build/spaceboard/cargo"
+    }
+  },
+  "modules": [
+    {
+      "name": "wvkbd",
+      "buildsystem": "simple",
+      "build-commands": [
+        "make",
+        "install -Dm755 wvkbd-mobintl /app/bin/wvkbd-mobintl"
+      ],
+      "sources": [
+        {
+          "type": "git",
+          "url": "https://github.com/Aquilesorei/wvkbd.git",
+          "commit": "ca2d9badbf15f474bbb80f860ca96564fa2c099e"
+        }
+      ],
+      "modules": [
+        {
+          "name": "wayland-protocols",
+          "buildsystem": "meson",
+          "sources": [
+            {
+              "type": "archive",
+              "url": "https://gitlab.freedesktop.org/wayland/wayland-protocols/-/releases/1.32/downloads/wayland-protocols-1.32.tar.xz",
+              "sha256": "7459799d340c8296b695ef857c07ddef24c5a09b09ab6a74f7b92640d2b1ba11"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "spaceboard",
+      "buildsystem": "simple",
+      "build-commands": [
+        "cargo --offline fetch --manifest-path Cargo.toml --verbose",
+        "cargo --offline build --release --verbose",
+        "install -Dm755 ./target/release/cosmic-ext-spaceboard /app/bin/cosmic-ext-spaceboard",
+        "install -Dm644 ./spaceboard.desktop /app/share/applications/io.github.aquilesorei.Spaceboard.desktop",
+        "install -Dm644 ./io.github.aquilesorei.Spaceboard.appdata.xml /app/share/metainfo/io.github.aquilesorei.Spaceboard.metainfo.xml",
+        "install -Dm644 ./icons/hicolor/scalable/apps/input-keyboard-symbolic.svg /app/share/icons/hicolor/scalable/apps/io.github.aquilesorei.Spaceboard.svg"
+      ],
+      "sources": [
+        {
+          "type": "git",
+          "url": "https://github.com/Aquilesorei/spaceboard.git",
+          "branch": "master"
+        },
+        "./cargo-sources.json"
+      ]
+    }
+  ]
+}

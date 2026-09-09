@@ -1,0 +1,45 @@
+{
+  "id": "com.github.bgub.CosmicExtAppletPomodoro",
+  "runtime": "org.freedesktop.Platform",
+  "runtime-version": "25.08",
+  "base": "com.system76.Cosmic.BaseApp",
+  "base-version": "stable",
+  "sdk": "org.freedesktop.Sdk",
+  "sdk-extensions": ["org.freedesktop.Sdk.Extension.rust-stable"],
+  "command": "cosmic-ext-applet-pomodoro",
+  "finish-args": [
+    "--share=ipc",
+    "--socket=wayland",
+    "--talk-name=com.system76.CosmicSettingsDaemon",
+    "--filesystem=xdg-config/cosmic:rw"
+  ],
+  "build-options": {
+    "append-path": "/usr/lib/sdk/rust-stable/bin",
+    "env": {
+      "CARGO_HOME": "/run/build/cosmic-ext-applet-pomodoro/cargo"
+    }
+  },
+  "modules": [
+    {
+      "name": "cosmic-ext-applet-pomodoro",
+      "buildsystem": "simple",
+      "build-commands": [
+        "cargo --offline fetch --manifest-path Cargo.toml --verbose",
+        "cargo --offline build --release --verbose",
+        "install -Dm0755 ./target/release/cosmic-ext-applet-pomodoro /app/bin/cosmic-ext-applet-pomodoro",
+        "install -Dm0644 ./resources/app.desktop /app/share/applications/com.github.bgub.CosmicExtAppletPomodoro.desktop",
+        "install -Dm0644 ./resources/app.metainfo.xml /app/share/metainfo/com.github.bgub.CosmicExtAppletPomodoro.metainfo.xml",
+        "install -Dm0644 ./resources/icon.svg /app/share/icons/hicolor/scalable/apps/com.github.bgub.CosmicExtAppletPomodoro.svg"
+      ],
+      "sources": [
+        {
+          "type": "git",
+          "url": "https://github.com/cosmic-utils/cosmic-ext-applet-pomodoro.git",
+          "tag": "0.1.2",
+          "commit": "eaadeca0f88c2e602fb00ede7ea1bee6ca7760f5"
+        },
+        "cargo-sources.json"
+      ]
+    }
+  ]
+}

@@ -5,4 +5,5 @@
 - [ ] My change is accurately described in the commit message.
 - [ ] My contribution is tested and working as described.
 - [ ] I have read the [Developer Certificate of Origin](https://developercertificate.org/) and certify my contribution under its conditions.
+- [ ] I have read the [COSMIC Trademark Policy](https://github.com/pop-os/cosmic-epoch/blob/master/TRADEMARK.md) and have not used the COSMIC trademark without permission.
 

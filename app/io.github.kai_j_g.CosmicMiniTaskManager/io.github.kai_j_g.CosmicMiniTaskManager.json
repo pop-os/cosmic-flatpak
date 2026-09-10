@@ -48,8 +48,8 @@
         {
           "type": "git",
           "url": "https://github.com/Kai-J-G/Cosmic-Mini-TaskManager.git",
-          "commit": "2a807a00bf6810abe21c8e32ebb350f3ecc4a9f6",
-          "branch": "feat/flatpak-host-access"
+          "commit": "69a988c4b62f8d6a5d10556c04e8121c7b7bf070",
+          "tag": "v1.2.0"
         },
         "cargo-sources.json",
         {

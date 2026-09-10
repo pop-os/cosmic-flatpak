@@ -48,8 +48,8 @@
         {
           "type": "git",
           "url": "https://github.com/Kai-J-G/cosmic-ext-mini-taskmanager.git",
-          "commit": "69a988c4b62f8d6a5d10556c04e8121c7b7bf070",
-          "tag": "v1.2.0"
+          "commit": "9caff8fd1e5021183d5762ee42f3952223aa966c",
+          "tag": "v1.2.1"
         },
         "cargo-sources.json",
         {

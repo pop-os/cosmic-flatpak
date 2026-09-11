@@ -1,13 +1,13 @@
 # Caffeine Applet for [COSMIC DE](https://system76.com/cosmic/)
 
-A simple COSMIC panel applet that prevents your system from going idle. Click the coffee icon to toggle an inhibit lock that blocks idle and sleep, keeping your screen on and your machine awake.
+A third-party applet for the [COSMIC desktop](https://system76.com/cosmic/) that prevents your system from going idle. Not official COSMIC software and not endorsed by System76. Click the coffee icon to toggle an inhibit lock that blocks idle and sleep, keeping your screen on and your machine awake.
 
 Uses the logind D-Bus `Inhibit` interface directly — no child processes, no PID files, crash-safe by design. Works on any system running systemd-logind or elogind.
 
 ## Features
 
-- **One-click toggle**: Click the panel icon to enable/disable idle and sleep inhibition.
-- **Lid-close prevention**: Optionally prevent sleep when closing the laptop lid (via config).
+- **One-click toggle**: Click the panel icon to open a menu and pick how long to inhibit — 15 minutes, 30 minutes, 1 hour, or indefinitely.
+- **Auto-expiry**: Timed sessions release the inhibit lock on their own when time's up — no need to remember to turn it off.
 - **Crash-safe**: Uses a file descriptor–based inhibit lock. If the applet crashes, the OS automatically releases the lock.
 - **Minimal**: No background processes, no polling, near-zero resource usage.
 - **Distro-agnostic**: Works with systemd-logind and elogind.
@@ -26,7 +26,7 @@ flatpak install --user cosmic com.github.codevardhan.caffeine-applet
 ```
 
 If you have COSMIC Store installed, it should also be visible there under the
-**COSMIC Applets** category, provided you have _both_ the `flathub` and
+**COSMIC Applets** category, provided you have *both* the `flathub` and
 `cosmic` remotes added at **user** scope. System-scope remotes currently
 don't surface applets correctly in COSMIC Store
 ([pop-os/cosmic-store#477](https://github.com/pop-os/cosmic-store/issues/477)),
@@ -61,24 +61,6 @@ sudo rm /usr/share/metainfo/com.github.codevardhan.caffeine-applet.metainfo.xml
 ```
 
 Log out and back in for COSMIC settings to update.
-
-## Configuration
-
-On first run, a config file is created at:
-
-```
-~/.config/cosmic/com.github.codevardhan.caffeine-applet/v1/
-```
-
-### Prevent lid-close sleep
-
-By default, closing the laptop lid will still trigger sleep even when caffeine is active. To also block lid-close sleep:
-
-```sh
-echo "true" > ~/.config/cosmic/com.github.codevardhan.caffeine-applet/v1/inhibit_lid
-```
-
-Restart the applet for the change to take effect. Set back to `"false"` to disable.
 
 ## Packaging
 

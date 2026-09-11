@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop-application">
+  <id>com.github.codevardhan.caffeine-applet</id>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>MPL-2.0</project_license>
+  <name>Caffeine Applet</name>
+  <summary>Keep your system awake on demand</summary>
+
+  <description>
+    <p>
+      A simple COSMIC panel applet that prevents your system from going idle.
+      Click the coffee icon to toggle an inhibit lock that blocks idle and sleep,
+      keeping your screen on and your machine awake.
+    </p>
+    <p>
+      Uses the logind D-Bus interface, so it works on any system running
+      systemd-logind or elogind. Minimal resource usage with no background processes.
+    </p>
+  </description>
+
+  <developer id="com.github.codevardhan">
+    <name>Harshavardhan Manohar</name>
+  </developer>
+
+  <url type="homepage">https://github.com/codevardhan/caffeine-applet</url>
+  <url type="bugtracker">https://github.com/codevardhan/caffeine-applet/issues</url>
+  <url type="vcs-browser">https://github.com/codevardhan/caffeine-applet</url>
+
+  <launchable type="desktop-id">com.github.codevardhan.caffeine-applet.desktop</launchable>
+
+  <provides>
+    <id>com.system76.CosmicApplet</id>
+  </provides>
+
+  <releases>
+    <release version="0.1.0" date="2025-03-19">
+      <description>
+        <p>Initial release</p>
+      </description>
+    </release>
+  </releases>
+
+  <screenshots>
+    <screenshot type="default">
+      <image>https://raw.githubusercontent.com/codevardhan/caffeine-applet/main/screenshots/screenshot_on.png</image>
+      <caption>Caffeine Applet active in the COSMIC panel</caption>
+    </screenshot>
+  </screenshots>
+
+  <content_rating type="oars-1.1" />
+</component>

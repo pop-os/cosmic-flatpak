@@ -1,0 +1,13 @@
+[Desktop Entry]
+Name=Caffeine Applet
+Type=Application
+Exec=caffeine-applet
+Terminal=false
+Categories=COSMIC;
+Keywords=COSMIC;Iced;
+Icon=com.github.codevardhan.caffeine-applet
+StartupNotify=true
+NoDisplay=true
+X-CosmicApplet=true
+X-CosmicHoverPopup=End
+X-OverflowPriority=10

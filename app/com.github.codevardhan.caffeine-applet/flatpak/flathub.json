@@ -1,0 +1,10 @@
+{
+    "linter": {
+        "exceptions": {
+            "appid-uses-code-hosting-domain": "No personal domain; project is hosted on GitHub",
+            "finish-args-only-wayland": "COSMIC DE is Wayland-only, X11 fallback is not needed",
+            "finish-args-login1-system-talk-name": "Required to call org.freedesktop.login1.Manager.Inhibit for idle/sleep inhibition",
+            "desktop-file-is-nodisplay": "This is a COSMIC panel applet, not a standalone launchable application"
+        }
+    }
+}

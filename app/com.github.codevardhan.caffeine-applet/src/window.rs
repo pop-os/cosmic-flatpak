@@ -51,24 +51,13 @@ impl CaffeineDuration {
     }
 }
 
+#[derive(Default)]
 pub struct CaffeineApplet {
     core: Core,
     popup: Option<Id>,
     inhibit_fd: Option<OwnedFd>,
     active_choice: Option<CaffeineDuration>,
     deadline: Option<Instant>,
-}
-
-impl Default for CaffeineApplet {
-    fn default() -> Self {
-        Self {
-            core: Core::default(),
-            popup: None,
-            inhibit_fd: None,
-            active_choice: None,
-            deadline: None,
-        }
-    }
 }
 
 #[derive(Clone, Debug)]

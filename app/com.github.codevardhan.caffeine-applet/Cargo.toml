@@ -1,0 +1,25 @@
+[package]
+name = "caffeine-applet"
+version = "0.1.0"
+edition = "2021"
+license = "MPL-2.0"
+description = "A simple COSMIC applet that prevents your system from going idle by creating a systemd-inhibit lock session."
+repository = "https://github.com/codevardhan/caffeine-applet"
+
+[dependencies]
+i18n-embed-fl = "0.9.2"
+rust-embed = "8.5.0"
+
+[dependencies.i18n-embed]
+version = "0.15"
+features = ["fluent-system", "desktop-requester"]
+
+[dependencies.libcosmic]
+git = "https://github.com/pop-os/libcosmic"
+default-features = false
+features = ["applet", "tokio", "wayland"]
+
+[dependencies.zbus]
+version = "5"
+default-features = false
+features = ["blocking"]

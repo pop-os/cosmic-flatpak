@@ -1,7 +1,7 @@
 {
   "id": "dev.DBrox.CosmicPrivacyIndicator",
   "runtime": "org.freedesktop.Platform",
-  "runtime-version": "25.08",
+  "runtime-version": "26.08",
   "sdk": "org.freedesktop.Sdk",
   "sdk-extensions": [
     "org.freedesktop.Sdk.Extension.rust-stable",
@@ -44,8 +44,8 @@
         {
           "type": "git",
           "url": "https://github.com/pipewire/pipewire.git",
-          "tag": "1.6.6",
-          "commit": "a1c1d9f9f128ec987f23a0140a1704b8f8781787"
+          "tag": "1.5.85",
+          "commit": "0a27618cd4f43017c8e2aa7b68172e64ba48eb23"
         }
       ]
     },
@@ -64,7 +64,7 @@
         {
           "type": "git",
           "url": "https://github.com/D-Brox/cosmic-ext-applet-privacy-indicator.git",
-          "commit": "fd0d0db6c42c58d0845142ffc60cfd41c4728283"
+          "commit": "dbf654ad841f40f367d6420ae8a5c0dbf7bb0e27",
         },
         "generated-sources.json"
       ]

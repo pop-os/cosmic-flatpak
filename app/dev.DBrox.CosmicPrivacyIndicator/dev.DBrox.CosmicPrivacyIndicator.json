@@ -44,8 +44,8 @@
         {
           "type": "git",
           "url": "https://github.com/pipewire/pipewire.git",
-          "tag": "1.5.85",
-          "commit": "0a27618cd4f43017c8e2aa7b68172e64ba48eb23"
+          "tag": "1.6.8",
+          "commit": "b741e0c74f5436f0c925f7741140db0efd32cf4e"
         }
       ]
     },

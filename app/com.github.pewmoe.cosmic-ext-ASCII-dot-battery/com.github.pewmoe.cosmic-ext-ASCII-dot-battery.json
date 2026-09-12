@@ -6,19 +6,15 @@
   "sdk-extensions": ["org.freedesktop.Sdk.Extension.rust-stable"],
   "command": "cosmic-ext-ascii-dot-battery",
   "finish-args": [
-    "--share=ipc",
     "--socket=wayland",
+    "--share=ipc",
     "--device=dri",
-    "--system-talk-name=net.hadess.PowerProfiles",
-    "--system-talk-name=org.freedesktop.UPower",
-    "--system-talk-name=org.freedesktop.login1",
+    "--filesystem=xdg-config/cosmic:rw",
+    "--filesystem=/sys/class/power_supply:ro",
     "--filesystem=/sys/class/backlight:ro",
-    "--filesystem=xdg-config/cosmic:ro",
-    "--filesystem=xdg-config/dconf:ro",
-    "--env=DCONF_PROFILE=cosmic",
-    "--filesystem=/usr/share/cosmic:rw",
-    "--filesystem=/usr/share/fonts:ro",
-    "--filesystem=xdg-data/fonts:ro"
+    "--talk-name=com.system76.CosmicSettingsDaemon",
+    "--system-talk-name=net.hadess.PowerProfiles",
+    "--system-talk-name=org.freedesktop.login1"
   ],
   
 	"build-options": {

@@ -1,0 +1,93 @@
+--- a/Cargo.toml
++++ b/Cargo.toml
+@@ -3,7 +3,7 @@
+ version = "0.1.0"
+ edition = "2024"
+ license = "GPL-3.0-only"
+-description = "Daymural: daily Microsoft Bing wallpaper applet for the COSMIC desktop"
++description = "Discover daily Bing wallpapers from your COSMIC panel"
+ repository = "https://github.com/ercling/cosmic-applet-daymural"
+ homepage = "https://github.com/ercling/cosmic-applet-daymural"
+ 
+--- a/data/io.github.ercling.cosmic-applet-daymural.metainfo.xml
++++ b/data/io.github.ercling.cosmic-applet-daymural.metainfo.xml
+@@ -4,9 +4,21 @@
+   <metadata_license>CC0-1.0</metadata_license>
+   <project_license>GPL-3.0-only</project_license>
+   <name>Daymural</name>
+-  <summary>Daymural: daily Microsoft Bing wallpaper applet for the COSMIC desktop</summary>
++  <summary>Discover daily Bing wallpapers from your COSMIC panel</summary>
+   <description>
+-    <p>Bring Microsoft Bing's daily UHD image to the COSMIC desktop, browse a local wallpaper history, and optionally match the system accent color to the current image.</p>
++    <p>Give your COSMIC desktop a fresh view with Microsoft Bing's daily UHD
++    wallpaper. Daymural lives in your panel, where you can preview the latest
++    image, read its attribution, and browse your downloaded wallpaper history.</p>
++    <ul>
++      <li>Download and apply the daily wallpaper automatically.</li>
++      <li>Browse saved images and choose a wallpaper from your panel.</li>
++      <li>Shuffle downloaded wallpapers at a configurable interval.</li>
++      <li>Keep 3, 8, or 30 days of images, or save them indefinitely.</li>
++      <li>Optionally match the COSMIC accent color to your wallpaper.</li>
++    </ul>
++    <p>Daymural respects wallpaper and accent color choices made in COSMIC
++    Settings. After installation, add Daymural to your panel through COSMIC
++    Settings. Automatic updates run while the applet is active in the panel.</p>
+     <p>Daymural is an unofficial, independent project and is not affiliated with, authorized by, sponsored by, or endorsed by Microsoft.</p>
+   </description>
+   <launchable type="desktop-id">io.github.ercling.cosmic-applet-daymural.desktop</launchable>
+@@ -15,8 +27,25 @@
+     <binary>daymural</binary>
+   </provides>
+   <url type="homepage">https://github.com/ercling/cosmic-applet-daymural</url>
++  <url type="bugtracker">https://github.com/ercling/cosmic-applet-daymural/issues</url>
++  <url type="help">https://github.com/ercling/cosmic-applet-daymural/blob/291b967b9b96c210ec364fa5cf3bfce896696057/docs/installation.md</url>
++  <categories>
++    <category>Utility</category>
++  </categories>
++  <keywords>
++    <keyword>wallpaper</keyword>
++    <keyword>Bing</keyword>
++    <keyword>applet</keyword>
++    <keyword>background</keyword>
++  </keywords>
++  <screenshots>
++    <screenshot type="default">
++      <caption>Browse wallpapers and configure shuffle, accent matching, and image history</caption>
++      <image type="source" width="371" height="585">https://raw.githubusercontent.com/ercling/cosmic-applet-daymural/291b967b9b96c210ec364fa5cf3bfce896696057/resources/screenshots/screenshot-main.png</image>
++    </screenshot>
++  </screenshots>
+   <developer id="io.github.ercling">
+-    <name>Oleksandr Mykhailiuta</name>
++    <name>Daymural Developers</name>
+   </developer>
+   <project_group>COSMIC</project_group>
+   <content_rating type="oars-1.1"/>
+--- a/src/app.rs
++++ b/src/app.rs
+@@ -5487,7 +5487,7 @@
+         assert_eq!(env!("CARGO_PKG_HOMEPAGE"), PROJECT_URL);
+         assert_eq!(
+             env!("CARGO_PKG_DESCRIPTION"),
+-            "Daymural: daily Microsoft Bing wallpaper applet for the COSMIC desktop"
++            "Discover daily Bing wallpapers from your COSMIC panel"
+         );
+     }
+ 
+@@ -6978,7 +6978,7 @@
+         )?;
+         require(
+             metainfo.contains("<developer id=\"io.github.ercling\">")
+-                && metainfo.contains("<name>Oleksandr Mykhailiuta</name>"),
++                && metainfo.contains("<name>Daymural Developers</name>"),
+             "metainfo must identify the developer",
+         )?;
+         require(
+@@ -8251,7 +8251,7 @@
+                 "<project_license>MIT</project_license>",
+             ),
+             (
+-                "<summary>Daymural: daily Microsoft Bing wallpaper applet for the COSMIC desktop</summary>",
++                "<summary>Discover daily Bing wallpapers from your COSMIC panel</summary>",
+                 "<summary>Wrong summary</summary>",
+             ),
+             ("<release version=\"0.1.0\"", "<release version=\"9.9.9\""),

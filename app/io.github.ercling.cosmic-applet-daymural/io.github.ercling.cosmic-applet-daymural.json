@@ -1,0 +1,53 @@
+{
+    "id": "io.github.ercling.cosmic-applet-daymural",
+    "runtime": "org.freedesktop.Platform",
+    "runtime-version": "25.08",
+    "sdk": "org.freedesktop.Sdk",
+    "sdk-extensions": [
+        "org.freedesktop.Sdk.Extension.rust-stable"
+    ],
+    "command": "daymural",
+    "finish-args": [
+        "--socket=wayland",
+        "--device=dri",
+        "--share=network",
+        "--filesystem=~/Pictures/BingWallpaper:create",
+        "--filesystem=xdg-config/cosmic:rw",
+        "--filesystem=~/.local/state/cosmic:create",
+        "--talk-name=com.system76.CosmicSettingsDaemon",
+        "--talk-name=com.system76.CosmicSettingsDaemon.*",
+        "--system-talk-name=org.freedesktop.login1"
+    ],
+    "build-options": {
+        "append-path": "/usr/lib/sdk/rust-stable/bin",
+        "env": {
+            "CARGO_HOME": "/run/build/daymural/cargo"
+        }
+    },
+    "modules": [
+        {
+            "name": "daymural",
+            "buildsystem": "simple",
+            "build-commands": [
+                "cargo --offline fetch --locked --manifest-path Cargo.toml --verbose",
+                "cargo --offline build --release --locked --verbose",
+                "install -Dm755 target/release/daymural /app/bin/daymural",
+                "install -Dm644 data/io.github.ercling.cosmic-applet-daymural.desktop /app/share/applications/io.github.ercling.cosmic-applet-daymural.desktop",
+                "install -Dm644 data/io.github.ercling.cosmic-applet-daymural.metainfo.xml /app/share/metainfo/io.github.ercling.cosmic-applet-daymural.metainfo.xml",
+                "install -Dm644 data/icons/io.github.ercling.cosmic-applet-daymural-symbolic.svg /app/share/icons/hicolor/scalable/apps/io.github.ercling.cosmic-applet-daymural-symbolic.svg"
+            ],
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://github.com/ercling/cosmic-applet-daymural.git",
+                    "commit": "291b967b9b96c210ec364fa5cf3bfce896696057"
+                },
+                "cargo-sources.json",
+                {
+                    "type": "patch",
+                    "path": "store-metadata.patch"
+                }
+            ]
+        }
+    ]
+}

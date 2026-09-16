@@ -45,7 +45,7 @@
         {
           "type": "git",
           "url": "https://github.com/hmrdsmoke/VoidWatcher",
-          "commit": "0aacd825e232772a5e5a287dc047594039d2228f",
+          "commit": "3b3fd4bf36a23d798ba1a01c3f1862e8befb2b4e",
           "disable-submodules": false
         },
         "cargo-sources.json"

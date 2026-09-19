@@ -34,6 +34,7 @@
         "install -Dm0755 ./target/release/cosmic-applet-yt-dlp-dixycat /app/bin/cosmic-applet-yt-dlp-dixycat",
         "install -Dm0644 ./res/io.github.felix_the_cat177.CosmicAppletYtDlp.desktop /app/share/applications/io.github.felix_the_cat177.CosmicAppletYtDlp.desktop",
         "install -Dm0644 ./res/io.github.felix_the_cat177.CosmicAppletYtDlp.metainfo.xml /app/share/metainfo/io.github.felix_the_cat177.CosmicAppletYtDlp.metainfo.xml",
+        "install -Dm0644 ./res/icons/hicolor/scalable/apps/Dixycat-yt-dlp-icon.png /app/share/icons/hicolor/scalable/apps/Dixycat-yt-dlp-icon.png",
         "install -Dm0644 ./res/icons/hicolor/scalable/apps/io.github.felix_the_cat177.CosmicAppletYtDlp.svg /app/share/icons/hicolor/scalable/apps/io.github.felix_the_cat177.CosmicAppletYtDlp.svg"
       ],
       "sources": [

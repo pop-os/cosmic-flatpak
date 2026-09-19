@@ -1,0 +1,55 @@
+{
+  "id": "com.github.hmrdsmoke.void-watcher",
+  "runtime": "org.freedesktop.Platform",
+  "runtime-version": "25.08",
+  "sdk": "org.freedesktop.Sdk",
+  "sdk-extensions": [
+    "org.freedesktop.Sdk.Extension.rust-stable"
+  ],
+  "base": "com.system76.Cosmic.BaseApp",
+  "base-version": "stable",
+  "command": "com.github.hmrdsmoke.void-watcher",
+  "finish-args": [
+    "--share=ipc",
+    "--socket=wayland",
+    "--device=dri",
+    "--filesystem=xdg-config/cosmic",
+    "--talk-name=org.freedesktop.DBus",
+    "--talk-name=org.freedesktop.Notifications",
+    "--talk-name=com.system76.CosmicTheme.Mode",
+    "--talk-name=com.system76.CosmicTheme.Dark",
+    "--talk-name=com.system76.CosmicTk",
+    "--own-name=com.github.hmrdsmoke.VoidWatcher"
+  ],
+  "build-options": {
+    "append-path": "/usr/lib/sdk/rust-stable/bin",
+    "env": {
+      "CARGO_HOME": "/run/build/void-watcher/cargo"
+    }
+  },
+  "modules": [
+    {
+      "name": "void-watcher",
+      "buildsystem": "simple",
+      "build-commands": [
+        "find flatpak-cargo -name \".git\" -type d -exec chmod -R u+w {} + 2>/dev/null || true",
+        "cargo --offline fetch --manifest-path Cargo.toml --verbose",
+        "cargo --offline build --release --verbose",
+        "install -Dm755 target/release/void-watcher /app/bin/com.github.hmrdsmoke.void-watcher",
+        "install -Dm644 resources/com.github.hmrdsmoke.void-watcher.desktop /app/share/applications/com.github.hmrdsmoke.void-watcher.desktop",
+        "install -Dm644 resources/com.github.hmrdsmoke.void-watcher.metainfo.xml /app/share/metainfo/com.github.hmrdsmoke.void-watcher.metainfo.xml",
+        "install -Dm644 resources/icon.svg /app/share/icons/hicolor/scalable/apps/com.github.hmrdsmoke.void-watcher.svg",
+        "install -Dm644 LICENSE /app/share/licenses/com.github.hmrdsmoke.void-watcher/LICENSE"
+      ],
+      "sources": [
+        {
+          "type": "git",
+          "url": "https://github.com/hmrdsmoke/VoidWatcher",
+          "commit": "3b3fd4bf36a23d798ba1a01c3f1862e8befb2b4e",
+          "disable-submodules": false
+        },
+        "cargo-sources.json"
+      ]
+    }
+  ]
+}

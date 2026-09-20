@@ -45,7 +45,7 @@
         {
           "type": "git",
           "url": "https://github.com/jjnuthuagen/cosmic-control-center-applet.git",
-          "commit": "8a5318f88bf4a0c3225988ef1f024ac07319164b"
+          "commit": "570fb583e006c0faf26f2b318b74fabdcd8e7106"
         },
         "cargo-sources.json"
       ]

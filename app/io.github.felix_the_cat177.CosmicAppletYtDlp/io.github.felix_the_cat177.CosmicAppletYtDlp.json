@@ -1,5 +1,5 @@
 {
-  "id": "io.github.felix_the_cat177.CosmicAppletYtDlp",
+  "id": "io.github.dixycat.ext.cosmic.yt.dlp",
   "runtime": "org.freedesktop.Platform",
   "runtime-version": "25.08",
   "sdk": "org.freedesktop.Sdk",

@@ -40,7 +40,7 @@
       "sources": [
         {
           "type": "git",
-          "url": "https://github.com/felix-the-cat177/cosmic-applet-yt-dlp-dixycat.git",
+          "url": "https://github.com/dixycat/cosmic-applet-yt-dlp-dixycat.git",
           "tag": "v0.5.0"
         },
         "generated-sources.json"

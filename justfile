@@ -35,7 +35,7 @@ repo:
 # Build app with specified ID
 build id:
     #!/usr/bin/env bash
-    set -e
+    set -eo pipefail
     arch="$(flatpak --default-arch)"
     gpg_args=()
     if [ -n "${DEBEMAIL:-}" ]

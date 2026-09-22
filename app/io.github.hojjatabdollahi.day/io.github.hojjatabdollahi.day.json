@@ -39,7 +39,7 @@
         {
           "type": "git",
           "url": "https://github.com/hojjatabdollahi/day.git",
-          "commit": "a165cc93d15a0462316e854da0ba1e32b16f9fb3"
+          "commit": "31eebc573bbe2bcebe35743d383766238345729f"
         },
         "cargo-sources.json"
       ]

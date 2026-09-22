@@ -65,17 +65,20 @@ build id:
 build-changed:
     #!/usr/bin/env bash
     set -e
+    shopt -s lastpipe
     git fetch origin master
+    fail=0
     git diff --name-only origin/master...HEAD | grep '^app/' | cut -d / -f2 | sort | uniq | while read id
     do
         # A PR that withdraws an app leaves its ID in the diff with no manifest behind it.
         if [ -f "app/${id}/${id}.json" ]
         then
-            just build ${id}
+            just build ${id} || fail=1
         else
             echo "${id} manifest removed, nothing to build"
         fi
     done
+    exit "${fail}"
 
 # EOL app with specified id, optional rebase id and optional reason
 eol id rebase="" reason="":

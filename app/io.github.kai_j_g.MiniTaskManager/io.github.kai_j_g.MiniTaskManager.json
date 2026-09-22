@@ -1,5 +1,5 @@
 {
-  "id": "io.github.kai_j_g.CosmicMiniTaskManager",
+  "id": "io.github.kai_j_g.MiniTaskManager",
   "runtime": "org.freedesktop.Platform",
   "runtime-version": "25.08",
   "sdk": "org.freedesktop.Sdk",
@@ -39,17 +39,17 @@
         "cargo --offline build --release --verbose",
         "install -Dm0755 ./target/release/cosmic-ext-mini-taskmanager /app/bin/cosmic-ext-mini-taskmanager-bin",
         "install -Dm0755 cosmic-ext-mini-taskmanager-wrapper /app/bin/cosmic-ext-mini-taskmanager",
-        "install -Dm0644 ./data/io.github.kai_j_g.CosmicMiniTaskManager.desktop /app/share/applications/io.github.kai_j_g.CosmicMiniTaskManager.desktop",
-        "install -Dm0644 ./data/io.github.kai_j_g.CosmicMiniTaskManager.metainfo.xml /app/share/metainfo/io.github.kai_j_g.CosmicMiniTaskManager.metainfo.xml",
-        "install -Dm0644 ./data/icons/io.github.kai_j_g.CosmicMiniTaskManager.svg /app/share/icons/hicolor/scalable/apps/io.github.kai_j_g.CosmicMiniTaskManager.svg",
-        "install -Dm0644 ./data/icons/io.github.kai_j_g.CosmicMiniTaskManager-symbolic.svg /app/share/icons/hicolor/scalable/apps/io.github.kai_j_g.CosmicMiniTaskManager-symbolic.svg"
+        "install -Dm0644 ./data/io.github.kai_j_g.MiniTaskManager.desktop /app/share/applications/io.github.kai_j_g.MiniTaskManager.desktop",
+        "install -Dm0644 ./data/io.github.kai_j_g.MiniTaskManager.metainfo.xml /app/share/metainfo/io.github.kai_j_g.MiniTaskManager.metainfo.xml",
+        "install -Dm0644 ./data/icons/io.github.kai_j_g.MiniTaskManager.svg /app/share/icons/hicolor/scalable/apps/io.github.kai_j_g.MiniTaskManager.svg",
+        "install -Dm0644 ./data/icons/io.github.kai_j_g.MiniTaskManager-symbolic.svg /app/share/icons/hicolor/scalable/apps/io.github.kai_j_g.MiniTaskManager-symbolic.svg"
       ],
       "sources": [
         {
           "type": "git",
           "url": "https://github.com/Kai-J-G/cosmic-ext-mini-taskmanager.git",
-          "commit": "9caff8fd1e5021183d5762ee42f3952223aa966c",
-          "tag": "v1.2.1"
+          "commit": "abcb2cc9336ef04608c3b6c6b0a177d36923e5e7",
+          "tag": "v1.3.0"
         },
         "cargo-sources.json",
         {

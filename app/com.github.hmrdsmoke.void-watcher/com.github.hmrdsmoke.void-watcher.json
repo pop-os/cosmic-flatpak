@@ -37,6 +37,7 @@
         "cargo --offline build --release --verbose",
         "install -Dm755 target/release/void-watcher /app/bin/com.github.hmrdsmoke.void-watcher",
         "install -Dm644 resources/com.github.hmrdsmoke.void-watcher.desktop /app/share/applications/com.github.hmrdsmoke.void-watcher.desktop",
+        "install -Dm644 resources/com.github.hmrdsmoke.void-watcher.import.desktop /app/share/applications/com.github.hmrdsmoke.void-watcher.import.desktop",
         "install -Dm644 resources/com.github.hmrdsmoke.void-watcher.metainfo.xml /app/share/metainfo/com.github.hmrdsmoke.void-watcher.metainfo.xml",
         "install -Dm644 resources/icon.svg /app/share/icons/hicolor/scalable/apps/com.github.hmrdsmoke.void-watcher.svg",
         "install -Dm644 LICENSE /app/share/licenses/com.github.hmrdsmoke.void-watcher/LICENSE"
@@ -45,7 +46,7 @@
         {
           "type": "git",
           "url": "https://github.com/hmrdsmoke/VoidWatcher",
-          "commit": "3b3fd4bf36a23d798ba1a01c3f1862e8befb2b4e",
+          "commit": "1874a24fff4cb73b93aa82ab7a1e959b07c78970",
           "disable-submodules": false
         },
         "cargo-sources.json"

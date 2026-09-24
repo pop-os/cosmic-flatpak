@@ -1,5 +1,5 @@
 {
-    "id": "io.github.ercling.cosmic-applet-daymural",
+    "id": "io.github.ercling.cosmic-ext-applet-daymural",
     "runtime": "org.freedesktop.Platform",
     "runtime-version": "25.08",
     "sdk": "org.freedesktop.Sdk",
@@ -32,15 +32,15 @@
                 "cargo --offline fetch --locked --manifest-path Cargo.toml --verbose",
                 "cargo --offline build --release --locked --verbose",
                 "install -Dm755 target/release/daymural /app/bin/daymural",
-                "install -Dm644 data/io.github.ercling.cosmic-applet-daymural.desktop /app/share/applications/io.github.ercling.cosmic-applet-daymural.desktop",
-                "install -Dm644 data/io.github.ercling.cosmic-applet-daymural.metainfo.xml /app/share/metainfo/io.github.ercling.cosmic-applet-daymural.metainfo.xml",
-                "install -Dm644 data/icons/io.github.ercling.cosmic-applet-daymural-symbolic.svg /app/share/icons/hicolor/scalable/apps/io.github.ercling.cosmic-applet-daymural-symbolic.svg"
+                "install -Dm644 data/io.github.ercling.cosmic-ext-applet-daymural.desktop /app/share/applications/io.github.ercling.cosmic-ext-applet-daymural.desktop",
+                "install -Dm644 data/io.github.ercling.cosmic-ext-applet-daymural.metainfo.xml /app/share/metainfo/io.github.ercling.cosmic-ext-applet-daymural.metainfo.xml",
+                "install -Dm644 data/icons/io.github.ercling.cosmic-ext-applet-daymural-symbolic.svg /app/share/icons/hicolor/scalable/apps/io.github.ercling.cosmic-ext-applet-daymural-symbolic.svg"
             ],
             "sources": [
                 {
                     "type": "git",
-                    "url": "https://github.com/ercling/cosmic-applet-daymural.git",
-                    "commit": "291b967b9b96c210ec364fa5cf3bfce896696057"
+                    "url": "https://github.com/ercling/cosmic-ext-applet-daymural.git",
+                    "commit": "0c3b8ffde35323e9a72b248d1ac22c163aaaee52"
                 },
                 "cargo-sources.json",
                 {

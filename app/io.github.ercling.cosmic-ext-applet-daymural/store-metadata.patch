@@ -1,16 +1,20 @@
+diff --git a/Cargo.toml b/Cargo.toml
+index 6293d28..3d1248a 100644
 --- a/Cargo.toml
 +++ b/Cargo.toml
-@@ -3,7 +3,7 @@
- version = "0.1.0"
+@@ -3,7 +3,7 @@ name = "daymural"
+ version = "0.1.1"
  edition = "2024"
  license = "GPL-3.0-only"
 -description = "Daymural: daily Microsoft Bing wallpaper applet for the COSMIC desktop"
 +description = "Discover daily Bing wallpapers from your COSMIC panel"
- repository = "https://github.com/ercling/cosmic-applet-daymural"
- homepage = "https://github.com/ercling/cosmic-applet-daymural"
+ repository = "https://github.com/ercling/cosmic-ext-applet-daymural"
+ homepage = "https://github.com/ercling/cosmic-ext-applet-daymural"
  
---- a/data/io.github.ercling.cosmic-applet-daymural.metainfo.xml
-+++ b/data/io.github.ercling.cosmic-applet-daymural.metainfo.xml
+diff --git a/data/io.github.ercling.cosmic-ext-applet-daymural.metainfo.xml b/data/io.github.ercling.cosmic-ext-applet-daymural.metainfo.xml
+index 3e2061b..3944887 100644
+--- a/data/io.github.ercling.cosmic-ext-applet-daymural.metainfo.xml
++++ b/data/io.github.ercling.cosmic-ext-applet-daymural.metainfo.xml
 @@ -4,9 +4,21 @@
    <metadata_license>CC0-1.0</metadata_license>
    <project_license>GPL-3.0-only</project_license>
@@ -34,13 +38,13 @@
 +    Settings. Automatic updates run while the applet is active in the panel.</p>
      <p>Daymural is an unofficial, independent project and is not affiliated with, authorized by, sponsored by, or endorsed by Microsoft.</p>
    </description>
-   <launchable type="desktop-id">io.github.ercling.cosmic-applet-daymural.desktop</launchable>
+   <launchable type="desktop-id">io.github.ercling.cosmic-ext-applet-daymural.desktop</launchable>
 @@ -15,8 +27,25 @@
      <binary>daymural</binary>
    </provides>
-   <url type="homepage">https://github.com/ercling/cosmic-applet-daymural</url>
-+  <url type="bugtracker">https://github.com/ercling/cosmic-applet-daymural/issues</url>
-+  <url type="help">https://github.com/ercling/cosmic-applet-daymural/blob/291b967b9b96c210ec364fa5cf3bfce896696057/docs/installation.md</url>
+   <url type="homepage">https://github.com/ercling/cosmic-ext-applet-daymural</url>
++  <url type="bugtracker">https://github.com/ercling/cosmic-ext-applet-daymural/issues</url>
++  <url type="help">https://github.com/ercling/cosmic-ext-applet-daymural/blob/0c3b8ffde35323e9a72b248d1ac22c163aaaee52/docs/installation.md</url>
 +  <categories>
 +    <category>Utility</category>
 +  </categories>
@@ -53,7 +57,7 @@
 +  <screenshots>
 +    <screenshot type="default">
 +      <caption>Browse wallpapers and configure shuffle, accent matching, and image history</caption>
-+      <image type="source" width="371" height="585">https://raw.githubusercontent.com/ercling/cosmic-applet-daymural/291b967b9b96c210ec364fa5cf3bfce896696057/resources/screenshots/screenshot-main.png</image>
++      <image type="source" width="371" height="585">https://raw.githubusercontent.com/ercling/cosmic-ext-applet-daymural/0c3b8ffde35323e9a72b248d1ac22c163aaaee52/resources/screenshots/screenshot-main.png</image>
 +    </screenshot>
 +  </screenshots>
    <developer id="io.github.ercling">
@@ -62,9 +66,11 @@
    </developer>
    <project_group>COSMIC</project_group>
    <content_rating type="oars-1.1"/>
+diff --git a/src/app.rs b/src/app.rs
+index 0280195..b0500fe 100644
 --- a/src/app.rs
 +++ b/src/app.rs
-@@ -5487,7 +5487,7 @@
+@@ -5503,7 +5503,7 @@ mod tests {
          assert_eq!(env!("CARGO_PKG_HOMEPAGE"), PROJECT_URL);
          assert_eq!(
              env!("CARGO_PKG_DESCRIPTION"),
@@ -73,7 +79,7 @@
          );
      }
  
-@@ -6978,7 +6978,7 @@
+@@ -7093,7 +7093,7 @@ mod tests {
          )?;
          require(
              metainfo.contains("<developer id=\"io.github.ercling\">")
@@ -82,7 +88,7 @@
              "metainfo must identify the developer",
          )?;
          require(
-@@ -8251,7 +8251,7 @@
+@@ -8572,7 +8572,7 @@ mod tests {
                  "<project_license>MIT</project_license>",
              ),
              (
@@ -90,4 +96,4 @@
 +                "<summary>Discover daily Bing wallpapers from your COSMIC panel</summary>",
                  "<summary>Wrong summary</summary>",
              ),
-             ("<release version=\"0.1.0\"", "<release version=\"9.9.9\""),
+             (current_release.as_str(), "<release version=\"9.9.9\""),

@@ -1,0 +1,97 @@
+{
+  "id": "io.github.markmiddo.Murmur",
+  "runtime": "org.freedesktop.Platform",
+  "runtime-version": "25.08",
+  "sdk": "org.freedesktop.Sdk",
+  "sdk-extensions": [
+    "org.freedesktop.Sdk.Extension.rust-stable"
+  ],
+  "base": "com.system76.Cosmic.BaseApp",
+  "base-version": "stable",
+  "command": "murmur-applet",
+  "finish-args": [
+    "--socket=wayland",
+    "--share=ipc",
+    "--share=network",
+    "--device=input",
+    "--filesystem=xdg-run/pipewire-0",
+    "--own-name=io.github.markmiddo.Murmur",
+    "--talk-name=org.freedesktop.Notifications",
+    "--talk-name=com.system76.CosmicSettingsDaemon",
+    "--filesystem=xdg-config/cosmic:ro"
+  ],
+  "build-options": {
+    "append-path": "/usr/lib/sdk/rust-stable/bin"
+  },
+  "cleanup": [
+    "/include",
+    "/lib/pkgconfig",
+    "/share/man"
+  ],
+  "modules": [
+    {
+      "name": "wtype",
+      "buildsystem": "meson",
+      "sources": [
+        {
+          "type": "archive",
+          "url": "https://github.com/atx/wtype/archive/refs/tags/v0.4.tar.gz",
+          "sha256": "da91786d828b6a6e29b884bc510473939eda052658ebef87d7bdeafa6a8746f9"
+        }
+      ]
+    },
+    {
+      "name": "wl-clipboard",
+      "buildsystem": "meson",
+      "config-opts": [
+        "-Dfishcompletiondir=no",
+        "-Dzshcompletiondir=no"
+      ],
+      "sources": [
+        {
+          "type": "archive",
+          "url": "https://github.com/bugaevc/wl-clipboard/archive/refs/tags/v2.2.1.tar.gz",
+          "sha256": "6eb8081207fb5581d1d82c4bcd9587205a31a3d47bea3ebeb7f41aa1143783eb"
+        }
+      ]
+    },
+    {
+      "name": "murmur",
+      "buildsystem": "simple",
+      "build-options": {
+        "env": {
+          "CARGO_HOME": "/run/build/murmur/cargo",
+          "ORT_LIB_LOCATION": "/run/build/murmur/ort"
+        }
+      },
+      "build-commands": [
+        "mkdir -p ort && xz -dc --format=raw --lzma2=dict=64MiB onnxruntime.tar.lzma2 | tar -x -C ort",
+        "cargo --offline fetch --manifest-path Cargo.toml --verbose",
+        "cargo --offline build --release --verbose",
+        "install -Dm0755 target/release/murmurd /app/bin/murmurd",
+        "install -Dm0755 target/release/murmur-applet /app/bin/murmur-applet",
+        "install -Dm0755 target/release/murmur-settings /app/bin/murmur-settings",
+        "install -Dm0644 res/io.github.markmiddo.Murmur.desktop /app/share/applications/io.github.markmiddo.Murmur.desktop",
+        "install -Dm0644 res/io.github.markmiddo.Murmur.Settings.desktop /app/share/applications/io.github.markmiddo.Murmur.Settings.desktop",
+        "install -Dm0644 res/io.github.markmiddo.Murmur.metainfo.xml /app/share/metainfo/io.github.markmiddo.Murmur.metainfo.xml",
+        "install -Dm0644 res/icons/hicolor/scalable/apps/io.github.markmiddo.Murmur.svg /app/share/icons/hicolor/scalable/apps/io.github.markmiddo.Murmur.svg",
+        "install -Dm0644 res/icons/hicolor/scalable/apps/io.github.markmiddo.Murmur-symbolic.svg /app/share/icons/hicolor/symbolic/apps/io.github.markmiddo.Murmur-symbolic.svg"
+      ],
+      "sources": [
+        {
+          "type": "git",
+          "url": "https://github.com/markmiddo/murmur.git",
+          "tag": "v0.1.1",
+          "commit": "1ecd79488b0115b84ad4acf6cb191d261e7427c2"
+        },
+        {
+          "type": "file",
+          "url": "https://cdn.pyke.io/0/pyke:ort-rs/ms@1.28.0/x86_64-unknown-linux-gnu.tar.lzma2",
+          "sha256": "e454f710f8a49f53aa5b4ff51e3454ae1835777e431c6c35c5255ce6f205fd68",
+          "dest-filename": "onnxruntime.tar.lzma2"
+        },
+        "cargo-sources.json"
+      ]
+    }
+  ]
+}

@@ -6,7 +6,7 @@ repo:
     # Build all apps
     ls -1 app | while read id
     do
-        just build ${id}
+        just build ${id} || echo "failed to build ${id}"
     done
 
     cat end-of-life.txt | grep -v '^#' | grep -v '^[[:space:]]*$' | while read eol

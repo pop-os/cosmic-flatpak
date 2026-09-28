@@ -1,0 +1,69 @@
+{
+  "id": "io.github.shagovAlexei.cosmic-ext-classic-menu-plus",
+  "runtime": "org.freedesktop.Platform",
+  "runtime-version": "25.08",
+  "base": "com.system76.Cosmic.BaseApp",
+  "base-version": "stable",
+  "sdk": "org.freedesktop.Sdk",
+  "sdk-extensions": [
+    "org.freedesktop.Sdk.Extension.rust-stable"
+  ],
+  "command": "/app/launch-applet.sh",
+  "finish-args": [
+    "--socket=wayland",
+    "--socket=fallback-x11",
+    "--socket=system-bus",
+    "--socket=session-bus",
+    "--share=ipc",
+    "--filesystem=xdg-config/cosmic:rw",
+    "--talk-name=com.system76.CosmicSettingsDaemon",
+    "--system-talk-name=org.freedesktop.Accounts",
+    "--system-talk-name=org.freedesktop.login1",
+    "--device=dri",
+    "--talk-name=org.freedesktop.portal.Desktop",
+    "--talk-name=org.freedesktop.portal.Location",
+    "--talk-name=org.freedesktop.Flatpak",
+    "--talk-name=org.freedesktop.portal.*",
+    "--talk-name=org.freedesktop.ScreenSaver",
+    "--env=XDG_DATA_DIRS=/run/host/usr/share:/var/lib/flatpak/exports/share:/app/share:${HOME}/.local/share/flatpak/exports/share:${HOME}/.local/share",
+    "--filesystem=host:ro",
+    "--filesystem=host-os:ro",
+    "--filesystem=/var/lib/flatpak/exports/share/applications:ro",
+    "--filesystem=/var/lib/flatpak/app:ro",
+    "--filesystem=/var/lib/flatpak/exports/share/icons:ro",
+    "--filesystem=~/.local/share/flatpak/exports/share/applications:ro",
+    "--filesystem=~/.local/share/flatpak/app:ro",
+    "--filesystem=~/.local/share/flatpak/exports/share/icons:ro",
+    "--filesystem=~/.local/share/applications:ro",
+    "--filesystem=~/.local/share/icons:ro",
+    "--filesystem=/run/current-system/sw/bin:ro"
+  ],
+  "build-options": {
+    "append-path": "/usr/lib/sdk/rust-stable/bin",
+    "env": {
+      "CARGO_HOME": "/run/build/cosmic-ext-classic-menu-plus/cargo"
+    }
+  },
+  "modules": [
+    {
+      "name": "cosmic-ext-classic-menu-plus",
+      "buildsystem": "simple",
+      "build-commands": [
+        "just build-release --verbose",
+        "just prefix=/app install",
+        "cp ./flatpak/launch-applet.sh /app",
+        "chmod +x /app/launch-applet.sh",
+        "cp ./flatpak/io.github.shagovAlexei.cosmic-ext-classic-menu-plus.desktop /app/share/applications/io.github.shagovAlexei.cosmic-ext-classic-menu-plus.desktop"
+      ],
+      "sources": [
+        {
+          "type": "git",
+          "url": "https://github.com/shagovAlexei/cosmic-ext-classic-menu-plus.git",
+          "tag": "0.1.0",
+          "commit": "4bdc81a85aac9ce61a5c1fea56312e6860c65ef5"
+        },
+        "./cargo-sources.json"
+      ]
+    }
+  ]
+}

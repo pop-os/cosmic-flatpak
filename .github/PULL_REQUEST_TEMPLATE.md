@@ -3,6 +3,7 @@ Replace this text with a description of your changes, and why these changes are 
 ---
 
 - I have read the [COSMIC Trademark Policy](https://github.com/pop-os/cosmic-epoch/blob/master/TRADEMARK.md) and have not used the COSMIC trademark without permission.
+- With the exception of my own app source code and manifest, I have not included any LLM (also known as AI) generated content in this PR, including code, comments, and descriptions.
 - I understand these changes in full and will be able to respond to review comments.
 - My change is accurately described in the commit message.
 - My contribution is tested and working as described.

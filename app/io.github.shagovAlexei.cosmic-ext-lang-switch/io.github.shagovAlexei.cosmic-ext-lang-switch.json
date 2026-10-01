@@ -36,14 +36,15 @@
         "install -Dm0755 target/release/cosmic-ext-lang-switch /app/bin/cosmic-ext-lang-switch",
         "install -Dm0755 target/release/cosmic-ext-lang-switch-daemon /app/bin/cosmic-ext-lang-switch-daemon",
         "install -Dm0644 res/io.github.shagovAlexei.cosmic-ext-lang-switch.desktop /app/share/applications/io.github.shagovAlexei.cosmic-ext-lang-switch.desktop",
-        "install -Dm0644 res/io.github.shagovAlexei.cosmic-ext-lang-switch.metainfo.xml /app/share/metainfo/io.github.shagovAlexei.cosmic-ext-lang-switch.metainfo.xml"
+        "install -Dm0644 res/io.github.shagovAlexei.cosmic-ext-lang-switch.metainfo.xml /app/share/metainfo/io.github.shagovAlexei.cosmic-ext-lang-switch.metainfo.xml",
+        "install -Dm0644 res/icons/hicolor/scalable/apps/io.github.shagovAlexei.cosmic-ext-lang-switch.svg /app/share/icons/hicolor/scalable/apps/io.github.shagovAlexei.cosmic-ext-lang-switch.svg"
       ],
       "sources": [
         {
           "type": "git",
           "url": "https://github.com/shagovAlexei/cosmic-ext-lang-switch.git",
-          "tag": "v0.1.1",
-          "commit": "1dbc5ad0d9e479178d64bdc16c41e6e462ad105a"
+          "tag": "v0.1.2",
+          "commit": "448278577546a2a8221d2b01c4ec53cc4cc3029d"
         },
         "./cargo-sources.json"
       ]

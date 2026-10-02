@@ -19,7 +19,10 @@
     "--filesystem=~/.local/share/flatpak/exports/share/icons:ro",
     "--filesystem=/var/lib/flatpak/app:ro",
     "--filesystem=~/.local/share/flatpak/app:ro",
-    "--filesystem=~/.icons:ro"
+    "--filesystem=~/.icons:ro",
+    "--filesystem=/snap:ro",
+    "--filesystem=/var/lib/snapd/snap:ro",
+    "--filesystem=/var/lib/snapd/desktop:ro"
   ],
   "build-options": {
     "append-path": "/usr/lib/sdk/rust-stable/bin",
@@ -46,8 +49,8 @@
         {
           "type": "git",
           "url": "https://github.com/marcelogomes90/cosmic-ext-applet-status-hub.git",
-          "tag": "v1.5.12",
-          "commit": "f845cefea4ba039d5977aed422ef0becff6db703"
+          "tag": "v1.5.13",
+          "commit": "d09f89256c254310a660d84780bba9b8a75b23be"
         },
         "cargo-sources.json"
       ]

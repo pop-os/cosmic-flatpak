@@ -1,0 +1,60 @@
+{
+  "id": "io.github.shagovAlexei.cosmic-ext-classic-menu-plus",
+  "runtime": "org.freedesktop.Platform",
+  "runtime-version": "25.08",
+  "base": "com.system76.Cosmic.BaseApp",
+  "base-version": "stable",
+  "sdk": "org.freedesktop.Sdk",
+  "sdk-extensions": [
+    "org.freedesktop.Sdk.Extension.rust-stable"
+  ],
+  "command": "/app/launch-applet.sh",
+  "finish-args": [
+    "--socket=wayland",
+    "--share=ipc",
+    "--device=dri",
+    "--filesystem=xdg-config/cosmic:rw",
+    "--own-name=io.github.shagovAlexei.CosmicExtClassicMenuPlus",
+    "--talk-name=org.freedesktop.Flatpak",
+    "--talk-name=com.system76.CosmicSession",
+    "--talk-name=org.gnome.SessionManager",
+    "--system-talk-name=org.freedesktop.login1",
+    "--system-talk-name=org.freedesktop.Accounts",
+    "--env=XDG_DATA_DIRS=/run/host/usr/share:/var/lib/flatpak/exports/share:/app/share:${HOME}/.local/share/flatpak/exports/share:${HOME}/.local/share",
+    "--filesystem=host-os:ro",
+    "--filesystem=/var/lib/flatpak/exports/share:ro",
+    "--filesystem=/var/lib/flatpak/app:ro",
+    "--filesystem=~/.local/share/flatpak/exports/share:ro",
+    "--filesystem=~/.local/share/flatpak/app:ro",
+    "--filesystem=~/.local/share/applications:ro",
+    "--filesystem=~/.local/share/icons:ro"
+  ],
+  "build-options": {
+    "append-path": "/usr/lib/sdk/rust-stable/bin",
+    "env": {
+      "CARGO_HOME": "/run/build/cosmic-ext-classic-menu-plus/cargo"
+    }
+  },
+  "modules": [
+    {
+      "name": "cosmic-ext-classic-menu-plus",
+      "buildsystem": "simple",
+      "build-commands": [
+        "just build-release --verbose",
+        "just prefix=/app install",
+        "cp ./flatpak/launch-applet.sh /app",
+        "chmod +x /app/launch-applet.sh",
+        "cp ./flatpak/io.github.shagovAlexei.cosmic-ext-classic-menu-plus.desktop /app/share/applications/io.github.shagovAlexei.cosmic-ext-classic-menu-plus.desktop"
+      ],
+      "sources": [
+        {
+          "type": "git",
+          "url": "https://github.com/shagovAlexei/cosmic-ext-classic-menu-plus.git",
+          "tag": "0.1.1",
+          "commit": "b76d4ebe8e713d5cee1258efd23c33f47c8c7ba4"
+        },
+        "./cargo-sources.json"
+      ]
+    }
+  ]
+}

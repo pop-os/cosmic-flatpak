@@ -13,3 +13,4 @@
 co.uk.cappsy.CosmicAppletLogoMenu=dev.cappsy.CosmicExtAppletLogoMenu
 io.github.Aviral_Omar.cosmic-ext-applet-bitrate=io.github.avomar.cosmic-ext-applet-bitrate
 io.github.cosmic-ext-applet-app-switcher==This applet cannot function inside the Flatpak sandbox. Install it from https://github.com/j0rdiun/cosmic-ext-app-switcher instead.
+io.github.PSGtatitos.papyrus==Maintaining and testing the separate Flatpak build and its bundled dependencies is no longer sustainable.

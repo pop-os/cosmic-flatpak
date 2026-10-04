@@ -43,8 +43,8 @@
         {
           "type": "git",
           "url": "https://github.com/shagovAlexei/cosmic-ext-lang-switch.git",
-          "tag": "v0.1.2",
-          "commit": "448278577546a2a8221d2b01c4ec53cc4cc3029d"
+          "tag": "v0.1.3",
+          "commit": "7ba8cd5ca5be5cf7a8328875ef89897fef4e9fb1"
         },
         "./cargo-sources.json"
       ]

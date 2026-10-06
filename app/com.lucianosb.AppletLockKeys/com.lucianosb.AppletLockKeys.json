@@ -1,5 +1,5 @@
 {
-    "id": "com.lucianosb.CosmicAppletLockKeys",
+    "id": "com.lucianosb.AppletLockKeys",
     "runtime": "org.freedesktop.Platform",
     "runtime-version": "25.08",
     "sdk": "org.freedesktop.Sdk",
@@ -15,12 +15,12 @@
     "build-options": {
         "append-path": "/usr/lib/sdk/rust-stable/bin",
         "env": {
-            "CARGO_HOME": "/run/build/cosmic-applet-lock-keys/cargo"
+            "CARGO_HOME": "/run/build/cosmic-ext-applet-lock-keys/cargo"
         }
     },
     "modules": [
         {
-            "name": "cosmic-applet-lock-keys",
+            "name": "cosmic-ext-applet-lock-keys",
             "buildsystem": "simple",
             "build-commands": [
                 "cargo --offline fetch --manifest-path Cargo.toml --verbose",

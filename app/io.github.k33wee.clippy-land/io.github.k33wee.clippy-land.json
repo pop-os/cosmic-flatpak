@@ -9,7 +9,6 @@
   "command": "cosmic-applet-clippy-land.sh",
   "finish-args": [
     "--share=ipc",
-    "--device=dri",
     "--socket=wayland",
     "--socket=fallback-x11",
     "--filesystem=/run/user",
@@ -42,8 +41,8 @@
         {
           "type": "git",
           "url": "https://github.com/k33wee/clippy-land.git",
-          "tag": "v0.5.2",
-          "commit": "b7611e7cda902f50a3332ed2efaf15da2e9fe6ec"
+          "tag": "v1.0.0",
+          "commit": "f71c4aab068715e077c711fc597b75f9fb2f4633"
         },
         "cargo-sources.json"
       ]

@@ -12,6 +12,7 @@
     "--socket=wayland",
     "--filesystem=/run/user",
     "--talk-name=com.system76.CosmicSettingsDaemon",
+    "--talk-name=com.system76.CosmicSettingsDaemon.*",
     "--filesystem=xdg-config/cosmic:rw"
   ],
   "build-options": {
@@ -32,7 +33,7 @@
         {
           "type": "git",
           "url": "https://github.com/cosmic-utils/clipboard-manager.git",
-          "commit": "a9c0d491640ab8f657cd85dc67151d1f9193cdea"
+          "commit": "7d2c3789c6f63178074311ec804a1f194a3e4e0a"
         },
         "cargo-sources.json"
       ]

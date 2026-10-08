@@ -156,13 +156,14 @@
             "build-commands": [
                 "install -Dm755 papyrus.py /app/bin/papyrus",
                 "install -Dm644 io.github.PSGtatitos.papyrus.desktop /app/share/applications/io.github.PSGtatitos.papyrus.desktop",
+                "install -Dm644 io.github.PSGtatitos.papyrus.metainfo.xml -t /app/share/metainfo/",
                 "install -Dm644 assets/icon.png /app/share/icons/hicolor/256x256/apps/io.github.PSGtatitos.papyrus.png"
             ],
             "sources": [
                 {
                     "type": "git",
                     "url": "https://github.com/PSGtatitos/papyrus.git",
-                    "branch": "main"
+                    "commit": "f47be84d358b35a414493ff32db058f1e0f917d3"
                 }
             ]
         }

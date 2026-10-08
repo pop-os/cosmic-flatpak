@@ -1,0 +1,47 @@
+{
+  "id": "io.github.MoisesRoig.cosmic-ext-applet-agents",
+  "runtime": "org.freedesktop.Platform",
+  "runtime-version": "25.08",
+  "base": "com.system76.Cosmic.BaseApp",
+  "base-version": "stable",
+  "sdk": "org.freedesktop.Sdk",
+  "sdk-extensions": ["org.freedesktop.Sdk.Extension.rust-stable"],
+  "command": "cosmic-ext-applet-agents",
+  "finish-args": [
+    "--share=ipc",
+    "--socket=wayland",
+    "--talk-name=com.system76.CosmicSettingsDaemon",
+    "--filesystem=xdg-config/cosmic:rw",
+    "--filesystem=~/.claude:ro",
+    "--talk-name=org.freedesktop.Flatpak"
+  ],
+  "build-options": {
+    "append-path": "/usr/lib/sdk/rust-stable/bin",
+    "env": {
+      "CARGO_HOME": "/run/build/cosmic-ext-applet-agents/cargo"
+    }
+  },
+  "modules": [
+    {
+      "name": "cosmic-ext-applet-agents",
+      "buildsystem": "simple",
+      "build-commands": [
+        "cargo --offline fetch --manifest-path Cargo.toml --verbose",
+        "cargo --offline build --release --verbose",
+        "install -Dm0755 ./target/release/cosmic-ext-applet-agents /app/bin/cosmic-ext-applet-agents",
+        "install -Dm0644 ./data/io.github.MoisesRoig.cosmic-ext-applet-agents.desktop /app/share/applications/io.github.MoisesRoig.cosmic-ext-applet-agents.desktop",
+        "install -Dm0644 ./data/io.github.MoisesRoig.cosmic-ext-applet-agents.metainfo.xml /app/share/metainfo/io.github.MoisesRoig.cosmic-ext-applet-agents.metainfo.xml",
+        "install -Dm0644 ./data/icon.svg /app/share/icons/hicolor/scalable/apps/io.github.MoisesRoig.cosmic-ext-applet-agents-symbolic.svg"
+      ],
+      "sources": [
+        {
+          "type": "git",
+          "url": "https://github.com/MoisesRoig/cosmic-ext-applet-agents.git",
+          "tag": "0.1.0",
+          "commit": "5ccf01e714b4afa8a2a73148ca181af1eae55d49"
+        },
+        "cargo-sources.json"
+      ]
+    }
+  ]
+}

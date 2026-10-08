@@ -1,0 +1,11 @@
+#!/bin/sh
+set -eu
+
+# The applet matches running processes against installed .desktop files so it
+# can show real application names and icons. Inside the sandbox only
+# /app/share is populated, so point the XDG data dirs at the host's (exposed
+# by --filesystem=host-os) and at the Flatpak exports.
+export XDG_DATA_HOME="${HOME}/.local/share"
+export XDG_DATA_DIRS="/run/host/usr/local/share:/run/host/usr/share:/var/lib/flatpak/exports/share:/app/share:${HOME}/.local/share/flatpak/exports/share:${HOME}/.local/share"
+
+exec /app/bin/cosmic-ext-mini-taskmanager-bin "$@"

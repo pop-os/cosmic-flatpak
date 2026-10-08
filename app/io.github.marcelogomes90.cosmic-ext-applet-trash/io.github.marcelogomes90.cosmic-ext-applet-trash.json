@@ -1,0 +1,47 @@
+{
+  "id": "io.github.marcelogomes90.cosmic-ext-applet-trash",
+  "runtime": "org.freedesktop.Platform",
+  "runtime-version": "25.08",
+  "base": "com.system76.Cosmic.BaseApp",
+  "base-version": "stable",
+  "sdk": "org.freedesktop.Sdk",
+  "sdk-extensions": [
+    "org.freedesktop.Sdk.Extension.rust-stable"
+  ],
+  "command": "cosmic-ext-applet-trash",
+  "finish-args": [
+    "--share=ipc",
+    "--socket=wayland",
+    "--filesystem=xdg-data/Trash:create",
+    "--filesystem=xdg-config/cosmic:ro",
+    "--talk-name=org.freedesktop.Flatpak",
+    "--talk-name=com.system76.CosmicSettingsDaemon",
+    "--talk-name=com.system76.CosmicSettingsDaemon.*"
+  ],
+  "build-options": {
+    "append-path": "/usr/lib/sdk/rust-stable/bin",
+    "env": {
+      "CARGO_HOME": "/run/build/cosmic-ext-applet-trash/cargo"
+    }
+  },
+  "modules": [
+    {
+      "name": "cosmic-ext-applet-trash",
+      "buildsystem": "simple",
+      "build-commands": [
+        "cargo --offline fetch --manifest-path Cargo.toml --verbose",
+        "just build-release --offline --locked",
+        "just prefix=/app install"
+      ],
+      "sources": [
+        {
+          "type": "git",
+          "url": "https://github.com/marcelogomes90/cosmic-ext-applet-trash.git",
+          "tag": "v1.0.0",
+          "commit": "6b62d85fa8a315b43fab22db2b4e0ec233e1e349"
+        },
+        "cargo-sources.json"
+      ]
+    }
+  ]
+}

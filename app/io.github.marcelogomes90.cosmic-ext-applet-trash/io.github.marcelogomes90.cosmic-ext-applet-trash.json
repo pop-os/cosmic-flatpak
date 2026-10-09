@@ -37,8 +37,8 @@
         {
           "type": "git",
           "url": "https://github.com/marcelogomes90/cosmic-ext-applet-trash.git",
-          "tag": "v1.0.0",
-          "commit": "6b62d85fa8a315b43fab22db2b4e0ec233e1e349"
+          "tag": "v1.0.1",
+          "commit": "36bd564fd0cc67345da7dd6b2f04ff1a3e8c1722"
         },
         "cargo-sources.json"
       ]

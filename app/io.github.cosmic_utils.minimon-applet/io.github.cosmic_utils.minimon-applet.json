@@ -47,7 +47,7 @@
         {
           "type": "git",
           "url": "https://github.com/cosmic-utils/minimon-applet.git",
-          "commit": "d5b00f8348f951ce48d94771af2b9001ab838295"
+          "commit": "9ba987e76ec476343e04e8538da32bd2c55981bf"
         },
         "cargo-sources.json"
       ]

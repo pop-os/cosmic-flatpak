@@ -1,0 +1,54 @@
+{
+  "id": "io.github.DrakRosmann.CosmicExtAppletQuickSettings",
+  "runtime": "org.freedesktop.Platform",
+  "runtime-version": "25.08",
+  "base": "com.system76.Cosmic.BaseApp",
+  "base-version": "stable",
+  "sdk": "org.freedesktop.Sdk",
+  "sdk-extensions": [
+    "org.freedesktop.Sdk.Extension.rust-stable"
+  ],
+  "command": "cosmic-ext-applet-quick-settings",
+  "finish-args": [
+    "--share=ipc",
+    "--socket=wayland",
+    "--device=dri",
+    "--filesystem=xdg-config/cosmic:rw",
+    "--talk-name=org.freedesktop.Flatpak",
+    "--talk-name=com.system76.CosmicSettingsDaemon",
+    "--talk-name=com.system76.CosmicSettingsDaemon.*",
+    "--talk-name=org.freedesktop.Notifications",
+    "--talk-name=org.freedesktop.ScreenSaver",
+    "--talk-name=org.mpris.MediaPlayer2.*",
+    "--talk-name=org.a11y.Bus",
+    "--system-talk-name=org.freedesktop.NetworkManager",
+    "--system-talk-name=org.bluez",
+    "--system-talk-name=org.freedesktop.UPower",
+    "--system-talk-name=org.freedesktop.UPower.PowerProfiles",
+    "--system-talk-name=net.hadess.PowerProfiles"
+  ],
+  "build-options": {
+    "append-path": "/usr/lib/sdk/rust-stable/bin",
+    "env": {
+      "CARGO_HOME": "/run/build/cosmic-ext-applet-quick-settings/cargo",
+      "CARGO_NET_OFFLINE": "true"
+    }
+  },
+  "modules": [
+    {
+      "name": "cosmic-ext-applet-quick-settings",
+      "buildsystem": "simple",
+      "build-commands": [
+        "./install.sh /app"
+      ],
+      "sources": [
+        {
+          "type": "git",
+          "url": "https://github.com/DrakRosmann/cosmic-ext-applet-quick-settings.git",
+          "commit": "133773e138e354f1c817c5b4a4c4e69f4e15b010"
+        },
+        "cargo-sources.json"
+      ]
+    }
+  ]
+}

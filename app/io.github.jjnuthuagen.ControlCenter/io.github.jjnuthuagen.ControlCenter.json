@@ -4,12 +4,12 @@
   "runtime-version": "25.08",
   "sdk": "org.freedesktop.Sdk",
   "sdk-extensions": ["org.freedesktop.Sdk.Extension.rust-stable"],
-  "command": "cosmic-control-center-applet",
+  "command": "cosmic-ext-control-center-applet",
   "finish-args": [
     "--socket=wayland",
     "--device=dri",
     "--filesystem=xdg-config/cosmic:rw",
-    "--filesystem=xdg-config/cosmic-control-center:rw",
+    "--filesystem=xdg-config/cosmic-ext-control-center-applet:rw",
     "--talk-name=com.system76.CosmicSettingsDaemon",
     "--talk-name=com.system76.CosmicNotifications",
     "--talk-name=com.feralinteractive.GameMode",
@@ -25,17 +25,17 @@
   "build-options": {
     "append-path": "/usr/lib/sdk/rust-stable/bin",
     "env": {
-      "CARGO_HOME": "/run/build/cosmic-control-center-applet/cargo"
+      "CARGO_HOME": "/run/build/cosmic-ext-control-center-applet/cargo"
     }
   },
   "modules": [
     {
-      "name": "cosmic-control-center-applet",
+      "name": "cosmic-ext-control-center-applet",
       "buildsystem": "simple",
       "build-commands": [
         "cargo --offline fetch --manifest-path Cargo.toml --verbose",
         "cargo --offline build --release --verbose",
-        "install -Dm0755 ./target/release/cosmic-control-center-applet /app/bin/cosmic-control-center-applet",
+        "install -Dm0755 ./target/release/cosmic-ext-control-center-applet /app/bin/cosmic-ext-control-center-applet",
         "install -Dm0644 ./data/io.github.jjnuthuagen.ControlCenter.desktop -t /app/share/applications/",
         "install -Dm0644 ./data/io.github.jjnuthuagen.ControlCenterSettings.desktop -t /app/share/applications/",
         "install -Dm0644 ./data/io.github.jjnuthuagen.ControlCenter.metainfo.xml -t /app/share/metainfo/",
@@ -45,7 +45,7 @@
         {
           "type": "git",
           "url": "https://github.com/jjnuthuagen/cosmic-control-center-applet.git",
-          "commit": "570fb583e006c0faf26f2b318b74fabdcd8e7106"
+          "commit": "d6200a23d349bb28f3f4ff8ac9c44dc39b00647f"
         },
         "cargo-sources.json"
       ]

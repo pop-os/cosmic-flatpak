@@ -49,8 +49,8 @@
         {
           "type": "git",
           "url": "https://github.com/marcelogomes90/cosmic-ext-applet-status-hub.git",
-          "tag": "v1.5.13",
-          "commit": "d09f89256c254310a660d84780bba9b8a75b23be"
+          "tag": "v1.6.0",
+          "commit": "2a0cb426179a7729b407b0f47e7f012ccb14274e"
         },
         "cargo-sources.json"
       ]

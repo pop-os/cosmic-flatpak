@@ -1,0 +1,47 @@
+{
+  "id": "io.github.DrakRosmann.CosmicExtSoundRecorder",
+  "runtime": "org.freedesktop.Platform",
+  "runtime-version": "25.08",
+  "base": "com.system76.Cosmic.BaseApp",
+  "base-version": "stable",
+  "sdk": "org.freedesktop.Sdk",
+  "sdk-extensions": [
+    "org.freedesktop.Sdk.Extension.rust-stable"
+  ],
+  "command": "cosmic-ext-sound-recorder",
+  "finish-args": [
+    "--share=ipc",
+    "--socket=wayland",
+    "--socket=fallback-x11",
+    "--device=dri",
+    "--socket=pulseaudio",
+    "--filesystem=xdg-music",
+    "--filesystem=xdg-config/cosmic:ro",
+    "--talk-name=com.system76.CosmicSettingsDaemon"
+  ],
+  "build-options": {
+    "append-path": "/usr/lib/sdk/rust-stable/bin",
+    "env": {
+      "CARGO_HOME": "/run/build/cosmic-ext-sound-recorder/cargo",
+      "CARGO_NET_OFFLINE": "true"
+    }
+  },
+  "modules": [
+    {
+      "name": "cosmic-ext-sound-recorder",
+      "buildsystem": "simple",
+      "build-commands": [
+        "cargo build --release --offline --locked",
+        "./install.sh /app --no-build"
+      ],
+      "sources": [
+        {
+          "type": "git",
+          "url": "https://github.com/DrakRosmann/cosmic-ext-sound-recorder.git",
+          "commit": "8eb85780c704c6de8333d4c513390f1f45e8c2f3"
+        },
+        "cargo-sources.json"
+      ]
+    }
+  ]
+}

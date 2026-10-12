@@ -4,7 +4,7 @@ runtime-version: '24.08'
 sdk: org.freedesktop.Sdk
 sdk-extensions:
   - org.freedesktop.Sdk.Extension.rust-stable
-command: cosmic-tiling-manager
+command: tiling-assistant
 finish-args:
   - --share=ipc
   - --socket=fallback-x11
@@ -14,24 +14,23 @@ finish-args:
 build-options:
   append-path: /usr/lib/sdk/rust-stable/bin
   env:
-    CARGO_HOME: /run/build/cosmic-tiling-manager/cargo
+    CARGO_HOME: /run/build/tiling-assistant/cargo
 modules:
-  - name: cosmic-tiling-manager
+  - name: tiling-assistant
     buildsystem: simple
     build-commands:
       - cargo --offline fetch --manifest-path Cargo.toml
       - cargo --offline build --release
-      - install -Dm755 target/release/cosmic-tiling-manager -t /app/bin/
-      - sed -i "s/cosmic-tiling-manager/io.github.maugustoldo.TilingAssistant/g" data/cosmic-tiling-manager.desktop
-      - sed -i "s/Cosmic Tiling Manager/Tiling Assistant/g" data/cosmic-tiling-manager.desktop
-      - install -Dm644 data/cosmic-tiling-manager.desktop /app/share/applications/io.github.maugustoldo.TilingAssistant.desktop
-      - install -Dm644 data/cosmic-tiling-manager.svg /app/share/icons/hicolor/scalable/apps/io.github.maugustoldo.TilingAssistant.svg
-      - sed -i "s/com.system76.CosmicTilingManager/io.github.maugustoldo.TilingAssistant/g" flatpak/com.system76.CosmicTilingManager.metainfo.xml
-      - sed -i "s/Cosmic Tiling Manager/Tiling Assistant/g" flatpak/com.system76.CosmicTilingManager.metainfo.xml
-      - install -Dm644 flatpak/com.system76.CosmicTilingManager.metainfo.xml /app/share/metainfo/io.github.maugustoldo.TilingAssistant.metainfo.xml
+      - install -Dm755 target/release/tiling-assistant -t /app/bin/
+      - ln -s tiling-assistant /app/bin/cosmic-ext-tiling-manager
+      - ln -s tiling-assistant /app/bin/tiling-manager
+      - sed -i 's/StartupWMClass=.*/StartupWMClass=io.github.maugustoldo.TilingAssistant/' data/io.github.maugustoldo.TilingAssistant.desktop
+      - install -Dm644 data/io.github.maugustoldo.TilingAssistant.desktop -t /app/share/applications/
+      - install -Dm644 data/io.github.maugustoldo.TilingAssistant.svg -t /app/share/icons/hicolor/scalable/apps/
+      - install -Dm644 flatpak/io.github.maugustoldo.TilingAssistant.metainfo.xml -t /app/share/metainfo/
     sources:
       - type: git
         url: https://github.com/maugustoldo/cosmic-tiling-manager.git
-        tag: v1.1.0
-        commit: 93556528296ac203ee0f4ee7b4f0a41c795d4334
+        tag: v1.1.1
+        commit: 1a4297469f7ac45172d180dfc6472b45684b899b
       - cargo-sources.json

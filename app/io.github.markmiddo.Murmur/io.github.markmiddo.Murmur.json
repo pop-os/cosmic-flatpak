@@ -13,7 +13,7 @@
     "--socket=wayland",
     "--share=ipc",
     "--share=network",
-    "--device=input",
+    "--device=all",
     "--filesystem=xdg-run/pipewire-0",
     "--own-name=io.github.markmiddo.Murmur",
     "--talk-name=org.freedesktop.Notifications",

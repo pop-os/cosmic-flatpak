@@ -50,8 +50,8 @@
         {
           "type": "git",
           "url": "https://github.com/shagovAlexei/cosmic-ext-classic-menu-plus.git",
-          "tag": "0.1.1",
-          "commit": "b76d4ebe8e713d5cee1258efd23c33f47c8c7ba4"
+          "tag": "0.1.2",
+          "commit": "69e4eac7b5c8dee65e73ac26732e5e7acf88bf86"
         },
         "./cargo-sources.json"
       ]

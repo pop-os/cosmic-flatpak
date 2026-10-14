@@ -1,0 +1,54 @@
+{
+  "id": "io.github.jjnuthuagen.ControlCenter",
+  "runtime": "org.freedesktop.Platform",
+  "runtime-version": "25.08",
+  "sdk": "org.freedesktop.Sdk",
+  "sdk-extensions": ["org.freedesktop.Sdk.Extension.rust-stable"],
+  "command": "cosmic-ext-control-center-applet",
+  "finish-args": [
+    "--socket=wayland",
+    "--device=dri",
+    "--filesystem=xdg-config/cosmic:rw",
+    "--filesystem=xdg-config/cosmic-ext-control-center-applet:rw",
+    "--talk-name=com.system76.CosmicSettingsDaemon",
+    "--talk-name=com.system76.CosmicNotifications",
+    "--talk-name=com.feralinteractive.GameMode",
+    "--talk-name=org.mpris.MediaPlayer2.*",
+    "--talk-name=org.freedesktop.Flatpak",
+    "--talk-name=org.freedesktop.portal.Desktop",
+    "--system-talk-name=org.freedesktop.NetworkManager",
+    "--system-talk-name=org.bluez",
+    "--system-talk-name=org.freedesktop.UPower",
+    "--system-talk-name=org.freedesktop.UPower.PowerProfiles",
+    "--system-talk-name=org.freedesktop.login1"
+  ],
+  "build-options": {
+    "append-path": "/usr/lib/sdk/rust-stable/bin",
+    "env": {
+      "CARGO_HOME": "/run/build/cosmic-ext-control-center-applet/cargo"
+    }
+  },
+  "modules": [
+    {
+      "name": "cosmic-ext-control-center-applet",
+      "buildsystem": "simple",
+      "build-commands": [
+        "cargo --offline fetch --manifest-path Cargo.toml --verbose",
+        "cargo --offline build --release --verbose",
+        "install -Dm0755 ./target/release/cosmic-ext-control-center-applet /app/bin/cosmic-ext-control-center-applet",
+        "install -Dm0644 ./data/io.github.jjnuthuagen.ControlCenter.desktop -t /app/share/applications/",
+        "install -Dm0644 ./data/io.github.jjnuthuagen.ControlCenterSettings.desktop -t /app/share/applications/",
+        "install -Dm0644 ./data/io.github.jjnuthuagen.ControlCenter.metainfo.xml -t /app/share/metainfo/",
+        "install -Dm0644 -t /app/share/icons/hicolor/scalable/apps/ ./data/icons/*.svg"
+      ],
+      "sources": [
+        {
+          "type": "git",
+          "url": "https://github.com/jjnuthuagen/cosmic-control-center-applet.git",
+          "commit": "cb143d2adf3ce20d2c93bcdb620b13b1970de288"
+        },
+        "cargo-sources.json"
+      ]
+    }
+  ]
+}

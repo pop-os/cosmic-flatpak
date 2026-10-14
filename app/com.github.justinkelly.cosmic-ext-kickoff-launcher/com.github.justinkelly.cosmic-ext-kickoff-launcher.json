@@ -19,7 +19,9 @@
     "--filesystem=xdg-data/icons:ro",
     "--filesystem=~/.local/bin:ro",
     "--filesystem=/var/lib/flatpak/exports/share:ro",
+    "--filesystem=/var/lib/flatpak/app:ro",
     "--filesystem=~/.local/share/flatpak/exports/share:ro",
+    "--filesystem=xdg-data/flatpak/app:ro",
     "--env=XDG_DATA_DIRS=/run/host/usr/share:/var/lib/flatpak/exports/share:/app/share:${HOME}/.local/share/flatpak/exports/share:${HOME}/.local/share"
   ],
   "build-options": {
@@ -42,8 +44,8 @@
         {
           "type": "git",
           "url": "https://github.com/justinkelly/cosmic-ext-kickoff-launcher.git",
-          "tag": "0.1.1",
-          "commit": "6f7229d07a06d2c00f28d854b6d9fa4dcd48ebbd"
+          "tag": "0.1.2",
+          "commit": "6ba2bb236931b973b9a2df78903db5e3c53642c1"
         },
         "./cargo-sources.json"
       ]

@@ -44,8 +44,8 @@
         {
           "type": "git",
           "url": "https://github.com/justinkelly/cosmic-ext-kickoff-launcher.git",
-          "tag": "0.1.2",
-          "commit": "6ba2bb236931b973b9a2df78903db5e3c53642c1"
+          "tag": "0.1.3",
+          "commit": "e5d534ad29215da9d7a6f21c44503ec380c75cee"
         },
         "./cargo-sources.json"
       ]

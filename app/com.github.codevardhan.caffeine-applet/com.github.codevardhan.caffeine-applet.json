@@ -1,7 +1,7 @@
 {
   "id": "com.github.codevardhan.caffeine-applet",
   "runtime": "org.freedesktop.Platform",
-  "runtime-version": "24.08",
+  "runtime-version": "25.08",
   "sdk": "org.freedesktop.Sdk",
   "sdk-extensions": ["org.freedesktop.Sdk.Extension.rust-stable"],
   "base": "com.system76.Cosmic.BaseApp",
@@ -32,14 +32,15 @@
         "install -Dm0644 resources/app.metainfo.xml ${FLATPAK_DEST}/share/metainfo/com.github.codevardhan.caffeine-applet.metainfo.xml",
         "install -Dm0644 resources/icons/hicolor/scalable/apps/coffee-full.svg ${FLATPAK_DEST}/share/icons/hicolor/scalable/apps/com.github.codevardhan.caffeine-applet.svg",
         "install -Dm0644 resources/icons/hicolor/scalable/apps/coffee-full.svg ${FLATPAK_DEST}/share/icons/hicolor/scalable/apps/com.github.codevardhan.caffeine-applet.On.svg",
-        "install -Dm0644 resources/icons/hicolor/scalable/apps/coffee-empty.svg ${FLATPAK_DEST}/share/icons/hicolor/scalable/apps/com.github.codevardhan.caffeine-applet.Off.svg"
+        "install -Dm0644 resources/icons/hicolor/scalable/apps/coffee-empty.svg ${FLATPAK_DEST}/share/icons/hicolor/scalable/apps/com.github.codevardhan.caffeine-applet.Off.svg",
+        "install -Dm0644 resources/icons/hicolor/scalable/apps/coffee-symbolic.svg ${FLATPAK_DEST}/share/icons/hicolor/scalable/apps/com.github.codevardhan.caffeine-applet-symbolic.svg"
       ],
       "sources": [
         {
           "type": "git",
           "url": "https://github.com/codevardhan/caffeine-applet.git",
-          "tag": "v0.1.1",
-          "commit": "da9d91e75f3f21635160e8fa89cbde929941f429"
+          "tag": "v0.1.2",
+          "commit": "54fecdd50f794a64ce7971989db289aff715c24d"
         },
         "./cargo-sources.json"
       ]

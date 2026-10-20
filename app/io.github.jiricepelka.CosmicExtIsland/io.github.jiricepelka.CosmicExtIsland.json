@@ -1,0 +1,60 @@
+{
+  "id": "io.github.jiricepelka.CosmicExtIsland",
+  "runtime": "org.freedesktop.Platform",
+  "runtime-version": "25.08",
+  "base": "com.system76.Cosmic.BaseApp",
+  "base-version": "stable",
+  "sdk": "org.freedesktop.Sdk",
+  "sdk-extensions": [
+    "org.freedesktop.Sdk.Extension.rust-stable"
+  ],
+  "command": "cosmic-ext-island-applet",
+  "finish-args": [
+    "--share=ipc",
+    "--share=network",
+    "--socket=wayland",
+    "--socket=pulseaudio",
+    "--device=dri",
+    "--filesystem=host:ro",
+    "--filesystem=xdg-config/cosmic:ro",
+    "--filesystem=xdg-config/cosmic/io.github.jiricepelka.CosmicExtIsland:create",
+    "--filesystem=~/.local/state/cosmic/io.github.jiricepelka.CosmicExtIsland:create",
+    "--talk-name=com.system76.CosmicSettingsDaemon",
+    "--talk-name=com.system76.CosmicSettingsDaemon.Config.*",
+    "--talk-name=org.mpris.MediaPlayer2.*",
+    "--talk-name=org.gnome.OnlineAccounts",
+    "--talk-name=org.kde.kdeconnect",
+    "--talk-name=org.freedesktop.Flatpak"
+  ],
+  "build-options": {
+    "append-path": "/usr/lib/sdk/rust-stable/bin",
+    "env": {
+      "CARGO_HOME": "/run/build/cosmic-ext-island/cargo",
+      "CARGO_NET_OFFLINE": "true"
+    }
+  },
+  "modules": [
+    {
+      "name": "cosmic-ext-island",
+      "buildsystem": "simple",
+      "build-commands": [
+        "cargo --offline build --release --locked",
+        "install -Dm0755 target/release/cosmic-ext-island /app/bin/cosmic-ext-island",
+        "install -Dm0755 target/release/cosmic-ext-island-applet /app/bin/cosmic-ext-island-applet",
+        "install -Dm0644 res/io.github.jiricepelka.CosmicExtIsland.desktop /app/share/applications/io.github.jiricepelka.CosmicExtIsland.desktop",
+        "install -Dm0644 res/io.github.jiricepelka.CosmicExtIsland.Applet.desktop /app/share/applications/io.github.jiricepelka.CosmicExtIsland.Applet.desktop",
+        "install -Dm0644 res/io.github.jiricepelka.CosmicExtIsland.svg /app/share/icons/hicolor/scalable/apps/io.github.jiricepelka.CosmicExtIsland.svg",
+        "install -Dm0644 res/io.github.jiricepelka.CosmicExtIsland-symbolic.svg /app/share/icons/hicolor/symbolic/apps/io.github.jiricepelka.CosmicExtIsland-symbolic.svg",
+        "install -Dm0644 res/io.github.jiricepelka.CosmicExtIsland.metainfo.xml /app/share/metainfo/io.github.jiricepelka.CosmicExtIsland.metainfo.xml"
+      ],
+      "sources": [
+        {
+          "type": "git",
+          "url": "https://github.com/Nieuport-Labs/Cosmic-notch.git",
+          "commit": "942f3c873d99fded001f6b1f35d857b306ee6146"
+        },
+        "cargo-sources.json"
+      ]
+    }
+  ]
+}

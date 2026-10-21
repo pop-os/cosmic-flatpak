@@ -1,0 +1,53 @@
+{
+  "id": "io.github.Nahel_A24.CosmicExtAppletAudioSwitch",
+  "runtime": "org.freedesktop.Platform",
+  "runtime-version": "25.08",
+  "base": "com.system76.Cosmic.BaseApp",
+  "base-version": "stable",
+  "sdk": "org.freedesktop.Sdk",
+  "sdk-extensions": [
+    "org.freedesktop.Sdk.Extension.rust-stable"
+  ],
+  "command": "cosmic-ext-applet-audio-switch",
+  "finish-args": [
+    "--share=ipc",
+    "--socket=wayland",
+    "--socket=pulseaudio",
+    "--device=all",
+    "--filesystem=/run/user",
+    "--filesystem=xdg-config/cosmic:rw",
+    "--talk-name=com.system76.CosmicSettingsDaemon",
+    "--talk-name=com.system76.CosmicSettingsDaemon.*"
+  ],
+  "build-options": {
+    "append-path": "/usr/lib/sdk/rust-stable/bin",
+    "env": {
+      "CARGO_HOME": "/run/build/cosmic-ext-applet-audio-switch/cargo"
+    }
+  },
+  "modules": [
+    {
+      "name": "cosmic-ext-applet-audio-switch",
+      "buildsystem": "simple",
+      "build-commands": [
+        "cargo --offline fetch --manifest-path Cargo.toml --verbose",
+        "cargo --offline build --release --locked",
+        "install -Dm0755 target/release/cosmic-ext-applet-audio-switch /app/bin/cosmic-ext-applet-audio-switch",
+        "install -Dm0644 data/io.github.Nahel_A24.CosmicExtAppletAudioSwitch.desktop /app/share/applications/io.github.Nahel_A24.CosmicExtAppletAudioSwitch.desktop",
+        "install -Dm0644 data/io.github.Nahel_A24.CosmicExtAppletAudioSwitch.metainfo.xml /app/share/metainfo/io.github.Nahel_A24.CosmicExtAppletAudioSwitch.metainfo.xml",
+        "install -Dm0644 data/icons/hicolor/scalable/apps/io.github.Nahel_A24.CosmicExtAppletAudioSwitch.svg /app/share/icons/hicolor/scalable/apps/io.github.Nahel_A24.CosmicExtAppletAudioSwitch.svg",
+        "install -Dm0644 data/icons/hicolor/scalable/devices/speaker-symbolic.svg /app/share/icons/hicolor/scalable/devices/speaker-symbolic.svg",
+        "install -Dm0644 data/icons/hicolor/scalable/devices/audio-headphones-symbolic.svg /app/share/icons/hicolor/scalable/devices/audio-headphones-symbolic.svg",
+        "install -Dm0644 data/icons/hicolor/scalable/actions/object-select-symbolic.svg /app/share/icons/hicolor/scalable/actions/object-select-symbolic.svg"
+      ],
+      "sources": [
+        {
+          "type": "git",
+          "url": "https://github.com/Nahel-A24/cosmic-ext-applet-audio-switch.git",
+          "commit": "1477d62f220b7d59247ac51d8f2c5cd17f5e7bdd"
+        },
+        "cargo-sources.json"
+      ]
+    }
+  ]
+}

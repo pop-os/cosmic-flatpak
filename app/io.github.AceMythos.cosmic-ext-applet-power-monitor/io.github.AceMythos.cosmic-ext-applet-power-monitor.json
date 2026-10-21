@@ -37,8 +37,8 @@
         {
           "type": "git",
           "url": "https://github.com/AceMythos/cosmic-power-monitor.git",
-          "tag": "v0.1.9",
-          "commit": "9202074ac5db11ba92ed42c0ec4a3fcd8d27820a"
+          "tag": "v0.1.10",
+          "commit": "3e99d5d6a7f0beb809de2a001de626b872ec65db"
         },
         "cargo-sources.json"
       ]

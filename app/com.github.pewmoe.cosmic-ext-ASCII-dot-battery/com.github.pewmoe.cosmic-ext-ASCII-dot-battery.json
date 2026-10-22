@@ -12,25 +12,24 @@
     "--filesystem=xdg-config/cosmic:rw",
     "--filesystem=/sys/class/power_supply:ro",
     "--filesystem=/sys/class/backlight:ro",
+    "--filesystem=/sys/class/leds:ro",
     "--talk-name=com.system76.CosmicSettingsDaemon",
     "--system-talk-name=net.hadess.PowerProfiles",
     "--system-talk-name=org.freedesktop.login1"
   ],
-  
-	"build-options": {
-  "append-path": "/usr/lib/sdk/rust-stable/bin",
-  "env": {
-    "CARGO_BUILD_JOBS": "8",
-    "CARGO_HOME": "/run/build/cosmic-ext-ascii-dot-battery/cargo",
-    "LOCKSTEP_XML_PATH": "/run/build/cosmic-ext-ascii-dot-battery/vendor/atspi-common/xml"
-  }
+  "build-options": {
+    "append-path": "/usr/lib/sdk/rust-stable/bin",
+    "env": {
+      "CARGO_BUILD_JOBS": "8",
+      "CARGO_HOME": "/run/build/cosmic-ext-ascii-dot-battery/cargo",
+      "LOCKSTEP_XML_PATH": "/run/build/cosmic-ext-ascii-dot-battery/cargo/vendor/atspi-common-0.13.0/xml"
+    }
   },
   "modules": [
     {
       "name": "cosmic-ext-ascii-dot-battery",
       "buildsystem": "simple",
       "build-commands": [
-        "tar pxf vendor.tar",
         "cargo build --release --frozen --offline",
         "install -Dm0755 target/release/cosmic-ext-ascii-dot-battery /app/bin/cosmic-ext-ascii-dot-battery",
         "install -Dm0644 target/xdgen/app.desktop /app/share/applications/com.github.pewmoe.cosmic-ext-ASCII-dot-battery.desktop",
@@ -38,8 +37,13 @@
         "install -Dm0644 resources/icon.svg /app/share/icons/hicolor/scalable/apps/com.github.pewmoe.cosmic-ext-ASCII-dot-battery.svg"
       ],
       "sources": [
-        { "type": "dir", "path": "./" },
-	{ "type": "file", "path": "vendor.tar" }
+        {
+          "type": "git",
+          "url": "https://github.com/pewmoe/Cosmic-Desktop-ASCII-Battery-Applet",
+          "tag": "v1.3.0",
+          "commit": "6f9989e4f70c25f1c572252f4b5302b231ca1013"
+        },
+        "cargo-sources.json"
       ]
     }
   ]

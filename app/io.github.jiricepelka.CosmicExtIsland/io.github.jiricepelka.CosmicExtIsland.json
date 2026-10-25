@@ -51,7 +51,7 @@
         {
           "type": "git",
           "url": "https://github.com/Nieuport-Labs/Cosmic-notch.git",
-          "commit": "942f3c873d99fded001f6b1f35d857b306ee6146"
+          "commit": "06f989e1c4cc5a3cf45b2850f7550b6b321cb7cb"
         },
         "cargo-sources.json"
       ]

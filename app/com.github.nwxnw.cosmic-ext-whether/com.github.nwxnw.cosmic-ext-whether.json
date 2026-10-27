@@ -12,7 +12,6 @@
         "--share=network",
         "--socket=wayland",
         "--device=dri",
-        "--talk-name=com.system76.CosmicSettingsDaemon",
         "--talk-name=org.freedesktop.portal.Desktop",
         "--talk-name=org.freedesktop.portal.Settings",
         "--filesystem=xdg-config/cosmic:rw"
@@ -39,8 +38,8 @@
                 {
                     "type": "git",
                     "url": "https://github.com/nwxnw/cosmic-ext-whether",
-                    "tag": "v0.6.0",
-                    "commit": "e71db9736e1a1ecf97b75a069974e3b047b0b1e2"
+                    "tag": "v0.7.0",
+                    "commit": "d48272109de8f7a222942a9e6089027714fc6162"
                 },
                 "cargo-sources.json"
             ]

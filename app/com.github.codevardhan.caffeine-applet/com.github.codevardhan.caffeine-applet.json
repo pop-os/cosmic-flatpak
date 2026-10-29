@@ -11,6 +11,9 @@
     "--socket=wayland",
     "--share=ipc",
     "--device=dri",
+    "--filesystem=xdg-config/cosmic:rw",
+    "--talk-name=com.system76.CosmicSettingsDaemon",
+    "--talk-name=org.freedesktop.ScreenSaver",
     "--system-talk-name=org.freedesktop.login1"
   ],
   "modules": [
@@ -30,7 +33,7 @@
         "install -Dm0755 target/release/caffeine-applet ${FLATPAK_DEST}/bin/caffeine-applet",
         "install -Dm0644 resources/app.desktop ${FLATPAK_DEST}/share/applications/com.github.codevardhan.caffeine-applet.desktop",
         "install -Dm0644 resources/app.metainfo.xml ${FLATPAK_DEST}/share/metainfo/com.github.codevardhan.caffeine-applet.metainfo.xml",
-        "install -Dm0644 resources/icons/hicolor/scalable/apps/coffee-full.svg ${FLATPAK_DEST}/share/icons/hicolor/scalable/apps/com.github.codevardhan.caffeine-applet.svg",
+        "install -Dm0644 resources/icons/hicolor/scalable/apps/icon.svg ${FLATPAK_DEST}/share/icons/hicolor/scalable/apps/com.github.codevardhan.caffeine-applet.svg",
         "install -Dm0644 resources/icons/hicolor/scalable/apps/coffee-full.svg ${FLATPAK_DEST}/share/icons/hicolor/scalable/apps/com.github.codevardhan.caffeine-applet.On.svg",
         "install -Dm0644 resources/icons/hicolor/scalable/apps/coffee-empty.svg ${FLATPAK_DEST}/share/icons/hicolor/scalable/apps/com.github.codevardhan.caffeine-applet.Off.svg",
         "install -Dm0644 resources/icons/hicolor/scalable/apps/coffee-symbolic.svg ${FLATPAK_DEST}/share/icons/hicolor/scalable/apps/com.github.codevardhan.caffeine-applet-symbolic.svg"
@@ -39,8 +42,8 @@
         {
           "type": "git",
           "url": "https://github.com/codevardhan/caffeine-applet.git",
-          "tag": "v0.1.2",
-          "commit": "54fecdd50f794a64ce7971989db289aff715c24d"
+          "tag": "v0.1.3",
+          "commit": "43c44c26c81f432e36bf53ef025bf1cb4e9889b8"
         },
         "./cargo-sources.json"
       ]

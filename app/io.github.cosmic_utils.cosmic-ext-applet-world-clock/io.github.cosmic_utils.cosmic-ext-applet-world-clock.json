@@ -36,7 +36,7 @@
         {
           "type": "git",
           "url": "https://github.com/cosmic-utils/cosmic-ext-applet-world-clock.git",
-          "commit": "2a366a6"
+          "commit": "3e337f1d300a898d34d233b671f52280d3fc5661"
         },
         "./cargo-sources.json"
       ]

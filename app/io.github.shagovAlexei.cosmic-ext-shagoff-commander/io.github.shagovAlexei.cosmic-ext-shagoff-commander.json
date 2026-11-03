@@ -1,5 +1,5 @@
 {
-  "id": "io.github.shagovAlexei.cosmic-shagoff-commander",
+  "id": "io.github.shagovAlexei.cosmic-ext-shagoff-commander",
   "runtime": "org.freedesktop.Platform",
   "runtime-version": "25.08",
   "base": "com.system76.Cosmic.BaseApp",
@@ -44,8 +44,8 @@
         {
           "type": "git",
           "url": "https://github.com/shagovAlexei/cosmic-shagoff-commander.git",
-          "tag": "v0.137.0",
-          "commit": "dea928b1222e9b9c68a51d30e711b6966700954e"
+          "tag": "v0.138.0",
+          "commit": "7503a2b34361efcd2a3035f6566f0eebef1e25c7"
         },
         "cargo-sources.json"
       ]

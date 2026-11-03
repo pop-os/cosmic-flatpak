@@ -1,0 +1,54 @@
+{
+  "id": "io.github.shagovAlexei.cosmic-shagoff-commander",
+  "runtime": "org.freedesktop.Platform",
+  "runtime-version": "25.08",
+  "base": "com.system76.Cosmic.BaseApp",
+  "base-version": "stable",
+  "sdk": "org.freedesktop.Sdk",
+  "sdk-extensions": [
+    "org.freedesktop.Sdk.Extension.rust-stable"
+  ],
+  "command": "launch.sh",
+  "finish-args": [
+    "--socket=wayland",
+    "--socket=fallback-x11",
+    "--share=ipc",
+    "--share=network",
+    "--device=dri",
+    "--filesystem=host",
+    "--filesystem=host-os:ro",
+    "--filesystem=host-etc:ro",
+    "--filesystem=/tmp",
+    "--filesystem=xdg-run/gvfs",
+    "--filesystem=xdg-run/shagoff-clouds:create",
+    "--talk-name=org.freedesktop.Flatpak",
+    "--talk-name=org.freedesktop.secrets",
+    "--talk-name=com.system76.CosmicSettingsDaemon"
+  ],
+  "build-options": {
+    "append-path": "/usr/lib/sdk/rust-stable/bin",
+    "env": {
+      "CARGO_HOME": "/run/build/shagoff-commander/cargo"
+    }
+  },
+  "modules": [
+    {
+      "name": "shagoff-commander",
+      "buildsystem": "simple",
+      "build-commands": [
+        "cargo --offline build --release --locked -p shagoff-commander",
+        "just prefix=/app install",
+        "install -Dm0755 flatpak/launch.sh /app/bin/launch.sh"
+      ],
+      "sources": [
+        {
+          "type": "git",
+          "url": "https://github.com/shagovAlexei/cosmic-shagoff-commander.git",
+          "tag": "v0.137.0",
+          "commit": "dea928b1222e9b9c68a51d30e711b6966700954e"
+        },
+        "cargo-sources.json"
+      ]
+    }
+  ]
+}

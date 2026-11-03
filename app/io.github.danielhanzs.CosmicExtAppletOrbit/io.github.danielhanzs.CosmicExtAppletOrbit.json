@@ -1,0 +1,57 @@
+{
+  "id": "io.github.danielhanzs.CosmicExtAppletOrbit",
+  "runtime": "org.freedesktop.Platform",
+  "runtime-version": "25.08",
+  "base": "com.system76.Cosmic.BaseApp",
+  "base-version": "stable",
+  "sdk": "org.freedesktop.Sdk",
+  "sdk-extensions": [
+    "org.freedesktop.Sdk.Extension.rust-stable"
+  ],
+  "command": "cosmic-ext-applet-orbit",
+  "finish-args": [
+    "--share=ipc",
+    "--socket=wayland",
+    "--device=dri",
+    "--filesystem=xdg-config/cosmic:rw",
+    "--talk-name=org.freedesktop.Flatpak",
+    "--talk-name=com.system76.CosmicSettingsDaemon",
+    "--talk-name=com.system76.CosmicSettingsDaemon.*",
+    "--talk-name=org.freedesktop.Notifications",
+    "--talk-name=org.freedesktop.ScreenSaver",
+    "--talk-name=org.freedesktop.secrets",
+    "--talk-name=org.mpris.MediaPlayer2.*",
+    "--talk-name=org.a11y.Bus",
+    "--talk-name=org.gnome.evolution.dataserver.*",
+    "--system-talk-name=org.freedesktop.NetworkManager",
+    "--system-talk-name=org.bluez",
+    "--system-talk-name=org.freedesktop.UPower",
+    "--system-talk-name=org.freedesktop.UPower.PowerProfiles",
+    "--system-talk-name=net.hadess.PowerProfiles"
+  ],
+  "build-options": {
+    "append-path": "/usr/lib/sdk/rust-stable/bin",
+    "env": {
+      "CARGO_HOME": "/run/build/cosmic-ext-applet-orbit/cargo",
+      "CARGO_NET_OFFLINE": "true"
+    }
+  },
+  "modules": [
+    {
+      "name": "cosmic-ext-applet-orbit",
+      "buildsystem": "simple",
+      "build-commands": [
+        "./install.sh /app"
+      ],
+      "sources": [
+        {
+          "type": "git",
+          "url": "https://github.com/danielhanzs/cosmic-ext-applet-orbit.git",
+          "tag": "v0.3.0",
+          "commit": "dfeae6c5d56300ebc89fa897c3c07f37ade13836"
+        },
+        "cargo-sources.json"
+      ]
+    }
+  ]
+}

@@ -39,8 +39,8 @@
         {
           "type": "git",
           "url": "https://github.com/cosmic-utils/cosmic-ext-applet-container-manager.git",
-          "tag": "v0.1.1",
-          "commit": "93496716fbb7569e47fa86f8307417d8cebe94fa"
+          "tag": "v1.11.0",
+          "commit": "6c8453d696a86a269e9c179052c6b605aed1cfcb"
         },
         "cargo-sources.json"
       ]

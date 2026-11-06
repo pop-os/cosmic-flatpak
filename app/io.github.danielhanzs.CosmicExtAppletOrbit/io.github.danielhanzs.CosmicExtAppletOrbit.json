@@ -47,8 +47,8 @@
         {
           "type": "git",
           "url": "https://github.com/danielhanzs/cosmic-ext-applet-orbit.git",
-          "tag": "v0.3.1",
-          "commit": "05e0894dcbf4fc572afdd83b0ae4016e7230bc35"
+          "tag": "v0.4.0",
+          "commit": "b20f22bc526d5c30e3a9f18a69bd3455988f2967"
         },
         "cargo-sources.json"
       ]

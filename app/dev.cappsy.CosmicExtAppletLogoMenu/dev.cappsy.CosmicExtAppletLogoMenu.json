@@ -36,16 +36,16 @@
         "cd ./settings && cargo --offline build --release --features flatpak --verbose",
         "install -Dm755 ./target/release/cosmic-ext-applet-logomenu -t /app/bin",
         "install -Dm755 ./target/release/cosmic-ext-logomenu-settings -t /app/bin",
-        "install -Dm644 ./res/dev.cappsy.CosmicExtAppletLogoMenu.desktop -t /app/share/applications",
-        "install -Dm644 ./res/dev.cappsy.CosmicExtAppletLogoMenu.Settings.desktop /app/share/applications",
-        "install -Dm644 ./res/dev.cappsy.CosmicExtAppletLogoMenu.metainfo.xml -t /app/share/metainfo",
+        "install -Dm644 ./target/xdgen/dev.cappsy.CosmicExtAppletLogoMenu.desktop -t /app/share/applications",
+        "install -Dm644 ./target/xdgen/dev.cappsy.CosmicExtAppletLogoMenu.Settings.desktop /app/share/applications",
+        "install -Dm644 ./target/xdgen/dev.cappsy.CosmicExtAppletLogoMenu.metainfo.xml -t /app/share/metainfo",
         "install -Dm644 ./res/icons/hicolor/scalable/apps/dev.cappsy.CosmicExtAppletLogoMenu.svg -t /app/share/icons/hicolor/scalable/apps"
       ],
       "sources": [
         {
           "type": "git",
           "url": "https://github.com/cappsyco/cosmic-ext-applet-logomenu.git",
-	  "tag": "v0.9.0"
+          "tag": "v0.9.0"
         },
         "./cargo-sources.json"
       ]

@@ -16,6 +16,7 @@
     "--socket=pulseaudio",
     "--device=dri",
     "--filesystem=host:ro",
+    "--filesystem=/tmp:ro",
     "--filesystem=xdg-config/cosmic:ro",
     "--filesystem=xdg-config/cosmic/io.github.jiricepelka.CosmicExtIsland:create",
     "--filesystem=~/.local/state/cosmic/io.github.jiricepelka.CosmicExtIsland:create",
@@ -24,6 +25,7 @@
     "--talk-name=org.mpris.MediaPlayer2.*",
     "--talk-name=org.gnome.OnlineAccounts",
     "--talk-name=org.kde.kdeconnect",
+    "--talk-name=io.github.hepp3n.kdeconnect",
     "--talk-name=org.freedesktop.Flatpak"
   ],
   "build-options": {
@@ -51,7 +53,7 @@
         {
           "type": "git",
           "url": "https://github.com/Nieuport-Labs/Cosmic-notch.git",
-          "commit": "06f989e1c4cc5a3cf45b2850f7550b6b321cb7cb"
+          "commit": "10c76a07609134f82575ff771b30252e3c687d8d"
         },
         "cargo-sources.json"
       ]

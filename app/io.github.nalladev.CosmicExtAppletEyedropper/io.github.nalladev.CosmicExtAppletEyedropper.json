@@ -12,10 +12,8 @@
     "--share=ipc",
     "--socket=wayland",
     "--socket=fallback-x11",
-    "--own-name=io.github.nalladev.CosmicExtAppletEyedropper",
     "--talk-name=com.system76.CosmicSettingsDaemon.*",
     "--talk-name=com.system76.CosmicSettingsDaemon",
-    "--talk-name=org.freedesktop.portal.Desktop",
     "--filesystem=xdg-config/cosmic:rw",
     "--filesystem=xdg-run/pipewire-0"
   ],
@@ -42,7 +40,7 @@
         {
           "type": "git",
           "url": "https://github.com/nalladev/cosmic-ext-applet-eyedropper.git",
-          "tag": "v0.6.1"
+          "tag": "v0.6.4"
         },
         "cargo-sources.json"
       ]

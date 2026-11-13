@@ -12,6 +12,7 @@
     "--socket=fallback-x11",
     "--filesystem=xdg-config/cosmic:rw",
     "--talk-name=com.system76.CosmicSettingsDaemon",
+    "--talk-name=com.system76.CosmicSettingsDaemon.*",
     "--share=ipc",
     "--device=dri"
   ],
@@ -37,8 +38,8 @@
         {
           "type": "git",
           "url": "https://github.com/AceMythos/cosmic-power-monitor.git",
-          "tag": "v0.2.0",
-          "commit": "25f5fe0c64325e2e2cadb46a32d11b203c6184d1"
+          "tag": "v0.2.1",
+          "commit": "3dd7f0261c47a9ac03c36d323c3919d83eacc4c5"
         },
         "cargo-sources.json"
       ]

@@ -44,8 +44,8 @@
         {
           "type": "git",
           "url": "https://github.com/shagovAlexei/cosmic-shagoff-commander.git",
-          "tag": "v0.139.2",
-          "commit": "564480bc092d3ce4e790fb79b2629f5098a6a9ec"
+          "tag": "v0.140.0",
+          "commit": "8714e28c39109c5b6df6367bfc7553533354a52b"
         },
         "cargo-sources.json"
       ]

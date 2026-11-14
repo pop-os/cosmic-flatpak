@@ -40,7 +40,7 @@
                 {
                     "type": "git",
                     "url": "https://github.com/ercling/cosmic-ext-applet-daymural.git",
-                    "commit": "0c3b8ffde35323e9a72b248d1ac22c163aaaee52"
+                    "commit": "c1e199230aa0102d4f917fdd39d927be364c8e1b"
                 },
                 "cargo-sources.json",
                 {

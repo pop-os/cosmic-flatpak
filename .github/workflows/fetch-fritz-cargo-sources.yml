@@ -1,0 +1,30 @@
+name: Fetch pinned FRITZ!Power Monitor Cargo sources
+
+on:
+  push:
+    branches:
+      - add-fritz-power-monitor
+
+permissions:
+  contents: write
+
+jobs:
+  fetch-cargo-sources:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: add-fritz-power-monitor
+      - name: Fetch generated Cargo source manifest
+        run: |
+          set -euo pipefail
+          curl --fail --location --silent --show-error \
+            https://raw.githubusercontent.com/gpkvt/cosmic-ext-fritzsmart-monitor-applet/f2237e55eb811e9d3fab94b85b315df3fe62f0e6/cargo-sources.json \
+            -o app/com.gpkvt.FritzPowerMonitor/cargo-sources.json
+          echo "aa6bf0eb701db396bf437651ec0d5805b37340e5a0bbcffc741c9d051c9ed6f8  app/com.gpkvt.FritzPowerMonitor/cargo-sources.json" | sha256sum --check
+          rm .github/workflows/fetch-fritz-cargo-sources.yml .github/trigger-fritz-cargo
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add app/com.gpkvt.FritzPowerMonitor/cargo-sources.json .github/workflows/fetch-fritz-cargo-sources.yml .github/trigger-fritz-cargo
+          git commit -m "Add pinned FRITZ!Power Monitor Cargo sources"
+          git push

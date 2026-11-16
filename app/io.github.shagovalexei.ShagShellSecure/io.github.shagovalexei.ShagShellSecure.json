@@ -1,0 +1,49 @@
+{
+  "id": "io.github.shagovalexei.ShagShellSecure",
+  "runtime": "org.freedesktop.Platform",
+  "runtime-version": "25.08",
+  "base": "com.system76.Cosmic.BaseApp",
+  "base-version": "stable",
+  "sdk": "org.freedesktop.Sdk",
+  "sdk-extensions": [
+    "org.freedesktop.Sdk.Extension.rust-stable"
+  ],
+  "command": "launch.sh",
+  "finish-args": [
+    "--socket=wayland",
+    "--socket=fallback-x11",
+    "--share=ipc",
+    "--device=dri",
+    "--share=network",
+    "--socket=ssh-auth",
+    "--filesystem=home",
+    "--talk-name=org.freedesktop.secrets",
+    "--talk-name=org.freedesktop.Flatpak",
+    "--talk-name=com.system76.CosmicSettingsDaemon"
+  ],
+  "build-options": {
+    "append-path": "/usr/lib/sdk/rust-stable/bin",
+    "env": {
+      "CARGO_HOME": "/run/build/shagshell/cargo"
+    }
+  },
+  "modules": [
+    {
+      "name": "shagshell",
+      "buildsystem": "simple",
+      "build-commands": [
+        "just build-release --offline --locked",
+        "just prefix=/app install-flatpak"
+      ],
+      "sources": [
+        {
+          "type": "git",
+          "url": "https://github.com/shagovAlexei/cosmic-ext-shagshell-secure.git",
+          "tag": "v0.129.0",
+          "commit": "211ad7c74564cb5c609e585663a6ebacfbb32497"
+        },
+        "./cargo-sources.json"
+      ]
+    }
+  ]
+}

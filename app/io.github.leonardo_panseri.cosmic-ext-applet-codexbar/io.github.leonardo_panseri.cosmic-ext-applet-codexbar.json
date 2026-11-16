@@ -1,0 +1,50 @@
+{
+  "id": "io.github.leonardo_panseri.cosmic-ext-applet-codexbar",
+  "runtime": "org.freedesktop.Platform",
+  "runtime-version": "25.08",
+  "sdk": "org.freedesktop.Sdk",
+  "sdk-extensions": [
+    "org.freedesktop.Sdk.Extension.rust-stable"
+  ],
+  "base": "com.system76.Cosmic.BaseApp",
+  "base-version": "stable",
+  "command": "cosmic-ext-applet-codexbar",
+  "finish-args": [
+    "--socket=wayland",
+    "--share=ipc",
+    "--device=dri",
+    "--filesystem=xdg-config/cosmic:rw",
+    "--talk-name=com.system76.CosmicSettingsDaemon",
+    "--filesystem=xdg-run/codexbar-linux:create"
+  ],
+  "build-options": {
+    "append-path": "/usr/lib/sdk/rust-stable/bin",
+    "env": {
+      "CARGO_HOME": "/run/build/cosmic-ext-applet-codexbar/cargo"
+    }
+  },
+  "modules": [
+    {
+      "name": "cosmic-ext-applet-codexbar",
+      "buildsystem": "simple",
+      "build-commands": [
+        "cargo --offline fetch --manifest-path Cargo.toml --verbose",
+        "cargo --offline build --release --locked --verbose",
+        "install -Dm0755 ./target/release/cosmic-ext-applet-codexbar /app/bin/cosmic-ext-applet-codexbar",
+        "install -Dm0644 ./target/xdgen/app.desktop /app/share/applications/io.github.leonardo_panseri.cosmic-ext-applet-codexbar.desktop",
+        "install -Dm0644 ./target/xdgen/app.metainfo.xml /app/share/metainfo/io.github.leonardo_panseri.cosmic-ext-applet-codexbar.metainfo.xml",
+        "install -Dm0644 ./resources/icon.svg /app/share/icons/hicolor/scalable/apps/io.github.leonardo_panseri.cosmic-ext-applet-codexbar.svg",
+        "install -Dm0644 ./resources/THIRD_PARTY_NOTICES.md /app/share/licenses/io.github.leonardo_panseri.cosmic-ext-applet-codexbar/THIRD_PARTY_NOTICES.md"
+      ],
+      "sources": [
+        {
+          "type": "git",
+          "url": "https://github.com/leonardo-panseri/cosmic-ext-applet-codexbar.git",
+          "tag": "0.1.2",
+          "commit": "dba9d404a983cae94c3757bae435ff327c5c6db4"
+        },
+        "cargo-sources.json"
+      ]
+    }
+  ]
+}

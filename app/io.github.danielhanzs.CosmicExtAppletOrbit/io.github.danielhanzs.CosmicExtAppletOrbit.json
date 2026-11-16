@@ -28,7 +28,9 @@
     "--system-talk-name=org.freedesktop.UPower",
     "--system-talk-name=org.freedesktop.UPower.PowerProfiles",
     "--system-talk-name=net.hadess.PowerProfiles",
-    "--system-talk-name=org.freedesktop.login1"
+    "--system-talk-name=org.freedesktop.login1",
+    "--system-talk-name=org.freedesktop.UDisks2",
+    "--system-talk-name=org.freedesktop.Accounts"
   ],
   "build-options": {
     "append-path": "/usr/lib/sdk/rust-stable/bin",
@@ -48,8 +50,8 @@
         {
           "type": "git",
           "url": "https://github.com/danielhanzs/cosmic-ext-applet-orbit.git",
-          "tag": "v0.7.0",
-          "commit": "be4add91420f75764dd5294434f02a0a8b023087"
+          "tag": "v0.8.0",
+          "commit": "18e05743006e04a36986d218d3e4ce767811919a"
         },
         "cargo-sources.json"
       ]

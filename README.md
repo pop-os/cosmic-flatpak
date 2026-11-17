@@ -1,17 +1,12 @@
-# COSMIC Flatpak Repository
+Cosmic FRITZ!Power Monitor Applet
 
-This repository hosts applets and other flatpaks for COSMIC that are not suitable for upload
-to Flathub. For COSMIC apps, please first try to submit to Flathub by following these instructions: https://docs.flathub.org/docs/for-app-authors/submission
+A native COSMIC panel applet for monitoring live power and temperature readings from compatible FRITZ!Box Smart Home devices. It communicates with the FRITZ!Box directly.
 
-To install this repository, run the following commands:
-```
-flatpak remote-add --if-not-exists --user cosmic https://apt.pop-os.org/cosmic/cosmic.flatpakrepo
-```
+  * Live monitoring
+  * Panel and popup
+  * Alerts and device controls
+  * Weather
+  * Connection and diagnostics
+  * Localization
 
-To test building an app, run the following commands:
-```
-# Install dependencies (only run once):
-sudo apt-get install flatpak flatpak-builder just
-# Build app with ID com.example.app (replace ID with yours):
-just build com.example.app
-```
+https://gpkvt.github.io/cosmic-ext-fritzsmart-monitor-applet/

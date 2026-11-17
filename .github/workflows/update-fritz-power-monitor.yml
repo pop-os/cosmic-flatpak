@@ -43,6 +43,7 @@ jobs:
           echo "version=${tag#v}" >> "$GITHUB_OUTPUT"
 
       - name: Fetch release source and update manifest inputs
+        id: prepare
         env:
           RELEASE_TAG: ${{ steps.release.outputs.tag }}
         run: |
@@ -83,8 +84,23 @@ jobs:
 
           jq empty "$destination/cargo-sources.json"
           echo "Prepared Flatpak manifest for $RELEASE_TAG ($source_commit)"
+          if git status --porcelain -- "$destination" | grep -q .; then
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Build the updated Flatpak
+        if: steps.prepare.outputs.changed == 'true'
+        run: |
+          set -euo pipefail
+          sudo apt-get update
+          sudo apt-get install --yes flatpak flatpak-builder just
+          flatpak remote-add --if-not-exists --user flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+          just build com.gpkvt.FritzPowerMonitor
 
       - name: Open or update pull request
+        if: steps.prepare.outputs.changed == 'true'
         uses: peter-evans/create-pull-request@v7
         with:
           token: ${{ github.token }}

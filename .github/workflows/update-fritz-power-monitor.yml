@@ -1,0 +1,109 @@
+name: Update FRITZ!Power Monitor Flatpak
+
+on:
+  schedule:
+    - cron: "17 8 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: update-fritz-power-monitor-flatpak
+  cancel-in-progress: false
+
+jobs:
+  update:
+    name: Track latest upstream release
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out Flatpak repository
+        uses: actions/checkout@v4
+        with:
+          ref: master
+
+      - name: Resolve latest stable applet release
+        id: release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          release="$(gh api repos/gpkvt/cosmic-ext-fritzsmart-monitor-applet/releases/latest)"
+          tag="$(jq -r '.tag_name' <<<"$release")"
+          draft="$(jq -r '.draft' <<<"$release")"
+          prerelease="$(jq -r '.prerelease' <<<"$release")"
+
+          if [[ -z "$tag" || "$tag" == "null" || "$draft" == "true" || "$prerelease" == "true" ]]; then
+            echo "::error::Latest applet release is not a published stable release"
+            exit 1
+          fi
+
+          echo "tag=$tag" >> "$GITHUB_OUTPUT"
+          echo "version=${tag#v}" >> "$GITHUB_OUTPUT"
+
+      - name: Fetch release source and update manifest inputs
+        env:
+          RELEASE_TAG: ${{ steps.release.outputs.tag }}
+        run: |
+          set -euo pipefail
+          source_dir="$RUNNER_TEMP/fritz-power-monitor"
+
+          git clone --quiet --depth 1 --branch "$RELEASE_TAG" \
+            https://github.com/gpkvt/cosmic-ext-fritzsmart-monitor-applet.git "$source_dir"
+
+          manifest_source="$source_dir/packaging/cosmic-flatpak/com.gpkvt.FritzPowerMonitor.json"
+          cargo_sources="$source_dir/packaging/cosmic-flatpak/cargo-sources.json"
+          cargo_lock="$source_dir/Cargo.lock"
+
+          for file in "$manifest_source" "$cargo_sources" "$cargo_lock"; do
+            if [[ ! -s "$file" ]]; then
+              echo "::error::Required Flatpak source file is missing at $RELEASE_TAG: $file"
+              exit 1
+            fi
+          done
+
+          source_commit="$(git -C "$source_dir" rev-parse 'HEAD^{commit}')"
+          destination="app/com.gpkvt.FritzPowerMonitor"
+          mkdir -p "$destination"
+
+          jq --arg tag "$RELEASE_TAG" --arg commit "$source_commit" '
+            .modules[0].sources[0].tag = $tag |
+            .modules[0].sources[0].commit = $commit
+          ' "$manifest_source" > "$destination/com.gpkvt.FritzPowerMonitor.json"
+
+          cp "$cargo_sources" "$destination/cargo-sources.json"
+
+          jq -e '
+            .id == "com.gpkvt.FritzPowerMonitor" and
+            .modules[0].sources[0].url == "https://github.com/gpkvt/cosmic-ext-fritzsmart-monitor-applet.git" and
+            (.modules[0].sources[0].commit | test("^[0-9a-f]{40}$")) and
+            (.modules[0].sources[0].tag | startswith("v"))
+          ' "$destination/com.gpkvt.FritzPowerMonitor.json" >/dev/null
+
+          jq empty "$destination/cargo-sources.json"
+          echo "Prepared Flatpak manifest for $RELEASE_TAG ($source_commit)"
+
+      - name: Open or update pull request
+        uses: peter-evans/create-pull-request@v7
+        with:
+          token: ${{ github.token }}
+          branch: automation/fritz-power-monitor-${{ steps.release.outputs.version }}
+          delete-branch: true
+          add-paths: |
+            app/com.gpkvt.FritzPowerMonitor/com.gpkvt.FritzPowerMonitor.json
+            app/com.gpkvt.FritzPowerMonitor/cargo-sources.json
+          commit-message: "Update FRITZ!Power Monitor to ${{ steps.release.outputs.tag }}"
+          title: "Update FRITZ!Power Monitor to ${{ steps.release.outputs.tag }}"
+          body: |
+            ## Automated Flatpak update
+
+            This pull request tracks the latest stable release of
+            [FRITZ!Power Monitor](https://github.com/gpkvt/cosmic-ext-fritzsmart-monitor-applet).
+
+            - Release: `${{ steps.release.outputs.tag }}`
+            - Source: pinned to the exact release commit
+            - Rust dependencies: refreshed from that release's checked-in Cargo source manifest
+
+            The repository's `build-changed` CI job validates the Flatpak build before
+            this update is ready to merge.

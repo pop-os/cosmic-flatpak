@@ -40,7 +40,7 @@
         {
           "type": "git",
           "url": "https://github.com/nalladev/cosmic-ext-applet-eyedropper.git",
-          "tag": "v0.6.4"
+          "tag": "v0.6.5"
         },
         "cargo-sources.json"
       ]

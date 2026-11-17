@@ -37,8 +37,8 @@
         {
           "type": "git",
           "url": "https://github.com/gpkvt/cosmic-ext-fritzsmart-monitor-applet.git",
-          "commit": "68df8f25199d65a2e5a49c9bc41ff000035e6a41",
-          "tag": "v0.8.39"
+          "commit": "a3667fbdd6849a4d7cd72f876320ea019c5be32e",
+          "tag": "v0.8.40"
         },
         "cargo-sources.json"
       ]

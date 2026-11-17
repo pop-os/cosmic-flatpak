@@ -114,4 +114,19 @@ jobs:
           fi
 
           git commit -m "Update FRITZ!Power Monitor to $RELEASE_TAG"
-          git push origin HEAD:master
+
+          # The fork may be synchronized with upstream while the Flatpak build
+          # is running. Rebase the validated manifest commit onto the latest
+          # master before publishing, retrying if another push wins the race.
+          for attempt in 1 2 3 4 5; do
+            git fetch origin master
+            git rebase origin/master
+            if git push origin HEAD:master; then
+              exit 0
+            fi
+            echo "Push raced with another master update; retrying ($attempt/5)…"
+            sleep "$attempt"
+          done
+
+          echo "::error::Could not publish after five attempts"
+          exit 1

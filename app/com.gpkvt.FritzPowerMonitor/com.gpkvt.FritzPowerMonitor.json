@@ -1,0 +1,47 @@
+{
+  "id": "com.gpkvt.FritzPowerMonitor",
+  "runtime": "org.freedesktop.Platform",
+  "runtime-version": "26.08",
+  "sdk": "org.freedesktop.Sdk",
+  "sdk-extensions": [
+    "org.freedesktop.Sdk.Extension.rust-stable"
+  ],
+  "command": "fritz-power-monitor",
+  "finish-args": [
+    "--share=ipc",
+    "--share=network",
+    "--socket=wayland",
+    "--talk-name=org.freedesktop.Notifications"
+  ],
+  "build-options": {
+    "append-path": "/usr/lib/sdk/rust-stable/bin",
+    "env": {
+      "CARGO_HOME": "/run/build/fritz-power-monitor/cargo",
+      "CARGO_NET_OFFLINE": "true"
+    }
+  },
+  "modules": [
+    {
+      "name": "fritz-power-monitor",
+      "buildsystem": "simple",
+      "build-commands": [
+        "mkdir -p .cargo && cp cargo/config .cargo/config.toml",
+        "cargo --offline fetch --manifest-path Cargo.toml --verbose",
+        "cargo --offline build --release --locked",
+        "install -Dm0755 target/release/fritz-power-monitor /app/bin/fritz-power-monitor",
+        "install -Dm0644 data/com.gpkvt.FritzPowerMonitor.desktop /app/share/applications/com.gpkvt.FritzPowerMonitor.desktop",
+        "install -Dm0644 data/com.gpkvt.FritzPowerMonitor.metainfo.xml /app/share/metainfo/com.gpkvt.FritzPowerMonitor.metainfo.xml",
+        "install -Dm0644 data/com.gpkvt.FritzPowerMonitor.svg /app/share/icons/hicolor/scalable/apps/com.gpkvt.FritzPowerMonitor.svg"
+      ],
+      "sources": [
+        {
+          "type": "git",
+          "url": "https://github.com/gpkvt/cosmic-ext-fritzsmart-monitor-applet.git",
+          "commit": "751235f5ac7a1969b3880dd9208b07382b1ca69a",
+          "tag": "v0.8.35"
+        },
+        "cargo-sources.json"
+      ]
+    }
+  ]
+}

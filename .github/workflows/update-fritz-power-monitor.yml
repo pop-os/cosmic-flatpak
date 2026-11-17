@@ -121,5 +121,4 @@ jobs:
             - Source: pinned to the exact release commit
             - Rust dependencies: refreshed from that release's checked-in Cargo source manifest
 
-            The repository's `build-changed` CI job validates the Flatpak build before
-            this update is ready to merge.
+            The workflow builds the Flatpak before opening this pull request.

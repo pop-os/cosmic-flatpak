@@ -1,0 +1,82 @@
+name: Generate Flatpak bundle
+
+on:
+  workflow_dispatch:
+    inputs:
+      app_id:
+        description: Flatpak application ID (must exist under app/)
+        required: true
+        default: com.gpkvt.FritzPowerMonitor
+        type: string
+      ref:
+        description: Repository ref to build
+        required: true
+        default: master
+        type: string
+
+permissions:
+  contents: read
+
+concurrency:
+  group: generate-flatpak-${{ inputs.app_id }}
+  cancel-in-progress: false
+
+jobs:
+  build:
+    name: Build ${{ inputs.app_id }}
+    runs-on: ubuntu-latest
+    env:
+      APP_ID: ${{ inputs.app_id }}
+      SOURCE_REF: ${{ inputs.ref }}
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ inputs.ref }}
+          fetch-depth: 0
+
+      - name: Validate application manifest
+        run: |
+          set -euo pipefail
+          manifest="app/${APP_ID}/${APP_ID}.json"
+          if [[ ! -s "$manifest" ]]; then
+            echo "::error::No Flatpak manifest found at $manifest"
+            exit 1
+          fi
+          jq -e --arg id "$APP_ID" '.id == $id' "$manifest" >/dev/null
+          echo "Building $APP_ID from $SOURCE_REF"
+
+      - name: Install Flatpak build tools
+        run: |
+          set -euo pipefail
+          sudo apt-get update
+          sudo apt-get install --yes flatpak flatpak-builder just jq
+          flatpak remote-add --if-not-exists --user flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+
+      - name: Build application
+        run: |
+          set -euo pipefail
+          just build "$APP_ID"
+
+      - name: Generate Flatpak bundle
+        id: bundle
+        run: |
+          set -euo pipefail
+          arch="$(flatpak --default-arch)"
+          mkdir -p dist
+          bundle="dist/${APP_ID}-${arch}.flatpak"
+          flatpak build-bundle repo "$bundle" "$APP_ID"
+          test -s "$bundle"
+          sha256sum "$bundle" | tee "$bundle.sha256"
+          echo "path=$bundle" >> "$GITHUB_OUTPUT"
+
+      - name: Upload Flatpak bundle
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ inputs.app_id }}-flatpak
+          path: |
+            ${{ steps.bundle.outputs.path }}
+            ${{ steps.bundle.outputs.path }}.sha256
+          if-no-files-found: error
+          compression-level: 0
+          retention-days: 14

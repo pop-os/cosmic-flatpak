@@ -1,0 +1,44 @@
+{
+  "id": "dev.edfloreshz.ModeToggle",
+  "runtime": "org.freedesktop.Platform",
+  "runtime-version": "26.08",
+  "sdk": "org.freedesktop.Sdk",
+  "sdk-extensions": ["org.freedesktop.Sdk.Extension.rust-stable"],
+  "base": "com.system76.Cosmic.BaseApp",
+  "base-version": "stable",
+  "command": "cosmic-ext-applet-mode-toggle",
+  "finish-args": [
+    "--socket=wayland",
+    "--device=dri",
+    "--filesystem=xdg-config/cosmic:ro",
+    "--filesystem=xdg-config/cosmic/com.system76.CosmicTheme.Mode:create",
+    "--talk-name=com.system76.CosmicSettingsDaemon",
+    "--talk-name=com.system76.CosmicSettingsDaemon.*"
+  ],
+  "build-options": {
+    "append-path": "/usr/lib/sdk/rust-stable/bin",
+    "env": {
+      "CARGO_HOME": "/run/build/cosmic-ext-applet-mode-toggle/cargo"
+    }
+  },
+  "modules": [
+    {
+      "name": "cosmic-ext-applet-mode-toggle",
+      "buildsystem": "simple",
+      "build-commands": [
+        "just build-release --locked --offline",
+        "just prefix=/app install",
+        "install -d /app/share/metainfo",
+        "mv /app/share/appdata/dev.edfloreshz.ModeToggle.metainfo.xml /app/share/metainfo/"
+      ],
+      "sources": [
+        {
+          "type": "git",
+          "url": "https://github.com/cosmic-utils/cosmic-ext-applet-mode-toggle.git",
+          "commit": "bc448f3c1250f3cf9e82e6a1ecbfb7dbe496a669"
+        },
+        "cargo-sources.json"
+      ]
+    }
+  ]
+}

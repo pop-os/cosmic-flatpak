@@ -1,0 +1,79 @@
+{
+  "id": "io.github.elalonde.Puron",
+  "runtime": "org.freedesktop.Platform",
+  "runtime-version": "25.08",
+  "sdk": "org.freedesktop.Sdk",
+  "sdk-extensions": [
+    "org.freedesktop.Sdk.Extension.rust-stable",
+    "org.freedesktop.Sdk.Extension.llvm20"
+  ],
+  "command": "puron-applet",
+  "finish-args": [
+    "--socket=wayland",
+    "--share=ipc",
+    "--device=dri",
+    "--filesystem=xdg-config/cosmic:rw",
+    "--filesystem=host-etc:ro",
+    "--system-talk-name=org.freedesktop.UDisks2",
+    "--talk-name=com.system76.CosmicSettingsDaemon.*",
+    "--env=SENSORS_SYSFS_ROOT=/sys"
+  ],
+  "build-options": {
+    "append-path": "/usr/lib/sdk/rust-stable/bin:/usr/lib/sdk/llvm20/bin",
+    "prepend-ld-library-path": "/usr/lib/sdk/llvm20/lib",
+    "env": {
+      "CARGO_HOME": "/run/build/puron/cargo",
+      "CARGO_NET_OFFLINE": "true",
+      "LIBCLANG_PATH": "/usr/lib/sdk/llvm20/lib",
+      "LMSENSORS_PATH": "/app"
+    }
+  },
+  "cleanup": [
+    "/include",
+    "/man"
+  ],
+  "modules": [
+    {
+      "name": "libsensors",
+      "buildsystem": "simple",
+      "build-commands": [
+        "make PREFIX=/app ETCDIR=/run/host/etc BUILD_STATIC_LIB=0 install-lib",
+        "install -Dm0644 COPYING.LGPL /app/share/licenses/io.github.elalonde.Puron/lm-sensors-COPYING.LGPL"
+      ],
+      "sources": [
+        {
+          "type": "git",
+          "url": "https://github.com/lm-sensors/lm-sensors.git",
+          "tag": "V3-6-2",
+          "commit": "5c3ba50f806dea27c3b1e368966191c735459111"
+        },
+        {
+          "type": "patch",
+          "path": "lm-sensors-quiet-sysfs-root.patch"
+        }
+      ]
+    },
+    {
+      "name": "puron",
+      "buildsystem": "simple",
+      "build-commands": [
+        "make install PREFIX=/app",
+        "make install-licenses PREFIX=/app VENDOR_DIR=/run/build/puron/cargo/vendor"
+      ],
+      "sources": [
+        {
+          "type": "git",
+          "url": "https://github.com/elalonde/puron.git",
+          "tag": "v1.7.0",
+          "commit": "7017270b27a1fe1e703ad46f7dabcd13594c897a"
+        },
+        "cargo-sources.json"
+      ],
+      "build-options": {
+        "env": {
+          "PACKAGE": "flatpak"
+        }
+      }
+    }
+  ]
+}

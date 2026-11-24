@@ -10,11 +10,12 @@
     "finish-args": [
         "--share=ipc",
         "--socket=wayland",
-        "--socket=session-bus",
         "--device=dri",
         "--filesystem=xdg-config/cosmic:rw",
         "--filesystem=xdg-data/kpeoplevcard:ro",
-        "--filesystem=xdg-cache/kdeconnect.daemon:ro"
+        "--filesystem=xdg-cache/kdeconnect.daemon:ro",
+        "--talk-name=org.kde.kdeconnect",
+        "--talk-name=org.freedesktop.Notifications"
     ],
     "build-options": {
         "append-path": "/usr/lib/sdk/rust-stable/bin",
@@ -38,8 +39,8 @@
                 {
                     "type": "git",
                     "url": "https://github.com/nwxnw/cosmic-ext-connected",
-                    "tag": "v0.7.0",
-                    "commit": "29be454a950384986af0499b50f20b884f8f0e15"
+                    "tag": "v0.10.0",
+                    "commit": "bdc8037d9937773e5073eada7700e4d673727c26"
                 },
                 "cargo-sources.json"
             ]

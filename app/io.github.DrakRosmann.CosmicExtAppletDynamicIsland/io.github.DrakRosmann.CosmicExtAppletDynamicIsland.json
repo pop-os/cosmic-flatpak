@@ -1,0 +1,53 @@
+{
+  "id": "io.github.DrakRosmann.CosmicExtAppletDynamicIsland",
+  "runtime": "org.freedesktop.Platform",
+  "runtime-version": "25.08",
+  "base": "com.system76.Cosmic.BaseApp",
+  "base-version": "stable",
+  "sdk": "org.freedesktop.Sdk",
+  "sdk-extensions": [
+    "org.freedesktop.Sdk.Extension.rust-stable"
+  ],
+  "command": "cosmic-ext-applet-dynamic-island",
+  "finish-args": [
+    "--share=ipc",
+    "--share=network",
+    "--socket=wayland",
+    "--socket=pulseaudio",
+    "--device=dri",
+    "--filesystem=xdg-config/cosmic:ro",
+    "--filesystem=xdg-config/cosmic/io.github.DrakRosmann.CosmicExtAppletDynamicIsland:create",
+    "--filesystem=/tmp:ro",
+    "--filesystem=xdg-data/applications:ro",
+    "--filesystem=xdg-data/flatpak/exports/share:ro",
+    "--filesystem=/var/lib/flatpak/exports/share:ro",
+    "--talk-name=com.system76.CosmicSettingsDaemon",
+    "--talk-name=org.freedesktop.Notifications",
+    "--talk-name=org.mpris.MediaPlayer2.*",
+    "--system-talk-name=org.freedesktop.UPower"
+  ],
+  "build-options": {
+    "append-path": "/usr/lib/sdk/rust-stable/bin",
+    "env": {
+      "CARGO_HOME": "/run/build/cosmic-ext-applet-dynamic-island/cargo",
+      "CARGO_NET_OFFLINE": "true"
+    }
+  },
+  "modules": [
+    {
+      "name": "cosmic-ext-applet-dynamic-island",
+      "buildsystem": "simple",
+      "build-commands": [
+        "./install.sh /app"
+      ],
+      "sources": [
+        {
+          "type": "git",
+          "url": "https://github.com/DrakRosmann/cosmic-ext-applet-dynamic-island.git",
+          "commit": "18e6438c1d6e51ed189bd69809eff3426cf4589d"
+        },
+        "cargo-sources.json"
+      ]
+    }
+  ]
+}

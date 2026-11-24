@@ -1,0 +1,53 @@
+{
+  "id": "io.github.leonardo_panseri.cosmic-ext-applet-sysmon",
+  "runtime": "org.freedesktop.Platform",
+  "runtime-version": "25.08",
+  "sdk": "org.freedesktop.Sdk",
+  "sdk-extensions": [
+    "org.freedesktop.Sdk.Extension.rust-stable"
+  ],
+  "base": "com.system76.Cosmic.BaseApp",
+  "base-version": "stable",
+  "command": "cosmic-ext-applet-sysmon",
+  "finish-args": [
+    "--socket=wayland",
+    "--share=ipc",
+    "--share=network",
+    "--device=dri",
+    "--filesystem=xdg-config/cosmic:rw",
+    "--talk-name=com.system76.CosmicSettingsDaemon",
+    "--talk-name=org.freedesktop.Flatpak",
+    "--system-talk-name=org.freedesktop.UPower"
+  ],
+  "build-options": {
+    "append-path": "/usr/lib/sdk/rust-stable/bin",
+    "env": {
+      "CARGO_HOME": "/run/build/cosmic-ext-applet-sysmon/cargo"
+    }
+  },
+  "modules": [
+    {
+      "name": "cosmic-ext-applet-sysmon",
+      "buildsystem": "simple",
+      "build-commands": [
+        "cargo --offline fetch --manifest-path Cargo.toml --verbose",
+        "cargo --offline build --release --locked --workspace --verbose",
+        "sh ./tools/check-glibc.sh ./target/release/sysmon-probe 2.34",
+        "install -Dm0755 ./target/release/cosmic-ext-applet-sysmon /app/bin/cosmic-ext-applet-sysmon",
+        "install -Dm0755 ./target/release/sysmon-probe /app/bin/sysmon-probe",
+        "install -Dm0644 ./target/xdgen/app.desktop /app/share/applications/io.github.leonardo_panseri.cosmic-ext-applet-sysmon.desktop",
+        "install -Dm0644 ./target/xdgen/app.metainfo.xml /app/share/metainfo/io.github.leonardo_panseri.cosmic-ext-applet-sysmon.metainfo.xml",
+        "install -Dm0644 ./resources/icon.svg /app/share/icons/hicolor/scalable/apps/io.github.leonardo_panseri.cosmic-ext-applet-sysmon.svg"
+      ],
+      "sources": [
+        {
+          "type": "git",
+          "url": "https://github.com/leonardo-panseri/cosmic-ext-applet-sysmon.git",
+          "tag": "0.1.0",
+          "commit": "3b8408e5a0dab4829f9f63e0a329de63be8ed19e"
+        },
+        "cargo-sources.json"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "id": "dev.daenu.CosmicExtAppletLowkeyWorkspaces",
+  "runtime": "org.freedesktop.Platform",
+  "runtime-version": "25.08",
+  "sdk": "org.freedesktop.Sdk",
+  "sdk-extensions": [
+    "org.freedesktop.Sdk.Extension.rust-stable"
+  ],
+  "command": "cosmic-ext-applet-lowkey-workspaces",
+  "finish-args": [
+    "--share=ipc",
+    "--socket=wayland",
+    "--device=dri",
+    "--filesystem=xdg-config/cosmic",
+    "--talk-name=com.system76.CosmicSettingsDaemon",
+    "--talk-name=com.system76.CosmicSettingsDaemon.*"
+  ],
+  "build-options": {
+    "append-path": "/usr/lib/sdk/rust-stable/bin",
+    "env": {
+      "CARGO_HOME": "/run/build/cosmic-ext-applet-lowkey-workspaces/cargo"
+    }
+  },
+  "modules": [
+    {
+      "name": "cosmic-ext-applet-lowkey-workspaces",
+      "buildsystem": "simple",
+      "build-commands": [
+        "printf '[source.\"https://github.com/pop-os/cosmic-protocols//\"]\\ngit = \"https://github.com/pop-os/cosmic-protocols//\"\\nreplace-with = \"vendored-sources\"\\nrev = \"c0cff4d\"\\n' >> $CARGO_HOME/config",
+        "cargo --offline fetch --manifest-path Cargo.toml --verbose",
+        "cargo --offline build --release --verbose",
+        "install -Dm0755 target/release/cosmic-ext-applet-lowkey-workspaces -t /app/bin",
+        "install -Dm0644 data/dev.daenu.CosmicExtAppletLowkeyWorkspaces.desktop -t /app/share/applications",
+        "install -Dm0644 data/dev.daenu.CosmicExtAppletLowkeyWorkspaces.metainfo.xml -t /app/share/metainfo",
+        "install -Dm0644 data/icons/scalable/apps/dev.daenu.CosmicExtAppletLowkeyWorkspaces.svg -t /app/share/icons/hicolor/scalable/apps"
+      ],
+      "sources": [
+        {
+          "type": "git",
+          "url": "https://github.com/daenuprobst/cosmic-ext-applet-lowkey-workspaces.git",
+          "tag": "v1.0.0",
+          "commit": "d6c725e67887814864fc270ad8fe1ac81ba2bf93"
+        },
+        "cargo-sources.json"
+      ]
+    }
+  ]
+}

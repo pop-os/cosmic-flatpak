@@ -1,13 +1,14 @@
 {
   "id": "com.github.DiegoMMR.CosmicExtAppletNowPlaying",
   "runtime": "org.freedesktop.Platform",
-  "runtime-version": "25.08",
+  "runtime-version": "26.08",
   "sdk": "org.freedesktop.Sdk",
   "sdk-extensions": ["org.freedesktop.Sdk.Extension.rust-stable"],
   "command": "cosmic-ext-applet-now-playing",
   "finish-args": [
     "--socket=wayland",
     "--socket=session-bus",
+    "--share=network",
     "--talk-name=org.mpris.MediaPlayer2.*",
     "--filesystem=xdg-cache:ro",
     "--filesystem=~/.var/app:ro",
@@ -24,8 +25,8 @@
       "name": "cosmic-ext-applet-now-playing",
       "buildsystem": "simple",
       "build-commands": [
-        "cargo --offline fetch --manifest-path Cargo.toml --verbose",
-        "cargo --offline build --release --verbose",
+        "cargo --offline fetch --locked --manifest-path Cargo.toml --verbose",
+        "cargo --offline build --locked --release --verbose",
         "install -Dm0755 ./target/release/cosmic-ext-applet-now-playing /app/bin/cosmic-ext-applet-now-playing",
         "install -Dm0644 ./res/com.github.DiegoMMR.CosmicExtAppletNowPlaying.desktop /app/share/applications/com.github.DiegoMMR.CosmicExtAppletNowPlaying.desktop",
         "install -Dm0644 ./res/com.github.DiegoMMR.CosmicExtAppletNowPlaying.metainfo.xml /app/share/metainfo/com.github.DiegoMMR.CosmicExtAppletNowPlaying.metainfo.xml",
@@ -39,9 +40,9 @@
       ],
       "sources": [
         {
-            "type": "git",
-            "url": "https://github.com/cosmic-utils/cosmic-ext-applet-now-playing.git",
-            "tag": "v0.2.1"
+          "type": "git",
+          "url": "https://github.com/cosmic-utils/cosmic-ext-applet-now-playing.git",
+          "tag": "v0.2.2"
         },
         "cargo-sources.json"
       ]

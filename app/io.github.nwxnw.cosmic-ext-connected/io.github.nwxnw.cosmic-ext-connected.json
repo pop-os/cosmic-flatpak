@@ -39,8 +39,8 @@
                 {
                     "type": "git",
                     "url": "https://github.com/nwxnw/cosmic-ext-connected",
-                    "tag": "v0.9.0",
-                    "commit": "c3b282fa3541b5835c283eeed4a1c099a20c689a"
+                    "tag": "v0.10.0",
+                    "commit": "bdc8037d9937773e5073eada7700e4d673727c26"
                 },
                 "cargo-sources.json"
             ]

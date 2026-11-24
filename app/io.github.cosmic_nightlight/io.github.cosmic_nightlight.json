@@ -1,0 +1,56 @@
+{
+    "id": "io.github.cosmic_nightlight",
+    "runtime": "org.freedesktop.Platform",
+    "runtime-version": "25.08",
+    "base": "com.system76.Cosmic.BaseApp",
+    "base-version": "stable",
+    "sdk": "org.freedesktop.Sdk",
+    "sdk-extensions": [
+        "org.freedesktop.Sdk.Extension.rust-stable"
+    ],
+    "command": "cosmic-nightlight",
+    "finish-args": [
+        "--share=ipc",
+        "--socket=wayland",
+        "--device=dri",
+        "--talk-name=com.system76.CosmicSettingsDaemon",
+        "--talk-name=com.system76.CosmicSettingsDaemon.Config.*",
+        "--filesystem=xdg-config/cosmic:rw",
+        "--filesystem=xdg-config/autostart:create",
+        "--talk-name=org.freedesktop.Flatpak"
+    ],
+    "build-options": {
+        "append-path": "/usr/lib/sdk/rust-stable/bin",
+        "env": {
+            "CARGO_HOME": "/run/build/cosmic-nightlight/cargo"
+        }
+    },
+    "modules": [
+        {
+            "name": "cosmic-nightlight",
+            "buildsystem": "simple",
+            "build-commands": [
+                "cargo --offline build --release --locked -p cosmic-nightlight -p nightlight-helper",
+                "install -Dm755 target/release/cosmic-nightlight /app/bin/cosmic-nightlight",
+                "install -Dm755 target/release/cosmic-nightlight-helper /app/libexec/cosmic-nightlight-helper",
+                "install -Dm755 scripts/flatpak-host-setup.sh /app/libexec/cosmic-nightlight-setup",
+                "install -Dm644 scripts/flatpak-host-cleanup.sh /app/libexec/cosmic-nightlight-cleanup",
+                "install -Dm644 polkit/49-cosmic-nightlight.rules /app/share/polkit-1/rules.d/49-cosmic-nightlight.rules",
+                "install -Dm644 data/io.github.cosmic_nightlight.desktop /app/share/applications/io.github.cosmic_nightlight.desktop",
+                "install -Dm644 data/io.github.cosmic_nightlight.settings.desktop /app/share/applications/io.github.cosmic_nightlight.settings.desktop",
+                "install -Dm644 data/io.github.cosmic_nightlight.metainfo.xml /app/share/metainfo/io.github.cosmic_nightlight.metainfo.xml",
+                "install -Dm644 data/icons/hicolor/scalable/apps/io.github.cosmic_nightlight.svg /app/share/icons/hicolor/scalable/apps/io.github.cosmic_nightlight.svg",
+                "install -Dm644 data/icons/hicolor/128x128/apps/io.github.cosmic_nightlight.png /app/share/icons/hicolor/128x128/apps/io.github.cosmic_nightlight.png"
+            ],
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://github.com/cosmic-nightlight/cosmic-nightlight.git",
+                    "tag": "v0.6.1",
+                    "commit": "10860f8600d2f63d04b573115e6663dcc25bff9e"
+                },
+                "cargo-sources.json"
+            ]
+        }
+    ]
+}

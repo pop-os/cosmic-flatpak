@@ -1,51 +1,49 @@
 {
-    "id": "io.github.hepp3n.kdeconnect",
-    "runtime": "org.freedesktop.Platform",
-    "runtime-version": "25.08",
-    "base": "com.system76.Cosmic.BaseApp",
-    "base-version": "stable",
-    "sdk": "org.freedesktop.Sdk",
-    "sdk-extensions": [
-        "org.freedesktop.Sdk.Extension.rust-stable"
-    ],
-    "command": "cosmic-ext-connect-applet",
-    "finish-args": [
-        "--share=ipc",
-        "--socket=wayland",
-        "--socket=session-bus",
-        "--device=dri",
-        "--share=network",
-        "--filesystem=xdg-download",
-        "--filesystem=xdg-config/cosmic:rw",
-        "--filesystem=xdg-config/kdeconnect:rw",
-        "--talk-name=org.freedesktop.Flatpak",
-        "--socket=pulseaudio"
-    ],
-    "build-options": {
-        "append-path": "/usr/lib/sdk/rust-stable/bin"
-    },
-    "modules": [
-        {
-            "name": "cosmic-ext-connect-applet",
-            "buildsystem": "simple",
-            "build-commands": [
-                "mv cargo/config cargo/config.toml",
-                "just build-rel-offline",
-                "just PREFIX=/app install"
-            ],
-            "build-options": {
-                "env": {
-                    "CARGO_HOME": "/run/build/cosmic-ext-connect-applet/cargo"
-                }
-            },
-            "sources": [
-                {
-                    "type": "git",
-                    "url": "https://github.com/cosmic-utils/kdeconnect",
-		    "commit": "7fe18a0bbc3e4891e121db272d4a4eab17265861"
-                },
-                "cargo-sources.json"
-            ]
+  "id": "io.github.hepp3n.kdeconnect",
+  "runtime": "org.freedesktop.Platform",
+  "runtime-version": "26.08",
+  "base": "com.system76.Cosmic.BaseApp",
+  "base-version": "stable",
+  "sdk": "org.freedesktop.Sdk",
+  "sdk-extensions": ["org.freedesktop.Sdk.Extension.rust-stable"],
+  "command": "cosmic-ext-connect-applet",
+  "finish-args": [
+    "--share=ipc",
+    "--socket=wayland",
+    "--socket=session-bus",
+    "--device=dri",
+    "--share=network",
+    "--filesystem=xdg-download",
+    "--filesystem=xdg-config/cosmic:rw",
+    "--filesystem=xdg-config/kdeconnect:rw",
+    "--talk-name=org.freedesktop.Flatpak",
+    "--socket=pulseaudio"
+  ],
+  "build-options": {
+    "append-path": "/usr/lib/sdk/rust-stable/bin"
+  },
+  "modules": [
+    {
+      "name": "cosmic-ext-connect-applet",
+      "buildsystem": "simple",
+      "build-commands": [
+        "mv cargo/config cargo/config.toml",
+        "just build-rel-offline",
+        "just PREFIX=/app install"
+      ],
+      "build-options": {
+        "env": {
+          "CARGO_HOME": "/run/build/cosmic-ext-connect-applet/cargo"
         }
-    ]
+      },
+      "sources": [
+        {
+          "type": "git",
+          "url": "https://github.com/cosmic-utils/kdeconnect",
+          "commit": "594c5351262359ce93dc046c467b9299ca295c8f"
+        },
+        "cargo-sources.json"
+      ]
+    }
+  ]
 }

@@ -1,0 +1,27 @@
+--- a/lib/sysfs.c
++++ b/lib/sysfs.c
+@@ -3,6 +3,10 @@
+     Copyright (c) 2005 Mark M. Hoffman <mhoffman@lightlink.com>
+     Copyright (C) 2007-2014 Jean Delvare <jdelvare@suse.de>
+ 
++    Changed for the Puron Flatpak on 2026-11-18: sensors_init_sysfs no
++    longer prints "Not a sysfs mount." when SENSORS_SYSFS_ROOT names a
++    directory that is not a sysfs mount. Nothing else is changed.
++
+     This library is free software; you can redistribute it and/or
+     modify it under the terms of the GNU Lesser General Public
+     License as published by the Free Software Foundation; either
+@@ -742,9 +746,10 @@
+ 
+ 	if (statfs(sensors_sysfs_mount, &statfsbuf) < 0
+ 	 || statfsbuf.f_type != SYSFS_MAGIC) {
+-		if (sysfs_root_env)
+-			fprintf(stderr, "%s: Not a sysfs mount.\n", sensors_sysfs_mount);
+-		else
++		/* The Flatpak sandbox mounts /sys as a tmpfs that holds the
++		   sysfs directories, so the variable is set there on purpose
++		   and the warning would be printed at every initialization. */
++		if (!sysfs_root_env)
+ 			return 0;
+ 	}
+ 

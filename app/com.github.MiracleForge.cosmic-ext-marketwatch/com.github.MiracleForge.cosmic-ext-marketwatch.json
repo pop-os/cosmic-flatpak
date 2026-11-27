@@ -42,7 +42,7 @@
         {
           "type": "git",
           "url": "https://github.com/MiracleForge/cosmic-ext-marketwatch.git",
-          "tag": "v2.0.0"
+          "tag": "v2.0.1"
         },
         "cargo-sources.json"
       ]
